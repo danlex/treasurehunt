@@ -5,7 +5,7 @@
       "dislikes": 1
     },
     "Research": {
-      "likes": 2,
+      "likes": 3,
       "dislikes": 0
     },
     "Top Tweets": {
@@ -261,6 +261,26 @@
     "CISA KEV": {
       "likes": 1,
       "dislikes": 0
+    },
+    "DeepMind": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "ICLR 2026": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "Quantization": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "KV Cache": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "Inference": {
+      "likes": 1,
+      "dislikes": 0
     }
   },
   "sources": {
@@ -293,7 +313,7 @@
       "dislikes": 0
     },
     "LLM Stats": {
-      "likes": 2,
+      "likes": 3,
       "dislikes": 0
     },
     "The Quantum Insider": {
@@ -318,8 +338,8 @@
     }
   },
   "totals": {
-    "likes": 12,
+    "likes": 13,
     "dislikes": 6
   },
-  "lastUpdated": "2026-04-12T18:51:34.768Z"
+  "lastUpdated": "2026-04-12T18:51:44.249Z"
 }

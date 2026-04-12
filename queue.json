@@ -79,22 +79,6 @@
     "image": "https://loremflickr.com/1200/600/microscope,atom,crystal,lab?lock=208"
   },
   {
-    "id": "turboquant",
-    "category": "Research",
-    "title": "DeepMind's TurboQuant: 6.2× KV-cache compression, no perplexity loss",
-    "summary": "At ICLR 2026, DeepMind's Yury Makarychev presented TurboQuant — PolarQuant (a randomized rotation making weight distributions near-Gaussian) composed with a Quantized Johnson–Lindenstrauss projection. Together they compress the KV cache 6.2× at identical perplexity. On a Gemini 3.1 Ultra 2M-token workload, GPU memory dropped from 380GB to 62GB per request. Google says it ships in Gemini's April 18 update. On-device long-context inference suddenly looks tractable; data-center inference costs fall sharply.",
-    "tags": [
-      "DeepMind",
-      "ICLR 2026",
-      "Quantization",
-      "KV Cache",
-      "Inference"
-    ],
-    "url": "https://llm-stats.com/ai-news",
-    "source": "LLM Stats",
-    "image": "https://loremflickr.com/1200/600/chip,semiconductor,circuit,hardware?lock=209"
-  },
-  {
     "id": "openai-852b",
     "category": "Startups",
     "title": "OpenAI closes $122B at $852B — most valuable private company in history",
