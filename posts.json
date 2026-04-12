@@ -1,5 +1,20 @@
 [
   {
+    "id": "karpathy-obsidian",
+    "category": "Top Tweets",
+    "title": "Karpathy on LLM knowledge bases with Obsidian — 18K likes",
+    "summary": "Andrej Karpathy's practical take on combining personal Obsidian vaults with LLMs struck a nerve — turning a niche workflow into a widely-shared playbook for personal AI.",
+    "tags": [
+      "Karpathy",
+      "Obsidian",
+      "PKM",
+      "Personal AI"
+    ],
+    "url": "https://x.com/ainunnajib/status/2039962318449390007",
+    "source": "X / AI Noon",
+    "publishedAt": "2026-04-12T18:32:23.828Z"
+  },
+  {
     "id": "ai-energy-100x",
     "category": "Research",
     "title": "Tufts: AI method cuts energy use 100× while boosting accuracy",
