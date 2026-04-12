@@ -9,7 +9,7 @@
       "dislikes": 1
     },
     "Top Tweets": {
-      "likes": 2,
+      "likes": 3,
       "dislikes": 0
     },
     "Startups": {
@@ -63,7 +63,7 @@
       "dislikes": 0
     },
     "Karpathy": {
-      "likes": 3,
+      "likes": 4,
       "dislikes": 0
     },
     "Obsidian": {
@@ -389,6 +389,18 @@
     "CLAUDE.md": {
       "likes": 1,
       "dislikes": 0
+    },
+    "AI Literacy": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "Frontier Models": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "Benchmarks": {
+      "likes": 1,
+      "dislikes": 0
     }
   },
   "sources": {
@@ -459,11 +471,15 @@
     "GitHub Trending": {
       "likes": 1,
       "dislikes": 0
+    },
+    "X": {
+      "likes": 1,
+      "dislikes": 0
     }
   },
   "totals": {
-    "likes": 14,
+    "likes": 15,
     "dislikes": 11
   },
-  "lastUpdated": "2026-04-12T20:04:18.300Z"
+  "lastUpdated": "2026-04-12T21:19:04.112Z"
 }

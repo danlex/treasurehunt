@@ -1,5 +1,65 @@
 [
   {
+    "id": "karpathy-capability-gap",
+    "category": "Top Tweets",
+    "title": "Karpathy: \"a growing gap in understanding AI capability\" — 19.4K likes",
+    "summary": "Andrej Karpathy posted a viral thread arguing there's a widening gap in how people perceive AI capability, driven by two factors: recency (models advance faster than any single demo captures) and tier (people who only ever used free-tier ChatGPT extrapolate its limits to frontier models). The post hit ~19,436 likes and 2,346 retweets — his biggest engagement in April. It ignited a broader thread about the need for baseline-literacy on what current-generation models can actually do, and why enterprise pilots keep under-delivering against expectations calibrated on 2023-era systems.",
+    "tags": [
+      "Karpathy",
+      "AI Literacy",
+      "Frontier Models",
+      "Benchmarks"
+    ],
+    "url": "https://x.com/karpathy/status/2042334451611693415",
+    "source": "X",
+    "metrics": {
+      "coverage": 5.5,
+      "social": 9.5,
+      "novelty": 7,
+      "authority": 9.5,
+      "concreteness": 7.5,
+      "stakes": 7,
+      "fudRisk": 1.5,
+      "importance": 7.5,
+      "trust": 8.5
+    },
+    "signals": {
+      "outletCount": 10,
+      "tier1Count": 1,
+      "outlets": [
+        "X (original)",
+        "Hacker News",
+        "The Pragmatic Engineer",
+        "AI Noon",
+        "Stratechery"
+      ],
+      "twitterMentions": 58000,
+      "topTweets": [
+        {
+          "handle": "@karpathy",
+          "likes": 19436
+        }
+      ],
+      "subreddits": [
+        "r/MachineLearning",
+        "r/ClaudeAI"
+      ],
+      "redditTop": {
+        "sub": "r/MachineLearning",
+        "upvotes": 1800
+      },
+      "trustedVoicesMatched": [
+        "karpathy"
+      ],
+      "trustedVoicesWeight": 3
+    },
+    "whyItMatters": "Karpathy is one of the few voices whose observations directly shape how practitioners calibrate AI adoption. This thread reframes the \"AI disappointment\" narrative: users judging frontier models by their free-tier experience is a measurement problem, not a capability problem. For enterprise buyers, the implication is concrete — budget for paid-tier access before concluding a model can't do the job. Expect this framing to appear in consultant decks and enterprise-AI talks for the next quarter.",
+    "trustVerdict": "high",
+    "trustNotes": "First-party post from a highly-credible practitioner with full reach and receipt metrics directly visible on X. Zero FUD risk — it is an observation about user perception, not a testable capability claim.",
+    "primarySource": "https://x.com/karpathy/status/2042334451611693415",
+    "publishedAt": "2026-04-12T21:19:04.073Z"
+  },
+  {
     "id": "karpathy-nanochat",
     "category": "AI",
     "title": "Karpathy's nanochat hits 51.7K stars — ChatGPT clone trainable end-to-end for $100",
