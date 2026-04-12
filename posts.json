@@ -1,5 +1,19 @@
 [
   {
+    "id": "openai-852b",
+    "category": "Startups",
+    "title": "OpenAI hits $852B valuation; Anthropic at $380B",
+    "summary": "OpenAI closed its $122B round at $852B post-money on March 31, making it the most valuable standalone startup ever. Anthropic's Series G put it at $380B — both backed heavily by D.E. Shaw and MGX.",
+    "tags": [
+      "OpenAI",
+      "Anthropic",
+      "Valuations"
+    ],
+    "url": "https://news.crunchbase.com/venture/foundational-ai-startup-funding-doubled-openai-anthropic-xai-q1-2026/",
+    "source": "Crunchbase News",
+    "publishedAt": "2026-04-12T18:38:00.808Z"
+  },
+  {
     "id": "physics-informed-ml",
     "category": "Research",
     "title": "Physics-informed ML: AI that respects the laws of physics",

@@ -13,16 +13,20 @@
       "dislikes": 0
     },
     "Startups": {
-      "likes": 1,
+      "likes": 2,
       "dislikes": 1
     },
     "Quantum": {
       "likes": 1,
-      "dislikes": 1
+      "dislikes": 2
     },
     "AI": {
       "likes": 2,
       "dislikes": 0
+    },
+    "Viral": {
+      "likes": 0,
+      "dislikes": 1
     }
   },
   "tags": {
@@ -31,7 +35,7 @@
       "dislikes": 0
     },
     "Anthropic": {
-      "likes": 2,
+      "likes": 3,
       "dislikes": 1
     },
     "Vidar": {
@@ -107,7 +111,7 @@
       "dislikes": 1
     },
     "OpenAI": {
-      "likes": 0,
+      "likes": 1,
       "dislikes": 1
     },
     "xAI": {
@@ -120,7 +124,7 @@
     },
     "Quantum": {
       "likes": 1,
-      "dislikes": 0
+      "dislikes": 1
     },
     "AI for Science": {
       "likes": 1,
@@ -189,6 +193,34 @@
     "Fluid Dynamics": {
       "likes": 1,
       "dislikes": 0
+    },
+    "Neutral Atom": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "Microsoft": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "Atom Computing": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "Reddit": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "Platforms": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "Algorithms": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "Valuations": {
+      "likes": 1,
+      "dislikes": 0
     }
   },
   "sources": {
@@ -209,7 +241,7 @@
       "dislikes": 0
     },
     "Crunchbase News": {
-      "likes": 1,
+      "likes": 2,
       "dislikes": 1
     },
     "Time": {
@@ -231,11 +263,19 @@
     "NextBigFuture": {
       "likes": 1,
       "dislikes": 0
+    },
+    "IEEE Spectrum": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "Social9": {
+      "likes": 0,
+      "dislikes": 1
     }
   },
   "totals": {
-    "likes": 9,
-    "dislikes": 3
+    "likes": 10,
+    "dislikes": 5
   },
-  "lastUpdated": "2026-04-12T18:37:45.897Z"
+  "lastUpdated": "2026-04-12T18:38:00.808Z"
 }
