@@ -18,10 +18,10 @@
     },
     "Quantum": {
       "likes": 1,
-      "dislikes": 2
+      "dislikes": 3
     },
     "AI": {
-      "likes": 2,
+      "likes": 3,
       "dislikes": 0
     },
     "Viral": {
@@ -35,7 +35,7 @@
       "dislikes": 0
     },
     "Anthropic": {
-      "likes": 3,
+      "likes": 4,
       "dislikes": 1
     },
     "Vidar": {
@@ -124,7 +124,7 @@
     },
     "Quantum": {
       "likes": 1,
-      "dislikes": 1
+      "dislikes": 2
     },
     "AI for Science": {
       "likes": 1,
@@ -159,15 +159,15 @@
       "dislikes": 0
     },
     "MCP": {
-      "likes": 1,
+      "likes": 2,
       "dislikes": 0
     },
     "Linux Foundation": {
-      "likes": 1,
+      "likes": 2,
       "dislikes": 0
     },
     "Open Source": {
-      "likes": 1,
+      "likes": 2,
       "dislikes": 0
     },
     "Post-Quantum": {
@@ -221,6 +221,26 @@
     "Valuations": {
       "likes": 1,
       "dislikes": 0
+    },
+    "Error Correction": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "Purdue": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "IBM": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "Quantinuum": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "KubeCon": {
+      "likes": 1,
+      "dislikes": 0
     }
   },
   "sources": {
@@ -230,7 +250,7 @@
     },
     "ScienceDaily": {
       "likes": 1,
-      "dislikes": 0
+      "dislikes": 1
     },
     "X / AI Noon": {
       "likes": 1,
@@ -253,7 +273,7 @@
       "dislikes": 0
     },
     "LLM Stats": {
-      "likes": 1,
+      "likes": 2,
       "dislikes": 0
     },
     "The Quantum Insider": {
@@ -274,8 +294,8 @@
     }
   },
   "totals": {
-    "likes": 10,
-    "dislikes": 5
+    "likes": 11,
+    "dislikes": 6
   },
-  "lastUpdated": "2026-04-12T18:38:00.808Z"
+  "lastUpdated": "2026-04-12T18:49:51.561Z"
 }

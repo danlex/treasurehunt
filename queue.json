@@ -4,7 +4,13 @@
     "category": "AI",
     "title": "Google ships Gemini 3.1 Ultra — 2M tokens, native multimodal, sandboxed code",
     "summary": "Google's marquee release of 2026: a 2M-token context window that ingests text, image, audio and video in a single forward pass — no stitched pipelines. Sundar Pichai demoed a sandboxed Code Execution tool that writes, runs and tests Python mid-conversation. On MMMU and VideoMME, Ultra outpaces GPT-5.4; on LM Arena it briefly hit #1 before GPT-5.4 reclaimed top. Available day-one in AI Studio and Vertex, with a 200K 'Flash' tier free up to 1M requests/day.",
-    "tags": ["Google", "Gemini", "Multimodal", "Long Context", "LM Arena"],
+    "tags": [
+      "Google",
+      "Gemini",
+      "Multimodal",
+      "Long Context",
+      "LM Arena"
+    ],
     "url": "https://llm-stats.com/ai-news",
     "source": "LLM Stats",
     "image": "https://loremflickr.com/1200/600/ai,neural,network,blue?lock=201"
@@ -14,37 +20,28 @@
     "category": "AI",
     "title": "Meta's Muse Spark: first flagship since the $14.3B Scale AI deal",
     "summary": "Meta Superintelligence Labs — the unit Alexandr Wang joined last July after Meta paid $14.3B for 49% of Scale AI — shipped Muse Spark, its first flagship under Wang's leadership. Training ran on ~400,000 H200s across new Louisiana and New Mexico data centers. Benchmarks show Muse Spark leading Llama 4 by 18 points on HumanEval-Plus with a 512K context. It launches as a paid Meta AI tier now, with an Apache-2.0 open-weight 'Muse Spark Mini' variant promised for Q3.",
-    "tags": ["Meta", "Alexandr Wang", "Superintelligence Labs", "Open Weights"],
+    "tags": [
+      "Meta",
+      "Alexandr Wang",
+      "Superintelligence Labs",
+      "Open Weights"
+    ],
     "url": "https://www.cnbc.com/2026/04/08/meta-debuts-first-major-ai-model-since-14-billion-deal-to-bring-in-alexandr-wang.html",
     "source": "CNBC",
     "image": "https://loremflickr.com/1200/600/data,center,servers,dark?lock=202"
-  },
-  {
-    "id": "ms-quantum-error-detect",
-    "category": "Quantum",
-    "title": "Quantum errors caught in under 4ms — 100× faster than prior art",
-    "summary": "A Purdue-led team unveiled an error-detection scheme that flags qubit faults in under 4 milliseconds — roughly two orders of magnitude faster than the prior state of the art. Paired with a companion Nature Physics paper measuring decoherence in superconducting qubits at microsecond resolution, researchers can watch errors unfold live instead of reconstructing them post-mortem. IBM, Google Quantum AI and Quantinuum are already using the technique to benchmark fault-tolerant prototypes more credibly — a critical instrumentation upgrade.",
-    "tags": ["Quantum", "Error Correction", "Purdue", "IBM", "Quantinuum"],
-    "url": "https://www.sciencedaily.com/releases/2026/04/260407193857.htm",
-    "source": "ScienceDaily",
-    "image": "https://loremflickr.com/1200/600/quantum,laser,physics?lock=203"
-  },
-  {
-    "id": "mcp-97m",
-    "category": "AI",
-    "title": "MCP crosses 97M installs; Linux Foundation takes governance at KubeCon",
-    "summary": "Anthropic's Model Context Protocol — the open spec for wiring LLMs to tools, files and APIs — crossed 97 million installs in March, up from ~3M a year ago. Every frontier vendor now ships MCP-compatible tooling: OpenAI, Google, Mistral, xAI, Cohere. The Linux Foundation announced at KubeCon EU on April 14 that it will take MCP under open governance, with Microsoft, Red Hat and GitHub signing as founding stewards. Arguably the fastest-standardizing protocol since LSP in 2016.",
-    "tags": ["MCP", "Anthropic", "Linux Foundation", "Open Source", "KubeCon"],
-    "url": "https://llm-stats.com/ai-news",
-    "source": "LLM Stats",
-    "image": "https://loremflickr.com/1200/600/code,terminal,open,source?lock=204"
   },
   {
     "id": "fault-tolerant-no-midcircuit",
     "category": "Quantum",
     "title": "Fault-tolerant Grover's — no mid-circuit measurements, 40% less overhead",
     "summary": "Researchers at the University of Innsbruck and RWTH Aachen, led by Rainer Blatt and Markus Müller, demonstrated a universal fault-tolerant circuit that skips mid-circuit measurements entirely — a long-standing engineering bottleneck. Running on a 16-ion trapped-ion processor, the team executed Grover's search on 3 logical qubits at a logical error rate of 3.1 × 10⁻³. Published in Nature on April 8, the protocol cuts hardware and timing overhead for fault-tolerant QC by an estimated 40%.",
-    "tags": ["Quantum", "Grover", "Trapped Ion", "Fault Tolerance", "Nature"],
+    "tags": [
+      "Quantum",
+      "Grover",
+      "Trapped Ion",
+      "Fault Tolerance",
+      "Nature"
+    ],
     "url": "https://phys.org/news/2026-04-quantum.html",
     "source": "Phys.org",
     "image": "https://loremflickr.com/1200/600/quantum,ion,trap,physics?lock=205"
@@ -54,7 +51,13 @@
     "category": "Cybersecurity",
     "title": "Citrix NetScaler CVE-2026-3055 (CVSS 9.3) — patch and rotate sessions now",
     "summary": "CVE-2026-3055 in Citrix NetScaler ADC and Gateway lets unauthenticated attackers read arbitrary memory — enough to pull session tokens, TLS keys and admin credentials, then chain into lateral movement. CVSS 9.3. Citrix confirmed in-the-wild exploitation on April 8 and shipped patches the same day for 13.1, 14.1 and NetScaler Secure Private Access. CISA added it to KEV within 24 hours. This echoes the 2023 'Citrix Bleed' pattern behind Boeing and Comcast breaches — rotate session material after patching.",
-    "tags": ["Citrix", "NetScaler", "CVE-2026-3055", "Active Exploit", "CISA KEV"],
+    "tags": [
+      "Citrix",
+      "NetScaler",
+      "CVE-2026-3055",
+      "Active Exploit",
+      "CISA KEV"
+    ],
     "url": "https://dev.to/ziizium/security-news-weekly-round-up-10th-april-2026-l5n",
     "source": "DEV Community",
     "image": "https://loremflickr.com/1200/600/cybersecurity,matrix,red,hacker?lock=206"
@@ -64,7 +67,13 @@
     "category": "Startups",
     "title": "Eclipse closes largest-ever $1.3B fund — betting on robots and AI infra",
     "summary": "Eclipse Ventures closed a $1.3B fund — its largest to date — earmarked for robotics and AI infrastructure. Eclipse led Cerebras's Series F and sits on the cap table for Figure, Physical Intelligence and Skild AI. Managing partner Lior Susan told Bloomberg the firm will write $20-80M checks with deliberate hardware bias: humanoids, autonomous industrial systems, and the power-and-cooling substrate under data centers. Lands in a week where Q1 global VC hit $300B — 80% of that AI.",
-    "tags": ["Eclipse", "Robotics", "AI Infra", "Lior Susan", "Hardware"],
+    "tags": [
+      "Eclipse",
+      "Robotics",
+      "AI Infra",
+      "Lior Susan",
+      "Hardware"
+    ],
     "url": "https://www.bloomberg.com/news/articles/2026-04-07/cerebras-backer-eclipse-raises-1-3-billion-for-robotics-ai-infrastructure",
     "source": "Bloomberg",
     "image": "https://loremflickr.com/1200/600/robot,industrial,automation?lock=207"
@@ -74,7 +83,13 @@
     "category": "Research",
     "title": "MIT's GNN spots atomic defects 400× faster — 3% fab yield lift",
     "summary": "MIT's Ju Li trained a graph neural network on ~2.4M DFT-simulated configurations to localize atomic defects in semiconductors, photovoltaics and thermal materials from scanning-transmission-electron-microscopy images. The model flags vacancies and dislocations 400× faster than conventional analysis at 94% accuracy. Early pilots at Applied Materials and First Solar report yield improvements above 3% — a very large number at fab scale, worth hundreds of millions annually per plant. Paper in Science on April 10.",
-    "tags": ["MIT", "Materials Science", "Semiconductors", "GNN", "Applied Materials"],
+    "tags": [
+      "MIT",
+      "Materials Science",
+      "Semiconductors",
+      "GNN",
+      "Applied Materials"
+    ],
     "url": "https://www.nextbigfuture.com/2026/04/2026-is-breakthrough-year-for-reliable-ai-world-models-and-continual-learning-prototypes.html",
     "source": "NextBigFuture",
     "image": "https://loremflickr.com/1200/600/microscope,atom,crystal,lab?lock=208"
@@ -84,7 +99,13 @@
     "category": "Research",
     "title": "DeepMind's TurboQuant: 6.2× KV-cache compression, no perplexity loss",
     "summary": "At ICLR 2026, DeepMind's Yury Makarychev presented TurboQuant — PolarQuant (a randomized rotation making weight distributions near-Gaussian) composed with a Quantized Johnson–Lindenstrauss projection. Together they compress the KV cache 6.2× at identical perplexity. On a Gemini 3.1 Ultra 2M-token workload, GPU memory dropped from 380GB to 62GB per request. Google says it ships in Gemini's April 18 update. On-device long-context inference suddenly looks tractable; data-center inference costs fall sharply.",
-    "tags": ["DeepMind", "ICLR 2026", "Quantization", "KV Cache", "Inference"],
+    "tags": [
+      "DeepMind",
+      "ICLR 2026",
+      "Quantization",
+      "KV Cache",
+      "Inference"
+    ],
     "url": "https://llm-stats.com/ai-news",
     "source": "LLM Stats",
     "image": "https://loremflickr.com/1200/600/chip,semiconductor,circuit,hardware?lock=209"
@@ -94,7 +115,13 @@
     "category": "Startups",
     "title": "OpenAI closes $122B at $852B — most valuable private company in history",
     "summary": "OpenAI closed its $122B primary+secondary on March 31 at an $852B post-money, passing SpaceX to become the most valuable private company in history. D.E. Shaw and MGX co-led, with Thrive, Coatue and Temasek participating. Revenue run-rate hit $28B on the April 1 board update, up from $12B a year earlier. The round funds OpenAI's $500B Stargate commitment with Oracle and SoftBank plus a reported $70B custom-chip program with Broadcom and TSMC aimed at halving training-compute cost per token by 2027.",
-    "tags": ["OpenAI", "Valuation", "Stargate", "Broadcom", "TSMC"],
+    "tags": [
+      "OpenAI",
+      "Valuation",
+      "Stargate",
+      "Broadcom",
+      "TSMC"
+    ],
     "url": "https://news.crunchbase.com/venture/foundational-ai-startup-funding-doubled-openai-anthropic-xai-q1-2026/",
     "source": "Crunchbase News",
     "image": "https://loremflickr.com/1200/600/skyline,tower,finance,night?lock=210"
@@ -104,7 +131,12 @@
     "category": "Viral",
     "title": "Reddit kills r/all after 17 years — moves to ML-ranked home feed",
     "summary": "On April 2 Reddit officially deprecated r/all — the unfiltered front-page feed that drove discovery for 17 years — replacing it with 'Home (Algorithmic)', an ML-ranked stream CEO Steve Huffman says lifts 7-day retention 12% in A/B tests. Moderators from r/AskHistorians, r/science and r/programming signed an open letter warning the shift kills cross-subreddit discovery and narrows the Overton window. RDDT shares jumped 4% intraday on the news. Another raw, open corner of the internet closes.",
-    "tags": ["Reddit", "Platforms", "Algorithms", "Steve Huffman"],
+    "tags": [
+      "Reddit",
+      "Platforms",
+      "Algorithms",
+      "Steve Huffman"
+    ],
     "url": "https://social9.com/news/reddit-shuts-down-rall-to-promote-algorithmic-personalization",
     "source": "Social9",
     "image": "https://loremflickr.com/1200/600/social,network,phone,crowd?lock=211"
@@ -114,7 +146,13 @@
     "category": "Quantum",
     "title": "Neutral-atom quantum eats IBM's roadmap: QuEra 99.5%, Atom Computing 99.7%",
     "summary": "IEEE Spectrum's April cover argues neutral-atom quantum is pulling ahead of superconducting and trapped-ion architectures. QuEra's 256-qubit Aquila hit 99.5% two-qubit gate fidelity in March; Atom Computing's 1,180-qubit system — built for Microsoft's upcoming level-2 Azure offering — runs at 99.7%. Pasqal and Infleqtion raised a combined $280M to scale. Neutral atoms reconfigure dynamically for arbitrary connectivity and scale more cheaply than ion traps, eating into IBM's planned 2026 superconducting roadmap.",
-    "tags": ["Quantum", "Neutral Atom", "Microsoft", "Atom Computing", "QuEra"],
+    "tags": [
+      "Quantum",
+      "Neutral Atom",
+      "Microsoft",
+      "Atom Computing",
+      "QuEra"
+    ],
     "url": "https://spectrum.ieee.org/neutral-atom-quantum-computing",
     "source": "IEEE Spectrum",
     "image": "https://loremflickr.com/1200/600/atom,laser,physics,blue?lock=212"
@@ -124,7 +162,13 @@
     "category": "Research",
     "title": "Physics-informed transformer: 34% better RMSE, 12× faster than PINN baselines",
     "summary": "University of Hawaiʻi Manoa's Peter Sadowski published a physics-informed transformer that hard-constrains outputs to conservation laws (mass, momentum, energy) via a differentiable projection layer. On turbulent channel-flow benchmarks it beats PINN baselines by 34% RMSE at 12× faster inference. NOAA is piloting the model for 10-day regional forecasts; the DOE has it slated for next-generation fusion-plasma control. Paper in PNAS on April 5. Credible AI for climate and fusion finally looks plausible at operational latency.",
-    "tags": ["Physics-Informed ML", "Climate", "Fluid Dynamics", "NOAA", "DOE"],
+    "tags": [
+      "Physics-Informed ML",
+      "Climate",
+      "Fluid Dynamics",
+      "NOAA",
+      "DOE"
+    ],
     "url": "https://www.nextbigfuture.com/2026/04/2026-is-breakthrough-year-for-reliable-ai-world-models-and-continual-learning-prototypes.html",
     "source": "NextBigFuture",
     "image": "https://loremflickr.com/1200/600/ocean,wave,turbulence,fluid?lock=213"
@@ -134,7 +178,13 @@
     "category": "Quantum",
     "title": "Q-day shrinks: factoring RSA-2048 drops to 20M noisy qubits",
     "summary": "A Google paper posted April 3 by Craig Gidney shows factoring RSA-2048 needs only ~20 million noisy qubits — down from the 20 billion estimate in 2019 — by combining magic-state distillation with better modular-exponentiation circuits. A companion paper from stealth startup Oratomic claims a 50× speedup on cryptographically relevant quantum workloads. Cloudflare pulled its post-quantum rollout target forward from 2035 to 2029 and said 38% of its TLS traffic is already hybrid ML-KEM. The Q-day horizon just shrank by years.",
-    "tags": ["Post-Quantum", "Cryptography", "Cloudflare", "Craig Gidney", "RSA"],
+    "tags": [
+      "Post-Quantum",
+      "Cryptography",
+      "Cloudflare",
+      "Craig Gidney",
+      "RSA"
+    ],
     "url": "https://thequantuminsider.com/2026/04/07/sp-analysts-report-quantum-computing-arriving-just-as-energy-sector-prepares-for-a-compute-driven-future/",
     "source": "The Quantum Insider",
     "image": "https://loremflickr.com/1200/600/lock,security,cryptography,binary?lock=214"
