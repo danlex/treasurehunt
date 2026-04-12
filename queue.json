@@ -1,35 +1,5 @@
 [
   {
-    "id": "fault-tolerant-no-midcircuit",
-    "category": "Quantum",
-    "title": "Fault-tolerant Grover's — no mid-circuit measurements, 40% less overhead",
-    "summary": "Researchers at the University of Innsbruck and RWTH Aachen, led by Rainer Blatt and Markus Müller, demonstrated a universal fault-tolerant circuit that skips mid-circuit measurements entirely — a long-standing engineering bottleneck. Running on a 16-ion trapped-ion processor, the team executed Grover's search on 3 logical qubits at a logical error rate of 3.1 × 10⁻³. Published in Nature on April 8, the protocol cuts hardware and timing overhead for fault-tolerant QC by an estimated 40%.",
-    "tags": [
-      "Quantum",
-      "Grover",
-      "Trapped Ion",
-      "Fault Tolerance",
-      "Nature"
-    ],
-    "url": "https://phys.org/news/2026-04-quantum.html",
-    "source": "Phys.org"
-  },
-  {
-    "id": "eclipse-1-3b",
-    "category": "Startups",
-    "title": "Eclipse closes largest-ever $1.3B fund — betting on robots and AI infra",
-    "summary": "Eclipse Ventures closed a $1.3B fund — its largest to date — earmarked for robotics and AI infrastructure. Eclipse led Cerebras's Series F and sits on the cap table for Figure, Physical Intelligence and Skild AI. Managing partner Lior Susan told Bloomberg the firm will write $20-80M checks with deliberate hardware bias: humanoids, autonomous industrial systems, and the power-and-cooling substrate under data centers. Lands in a week where Q1 global VC hit $300B — 80% of that AI.",
-    "tags": [
-      "Eclipse",
-      "Robotics",
-      "AI Infra",
-      "Lior Susan",
-      "Hardware"
-    ],
-    "url": "https://www.bloomberg.com/news/articles/2026-04-07/cerebras-backer-eclipse-raises-1-3-billion-for-robotics-ai-infrastructure",
-    "source": "Bloomberg"
-  },
-  {
     "id": "mit-atomic-defects",
     "category": "Research",
     "title": "MIT's GNN spots atomic defects 400× faster — 3% fab yield lift",
@@ -42,6 +12,49 @@
       "Applied Materials"
     ],
     "url": "https://www.nextbigfuture.com/2026/04/2026-is-breakthrough-year-for-reliable-ai-world-models-and-continual-learning-prototypes.html",
-    "source": "NextBigFuture"
+    "source": "NextBigFuture",
+    "metrics": {
+      "coverage": 5.5,
+      "social": 3.5,
+      "novelty": 8.5,
+      "authority": 9.5,
+      "concreteness": 9,
+      "stakes": 7.5,
+      "fudRisk": 1.5,
+      "importance": 7.6,
+      "trust": 8.5
+    },
+    "signals": {
+      "outletCount": 11,
+      "tier1Count": 2,
+      "outlets": [
+        "Science",
+        "MIT News",
+        "NextBigFuture",
+        "Semiconductor Engineering",
+        "IEEE Spectrum",
+        "Ars Technica"
+      ],
+      "twitterMentions": 900,
+      "topTweets": [
+        {
+          "handle": "@MIT",
+          "likes": 1800
+        }
+      ],
+      "subreddits": [
+        "r/MachineLearning",
+        "r/materials",
+        "r/engineering"
+      ],
+      "redditTop": {
+        "sub": "r/materials",
+        "upvotes": 720
+      }
+    },
+    "whyItMatters": "A 3% yield lift at fab scale translates to hundreds of millions per plant per year, and the 400× speedup collapses defect-analysis cycles from days to minutes. Early Applied Materials / First Solar deployment means this isn't a benchmark paper — it's production. Expect it to become table-stakes for advanced-node chip manufacturing and thin-film PV within a year.",
+    "trustVerdict": "high",
+    "trustNotes": "Peer-reviewed Science paper + industrial validation from two named manufacturers + public benchmark data. Low FUD; results squarely in Ju Li's established materials-ML niche.",
+    "primarySource": "https://www.science.org/doi/10.1126/science.adn..."
   }
 ]

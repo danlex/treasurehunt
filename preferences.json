@@ -14,11 +14,11 @@
     },
     "Startups": {
       "likes": 3,
-      "dislikes": 1
+      "dislikes": 2
     },
     "Quantum": {
       "likes": 1,
-      "dislikes": 3
+      "dislikes": 4
     },
     "AI": {
       "likes": 3,
@@ -124,7 +124,7 @@
     },
     "Quantum": {
       "likes": 1,
-      "dislikes": 2
+      "dislikes": 3
     },
     "AI for Science": {
       "likes": 1,
@@ -297,6 +297,42 @@
     "TSMC": {
       "likes": 1,
       "dislikes": 0
+    },
+    "Grover": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "Trapped Ion": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "Fault Tolerance": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "Nature": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "Eclipse": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "Robotics": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "AI Infra": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "Lior Susan": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "Hardware": {
+      "likes": 0,
+      "dislikes": 1
     }
   },
   "sources": {
@@ -351,11 +387,19 @@
     "DEV Community": {
       "likes": 0,
       "dislikes": 1
+    },
+    "Phys.org": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "Bloomberg": {
+      "likes": 0,
+      "dislikes": 1
     }
   },
   "totals": {
     "likes": 13,
-    "dislikes": 7
+    "dislikes": 9
   },
-  "lastUpdated": "2026-04-12T19:32:50.487Z"
+  "lastUpdated": "2026-04-12T19:47:00.282Z"
 }

@@ -111,6 +111,109 @@ const STYLES = `
     margin-bottom: 20px;
     transition: border-color 0.15s, box-shadow 0.15s;
   }
+
+  /* Impact badge on feed cards */
+  .impact-strip {
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+    padding: 10px 14px;
+    background: var(--light-bg);
+    border-radius: 8px;
+    margin: 12px 0 14px;
+    font-size: 12px;
+    color: var(--text-sec);
+  }
+  .impact-score {
+    font-family: var(--font-display); font-weight: 700;
+    font-size: 15px;
+    color: var(--text);
+  }
+  .impact-score .num { color: var(--red); }
+  .trust-pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 3px 10px; border-radius: 4px;
+    font-size: 10px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase;
+  }
+  .trust-high   { background: #dcfce7; color: #166534; }
+  .trust-medium { background: #fef3c7; color: #854d0e; }
+  .trust-low    { background: #fee2e2; color: #991b1b; }
+  .signals-inline { display: flex; gap: 12px; flex-wrap: wrap; font-variant-numeric: tabular-nums; }
+
+  /* Full scorecard on article pages */
+  .scorecard {
+    background: var(--light-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px 26px;
+    margin: 28px 0;
+  }
+  .scorecard-header {
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 12px; margin-bottom: 20px;
+  }
+  .scorecard-header h3 {
+    font-size: 13px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 2px;
+    color: var(--text-sec);
+  }
+  .importance {
+    font-family: var(--font-display); font-weight: 700;
+    font-size: 36px; line-height: 1;
+    color: var(--text);
+  }
+  .importance .slash { color: var(--text-mute); font-size: 20px; }
+  .importance .out   { color: var(--text-mute); font-size: 20px; }
+  .metric-row {
+    display: grid; grid-template-columns: 140px 1fr auto;
+    align-items: center; gap: 16px;
+    padding: 6px 0;
+    font-size: 13px;
+  }
+  .metric-label { color: var(--text-sec); font-weight: 500; }
+  .metric-bar {
+    height: 6px; background: #e5e5e5; border-radius: 3px; overflow: hidden;
+  }
+  .metric-bar span {
+    display: block; height: 100%;
+    background: linear-gradient(90deg, var(--red), #ff7a6e);
+    border-radius: 3px;
+  }
+  .metric-bar.fud span { background: linear-gradient(90deg, #991b1b, #ef4444); }
+  .metric-val { font-weight: 700; font-variant-numeric: tabular-nums; min-width: 38px; text-align: right; }
+  .scorecard-signals {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px 24px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+  .signal-block strong {
+    display: block;
+    font-size: 10px; letter-spacing: 1.4px; text-transform: uppercase;
+    color: var(--text-mute); font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .signal-block { font-size: 13px; color: var(--text); line-height: 1.6; }
+  .signal-block .num { font-family: var(--font-display); font-weight: 700; color: var(--red); font-size: 18px; }
+  .signal-block .outlet-list { color: var(--text-sec); }
+
+  .why-it-matters, .trust-notes {
+    margin-top: 28px;
+    padding: 22px 24px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+  }
+  .why-it-matters { background: #fff; border-left: 4px solid var(--red); }
+  .trust-notes { background: var(--light-bg); }
+  .why-it-matters h3, .trust-notes h3 {
+    font-size: 12px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 2px;
+    margin-bottom: 10px;
+    color: var(--text-sec);
+  }
+  .why-it-matters p { font-size: 15px; line-height: 1.7; color: var(--text); }
+  .trust-notes p    { font-size: 13px; line-height: 1.65; color: var(--text-sec); }
+  .trust-notes .verdict-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .trust-notes .primary-src { display: block; margin-top: 10px; font-size: 12px; }
   article.post:hover { border-color: #d4d4d4; box-shadow: 0 4px 18px rgba(0,0,0,0.05); }
   .post-meta {
     display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
@@ -273,6 +376,24 @@ const footer = `
 `;
 
 // ─── Card rendering (used on index) ────────────────────────────────────────────
+function impactStrip(p) {
+  if (!p.metrics) return '';
+  const m = p.metrics;
+  const s = p.signals || {};
+  const trustClass = `trust-${p.trustVerdict || 'medium'}`;
+  const outlets = s.outletCount ? `📰 <strong>${s.outletCount}</strong> outlets` : '';
+  const tweets  = s.twitterMentions ? `🐦 <strong>${s.twitterMentions.toLocaleString()}</strong>` : '';
+  const reddit  = s.redditTop ? `👽 ${esc(s.redditTop.sub)} · <strong>${s.redditTop.upvotes.toLocaleString()}</strong>` : '';
+  return `
+  <div class="impact-strip">
+    <span class="impact-score">Impact <span class="num">${m.importance}</span>/10</span>
+    <span class="trust-pill ${trustClass}">Trust · ${esc(p.trustVerdict || 'medium')}</span>
+    <span class="signals-inline">
+      ${[outlets, tweets, reddit].filter(Boolean).join(' · ')}
+    </span>
+  </div>`;
+}
+
 function postCard(p) {
   return `
 <article class="post" aria-labelledby="title-${esc(p.id)}">
@@ -283,12 +404,63 @@ function postCard(p) {
     <span class="source">${esc(p.source || '')}</span>
   </div>
   <h2 class="post-title" id="title-${esc(p.id)}"><a href="${postPath(p.id)}">${esc(p.title)}</a></h2>
+  ${impactStrip(p)}
   <p class="post-summary">${esc(p.summary)}</p>
   <div class="post-footer">
     <div class="tags">${(p.tags || []).map(t => `<span class="tag">${esc(t)}</span>`).join('')}</div>
     <a class="read-link" href="${postPath(p.id)}">Read more →</a>
   </div>
 </article>`;
+}
+
+// ─── Full scorecard for article pages ──────────────────────────────────────────
+function scorecard(p) {
+  if (!p.metrics) return '';
+  const m = p.metrics;
+  const s = p.signals || {};
+  const bar = (v) => `<span style="width:${Math.max(0, Math.min(100, v * 10))}%"></span>`;
+  const outletList = (s.outlets || []).slice(0, 6).join(', ') + ((s.outlets || []).length > 6 ? ', …' : '');
+  const topTweets = (s.topTweets || []).slice(0, 2).map(t => `${esc(t.handle)} · ${t.likes.toLocaleString()} likes`).join('<br>');
+  return `
+<section class="scorecard" aria-label="Impact scorecard">
+  <div class="scorecard-header">
+    <h3>Impact scorecard</h3>
+    <div class="importance">${m.importance}<span class="slash">/</span><span class="out">10</span></div>
+  </div>
+  <div class="metric-row"><span class="metric-label">Stakes</span>        <div class="metric-bar">${bar(m.stakes)}</div><span class="metric-val">${m.stakes.toFixed(1)}</span></div>
+  <div class="metric-row"><span class="metric-label">Novelty</span>       <div class="metric-bar">${bar(m.novelty)}</div><span class="metric-val">${m.novelty.toFixed(1)}</span></div>
+  <div class="metric-row"><span class="metric-label">Authority</span>     <div class="metric-bar">${bar(m.authority)}</div><span class="metric-val">${m.authority.toFixed(1)}</span></div>
+  <div class="metric-row"><span class="metric-label">Coverage</span>      <div class="metric-bar">${bar(m.coverage)}</div><span class="metric-val">${m.coverage.toFixed(1)}</span></div>
+  <div class="metric-row"><span class="metric-label">Concreteness</span>  <div class="metric-bar">${bar(m.concreteness)}</div><span class="metric-val">${m.concreteness.toFixed(1)}</span></div>
+  <div class="metric-row"><span class="metric-label">Social</span>        <div class="metric-bar">${bar(m.social)}</div><span class="metric-val">${m.social.toFixed(1)}</span></div>
+  <div class="metric-row"><span class="metric-label">FUD risk</span>      <div class="metric-bar fud">${bar(m.fudRisk)}</div><span class="metric-val">${m.fudRisk.toFixed(1)}</span></div>
+  <div class="scorecard-signals">
+    ${s.outletCount ? `<div class="signal-block"><strong>Coverage</strong><span class="num">${s.outletCount}</span> outlets · <span>${s.tier1Count || 0} tier-1</span><div class="outlet-list">${esc(outletList)}</div></div>` : ''}
+    ${s.twitterMentions ? `<div class="signal-block"><strong>X / Twitter</strong><span class="num">${s.twitterMentions.toLocaleString()}</span> mentions${topTweets ? `<br>${topTweets}` : ''}</div>` : ''}
+    ${s.redditTop ? `<div class="signal-block"><strong>Reddit</strong><span class="num">${s.redditTop.upvotes.toLocaleString()}</span> upvotes<br>${esc(s.redditTop.sub)}${(s.subreddits || []).length ? `<div class="outlet-list">${esc((s.subreddits || []).join(', '))}</div>` : ''}</div>` : ''}
+  </div>
+</section>`;
+}
+
+function whyItMattersBlock(p) {
+  if (!p.whyItMatters) return '';
+  return `
+<section class="why-it-matters">
+  <h3>Why it matters</h3>
+  <p>${esc(p.whyItMatters)}</p>
+</section>`;
+}
+
+function trustBlock(p) {
+  if (!p.trustNotes && !p.trustVerdict) return '';
+  const trustClass = `trust-${p.trustVerdict || 'medium'}`;
+  return `
+<section class="trust-notes">
+  <h3>Trust check</h3>
+  <div class="verdict-row"><span class="trust-pill ${trustClass}">${esc(p.trustVerdict || 'medium')}</span></div>
+  <p>${esc(p.trustNotes || '')}</p>
+  ${p.primarySource ? `<a class="primary-src" href="${esc(p.primarySource)}" target="_blank" rel="noopener">Primary source ↗</a>` : ''}
+</section>`;
 }
 
 // ─── index.html ────────────────────────────────────────────────────────────────
@@ -423,6 +595,9 @@ ${navbar}
     </div>
     <p class="post-summary" itemprop="description">${esc(p.summary)}</p>
     <div class="tags" itemprop="keywords" content="${esc((p.tags || []).join(', '))}">${(p.tags || []).map(t => `<span class="tag">${esc(t)}</span>`).join('')}</div>
+    ${whyItMattersBlock(p)}
+    ${scorecard(p)}
+    ${trustBlock(p)}
     <aside class="cta">
       <p>Want the full story from the original source?</p>
       <a href="${esc(p.url)}" target="_blank" rel="noopener" itemprop="isBasedOn">Read on ${esc(p.source || 'source')} ↗</a>

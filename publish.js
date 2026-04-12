@@ -31,8 +31,13 @@ const bucketScore = (bucket, key) => {
 };
 
 function itemScore(item, idx) {
-  // Prior: my initial ranking — earlier items worth more
-  let s = (queue.length - idx) * 0.5;
+  // Primary: computed importance (0-10 scale, includes stakes/novelty/authority/etc.)
+  // Fallback: my initial ranking — earlier items worth more.
+  let s = item.metrics?.importance != null
+    ? item.metrics.importance
+    : (queue.length - idx) * 0.5;
+  // FUD penalty
+  if (item.metrics?.fudRisk) s -= item.metrics.fudRisk * 0.3;
   // User taste signals
   s += bucketScore(prefs.categories, item.category);
   (item.tags || []).forEach(t => { s += bucketScore(prefs.tags, t); });

@@ -1,5 +1,144 @@
 [
   {
+    "id": "eclipse-1-3b",
+    "category": "Startups",
+    "title": "Eclipse closes largest-ever $1.3B fund — betting on robots and AI infra",
+    "summary": "Eclipse Ventures closed a $1.3B fund — its largest to date — earmarked for robotics and AI infrastructure. Eclipse led Cerebras's Series F and sits on the cap table for Figure, Physical Intelligence and Skild AI. Managing partner Lior Susan told Bloomberg the firm will write $20-80M checks with deliberate hardware bias: humanoids, autonomous industrial systems, and the power-and-cooling substrate under data centers. Lands in a week where Q1 global VC hit $300B — 80% of that AI.",
+    "tags": [
+      "Eclipse",
+      "Robotics",
+      "AI Infra",
+      "Lior Susan",
+      "Hardware"
+    ],
+    "url": "https://www.bloomberg.com/news/articles/2026-04-07/cerebras-backer-eclipse-raises-1-3-billion-for-robotics-ai-infrastructure",
+    "source": "Bloomberg",
+    "metrics": {
+      "coverage": 7,
+      "social": 4.5,
+      "novelty": 5.5,
+      "authority": 9,
+      "concreteness": 8.5,
+      "stakes": 7,
+      "fudRisk": 2,
+      "importance": 7,
+      "trust": 8
+    },
+    "signals": {
+      "outletCount": 18,
+      "tier1Count": 4,
+      "outlets": [
+        "Bloomberg",
+        "The Information",
+        "TechCrunch",
+        "Axios",
+        "PitchBook",
+        "Crunchbase"
+      ],
+      "twitterMentions": 1400,
+      "topTweets": [
+        {
+          "handle": "@LiorSusan",
+          "likes": 2100
+        }
+      ],
+      "subreddits": [
+        "r/venturecapital",
+        "r/robotics"
+      ],
+      "redditTop": {
+        "sub": "r/robotics",
+        "upvotes": 640
+      }
+    },
+    "whyItMatters": "Eclipse backing is the signal that moves robotics and AI-infra companies from 'interesting' to 'fundable at scale'. A $1.3B fund targeted at hardware — in a year where most LPs want software margins — reinforces that physical-AI is now a real asset class, not a niche bet. Expect follow-on rounds for Figure and Physical Intelligence within 6 months.",
+    "trustVerdict": "high",
+    "trustNotes": "Bloomberg scoop with LP confirmations; fund size is SEC-filing-backed. Low FUD risk.",
+    "primarySource": "https://www.bloomberg.com/news/articles/2026-04-07/cerebras-backer-eclipse-raises-1-3-billion",
+    "rejectedAt": "2026-04-12T19:47:00.281Z"
+  },
+  {
+    "id": "fault-tolerant-no-midcircuit",
+    "category": "Quantum",
+    "title": "Fault-tolerant Grover's — no mid-circuit measurements, 40% less overhead",
+    "summary": "Researchers at the University of Innsbruck and RWTH Aachen, led by Rainer Blatt and Markus Müller, demonstrated a universal fault-tolerant circuit that skips mid-circuit measurements entirely — a long-standing engineering bottleneck. Running on a 16-ion trapped-ion processor, the team executed Grover's search on 3 logical qubits at a logical error rate of 3.1 × 10⁻³. Published in Nature on April 8, the protocol cuts hardware and timing overhead for fault-tolerant QC by an estimated 40%.",
+    "tags": [
+      "Quantum",
+      "Grover",
+      "Trapped Ion",
+      "Fault Tolerance",
+      "Nature"
+    ],
+    "url": "https://phys.org/news/2026-04-quantum.html",
+    "source": "Phys.org",
+    "metrics": {
+      "coverage": 5.5,
+      "social": 4.5,
+      "novelty": 8.5,
+      "authority": 9.5,
+      "concreteness": 9,
+      "stakes": 8,
+      "fudRisk": 1.5,
+      "importance": 7.8,
+      "trust": 8.5
+    },
+    "signals": {
+      "outletCount": 12,
+      "tier1Count": 2,
+      "outlets": [
+        "Nature",
+        "Phys.org",
+        "Quanta",
+        "Physics World",
+        "IEEE Spectrum",
+        "The Quantum Insider"
+      ],
+      "twitterMentions": 1800,
+      "topTweets": [
+        {
+          "handle": "@quantum_insider",
+          "likes": 1600
+        },
+        {
+          "handle": "@preskill",
+          "likes": 3900
+        }
+      ],
+      "subreddits": [
+        "r/Physics",
+        "r/QuantumComputing",
+        "r/science"
+      ],
+      "redditTop": {
+        "sub": "r/QuantumComputing",
+        "upvotes": 1200
+      }
+    },
+    "whyItMatters": "Removing mid-circuit measurements from fault-tolerant protocols kills a major timing and hardware bottleneck — 40% overhead reduction directly accelerates every serious quantum roadmap. Trapped-ion progress under the Blatt/Müller team has been the single most reproducible line of quantum results for a decade, so this is a credible step, not a hype claim.",
+    "trustVerdict": "high",
+    "trustNotes": "Nature paper with full supplementary materials; logical error-rate figure independently verifiable from device telemetry. Team has a long track record of results that hold up.",
+    "primarySource": "https://www.nature.com/articles/s41586-026-00897-2",
+    "rejectedAt": "2026-04-12T19:46:49.922Z"
+  },
+  {
+    "id": "citrix-netscaler",
+    "category": "Cybersecurity",
+    "title": "Citrix NetScaler CVE-2026-3055 (CVSS 9.3) — patch and rotate sessions now",
+    "summary": "CVE-2026-3055 in Citrix NetScaler ADC and Gateway lets unauthenticated attackers read arbitrary memory — enough to pull session tokens, TLS keys and admin credentials, then chain into lateral movement. CVSS 9.3. Citrix confirmed in-the-wild exploitation on April 8 and shipped patches the same day for 13.1, 14.1 and NetScaler Secure Private Access. CISA added it to KEV within 24 hours. This echoes the 2023 'Citrix Bleed' pattern behind Boeing and Comcast breaches — rotate session material after patching.",
+    "tags": [
+      "Citrix",
+      "NetScaler",
+      "CVE-2026-3055",
+      "Active Exploit",
+      "CISA KEV"
+    ],
+    "url": "https://dev.to/ziizium/security-news-weekly-round-up-10th-april-2026-l5n",
+    "source": "DEV Community",
+    "publishedAt": "2026-04-12T18:51:34.748Z",
+    "rejectedAt": "2026-04-12T19:32:50.487Z",
+    "wasPublished": true
+  },
+  {
     "id": "ms-quantum-error-detect",
     "category": "Quantum",
     "title": "Quantum errors caught in under 4ms — 100× faster than prior art",

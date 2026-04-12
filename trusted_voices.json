@@ -1,0 +1,11 @@
+{
+  "_note": "X / Twitter handles you trust. Paste your @KryptonAi follow list here (or a curated subset). The hunt pipeline boosts a news item's Social score when people on this list discuss it — so a tweet from a trusted voice counts far more than 1,000 random mentions.",
+  "_howToPopulate": "Open https://x.com/KryptonAi/following, copy all handles, paste them as strings into the 'handles' array. No @ prefix needed.",
+  "tiers": {
+    "tier1_must_watch": [],
+    "tier2_trusted":    [],
+    "tier3_interesting": []
+  },
+  "handles": [],
+  "lastUpdated": null
+}

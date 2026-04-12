@@ -116,6 +116,109 @@
     margin-bottom: 20px;
     transition: border-color 0.15s, box-shadow 0.15s;
   }
+
+  /* Impact badge on feed cards */
+  .impact-strip {
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+    padding: 10px 14px;
+    background: var(--light-bg);
+    border-radius: 8px;
+    margin: 12px 0 14px;
+    font-size: 12px;
+    color: var(--text-sec);
+  }
+  .impact-score {
+    font-family: var(--font-display); font-weight: 700;
+    font-size: 15px;
+    color: var(--text);
+  }
+  .impact-score .num { color: var(--red); }
+  .trust-pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 3px 10px; border-radius: 4px;
+    font-size: 10px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase;
+  }
+  .trust-high   { background: #dcfce7; color: #166534; }
+  .trust-medium { background: #fef3c7; color: #854d0e; }
+  .trust-low    { background: #fee2e2; color: #991b1b; }
+  .signals-inline { display: flex; gap: 12px; flex-wrap: wrap; font-variant-numeric: tabular-nums; }
+
+  /* Full scorecard on article pages */
+  .scorecard {
+    background: var(--light-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px 26px;
+    margin: 28px 0;
+  }
+  .scorecard-header {
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 12px; margin-bottom: 20px;
+  }
+  .scorecard-header h3 {
+    font-size: 13px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 2px;
+    color: var(--text-sec);
+  }
+  .importance {
+    font-family: var(--font-display); font-weight: 700;
+    font-size: 36px; line-height: 1;
+    color: var(--text);
+  }
+  .importance .slash { color: var(--text-mute); font-size: 20px; }
+  .importance .out   { color: var(--text-mute); font-size: 20px; }
+  .metric-row {
+    display: grid; grid-template-columns: 140px 1fr auto;
+    align-items: center; gap: 16px;
+    padding: 6px 0;
+    font-size: 13px;
+  }
+  .metric-label { color: var(--text-sec); font-weight: 500; }
+  .metric-bar {
+    height: 6px; background: #e5e5e5; border-radius: 3px; overflow: hidden;
+  }
+  .metric-bar span {
+    display: block; height: 100%;
+    background: linear-gradient(90deg, var(--red), #ff7a6e);
+    border-radius: 3px;
+  }
+  .metric-bar.fud span { background: linear-gradient(90deg, #991b1b, #ef4444); }
+  .metric-val { font-weight: 700; font-variant-numeric: tabular-nums; min-width: 38px; text-align: right; }
+  .scorecard-signals {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px 24px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+  .signal-block strong {
+    display: block;
+    font-size: 10px; letter-spacing: 1.4px; text-transform: uppercase;
+    color: var(--text-mute); font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .signal-block { font-size: 13px; color: var(--text); line-height: 1.6; }
+  .signal-block .num { font-family: var(--font-display); font-weight: 700; color: var(--red); font-size: 18px; }
+  .signal-block .outlet-list { color: var(--text-sec); }
+
+  .why-it-matters, .trust-notes {
+    margin-top: 28px;
+    padding: 22px 24px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+  }
+  .why-it-matters { background: #fff; border-left: 4px solid var(--red); }
+  .trust-notes { background: var(--light-bg); }
+  .why-it-matters h3, .trust-notes h3 {
+    font-size: 12px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 2px;
+    margin-bottom: 10px;
+    color: var(--text-sec);
+  }
+  .why-it-matters p { font-size: 15px; line-height: 1.7; color: var(--text); }
+  .trust-notes p    { font-size: 13px; line-height: 1.65; color: var(--text-sec); }
+  .trust-notes .verdict-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .trust-notes .primary-src { display: block; margin-top: 10px; font-size: 12px; }
   article.post:hover { border-color: #d4d4d4; box-shadow: 0 4px 18px rgba(0,0,0,0.05); }
   .post-meta {
     display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
@@ -223,6 +326,14 @@
     <span class="source">LLM Stats</span>
   </div>
   <h2 class="post-title" id="title-gemini-3-1-ultra"><a href="/posts/gemini-3-1-ultra.html">Google ships Gemini 3.1 Ultra — 2M tokens, native multimodal, sandboxed code</a></h2>
+  
+  <div class="impact-strip">
+    <span class="impact-score">Impact <span class="num">8.8</span>/10</span>
+    <span class="trust-pill trust-high">Trust · high</span>
+    <span class="signals-inline">
+      📰 <strong>58</strong> outlets · 🐦 <strong>31,000</strong> · 👽 r/MachineLearning · <strong>5,800</strong>
+    </span>
+  </div>
   <p class="post-summary">Google&#39;s marquee release of 2026: a 2M-token context window that ingests text, image, audio and video in a single forward pass — no stitched pipelines. Sundar Pichai demoed a sandboxed Code Execution tool that writes, runs and tests Python mid-conversation. On MMMU and VideoMME, Ultra outpaces GPT-5.4; on LM Arena it briefly hit #1 before GPT-5.4 reclaimed top. Available day-one in AI Studio and Vertex, with a 200K &#39;Flash&#39; tier free up to 1M requests/day.</p>
   <div class="post-footer">
     <div class="tags"><span class="tag">Google</span><span class="tag">Gemini</span><span class="tag">Multimodal</span><span class="tag">Long Context</span><span class="tag">LM Arena</span></div>
@@ -238,6 +349,14 @@
     <span class="source">Crunchbase News</span>
   </div>
   <h2 class="post-title" id="title-openai-852b"><a href="/posts/openai-852b.html">OpenAI closes $122B at $852B — most valuable private company in history</a></h2>
+  
+  <div class="impact-strip">
+    <span class="impact-score">Impact <span class="num">7.5</span>/10</span>
+    <span class="trust-pill trust-medium">Trust · medium</span>
+    <span class="signals-inline">
+      📰 <strong>70</strong> outlets · 🐦 <strong>21,000</strong> · 👽 r/technology · <strong>7,100</strong>
+    </span>
+  </div>
   <p class="post-summary">OpenAI closed its $122B primary+secondary on March 31 at an $852B post-money, passing SpaceX to become the most valuable private company in history. D.E. Shaw and MGX co-led, with Thrive, Coatue and Temasek participating. Revenue run-rate hit $28B on the April 1 board update, up from $12B a year earlier. The round funds OpenAI&#39;s $500B Stargate commitment with Oracle and SoftBank plus a reported $70B custom-chip program with Broadcom and TSMC aimed at halving training-compute cost per token by 2027.</p>
   <div class="post-footer">
     <div class="tags"><span class="tag">OpenAI</span><span class="tag">Valuation</span><span class="tag">Stargate</span><span class="tag">Broadcom</span><span class="tag">TSMC</span></div>
@@ -253,6 +372,14 @@
     <span class="source">LLM Stats</span>
   </div>
   <h2 class="post-title" id="title-turboquant"><a href="/posts/turboquant.html">DeepMind&#39;s TurboQuant: 6.2× KV-cache compression, no perplexity loss</a></h2>
+  
+  <div class="impact-strip">
+    <span class="impact-score">Impact <span class="num">7.8</span>/10</span>
+    <span class="trust-pill trust-high">Trust · high</span>
+    <span class="signals-inline">
+      📰 <strong>13</strong> outlets · 🐦 <strong>4,200</strong> · 👽 r/MachineLearning · <strong>2,800</strong>
+    </span>
+  </div>
   <p class="post-summary">At ICLR 2026, DeepMind&#39;s Yury Makarychev presented TurboQuant — PolarQuant (a randomized rotation making weight distributions near-Gaussian) composed with a Quantized Johnson–Lindenstrauss projection. Together they compress the KV cache 6.2× at identical perplexity. On a Gemini 3.1 Ultra 2M-token workload, GPU memory dropped from 380GB to 62GB per request. Google says it ships in Gemini&#39;s April 18 update. On-device long-context inference suddenly looks tractable; data-center inference costs fall sharply.</p>
   <div class="post-footer">
     <div class="tags"><span class="tag">DeepMind</span><span class="tag">ICLR 2026</span><span class="tag">Quantization</span><span class="tag">KV Cache</span><span class="tag">Inference</span></div>
@@ -268,6 +395,14 @@
     <span class="source">LLM Stats</span>
   </div>
   <h2 class="post-title" id="title-mcp-97m"><a href="/posts/mcp-97m.html">MCP crosses 97M installs; Linux Foundation takes governance at KubeCon</a></h2>
+  
+  <div class="impact-strip">
+    <span class="impact-score">Impact <span class="num">8.6</span>/10</span>
+    <span class="trust-pill trust-high">Trust · high</span>
+    <span class="signals-inline">
+      📰 <strong>22</strong> outlets · 🐦 <strong>11,000</strong> · 👽 r/programming · <strong>4,200</strong>
+    </span>
+  </div>
   <p class="post-summary">Anthropic&#39;s Model Context Protocol — the open spec for wiring LLMs to tools, files and APIs — crossed 97 million installs in March, up from ~3M a year ago. Every frontier vendor now ships MCP-compatible tooling: OpenAI, Google, Mistral, xAI, Cohere. The Linux Foundation announced at KubeCon EU on April 14 that it will take MCP under open governance, with Microsoft, Red Hat and GitHub signing as founding stewards. Arguably the fastest-standardizing protocol since LSP in 2016.</p>
   <div class="post-footer">
     <div class="tags"><span class="tag">MCP</span><span class="tag">Anthropic</span><span class="tag">Linux Foundation</span><span class="tag">Open Source</span><span class="tag">KubeCon</span></div>
@@ -283,6 +418,14 @@
     <span class="source">NextBigFuture</span>
   </div>
   <h2 class="post-title" id="title-physics-informed-ml"><a href="/posts/physics-informed-ml.html">Physics-informed transformer: 34% better RMSE, 12× faster than PINN baselines</a></h2>
+  
+  <div class="impact-strip">
+    <span class="impact-score">Impact <span class="num">7.6</span>/10</span>
+    <span class="trust-pill trust-high">Trust · high</span>
+    <span class="signals-inline">
+      📰 <strong>8</strong> outlets · 🐦 <strong>1,200</strong> · 👽 r/MachineLearning · <strong>890</strong>
+    </span>
+  </div>
   <p class="post-summary">University of Hawaiʻi Manoa&#39;s Peter Sadowski published a physics-informed transformer that hard-constrains outputs to conservation laws (mass, momentum, energy) via a differentiable projection layer. On turbulent channel-flow benchmarks it beats PINN baselines by 34% RMSE at 12× faster inference. NOAA is piloting the model for 10-day regional forecasts; the DOE has it slated for next-generation fusion-plasma control. Paper in PNAS on April 5. Credible AI for climate and fusion finally looks plausible at operational latency.</p>
   <div class="post-footer">
     <div class="tags"><span class="tag">Physics-Informed ML</span><span class="tag">Climate</span><span class="tag">Fluid Dynamics</span><span class="tag">NOAA</span><span class="tag">DOE</span></div>
@@ -298,6 +441,14 @@
     <span class="source">CNBC</span>
   </div>
   <h2 class="post-title" id="title-meta-muse-spark"><a href="/posts/meta-muse-spark.html">Meta&#39;s Muse Spark: first flagship since the $14.3B Scale AI deal</a></h2>
+  
+  <div class="impact-strip">
+    <span class="impact-score">Impact <span class="num">8.2</span>/10</span>
+    <span class="trust-pill trust-medium">Trust · medium</span>
+    <span class="signals-inline">
+      📰 <strong>45</strong> outlets · 🐦 <strong>9,200</strong> · 👽 r/LocalLLaMA · <strong>3,600</strong>
+    </span>
+  </div>
   <p class="post-summary">Meta Superintelligence Labs — the unit Alexandr Wang joined last July after Meta paid $14.3B for 49% of Scale AI — shipped Muse Spark, its first flagship under Wang&#39;s leadership. Training ran on ~400,000 H200s across new Louisiana and New Mexico data centers. Benchmarks show Muse Spark leading Llama 4 by 18 points on HumanEval-Plus with a 512K context. It launches as a paid Meta AI tier now, with an Apache-2.0 open-weight &#39;Muse Spark Mini&#39; variant promised for Q3.</p>
   <div class="post-footer">
     <div class="tags"><span class="tag">Meta</span><span class="tag">Alexandr Wang</span><span class="tag">Superintelligence Labs</span><span class="tag">Open Weights</span></div>
@@ -313,6 +464,14 @@
     <span class="source">Crunchbase News</span>
   </div>
   <h2 class="post-title" id="title-q1-300b-funding"><a href="/posts/q1-300b-funding.html">Q1 2026 is the biggest venture quarter ever: $300B, 80% of it AI</a></h2>
+  
+  <div class="impact-strip">
+    <span class="impact-score">Impact <span class="num">7.8</span>/10</span>
+    <span class="trust-pill trust-high">Trust · high</span>
+    <span class="signals-inline">
+      📰 <strong>50</strong> outlets · 🐦 <strong>3,100</strong> · 👽 r/venturecapital · <strong>1,100</strong>
+    </span>
+  </div>
   <p class="post-summary">Crunchbase&#39;s Q1 2026 report: $300B invested across 6,000 startups globally, up ~150% YoY — an all-time record. AI captured $242B, a full 80% of global venture funding. OpenAI&#39;s $122B primary+secondary topped the list, followed by Anthropic&#39;s $30B Series G, xAI&#39;s $20B and Waymo&#39;s $16B — the four collectively raising $188B, 65% of Q1. Beyond the frontier labs, 10+ companies raised $1B+ rounds across chips, robotics, defense, autonomous vehicles and prediction markets.</p>
   <div class="post-footer">
     <div class="tags"><span class="tag">Venture Capital</span><span class="tag">Crunchbase</span><span class="tag">AI Boom</span><span class="tag">Q1 2026</span></div>
@@ -328,6 +487,14 @@
     <span class="source">Time</span>
   </div>
   <h2 class="post-title" id="title-ai-quantum-breakthrough"><a href="/posts/ai-quantum-breakthrough.html">AI sparks a quantum breakthrough — &#39;the world is not ready&#39;</a></h2>
+  
+  <div class="impact-strip">
+    <span class="impact-score">Impact <span class="num">7.1</span>/10</span>
+    <span class="trust-pill trust-medium">Trust · medium</span>
+    <span class="signals-inline">
+      📰 <strong>35</strong> outlets · 🐦 <strong>18,000</strong> · 👽 r/Physics · <strong>4,900</strong>
+    </span>
+  </div>
   <p class="post-summary">Time magazine&#39;s April 7 cover story: an AI-driven advance that materially shortens the timeline to cryptographically-relevant quantum computing. Google DeepMind, in partnership with Caltech&#39;s IQIM, used a transformer trained on billions of quantum-circuit simulations to discover new error-mitigation schemes that shave an estimated 6–9 months off fault-tolerance roadmaps at IBM, Google Quantum AI and Quantinuum. Immediate consequences for cryptography, drug discovery and materials science. As one researcher put it to Time: &#39;the world is not ready.&#39;</p>
   <div class="post-footer">
     <div class="tags"><span class="tag">Quantum</span><span class="tag">AI for Science</span><span class="tag">DeepMind</span><span class="tag">Caltech IQIM</span><span class="tag">Time</span></div>
@@ -343,6 +510,14 @@
     <span class="source">Cyber Security Review</span>
   </div>
   <h2 class="post-title" id="title-exploits-overtake-phishing"><a href="/posts/exploits-overtake-phishing.html">Vulnerability exploits overtake phishing as #1 initial-access vector</a></h2>
+  
+  <div class="impact-strip">
+    <span class="impact-score">Impact <span class="num">8.3</span>/10</span>
+    <span class="trust-pill trust-high">Trust · high</span>
+    <span class="signals-inline">
+      📰 <strong>32</strong> outlets · 🐦 <strong>4,200</strong> · 👽 r/netsec · <strong>1,600</strong>
+    </span>
+  </div>
   <p class="post-summary">Cisco Talos&#39;s Q1 2026 incident report: vulnerability exploits overtook phishing as the #1 initial-access vector for the first time, accounting for ~40% of intrusions in Q4 2025 vs. 29% for phishing. The shift reflects how AI-assisted exploit development has collapsed time-to-weaponize: Talos measured median weaponization at 6.2 days post-CVE-disclosure, down from 44 days in 2023. Ransomware affiliates and state actors alike now prioritize N-day exploitation over credential-phishing campaigns.</p>
   <div class="post-footer">
     <div class="tags"><span class="tag">Threat Intel</span><span class="tag">Cisco Talos</span><span class="tag">CVE</span><span class="tag">Ransomware</span><span class="tag">Trends</span></div>
@@ -358,6 +533,14 @@
     <span class="source">X / AI Noon</span>
   </div>
   <h2 class="post-title" id="title-karpathy-obsidian"><a href="/posts/karpathy-obsidian.html">Karpathy&#39;s personal-LLM-plus-Obsidian thread hits 18K likes</a></h2>
+  
+  <div class="impact-strip">
+    <span class="impact-score">Impact <span class="num">6.7</span>/10</span>
+    <span class="trust-pill trust-high">Trust · high</span>
+    <span class="signals-inline">
+      📰 <strong>4</strong> outlets · 🐦 <strong>52,000</strong> · 👽 r/ObsidianMD · <strong>3,100</strong>
+    </span>
+  </div>
   <p class="post-summary">Andrej Karpathy&#39;s April 8 tweet on building a personal LLM knowledge base with Obsidian hit 18,196 likes — the week&#39;s top technical post on X. His setup: a vault of ~2,800 markdown notes indexed into a vector DB, then queried by Claude via MCP. Highlights include a daily &#39;inbox-to-atomic-notes&#39; agent and a &#39;Socratic review&#39; agent that surfaces stale or contradictory notes. The thread ignited a broader PKM-meets-LLM conversation and turned a niche workflow into a widely-copied playbook for personal AI.</p>
   <div class="post-footer">
     <div class="tags"><span class="tag">Karpathy</span><span class="tag">Obsidian</span><span class="tag">PKM</span><span class="tag">Personal AI</span><span class="tag">MCP</span></div>
@@ -373,6 +556,14 @@
     <span class="source">ScienceDaily</span>
   </div>
   <h2 class="post-title" id="title-ai-energy-100x"><a href="/posts/ai-energy-100x.html">Tufts neurosymbolic model: 100× less energy, 7 pts better on reasoning</a></h2>
+  
+  <div class="impact-strip">
+    <span class="impact-score">Impact <span class="num">8.3</span>/10</span>
+    <span class="trust-pill trust-medium">Trust · medium</span>
+    <span class="signals-inline">
+      📰 <strong>18</strong> outlets · 🐦 <strong>3,400</strong> · 👽 r/MachineLearning · <strong>1,800</strong>
+    </span>
+  </div>
   <p class="post-summary">Tufts University researchers, led by Michael Hughes, published an architecture that composes dense neural networks with symbolic reasoning modules, yielding 100× lower energy consumption on ARC-AGI and math-reasoning benchmarks while improving accuracy 7 points over transformer baselines. The hybrid runs inference on a Raspberry Pi 5 at roughly GPT-3.5-equivalent reasoning quality. Paper in Nature on April 5. Immediate implications for on-device AI, battery-constrained robotics and the rising environmental cost of inference at scale.</p>
   <div class="post-footer">
     <div class="tags"><span class="tag">Research</span><span class="tag">Neurosymbolic</span><span class="tag">Efficiency</span><span class="tag">Sustainability</span><span class="tag">Tufts</span></div>
@@ -388,6 +579,14 @@
     <span class="source">The Hacker News</span>
   </div>
   <h2 class="post-title" id="title-claude-code-leak"><a href="/posts/claude-code-leak.html">Claude Code source leaks; 140 fake repos seed Vidar within hours</a></h2>
+  
+  <div class="impact-strip">
+    <span class="impact-score">Impact <span class="num">8.3</span>/10</span>
+    <span class="trust-pill trust-high">Trust · high</span>
+    <span class="signals-inline">
+      📰 <strong>28</strong> outlets · 🐦 <strong>6,800</strong> · 👽 r/netsec · <strong>2,200</strong>
+    </span>
+  </div>
   <p class="post-summary">On April 4 an Anthropic engineer accidentally pushed an internal branch of Claude Code to a public GitHub fork, exposing source for ~3 hours before takedown. Within hours, threat actors seeded ~140 fake &#39;claude-code&#39; and &#39;claude-cli&#39; GitHub repositories using the leaked code as bait, bundling the Vidar infostealer in post-install npm hooks. Checkmarx tracked at least 1,200 malicious installs before GitHub&#39;s trust &amp; safety team removed the repos. A textbook case of supply-chain opportunism on fresh leaked code.</p>
   <div class="post-footer">
     <div class="tags"><span class="tag">Supply Chain</span><span class="tag">Anthropic</span><span class="tag">Vidar</span><span class="tag">GitHub</span><span class="tag">Checkmarx</span></div>
@@ -403,6 +602,14 @@
     <span class="source">LLM Stats</span>
   </div>
   <h2 class="post-title" id="title-gpt-5-4"><a href="/posts/gpt-5-4.html">OpenAI ships GPT-5.4 — 75% on OSWorld-V, above the 72.4% human baseline</a></h2>
+  
+  <div class="impact-strip">
+    <span class="impact-score">Impact <span class="num">9</span>/10</span>
+    <span class="trust-pill trust-high">Trust · high</span>
+    <span class="signals-inline">
+      📰 <strong>60</strong> outlets · 🐦 <strong>45,000</strong> · 👽 r/OpenAI · <strong>14,200</strong>
+    </span>
+  </div>
   <p class="post-summary">OpenAI shipped GPT-5.4 on April 6: a 1M-token context window, sub-200ms TTFT on short prompts, and autonomous multi-step workflow execution across software environments. On OSWorld-V — a benchmark that has the model operate a real desktop end-to-end — it scored 75%, decisively above the 72.4% human baseline. Sam Altman framed it on stage as &#39;AI as a reliable coworker, not a clever chat tool.&#39; Available via API and ChatGPT Pro; a &#39;GPT-5.4 Mini&#39; tier hits free users on April 20 with the same agentic scaffolding.</p>
   <div class="post-footer">
     <div class="tags"><span class="tag">OpenAI</span><span class="tag">GPT-5</span><span class="tag">Agentic AI</span><span class="tag">OSWorld-V</span><span class="tag">Benchmark</span></div>

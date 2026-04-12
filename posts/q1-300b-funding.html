@@ -119,6 +119,109 @@
     margin-bottom: 20px;
     transition: border-color 0.15s, box-shadow 0.15s;
   }
+
+  /* Impact badge on feed cards */
+  .impact-strip {
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+    padding: 10px 14px;
+    background: var(--light-bg);
+    border-radius: 8px;
+    margin: 12px 0 14px;
+    font-size: 12px;
+    color: var(--text-sec);
+  }
+  .impact-score {
+    font-family: var(--font-display); font-weight: 700;
+    font-size: 15px;
+    color: var(--text);
+  }
+  .impact-score .num { color: var(--red); }
+  .trust-pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 3px 10px; border-radius: 4px;
+    font-size: 10px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase;
+  }
+  .trust-high   { background: #dcfce7; color: #166534; }
+  .trust-medium { background: #fef3c7; color: #854d0e; }
+  .trust-low    { background: #fee2e2; color: #991b1b; }
+  .signals-inline { display: flex; gap: 12px; flex-wrap: wrap; font-variant-numeric: tabular-nums; }
+
+  /* Full scorecard on article pages */
+  .scorecard {
+    background: var(--light-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px 26px;
+    margin: 28px 0;
+  }
+  .scorecard-header {
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 12px; margin-bottom: 20px;
+  }
+  .scorecard-header h3 {
+    font-size: 13px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 2px;
+    color: var(--text-sec);
+  }
+  .importance {
+    font-family: var(--font-display); font-weight: 700;
+    font-size: 36px; line-height: 1;
+    color: var(--text);
+  }
+  .importance .slash { color: var(--text-mute); font-size: 20px; }
+  .importance .out   { color: var(--text-mute); font-size: 20px; }
+  .metric-row {
+    display: grid; grid-template-columns: 140px 1fr auto;
+    align-items: center; gap: 16px;
+    padding: 6px 0;
+    font-size: 13px;
+  }
+  .metric-label { color: var(--text-sec); font-weight: 500; }
+  .metric-bar {
+    height: 6px; background: #e5e5e5; border-radius: 3px; overflow: hidden;
+  }
+  .metric-bar span {
+    display: block; height: 100%;
+    background: linear-gradient(90deg, var(--red), #ff7a6e);
+    border-radius: 3px;
+  }
+  .metric-bar.fud span { background: linear-gradient(90deg, #991b1b, #ef4444); }
+  .metric-val { font-weight: 700; font-variant-numeric: tabular-nums; min-width: 38px; text-align: right; }
+  .scorecard-signals {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px 24px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+  .signal-block strong {
+    display: block;
+    font-size: 10px; letter-spacing: 1.4px; text-transform: uppercase;
+    color: var(--text-mute); font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .signal-block { font-size: 13px; color: var(--text); line-height: 1.6; }
+  .signal-block .num { font-family: var(--font-display); font-weight: 700; color: var(--red); font-size: 18px; }
+  .signal-block .outlet-list { color: var(--text-sec); }
+
+  .why-it-matters, .trust-notes {
+    margin-top: 28px;
+    padding: 22px 24px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+  }
+  .why-it-matters { background: #fff; border-left: 4px solid var(--red); }
+  .trust-notes { background: var(--light-bg); }
+  .why-it-matters h3, .trust-notes h3 {
+    font-size: 12px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 2px;
+    margin-bottom: 10px;
+    color: var(--text-sec);
+  }
+  .why-it-matters p { font-size: 15px; line-height: 1.7; color: var(--text); }
+  .trust-notes p    { font-size: 13px; line-height: 1.65; color: var(--text-sec); }
+  .trust-notes .verdict-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .trust-notes .primary-src { display: block; margin-top: 10px; font-size: 12px; }
   article.post:hover { border-color: #d4d4d4; box-shadow: 0 4px 18px rgba(0,0,0,0.05); }
   .post-meta {
     display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
@@ -226,6 +329,37 @@
     </div>
     <p class="post-summary" itemprop="description">Crunchbase&#39;s Q1 2026 report: $300B invested across 6,000 startups globally, up ~150% YoY — an all-time record. AI captured $242B, a full 80% of global venture funding. OpenAI&#39;s $122B primary+secondary topped the list, followed by Anthropic&#39;s $30B Series G, xAI&#39;s $20B and Waymo&#39;s $16B — the four collectively raising $188B, 65% of Q1. Beyond the frontier labs, 10+ companies raised $1B+ rounds across chips, robotics, defense, autonomous vehicles and prediction markets.</p>
     <div class="tags" itemprop="keywords" content="Venture Capital, Crunchbase, AI Boom, Q1 2026"><span class="tag">Venture Capital</span><span class="tag">Crunchbase</span><span class="tag">AI Boom</span><span class="tag">Q1 2026</span></div>
+    
+<section class="why-it-matters">
+  <h3>Why it matters</h3>
+  <p>Capital concentration at this level — 80% of global venture in one category, four rounds at &gt;$15B — means the non-AI startup ecosystem is operationally starving even though headline venture is at an all-time high. Expect severe ripple effects: junior VC hiring freezes, pre-seed rounds shrinking, and non-AI founders pivoting or quitting in the next two quarters.</p>
+</section>
+    
+<section class="scorecard" aria-label="Impact scorecard">
+  <div class="scorecard-header">
+    <h3>Impact scorecard</h3>
+    <div class="importance">7.8<span class="slash">/</span><span class="out">10</span></div>
+  </div>
+  <div class="metric-row"><span class="metric-label">Stakes</span>        <div class="metric-bar"><span style="width:75%"></span></div><span class="metric-val">7.5</span></div>
+  <div class="metric-row"><span class="metric-label">Novelty</span>       <div class="metric-bar"><span style="width:60%"></span></div><span class="metric-val">6.0</span></div>
+  <div class="metric-row"><span class="metric-label">Authority</span>     <div class="metric-bar"><span style="width:90%"></span></div><span class="metric-val">9.0</span></div>
+  <div class="metric-row"><span class="metric-label">Coverage</span>      <div class="metric-bar"><span style="width:90%"></span></div><span class="metric-val">9.0</span></div>
+  <div class="metric-row"><span class="metric-label">Concreteness</span>  <div class="metric-bar"><span style="width:95%"></span></div><span class="metric-val">9.5</span></div>
+  <div class="metric-row"><span class="metric-label">Social</span>        <div class="metric-bar"><span style="width:65%"></span></div><span class="metric-val">6.5</span></div>
+  <div class="metric-row"><span class="metric-label">FUD risk</span>      <div class="metric-bar fud"><span style="width:20%"></span></div><span class="metric-val">2.0</span></div>
+  <div class="scorecard-signals">
+    <div class="signal-block"><strong>Coverage</strong><span class="num">50</span> outlets · <span>10 tier-1</span><div class="outlet-list">Crunchbase, PitchBook, Financial Times, Wall Street Journal, Bloomberg, Reuters, …</div></div>
+    <div class="signal-block"><strong>X / Twitter</strong><span class="num">3,100</span> mentions<br>@crunchbase · 2,800 likes</div>
+    <div class="signal-block"><strong>Reddit</strong><span class="num">1,100</span> upvotes<br>r/venturecapital<div class="outlet-list">r/venturecapital, r/startups, r/technology</div></div>
+  </div>
+</section>
+    
+<section class="trust-notes">
+  <h3>Trust check</h3>
+  <div class="verdict-row"><span class="trust-pill trust-high">high</span></div>
+  <p>Crunchbase methodology is transparent; numbers are SEC-filing-backed for the big rounds. Low FUD — these are reported facts, not projections.</p>
+  <a class="primary-src" href="https://news.crunchbase.com/venture/record-breaking-funding-ai-global-q1-2026/" target="_blank" rel="noopener">Primary source ↗</a>
+</section>
     <aside class="cta">
       <p>Want the full story from the original source?</p>
       <a href="https://news.crunchbase.com/venture/record-breaking-funding-ai-global-q1-2026/" target="_blank" rel="noopener" itemprop="isBasedOn">Read on Crunchbase News ↗</a>
@@ -243,6 +377,14 @@
     <span class="source">LLM Stats</span>
   </div>
   <h2 class="post-title" id="title-gemini-3-1-ultra"><a href="/posts/gemini-3-1-ultra.html">Google ships Gemini 3.1 Ultra — 2M tokens, native multimodal, sandboxed code</a></h2>
+  
+  <div class="impact-strip">
+    <span class="impact-score">Impact <span class="num">8.8</span>/10</span>
+    <span class="trust-pill trust-high">Trust · high</span>
+    <span class="signals-inline">
+      📰 <strong>58</strong> outlets · 🐦 <strong>31,000</strong> · 👽 r/MachineLearning · <strong>5,800</strong>
+    </span>
+  </div>
   <p class="post-summary">Google&#39;s marquee release of 2026: a 2M-token context window that ingests text, image, audio and video in a single forward pass — no stitched pipelines. Sundar Pichai demoed a sandboxed Code Execution tool that writes, runs and tests Python mid-conversation. On MMMU and VideoMME, Ultra outpaces GPT-5.4; on LM Arena it briefly hit #1 before GPT-5.4 reclaimed top. Available day-one in AI Studio and Vertex, with a 200K &#39;Flash&#39; tier free up to 1M requests/day.</p>
   <div class="post-footer">
     <div class="tags"><span class="tag">Google</span><span class="tag">Gemini</span><span class="tag">Multimodal</span><span class="tag">Long Context</span><span class="tag">LM Arena</span></div>
@@ -257,6 +399,14 @@
     <span class="source">Crunchbase News</span>
   </div>
   <h2 class="post-title" id="title-openai-852b"><a href="/posts/openai-852b.html">OpenAI closes $122B at $852B — most valuable private company in history</a></h2>
+  
+  <div class="impact-strip">
+    <span class="impact-score">Impact <span class="num">7.5</span>/10</span>
+    <span class="trust-pill trust-medium">Trust · medium</span>
+    <span class="signals-inline">
+      📰 <strong>70</strong> outlets · 🐦 <strong>21,000</strong> · 👽 r/technology · <strong>7,100</strong>
+    </span>
+  </div>
   <p class="post-summary">OpenAI closed its $122B primary+secondary on March 31 at an $852B post-money, passing SpaceX to become the most valuable private company in history. D.E. Shaw and MGX co-led, with Thrive, Coatue and Temasek participating. Revenue run-rate hit $28B on the April 1 board update, up from $12B a year earlier. The round funds OpenAI&#39;s $500B Stargate commitment with Oracle and SoftBank plus a reported $70B custom-chip program with Broadcom and TSMC aimed at halving training-compute cost per token by 2027.</p>
   <div class="post-footer">
     <div class="tags"><span class="tag">OpenAI</span><span class="tag">Valuation</span><span class="tag">Stargate</span><span class="tag">Broadcom</span><span class="tag">TSMC</span></div>
@@ -271,6 +421,14 @@
     <span class="source">LLM Stats</span>
   </div>
   <h2 class="post-title" id="title-turboquant"><a href="/posts/turboquant.html">DeepMind&#39;s TurboQuant: 6.2× KV-cache compression, no perplexity loss</a></h2>
+  
+  <div class="impact-strip">
+    <span class="impact-score">Impact <span class="num">7.8</span>/10</span>
+    <span class="trust-pill trust-high">Trust · high</span>
+    <span class="signals-inline">
+      📰 <strong>13</strong> outlets · 🐦 <strong>4,200</strong> · 👽 r/MachineLearning · <strong>2,800</strong>
+    </span>
+  </div>
   <p class="post-summary">At ICLR 2026, DeepMind&#39;s Yury Makarychev presented TurboQuant — PolarQuant (a randomized rotation making weight distributions near-Gaussian) composed with a Quantized Johnson–Lindenstrauss projection. Together they compress the KV cache 6.2× at identical perplexity. On a Gemini 3.1 Ultra 2M-token workload, GPU memory dropped from 380GB to 62GB per request. Google says it ships in Gemini&#39;s April 18 update. On-device long-context inference suddenly looks tractable; data-center inference costs fall sharply.</p>
   <div class="post-footer">
     <div class="tags"><span class="tag">DeepMind</span><span class="tag">ICLR 2026</span><span class="tag">Quantization</span><span class="tag">KV Cache</span><span class="tag">Inference</span></div>
