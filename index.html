@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Treasure Hunt — AI News Picks</title>
+<style>
+  :root {
+    --bg: #0b0d12;
+    --card: #141821;
+    --card-hover: #1a1f2b;
+    --text: #e6e9ef;
+    --muted: #8892a6;
+    --accent: #f5c518;
+    --like: #22c55e;
+    --dislike: #ef4444;
+    --skip: #64748b;
+    --border: #232838;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    line-height: 1.5;
+  }
+  header {
+    padding: 32px 24px 16px;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    background: var(--bg);
+    z-index: 10;
+  }
+  h1 {
+    margin: 0 0 8px;
+    font-size: 28px;
+  }
+  h1 .gem { color: var(--accent); }
+  .stats {
+    color: var(--muted);
+    font-size: 14px;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .stats span b { color: var(--text); }
+  main {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 24px;
+  }
+  .category {
+    margin-top: 32px;
+    margin-bottom: 8px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-bottom: 12px;
+    transition: background 0.15s, transform 0.15s, opacity 0.3s;
+  }
+  .card.liked { border-color: var(--like); }
+  .card.disliked { border-color: var(--dislike); opacity: 0.45; }
+  .card.skipped { opacity: 0.55; }
+  .card-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .card-desc {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  .actions {
+    display: flex;
+    gap: 8px;
+  }
+  button {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    padding: 6px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.15s;
+  }
+  button:hover { background: var(--card-hover); color: var(--text); }
+  button.active.like { background: var(--like); border-color: var(--like); color: white; }
+  button.active.dislike { background: var(--dislike); border-color: var(--dislike); color: white; }
+  button.active.skip { background: var(--skip); border-color: var(--skip); color: white; }
+  .toolbar {
+    margin-top: 24px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .toolbar button {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+  .export {
+    margin-top: 16px;
+    padding: 16px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 12px;
+    white-space: pre-wrap;
+    display: none;
+    color: var(--muted);
+    max-height: 320px;
+    overflow: auto;
+  }
+  .export.visible { display: block; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1><span class="gem">◆</span> Treasure Hunt — April 12, 2026</h1>
+  <div class="stats">
+    <span>Liked: <b id="stat-like">0</b></span>
+    <span>Disliked: <b id="stat-dislike">0</b></span>
+    <span>Skipped: <b id="stat-skip">0</b></span>
+    <span>Unreviewed: <b id="stat-none">0</b></span>
+  </div>
+</header>
+
+<main id="feed"></main>
+
+<main>
+  <div class="toolbar">
+    <button onclick="showExport()">Show Picks</button>
+    <button onclick="copyExport()">Copy Liked to Clipboard</button>
+    <button onclick="resetAll()">Reset All</button>
+  </div>
+  <pre class="export" id="export"></pre>
+</main>
+
+<script>
+const ITEMS = [
+  { cat: "AI", title: "OpenAI GPT-5.4 launches", desc: "1M token context, 75% on OSWorld-V (above human 72.4%) — autonomous digital coworker." },
+  { cat: "AI", title: "Google Gemini 3.1 Ultra", desc: "2M token context, natively multimodal across text/image/audio/video, sandboxed code execution mid-conversation." },
+  { cat: "AI", title: "Meta debuts Muse Spark", desc: "Meta's first major AI model under Alexandr Wang at Meta Superintelligence Labs." },
+  { cat: "AI", title: "GLM-5.1 cracks top 3 on LM Code Arena", desc: "First frontier-level open model to break top 3." },
+  { cat: "AI", title: "Anthropic MCP crosses 97M installs", desc: "Linux Foundation taking Model Context Protocol under open governance." },
+
+  { cat: "Quantum", title: "AI + quantum breakthrough", desc: "Time reports AI sparked a major quantum advance — 'the world is not ready'." },
+  { cat: "Quantum", title: "Millisecond quantum error detection", desc: "New method identifies errors orders of magnitude faster than existing techniques." },
+  { cat: "Quantum", title: "Fault-tolerant quantum without mid-circuit measurements", desc: "Innsbruck/Aachen team ran Grover's algorithm on 3 logical qubits on trapped-ion processor." },
+  { cat: "Quantum", title: "Microsoft + Atom Computing deliver level-2 quantum", desc: "Error-corrected quantum computers shipping to customers in 2026." },
+  { cat: "Quantum", title: "Quantum crypto threat accelerates", desc: "Google + Oratomic papers suggest encryption-breaking quantum may come sooner; Cloudflare pulls post-quantum target to 2029." },
+
+  { cat: "Cybersecurity", title: "Claude Code source code leaked", desc: "Anthropic employee accidentally leaked source; threat actors seeded fake GitHub repos delivering Vidar infostealer." },
+  { cat: "Cybersecurity", title: "Chrome zero-day #4 of 2026 patched", desc: "Out-of-band Chrome 146 update fixes actively-exploited CVE-2026-5281." },
+  { cat: "Cybersecurity", title: "Citrix NetScaler under active exploit", desc: "CVE-2026-3055 lets attackers read sensitive appliance memory and steal session material." },
+  { cat: "Cybersecurity", title: "Smart Slider 3 Pro supply chain attack", desc: "Update system hijacked for ~6 hours on April 7, distributed weaponized RAT." },
+  { cat: "Cybersecurity", title: "Vulnerability exploits overtake phishing", desc: "Cisco Talos: 40% of Q4 2025 intrusions came from exploited flaws, now #1 initial access method." },
+
+  { cat: "Startups", title: "Q1 2026: $300B global venture funding", desc: "All-time record, up 150% QoQ. AI = 80% of total ($242B)." },
+  { cat: "Startups", title: "Mega rounds: OpenAI $122B, Anthropic $30B", desc: "xAI $20B, Waymo $16B. Four of the five largest VC rounds ever closed in Q1." },
+  { cat: "Startups", title: "OpenAI valued at $852B post-money", desc: "Anthropic at $380B after Series G. D.E. Shaw and MGX co-led both financings." },
+  { cat: "Startups", title: "Eclipse raises $1.3B", desc: "Cerebras backer raises for robotics and AI infrastructure." },
+  { cat: "Startups", title: "10+ companies raised $1B+ rounds in Q1", desc: "Beyond the big 3 — chips, data centers, robotics, defense, autonomous vehicles, prediction markets." },
+
+  { cat: "Research", title: "100x AI energy reduction (Tufts)", desc: "Combining neural nets with symbolic reasoning slashes energy use and boosts accuracy." },
+  { cat: "Research", title: "Google TurboQuant at ICLR 2026", desc: "PolarQuant + Quantized Johnson-Lindenstrauss dramatically reduces KV cache memory overhead." },
+  { cat: "Research", title: "MIT AI uncovers atomic defects", desc: "Model improves heat transfer and energy conversion for semiconductors and renewables." },
+  { cat: "Research", title: "Physics-informed ML (Hawai'i)", desc: "Algorithm makes AI obey physics laws for fluid dynamics and climate modeling." },
+  { cat: "Research", title: "Neuromorphic computers solve physics equations", desc: "Brain-inspired processors now handling complex physics simulations." },
+
+  { cat: "Top Tweets", title: "@Light_2610 — 102K likes", desc: "ChatGPT nostalgia: 'Tweeted this 2 months after ChatGPT came out — one of the last to experience that euphoria.'" },
+  { cat: "Top Tweets", title: "BTS Yoongi 'walking GPT' — 38K likes", desc: "@syubjim post about Namjoon calling Yoongi 'walking GPT' went viral." },
+  { cat: "Top Tweets", title: "MIT 'ChatGPT delusional spiraling' — 36K likes", desc: "@heynavtoor surfaces MIT research; Spanish version by @tendenciaytuits hit 33K." },
+  { cat: "Top Tweets", title: "@karpathy on LLM knowledge bases with Obsidian", desc: "18K likes. Practical take on personal knowledge + LLMs." },
+  { cat: "Top Tweets", title: "Claude Computer Use on Windows", desc: "@claudeai, 7.7K likes. OpenCode (Claude Code fork for any LLM) also trending." },
+
+  { cat: "Viral / Reddit", title: "Reddit kills r/all", desc: "Long-standing unfiltered discovery feed officially deprecated April 2, moved to algorithmic personalization." },
+  { cat: "Viral / Reddit", title: "AI-generated Maduro arrest images", desc: "Highly realistic fakes went viral, sparked widespread confusion across platforms." },
+  { cat: "Viral / Reddit", title: "April Fools AI meme wave", desc: "Fake 'system messages' pretending AI took over phones, laptops, fridges — dominated X, IG, Reddit." },
+  { cat: "Viral / Reddit", title: "'AI employees' discourse", desc: "Dominated LinkedIn throughout early April." }
+];
+
+const STORAGE_KEY = "treasurehunt-picks-2026-04-12";
+const state = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
+
+function render() {
+  const feed = document.getElementById("feed");
+  feed.innerHTML = "";
+  let currentCat = "";
+  ITEMS.forEach((item, i) => {
+    if (item.cat !== currentCat) {
+      currentCat = item.cat;
+      const h = document.createElement("div");
+      h.className = "category";
+      h.textContent = currentCat;
+      feed.appendChild(h);
+    }
+    const verdict = state[i] || "";
+    const card = document.createElement("div");
+    card.className = "card " + (verdict || "");
+    card.innerHTML = `
+      <div class="card-title">${item.title}</div>
+      <div class="card-desc">${item.desc}</div>
+      <div class="actions">
+        <button class="like ${verdict === "liked" ? "active" : ""}" onclick="vote(${i}, 'liked')">Like</button>
+        <button class="dislike ${verdict === "disliked" ? "active" : ""}" onclick="vote(${i}, 'disliked')">Dislike</button>
+        <button class="skip ${verdict === "skipped" ? "active" : ""}" onclick="vote(${i}, 'skipped')">Skip</button>
+      </div>
+    `;
+    feed.appendChild(card);
+  });
+  updateStats();
+}
+
+function vote(i, verdict) {
+  if (state[i] === verdict) delete state[i];
+  else state[i] = verdict;
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  render();
+}
+
+function updateStats() {
+  const counts = { liked: 0, disliked: 0, skipped: 0 };
+  Object.values(state).forEach(v => counts[v] !== undefined && counts[v]++);
+  document.getElementById("stat-like").textContent = counts.liked;
+  document.getElementById("stat-dislike").textContent = counts.disliked;
+  document.getElementById("stat-skip").textContent = counts.skipped;
+  document.getElementById("stat-none").textContent = ITEMS.length - counts.liked - counts.disliked - counts.skipped;
+}
+
+function exportText() {
+  const sections = { liked: [], disliked: [], skipped: [] };
+  ITEMS.forEach((item, i) => {
+    const v = state[i];
+    if (v) sections[v].push(`[${item.cat}] ${item.title}`);
+  });
+  let out = "";
+  if (sections.liked.length)    out += "LIKED\n"    + sections.liked.map(s => "  + " + s).join("\n") + "\n\n";
+  if (sections.disliked.length) out += "DISLIKED\n" + sections.disliked.map(s => "  - " + s).join("\n") + "\n\n";
+  if (sections.skipped.length)  out += "SKIPPED\n"  + sections.skipped.map(s => "  ~ " + s).join("\n") + "\n\n";
+  return out || "No picks yet.";
+}
+
+function showExport() {
+  const el = document.getElementById("export");
+  el.textContent = exportText();
+  el.classList.toggle("visible");
+}
+
+function copyExport() {
+  const liked = ITEMS
+    .map((item, i) => state[i] === "liked" ? `[${item.cat}] ${item.title} — ${item.desc}` : null)
+    .filter(Boolean)
+    .join("\n");
+  navigator.clipboard.writeText(liked || "(no liked items)");
+  alert("Liked items copied to clipboard!");
+}
+
+function resetAll() {
+  if (!confirm("Clear all picks?")) return;
+  Object.keys(state).forEach(k => delete state[k]);
+  localStorage.removeItem(STORAGE_KEY);
+  render();
+}
+
+render();
+</script>
+</body>
+</html>
