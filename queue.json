@@ -41,20 +41,6 @@
     "source": "Time"
   },
   {
-    "id": "ai-energy-100x",
-    "category": "Research",
-    "title": "Tufts: AI method cuts energy use 100× while boosting accuracy",
-    "summary": "Researchers combined neural networks with human-like symbolic reasoning in a hybrid that slashes compute requirements by two orders of magnitude and improves accuracy. Could reshape what on-device AI is capable of.",
-    "tags": [
-      "Research",
-      "Efficiency",
-      "Neurosymbolic",
-      "Sustainability"
-    ],
-    "url": "https://www.sciencedaily.com/releases/2026/04/260405003952.htm",
-    "source": "ScienceDaily"
-  },
-  {
     "id": "meta-muse-spark",
     "category": "AI",
     "title": "Meta debuts Muse Spark — first major model since the $14B Scale deal",
