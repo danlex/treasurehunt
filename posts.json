@@ -1,5 +1,19 @@
 [
   {
+    "id": "ai-quantum-breakthrough",
+    "category": "Quantum",
+    "title": "AI just sparked a quantum breakthrough — 'the world is not ready'",
+    "summary": "Time reports an AI-driven quantum advance that materially shortens the timeline to useful quantum computing. The discovery has immediate implications for cryptography, materials science and drug discovery.",
+    "tags": [
+      "Quantum",
+      "AI for Science",
+      "Time"
+    ],
+    "url": "https://time.com/article/2026/04/07/ai-quantum-computing-advance/",
+    "source": "Time",
+    "publishedAt": "2026-04-12T18:35:16.173Z"
+  },
+  {
     "id": "exploits-overtake-phishing",
     "category": "Cybersecurity",
     "title": "Vulnerability exploits overtake phishing as #1 initial access method",

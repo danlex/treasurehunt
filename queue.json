@@ -28,19 +28,6 @@
     "source": "LLM Stats"
   },
   {
-    "id": "ai-quantum-breakthrough",
-    "category": "Quantum",
-    "title": "AI just sparked a quantum breakthrough — 'the world is not ready'",
-    "summary": "Time reports an AI-driven quantum advance that materially shortens the timeline to useful quantum computing. The discovery has immediate implications for cryptography, materials science and drug discovery.",
-    "tags": [
-      "Quantum",
-      "AI for Science",
-      "Time"
-    ],
-    "url": "https://time.com/article/2026/04/07/ai-quantum-computing-advance/",
-    "source": "Time"
-  },
-  {
     "id": "meta-muse-spark",
     "category": "AI",
     "title": "Meta debuts Muse Spark — first major model since the $14B Scale deal",
@@ -52,35 +39,6 @@
     ],
     "url": "https://www.cnbc.com/2026/04/08/meta-debuts-first-major-ai-model-since-14-billion-deal-to-bring-in-alexandr-wang.html",
     "source": "CNBC"
-  },
-  {
-    "id": "mega-rounds",
-    "category": "Startups",
-    "title": "Four of the five largest VC rounds in history closed this quarter",
-    "summary": "OpenAI ($122B), Anthropic ($30B), xAI ($20B) and Waymo ($16B) collectively raised $188B — 65% of all global venture investment in Q1. D.E. Shaw and MGX co-led OpenAI and Anthropic, a combined $150B+ commitment.",
-    "tags": [
-      "Funding",
-      "OpenAI",
-      "Anthropic",
-      "xAI",
-      "Waymo"
-    ],
-    "url": "https://news.crunchbase.com/venture/foundational-ai-startup-funding-doubled-openai-anthropic-xai-q1-2026/",
-    "source": "Crunchbase News"
-  },
-  {
-    "id": "chrome-zero-day-4",
-    "category": "Cybersecurity",
-    "title": "Google patches 4th actively-exploited Chrome zero-day of 2026",
-    "summary": "An out-of-band Chrome 146 release fixes CVE-2026-5281 — already being exploited in the wild. Update immediately: it's the fourth Chrome zero-day patched in just over three months.",
-    "tags": [
-      "Zero-Day",
-      "Chrome",
-      "CVE-2026-5281",
-      "Patch"
-    ],
-    "url": "https://thehackernews.com/",
-    "source": "The Hacker News"
   },
   {
     "id": "ms-quantum-error-detect",
