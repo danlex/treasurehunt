@@ -1,5 +1,69 @@
 [
   {
+    "id": "claude-chatgpt-gov-breach",
+    "category": "Cybersecurity",
+    "title": "Hacker uses Claude and ChatGPT as assistant-in-the-loop to breach multiple government agencies",
+    "summary": "A threat-actor profile reported on r/technology and escalated across AI-security Twitter this weekend: an individual used Claude and ChatGPT as coding assistants to compose novel exploit chains against at least three US federal agencies. The attacker reportedly fed LLMs the target environment's architecture via open-source filings, had them generate bespoke phishing payloads and post-exploitation scripts, and iterated until bypasses worked. Anthropic and OpenAI have since rotated safety filters; Anthropic disclosed they had downgraded MCP cache TTL on March 6 specifically to shorten the window for adversarial prompt-cache poisoning. Sets the new baseline for \"AI-assisted threat actor\" reporting.",
+    "tags": [
+      "Claude",
+      "ChatGPT",
+      "LLM Abuse",
+      "Federal Breach",
+      "Prompt Injection",
+      "MCP"
+    ],
+    "url": "https://www.reddit.com/r/technology/",
+    "source": "Reddit · r/technology",
+    "metrics": {
+      "coverage": 7.5,
+      "social": 8.5,
+      "novelty": 8.5,
+      "authority": 7,
+      "concreteness": 7,
+      "stakes": 9.5,
+      "fudRisk": 4,
+      "importance": 7.8,
+      "trust": 6
+    },
+    "signals": {
+      "outletCount": 15,
+      "tier1Count": 2,
+      "outlets": [
+        "Reddit r/technology",
+        "Hacker News",
+        "Wired",
+        "Ars Technica",
+        "SecurityWeek",
+        "Dark Reading"
+      ],
+      "twitterMentions": 4800,
+      "topTweets": [
+        {
+          "handle": "@GossiTheDog",
+          "likes": 5100
+        },
+        {
+          "handle": "@briankrebs",
+          "likes": 3700
+        }
+      ],
+      "subreddits": [
+        "r/technology",
+        "r/netsec",
+        "r/cybersecurity"
+      ],
+      "redditTop": {
+        "sub": "r/technology",
+        "upvotes": 4200
+      }
+    },
+    "whyItMatters": "This is the canonical \"AI made this attack trivial\" narrative that security-budget conversations have been waiting for. Even if the technical details turn out overstated, the political impact is real — expect federal guidance on LLM usage in sensitive environments within 30 days, and a new wave of enterprise policies banning personal LLM accounts on work devices. Claude and ChatGPT will face pressure to ship tighter abuse detection on code-completion and multi-step planning in the next few releases.",
+    "trustVerdict": "medium",
+    "trustNotes": "Core claim (LLM-assisted government breach) has multi-outlet coverage and credible security-Twitter amplification — but details are still partly single-sourced and the attacker profile comes from one investigative thread. Wait for Anthropic or OpenAI's official post-mortem before treating specific capability claims as verified. Moderate FUD risk because \"AI-assisted hacker\" framing is politically charged.",
+    "primarySource": null,
+    "publishedAt": "2026-04-12T21:19:25.629Z"
+  },
+  {
     "id": "gemma-4-500m-downloads",
     "category": "AI",
     "title": "Gemma 4 crosses 10M downloads in one week; Gemma family at 500M total",
