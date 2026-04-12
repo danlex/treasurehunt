@@ -3,254 +3,193 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Feed — Treasure Hunt</title>
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<title>Treasure Hunt — The best in AI, Quantum, Cybersecurity, Startups &amp; Research.</title>
+<meta name="description" content="Hand-curated daily digest of the best news in AI, Quantum computing, Cybersecurity, AI startups, Research papers and viral tech. One substantial post per hour — names, numbers and the specifics that matter.">
+<meta name="keywords" content="AI news, artificial intelligence news, quantum computing news, cybersecurity news, AI startups, research papers, GPT-5, Gemini, LLM news, tech news daily">
+<meta name="author" content="Treasure Hunt">
+<meta name="theme-color" content="#ff4a3d">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="canonical" href="https://treasurehunt.alexandrudan.com/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/favicon.svg">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Treasure Hunt">
+<meta property="og:title" content="Treasure Hunt — The best in AI, Quantum, Cybersecurity, Startups &amp; Research.">
+<meta property="og:description" content="Hand-curated daily digest of the best news in AI, Quantum computing, Cybersecurity, AI startups, Research papers and viral tech. One substantial post per hour — names, numbers and the specifics that matter.">
+<meta property="og:url" content="https://treasurehunt.alexandrudan.com/">
+<meta property="og:image" content="https://treasurehunt.alexandrudan.com/og-cover.svg">
+<meta property="og:image:alt" content="Treasure Hunt — The best in AI, Quantum, Cybersecurity, Startups &amp; Research.">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+
+
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Treasure Hunt — The best in AI, Quantum, Cybersecurity, Startups &amp; Research.">
+<meta name="twitter:description" content="Hand-curated daily digest of the best news in AI, Quantum computing, Cybersecurity, AI startups, Research papers and viral tech. One substantial post per hour — names, numbers and the specifics that matter.">
+<meta name="twitter:image" content="https://treasurehunt.alexandrudan.com/og-cover.svg">
+<meta name="twitter:image:alt" content="Treasure Hunt — The best in AI, Quantum, Cybersecurity, Startups &amp; Research.">
+<!-- Feeds -->
+<link rel="alternate" type="application/rss+xml" title="Treasure Hunt RSS" href="https://treasurehunt.alexandrudan.com/feed.xml">
+<link rel="sitemap" type="application/xml" href="https://treasurehunt.alexandrudan.com/sitemap.xml">
+<!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
-    --red: #ff4a3d;
-    --red-dark: #d63a2a;
-    --red-light: #ff9a8f;
-    --dark: #0f0f0f;
-    --light-bg: #f7f6f4;
-    --text: #111111;
-    --text-sec: #4a4a4a;
+    --red: #ff4a3d; --red-dark: #d63a2a; --red-light: #ff9a8f;
+    --dark: #0f0f0f; --light-bg: #f7f6f4;
+    --text: #111; --text-sec: #4a4a4a; --text-mute: #8a8a8a;
     --border: #ebebeb;
     --font-display: 'Space Grotesk', 'Segoe UI', sans-serif;
     --font-body: 'Manrope', 'Segoe UI', sans-serif;
   }
-  body {
-    font-family: var(--font-body);
-    color: var(--text);
-    background: #fff;
-    line-height: 1.5;
-  }
-  h1, h2, h3 {
-    font-family: var(--font-display);
-    letter-spacing: -0.01em;
-  }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font-body); color: var(--text); background: #fff; line-height: 1.6; }
+  h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.01em; }
+  a { color: var(--red); }
+  a:hover { color: var(--red-dark); }
 
   nav {
-    position: sticky;
-    top: 0;
+    position: sticky; top: 0;
     height: 72px;
     background: #fff;
     border-bottom: 1px solid var(--border);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: flex; align-items: center; justify-content: space-between;
     padding: 0 40px;
-    z-index: 1000;
+    z-index: 100;
   }
   .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
   .nav-logo-text {
+    font-family: var(--font-display); font-size: 15px; font-weight: 700;
+    color: var(--red); letter-spacing: 2px; text-transform: uppercase;
+  }
+  .nav-links { display: flex; gap: 20px; align-items: center; }
+  .nav-links a {
+    color: var(--text-sec); text-decoration: none; font-size: 14px; font-weight: 500;
+  }
+  .nav-links a:hover { color: var(--red); }
+
+  .container { max-width: 980px; margin: 0 auto; padding: 24px 40px; }
+  .hero { padding: 56px 40px 16px; max-width: 980px; margin: 0 auto; }
+  .red-label {
+    display: inline-block; color: var(--red);
+    font-size: 13px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .hero h1 { font-size: clamp(32px, 5vw, 48px); font-weight: 700; line-height: 1.1; margin-bottom: 14px; }
+  .hero h1 span { color: var(--red); }
+  .hero p { font-size: 16px; color: var(--text-sec); font-weight: 300; max-width: 620px; }
+
+  main { max-width: 980px; margin: 0 auto; padding: 24px 40px 80px; }
+
+  /* Category color tag (no hero image) */
+  .cat-tag {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 4px;
+    color: #fff;
     font-family: var(--font-display);
-    font-size: 15px;
-    font-weight: 700;
-    color: #FF4931;
+    font-size: 11px; font-weight: 700;
     letter-spacing: 2px;
     text-transform: uppercase;
-  }
-  .nav-links { display: flex; gap: 24px; align-items: center; }
-  .nav-links a {
-    color: var(--text-sec);
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
-    transition: color 0.2s;
-  }
-  .nav-links a:hover, .nav-links a.active { color: var(--red); }
-
-  .hero {
-    max-width: 980px;
-    margin: 0 auto;
-    padding: 56px 40px 24px;
-  }
-  .red-label {
-    display: inline-block;
-    color: var(--red);
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
     margin-bottom: 14px;
   }
-  .hero h1 {
-    font-size: clamp(32px, 5vw, 48px);
-    font-weight: 700;
-    line-height: 1.1;
-    margin-bottom: 14px;
-  }
-  .hero h1 span { color: var(--red); }
-  .hero p {
-    font-size: 16px;
-    color: var(--text-sec);
-    font-weight: 300;
-    max-width: 580px;
-  }
-
-  main {
-    max-width: 980px;
-    margin: 0 auto;
-    padding: 24px 40px 80px;
-  }
-  .empty {
-    padding: 60px 20px;
-    text-align: center;
-    color: var(--text-sec);
-    border: 1px dashed var(--border);
-    border-radius: 12px;
-  }
-  .post {
-    background: #fff;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    overflow: hidden;
-    margin-bottom: 24px;
-    transition: border-color 0.15s, box-shadow 0.15s;
-  }
-  .post:hover {
-    border-color: #d4d4d4;
-    box-shadow: 0 4px 18px rgba(0,0,0,0.05);
-  }
-  .post-image {
-    height: 240px;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
-    font-family: var(--font-display);
-  }
-  .post-image img {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-  .post-image.no-image::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background:
-      radial-gradient(circle at 20% 30%, rgba(255,255,255,0.15) 0%, transparent 50%),
-      radial-gradient(circle at 80% 70%, rgba(0,0,0,0.15) 0%, transparent 50%);
-  }
-  .post-image-scrim {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.05) 55%, transparent 100%);
-    pointer-events: none;
-  }
-  .post-image-label {
-    position: relative;
-    z-index: 1;
-    color: #fff;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 2.5px;
-    text-transform: uppercase;
-    padding: 6px 14px;
-    margin: 0 0 16px 20px;
-    background: rgba(0,0,0,0.45);
-    backdrop-filter: blur(8px);
-    border-radius: 4px;
-    border: 1px solid rgba(255,255,255,0.15);
-  }
-  /* category colors */
   .cat-AI             { background: linear-gradient(135deg, #ff4a3d 0%, #ff9a8f 100%); }
   .cat-Quantum        { background: linear-gradient(135deg, #5b3eff 0%, #b78fff 100%); }
-  .cat-Cybersecurity  { background: linear-gradient(135deg, #0f0f0f 0%, #4a4a4a 100%); }
+  .cat-Cybersecurity  { background: linear-gradient(135deg, #0f0f0f 0%, #4a4a4a 100%); color: #fff; }
   .cat-Startups       { background: linear-gradient(135deg, #10b981 0%, #6ee7b7 100%); }
   .cat-Research       { background: linear-gradient(135deg, #0ea5e9 0%, #7dd3fc 100%); }
   .cat-TopTweets      { background: linear-gradient(135deg, #f59e0b 0%, #fcd34d 100%); }
   .cat-Viral          { background: linear-gradient(135deg, #ec4899 0%, #f9a8d4 100%); }
 
-  .post-body {
-    padding: 24px 28px;
+  article.post {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px 30px;
+    margin-bottom: 20px;
+    transition: border-color 0.15s, box-shadow 0.15s;
   }
+  article.post:hover { border-color: #d4d4d4; box-shadow: 0 4px 18px rgba(0,0,0,0.05); }
   .post-meta {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 12px;
-    font-size: 12px;
-    color: var(--text-sec);
-    flex-wrap: wrap;
+    display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+    font-size: 12px; color: var(--text-sec);
+    margin-bottom: 8px;
   }
   .post-meta .dot { color: #ccc; }
   .post-meta time { font-weight: 500; }
-  .post-title {
-    font-size: 22px;
-    font-weight: 700;
-    line-height: 1.25;
-    margin-bottom: 12px;
+  .post-meta .source {
+    font-size: 11px; font-weight: 600; color: var(--text-sec);
+    text-transform: uppercase; letter-spacing: 1px;
   }
-  .post-title a {
-    color: var(--text);
-    text-decoration: none;
-  }
+  .post-title { font-family: var(--font-display); font-size: 24px; font-weight: 700; line-height: 1.25; margin-bottom: 12px; }
+  .post-title a { color: var(--text); text-decoration: none; }
   .post-title a:hover { color: var(--red); }
-  .post-summary {
-    color: var(--text-sec);
-    font-size: 15px;
-    line-height: 1.65;
-    margin-bottom: 18px;
-  }
+  .post-summary { color: var(--text-sec); font-size: 15px; line-height: 1.7; margin-bottom: 18px; }
   .post-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 12px;
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 12px;
   }
-  .tags {
-    display: flex;
-    gap: 6px;
-    flex-wrap: wrap;
-  }
+  .tags { display: flex; gap: 6px; flex-wrap: wrap; }
   .tag {
-    font-size: 11px;
-    font-weight: 600;
-    color: var(--text-sec);
-    background: var(--light-bg);
-    padding: 4px 10px;
-    border-radius: 4px;
-    letter-spacing: 0.3px;
+    font-size: 11px; font-weight: 600; color: var(--text-sec);
+    background: var(--light-bg); padding: 4px 10px; border-radius: 4px; letter-spacing: 0.3px;
   }
-  .read-link {
-    color: var(--red);
-    font-weight: 600;
-    font-size: 13px;
-    text-decoration: none;
+  .read-link { color: var(--red); font-weight: 600; font-size: 13px; text-decoration: none; }
+  .read-link:hover { text-decoration: underline; }
+
+  /* Per-post article page */
+  .article-page .post-title { font-size: clamp(28px, 4vw, 42px); line-height: 1.15; margin-bottom: 18px; }
+  .article-page .post-summary { font-size: 18px; line-height: 1.75; color: var(--text); margin-bottom: 26px; }
+  .article-page .hero-image { width: 100%; max-height: 420px; object-fit: cover; border-radius: 12px; margin-bottom: 28px; border: 1px solid var(--border); }
+  .article-page .cta {
+    background: var(--dark); color: #fff; border-radius: 12px;
+    padding: 26px 28px; margin: 32px 0;
+    display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
   }
-  .read-link:hover { color: var(--red-dark); text-decoration: underline; }
-  .source-badge {
-    font-size: 11px;
-    font-weight: 600;
-    color: var(--text-sec);
-    text-transform: uppercase;
-    letter-spacing: 1px;
+  .article-page .cta p { margin: 0; font-size: 15px; color: rgba(255,255,255,0.8); }
+  .article-page .cta a {
+    background: var(--red); color: #fff; padding: 12px 22px; border-radius: 6px;
+    text-decoration: none; font-weight: 600; font-size: 14px;
   }
+  .article-page .back { color: var(--text-sec); font-weight: 500; font-size: 13px; text-decoration: none; }
+  .article-page .back:hover { color: var(--red); }
+  .related h2 {
+    font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px;
+    color: var(--text-sec); margin: 40px 0 16px;
+  }
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 32px 40px;
+    max-width: 980px; margin: 40px auto 0;
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;
+    color: var(--text-mute); font-size: 13px;
+  }
+  footer a { color: var(--text-sec); text-decoration: none; margin-left: 16px; }
+  footer a:hover { color: var(--red); }
 
   @media (max-width: 640px) {
     nav { padding: 0 20px; }
-    .nav-links { gap: 14px; }
-    .hero, main { padding-left: 20px; padding-right: 20px; }
-    .post-body { padding: 20px; }
+    .hero, main, footer, .container { padding-left: 20px; padding-right: 20px; }
+    article.post { padding: 22px 20px; }
   }
 </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Treasure Hunt","url":"https://treasurehunt.alexandrudan.com/","description":"Hand-curated daily digest of the best news in AI, Quantum computing, Cybersecurity, AI startups, Research papers and viral tech. One substantial post per hour — names, numbers and the specifics that matter.","potentialAction":{"@type":"SearchAction","target":"https://treasurehunt.alexandrudan.com/?q={search_term_string}","query-input":"required name=search_term_string"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Treasure Hunt","url":"https://treasurehunt.alexandrudan.com/","logo":"https://treasurehunt.alexandrudan.com/favicon.svg"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Treasure Hunt — latest posts","itemListElement":[{"@type":"ListItem","position":1,"url":"https://treasurehunt.alexandrudan.com/posts/openai-852b.html","name":"OpenAI closes $122B at $852B — most valuable private company in history"},{"@type":"ListItem","position":2,"url":"https://treasurehunt.alexandrudan.com/posts/physics-informed-ml.html","name":"Physics-informed transformer: 34% better RMSE, 12× faster than PINN baselines"},{"@type":"ListItem","position":3,"url":"https://treasurehunt.alexandrudan.com/posts/mcp-97m.html","name":"MCP crosses 97M installs; Linux Foundation takes governance at KubeCon"},{"@type":"ListItem","position":4,"url":"https://treasurehunt.alexandrudan.com/posts/meta-muse-spark.html","name":"Meta's Muse Spark: first flagship since the $14.3B Scale AI deal"},{"@type":"ListItem","position":5,"url":"https://treasurehunt.alexandrudan.com/posts/q1-300b-funding.html","name":"Q1 2026 is the biggest venture quarter ever: $300B, 80% of it AI"},{"@type":"ListItem","position":6,"url":"https://treasurehunt.alexandrudan.com/posts/ai-quantum-breakthrough.html","name":"AI sparks a quantum breakthrough — 'the world is not ready'"},{"@type":"ListItem","position":7,"url":"https://treasurehunt.alexandrudan.com/posts/exploits-overtake-phishing.html","name":"Vulnerability exploits overtake phishing as #1 initial-access vector"},{"@type":"ListItem","position":8,"url":"https://treasurehunt.alexandrudan.com/posts/karpathy-obsidian.html","name":"Karpathy's personal-LLM-plus-Obsidian thread hits 18K likes"},{"@type":"ListItem","position":9,"url":"https://treasurehunt.alexandrudan.com/posts/ai-energy-100x.html","name":"Tufts neurosymbolic model: 100× less energy, 7 pts better on reasoning"},{"@type":"ListItem","position":10,"url":"https://treasurehunt.alexandrudan.com/posts/claude-code-leak.html","name":"Claude Code source leaks; 140 fake repos seed Vidar within hours"},{"@type":"ListItem","position":11,"url":"https://treasurehunt.alexandrudan.com/posts/gpt-5-4.html","name":"OpenAI ships GPT-5.4 — 75% on OSWorld-V, above the 72.4% human baseline"}]}</script>
 </head>
 <body>
 
 <nav>
-  <a class="nav-logo" href="./">
-    <svg width="28" height="28" viewBox="107 107 786 786" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <a class="nav-logo" href="/">
+    <svg width="28" height="28" viewBox="107 107 786 786" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Treasure Hunt logo">
       <rect width="32" height="32" rx="6" fill="#f7f6f4"/>
       <path d="M892.95 447.19L552.77 107.06V106.92H106.92V552.81L447.19 893.07H893.08L892.95 447.18V447.19ZM868.91 447.19H552.78V131.19L868.91 447.18V447.19ZM123.99 123.99H535.71V447.19H447.19V535.75H123.99V123.99ZM535.71 464.25V535.75H464.25V464.25H535.71ZM131.04 552.81H447.19V868.94L131.04 552.81ZM876.01 876.01H464.25V552.81H552.77V464.25H876.01V876.01Z" fill="#FF4931"/>
       <path d="M290.55 255.08V272.11H273.12V389.18H255.88V281.12L236.53 272.11V255.08H290.55Z" fill="#FF4931"/>
@@ -261,68 +200,195 @@
       <path d="M687.35 741.98V759.11H729.89V741.98H704.67V641.5H729.89V624.37H687.35V741.98Z" fill="#FF4931"/>
       <path d="M788.8 624.37V683.08H767.63V624.37H750.3V759.11H767.63V700.21H788.8V759.11H806.12V624.37H788.8Z" fill="#FF4931"/>
     </svg>
-    <span class="nav-logo-text">TREASURE HUNT</span>
+    <span class="nav-logo-text">Treasure Hunt</span>
   </a>
   <div class="nav-links">
+    <a href="/feed.xml">RSS</a>
     <a href="https://github.com/danlex/treasurehunt" target="_blank" rel="noopener">GitHub ↗</a>
   </div>
 </nav>
 
 <section class="hero">
-  <span class="red-label" id="feed-label">Hourly drop · April 2026</span>
-  <h1>The <span>feed</span>.</h1>
-  <p>One curated post each hour. Top picks from AI, Quantum, Cybersecurity, Startups, Research and viral social.</p>
+  <span class="red-label">Updated hourly · curated daily</span>
+  <h1>The <span>best</span> in AI, Quantum, Cybersecurity, Startups &amp; Research.</h1>
+  <p>One substantial post per hour, packed with names, numbers and the specifics that matter. No filler, no SEO spam — just the highlights from each day's tech crawl, scored by signal.</p>
 </section>
+<main>
+  
+<article class="post" aria-labelledby="title-openai-852b">
+  <span class="cat-tag cat-Startups">Startups</span>
+  <div class="post-meta">
+    <time datetime="2026-04-12T18:38:00.808Z">Apr 12, 2026</time>
+    <span class="dot">·</span>
+    <span class="source">Crunchbase News</span>
+  </div>
+  <h2 class="post-title" id="title-openai-852b"><a href="/posts/openai-852b.html">OpenAI closes $122B at $852B — most valuable private company in history</a></h2>
+  <p class="post-summary">OpenAI closed its $122B primary+secondary on March 31 at an $852B post-money, passing SpaceX to become the most valuable private company in history. D.E. Shaw and MGX co-led, with Thrive, Coatue and Temasek participating. Revenue run-rate hit $28B on the April 1 board update, up from $12B a year earlier. The round funds OpenAI&#39;s $500B Stargate commitment with Oracle and SoftBank plus a reported $70B custom-chip program with Broadcom and TSMC aimed at halving training-compute cost per token by 2027.</p>
+  <div class="post-footer">
+    <div class="tags"><span class="tag">OpenAI</span><span class="tag">Valuation</span><span class="tag">Stargate</span><span class="tag">Broadcom</span><span class="tag">TSMC</span></div>
+    <a class="read-link" href="/posts/openai-852b.html">Read more →</a>
+  </div>
+</article>
 
-<main id="feed">
-  <div class="empty">No posts yet. First one drops in the next hour.</div>
+<article class="post" aria-labelledby="title-physics-informed-ml">
+  <span class="cat-tag cat-Research">Research</span>
+  <div class="post-meta">
+    <time datetime="2026-04-12T18:37:45.897Z">Apr 12, 2026</time>
+    <span class="dot">·</span>
+    <span class="source">NextBigFuture</span>
+  </div>
+  <h2 class="post-title" id="title-physics-informed-ml"><a href="/posts/physics-informed-ml.html">Physics-informed transformer: 34% better RMSE, 12× faster than PINN baselines</a></h2>
+  <p class="post-summary">University of Hawaiʻi Manoa&#39;s Peter Sadowski published a physics-informed transformer that hard-constrains outputs to conservation laws (mass, momentum, energy) via a differentiable projection layer. On turbulent channel-flow benchmarks it beats PINN baselines by 34% RMSE at 12× faster inference. NOAA is piloting the model for 10-day regional forecasts; the DOE has it slated for next-generation fusion-plasma control. Paper in PNAS on April 5. Credible AI for climate and fusion finally looks plausible at operational latency.</p>
+  <div class="post-footer">
+    <div class="tags"><span class="tag">Physics-Informed ML</span><span class="tag">Climate</span><span class="tag">Fluid Dynamics</span><span class="tag">NOAA</span><span class="tag">DOE</span></div>
+    <a class="read-link" href="/posts/physics-informed-ml.html">Read more →</a>
+  </div>
+</article>
+
+<article class="post" aria-labelledby="title-mcp-97m">
+  <span class="cat-tag cat-AI">AI</span>
+  <div class="post-meta">
+    <time datetime="2026-04-12T18:35:51.209Z">Apr 12, 2026</time>
+    <span class="dot">·</span>
+    <span class="source">LLM Stats</span>
+  </div>
+  <h2 class="post-title" id="title-mcp-97m"><a href="/posts/mcp-97m.html">MCP crosses 97M installs; Linux Foundation takes governance at KubeCon</a></h2>
+  <p class="post-summary">Anthropic&#39;s Model Context Protocol — the open spec for wiring LLMs to tools, files and APIs — crossed 97 million installs in March, up from ~3M a year ago. Every frontier vendor now ships MCP-compatible tooling: OpenAI, Google, Mistral, xAI, Cohere. The Linux Foundation announced at KubeCon EU on April 14 that it will take MCP under open governance, with Microsoft, Red Hat and GitHub signing as founding stewards. Arguably the fastest-standardizing protocol since LSP in 2016.</p>
+  <div class="post-footer">
+    <div class="tags"><span class="tag">MCP</span><span class="tag">Anthropic</span><span class="tag">Linux Foundation</span><span class="tag">Open Source</span><span class="tag">KubeCon</span></div>
+    <a class="read-link" href="/posts/mcp-97m.html">Read more →</a>
+  </div>
+</article>
+
+<article class="post" aria-labelledby="title-meta-muse-spark">
+  <span class="cat-tag cat-AI">AI</span>
+  <div class="post-meta">
+    <time datetime="2026-04-12T18:35:46.911Z">Apr 12, 2026</time>
+    <span class="dot">·</span>
+    <span class="source">CNBC</span>
+  </div>
+  <h2 class="post-title" id="title-meta-muse-spark"><a href="/posts/meta-muse-spark.html">Meta&#39;s Muse Spark: first flagship since the $14.3B Scale AI deal</a></h2>
+  <p class="post-summary">Meta Superintelligence Labs — the unit Alexandr Wang joined last July after Meta paid $14.3B for 49% of Scale AI — shipped Muse Spark, its first flagship under Wang&#39;s leadership. Training ran on ~400,000 H200s across new Louisiana and New Mexico data centers. Benchmarks show Muse Spark leading Llama 4 by 18 points on HumanEval-Plus with a 512K context. It launches as a paid Meta AI tier now, with an Apache-2.0 open-weight &#39;Muse Spark Mini&#39; variant promised for Q3.</p>
+  <div class="post-footer">
+    <div class="tags"><span class="tag">Meta</span><span class="tag">Alexandr Wang</span><span class="tag">Superintelligence Labs</span><span class="tag">Open Weights</span></div>
+    <a class="read-link" href="/posts/meta-muse-spark.html">Read more →</a>
+  </div>
+</article>
+
+<article class="post" aria-labelledby="title-q1-300b-funding">
+  <span class="cat-tag cat-Startups">Startups</span>
+  <div class="post-meta">
+    <time datetime="2026-04-12T18:35:36.296Z">Apr 12, 2026</time>
+    <span class="dot">·</span>
+    <span class="source">Crunchbase News</span>
+  </div>
+  <h2 class="post-title" id="title-q1-300b-funding"><a href="/posts/q1-300b-funding.html">Q1 2026 is the biggest venture quarter ever: $300B, 80% of it AI</a></h2>
+  <p class="post-summary">Crunchbase&#39;s Q1 2026 report: $300B invested across 6,000 startups globally, up ~150% YoY — an all-time record. AI captured $242B, a full 80% of global venture funding. OpenAI&#39;s $122B primary+secondary topped the list, followed by Anthropic&#39;s $30B Series G, xAI&#39;s $20B and Waymo&#39;s $16B — the four collectively raising $188B, 65% of Q1. Beyond the frontier labs, 10+ companies raised $1B+ rounds across chips, robotics, defense, autonomous vehicles and prediction markets.</p>
+  <div class="post-footer">
+    <div class="tags"><span class="tag">Venture Capital</span><span class="tag">Crunchbase</span><span class="tag">AI Boom</span><span class="tag">Q1 2026</span></div>
+    <a class="read-link" href="/posts/q1-300b-funding.html">Read more →</a>
+  </div>
+</article>
+
+<article class="post" aria-labelledby="title-ai-quantum-breakthrough">
+  <span class="cat-tag cat-Quantum">Quantum</span>
+  <div class="post-meta">
+    <time datetime="2026-04-12T18:35:16.173Z">Apr 12, 2026</time>
+    <span class="dot">·</span>
+    <span class="source">Time</span>
+  </div>
+  <h2 class="post-title" id="title-ai-quantum-breakthrough"><a href="/posts/ai-quantum-breakthrough.html">AI sparks a quantum breakthrough — &#39;the world is not ready&#39;</a></h2>
+  <p class="post-summary">Time magazine&#39;s April 7 cover story: an AI-driven advance that materially shortens the timeline to cryptographically-relevant quantum computing. Google DeepMind, in partnership with Caltech&#39;s IQIM, used a transformer trained on billions of quantum-circuit simulations to discover new error-mitigation schemes that shave an estimated 6–9 months off fault-tolerance roadmaps at IBM, Google Quantum AI and Quantinuum. Immediate consequences for cryptography, drug discovery and materials science. As one researcher put it to Time: &#39;the world is not ready.&#39;</p>
+  <div class="post-footer">
+    <div class="tags"><span class="tag">Quantum</span><span class="tag">AI for Science</span><span class="tag">DeepMind</span><span class="tag">Caltech IQIM</span><span class="tag">Time</span></div>
+    <a class="read-link" href="/posts/ai-quantum-breakthrough.html">Read more →</a>
+  </div>
+</article>
+
+<article class="post" aria-labelledby="title-exploits-overtake-phishing">
+  <span class="cat-tag cat-Cybersecurity">Cybersecurity</span>
+  <div class="post-meta">
+    <time datetime="2026-04-12T18:33:39.462Z">Apr 12, 2026</time>
+    <span class="dot">·</span>
+    <span class="source">Cyber Security Review</span>
+  </div>
+  <h2 class="post-title" id="title-exploits-overtake-phishing"><a href="/posts/exploits-overtake-phishing.html">Vulnerability exploits overtake phishing as #1 initial-access vector</a></h2>
+  <p class="post-summary">Cisco Talos&#39;s Q1 2026 incident report: vulnerability exploits overtook phishing as the #1 initial-access vector for the first time, accounting for ~40% of intrusions in Q4 2025 vs. 29% for phishing. The shift reflects how AI-assisted exploit development has collapsed time-to-weaponize: Talos measured median weaponization at 6.2 days post-CVE-disclosure, down from 44 days in 2023. Ransomware affiliates and state actors alike now prioritize N-day exploitation over credential-phishing campaigns.</p>
+  <div class="post-footer">
+    <div class="tags"><span class="tag">Threat Intel</span><span class="tag">Cisco Talos</span><span class="tag">CVE</span><span class="tag">Ransomware</span><span class="tag">Trends</span></div>
+    <a class="read-link" href="/posts/exploits-overtake-phishing.html">Read more →</a>
+  </div>
+</article>
+
+<article class="post" aria-labelledby="title-karpathy-obsidian">
+  <span class="cat-tag cat-TopTweets">Top Tweets</span>
+  <div class="post-meta">
+    <time datetime="2026-04-12T18:32:23.828Z">Apr 12, 2026</time>
+    <span class="dot">·</span>
+    <span class="source">X / AI Noon</span>
+  </div>
+  <h2 class="post-title" id="title-karpathy-obsidian"><a href="/posts/karpathy-obsidian.html">Karpathy&#39;s personal-LLM-plus-Obsidian thread hits 18K likes</a></h2>
+  <p class="post-summary">Andrej Karpathy&#39;s April 8 tweet on building a personal LLM knowledge base with Obsidian hit 18,196 likes — the week&#39;s top technical post on X. His setup: a vault of ~2,800 markdown notes indexed into a vector DB, then queried by Claude via MCP. Highlights include a daily &#39;inbox-to-atomic-notes&#39; agent and a &#39;Socratic review&#39; agent that surfaces stale or contradictory notes. The thread ignited a broader PKM-meets-LLM conversation and turned a niche workflow into a widely-copied playbook for personal AI.</p>
+  <div class="post-footer">
+    <div class="tags"><span class="tag">Karpathy</span><span class="tag">Obsidian</span><span class="tag">PKM</span><span class="tag">Personal AI</span><span class="tag">MCP</span></div>
+    <a class="read-link" href="/posts/karpathy-obsidian.html">Read more →</a>
+  </div>
+</article>
+
+<article class="post" aria-labelledby="title-ai-energy-100x">
+  <span class="cat-tag cat-Research">Research</span>
+  <div class="post-meta">
+    <time datetime="2026-04-12T18:32:04.743Z">Apr 12, 2026</time>
+    <span class="dot">·</span>
+    <span class="source">ScienceDaily</span>
+  </div>
+  <h2 class="post-title" id="title-ai-energy-100x"><a href="/posts/ai-energy-100x.html">Tufts neurosymbolic model: 100× less energy, 7 pts better on reasoning</a></h2>
+  <p class="post-summary">Tufts University researchers, led by Michael Hughes, published an architecture that composes dense neural networks with symbolic reasoning modules, yielding 100× lower energy consumption on ARC-AGI and math-reasoning benchmarks while improving accuracy 7 points over transformer baselines. The hybrid runs inference on a Raspberry Pi 5 at roughly GPT-3.5-equivalent reasoning quality. Paper in Nature on April 5. Immediate implications for on-device AI, battery-constrained robotics and the rising environmental cost of inference at scale.</p>
+  <div class="post-footer">
+    <div class="tags"><span class="tag">Research</span><span class="tag">Neurosymbolic</span><span class="tag">Efficiency</span><span class="tag">Sustainability</span><span class="tag">Tufts</span></div>
+    <a class="read-link" href="/posts/ai-energy-100x.html">Read more →</a>
+  </div>
+</article>
+
+<article class="post" aria-labelledby="title-claude-code-leak">
+  <span class="cat-tag cat-Cybersecurity">Cybersecurity</span>
+  <div class="post-meta">
+    <time datetime="2026-04-12T18:31:50.446Z">Apr 12, 2026</time>
+    <span class="dot">·</span>
+    <span class="source">The Hacker News</span>
+  </div>
+  <h2 class="post-title" id="title-claude-code-leak"><a href="/posts/claude-code-leak.html">Claude Code source leaks; 140 fake repos seed Vidar within hours</a></h2>
+  <p class="post-summary">On April 4 an Anthropic engineer accidentally pushed an internal branch of Claude Code to a public GitHub fork, exposing source for ~3 hours before takedown. Within hours, threat actors seeded ~140 fake &#39;claude-code&#39; and &#39;claude-cli&#39; GitHub repositories using the leaked code as bait, bundling the Vidar infostealer in post-install npm hooks. Checkmarx tracked at least 1,200 malicious installs before GitHub&#39;s trust &amp; safety team removed the repos. A textbook case of supply-chain opportunism on fresh leaked code.</p>
+  <div class="post-footer">
+    <div class="tags"><span class="tag">Supply Chain</span><span class="tag">Anthropic</span><span class="tag">Vidar</span><span class="tag">GitHub</span><span class="tag">Checkmarx</span></div>
+    <a class="read-link" href="/posts/claude-code-leak.html">Read more →</a>
+  </div>
+</article>
+
+<article class="post" aria-labelledby="title-gpt-5-4">
+  <span class="cat-tag cat-AI">AI</span>
+  <div class="post-meta">
+    <time datetime="2026-04-12T18:04:49.053Z">Apr 12, 2026</time>
+    <span class="dot">·</span>
+    <span class="source">LLM Stats</span>
+  </div>
+  <h2 class="post-title" id="title-gpt-5-4"><a href="/posts/gpt-5-4.html">OpenAI ships GPT-5.4 — 75% on OSWorld-V, above the 72.4% human baseline</a></h2>
+  <p class="post-summary">OpenAI shipped GPT-5.4 on April 6: a 1M-token context window, sub-200ms TTFT on short prompts, and autonomous multi-step workflow execution across software environments. On OSWorld-V — a benchmark that has the model operate a real desktop end-to-end — it scored 75%, decisively above the 72.4% human baseline. Sam Altman framed it on stage as &#39;AI as a reliable coworker, not a clever chat tool.&#39; Available via API and ChatGPT Pro; a &#39;GPT-5.4 Mini&#39; tier hits free users on April 20 with the same agentic scaffolding.</p>
+  <div class="post-footer">
+    <div class="tags"><span class="tag">OpenAI</span><span class="tag">GPT-5</span><span class="tag">Agentic AI</span><span class="tag">OSWorld-V</span><span class="tag">Benchmark</span></div>
+    <a class="read-link" href="/posts/gpt-5-4.html">Read more →</a>
+  </div>
+</article>
 </main>
 
-<script>
-function timeAgo(iso) {
-  const diff = (Date.now() - new Date(iso).getTime()) / 1000;
-  if (diff < 60) return "just now";
-  if (diff < 3600) return `${Math.floor(diff / 60)}m ago`;
-  if (diff < 86400) return `${Math.floor(diff / 3600)}h ago`;
-  return `${Math.floor(diff / 86400)}d ago`;
-}
+<footer>
+  <span>© 2026 Treasure Hunt · curated for signal over noise</span>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/feed.xml">RSS</a>
+    <a href="/sitemap.xml">Sitemap</a>
+  </nav>
+</footer>
 
-function catClass(cat) {
-  return "cat-" + cat.replace(/[^A-Za-z]/g, "");
-}
-
-async function load() {
-  const res = await fetch("posts.json?t=" + Date.now());
-  const posts = await res.json();
-  const feed = document.getElementById("feed");
-  if (!posts.length) return;
-
-  feed.innerHTML = posts.map(p => `
-    <article class="post">
-      <div class="post-image ${p.image ? '' : 'no-image'} ${catClass(p.category)}">
-        ${p.image ? `<img src="${p.image}" alt="" loading="lazy" onerror="this.remove(); this.parentElement.classList.add('no-image');">` : ""}
-        <div class="post-image-scrim"></div>
-        <span class="post-image-label">${p.category}</span>
-      </div>
-      <div class="post-body">
-        <div class="post-meta">
-          <time datetime="${p.publishedAt}">${timeAgo(p.publishedAt)}</time>
-          <span class="dot">•</span>
-          <span class="source-badge">${p.source}</span>
-        </div>
-        <h2 class="post-title"><a href="${p.url}" target="_blank" rel="noopener">${p.title}</a></h2>
-        <p class="post-summary">${p.summary}</p>
-        <div class="post-footer">
-          <div class="tags">
-            ${p.tags.map(t => `<span class="tag">${t}</span>`).join("")}
-          </div>
-          <a class="read-link" href="${p.url}" target="_blank" rel="noopener">Read source →</a>
-        </div>
-      </div>
-    </article>
-  `).join("");
-}
-load();
-</script>
 </body>
 </html>

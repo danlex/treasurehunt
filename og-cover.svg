@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f0f"/>
+      <stop offset="100%" stop-color="#1a1a1a"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="20%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#ff4a3d" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ff4a3d" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <!-- TVL mark -->
+  <g transform="translate(80,80) scale(0.25)">
+    <path d="M892.95 447.19L552.77 107.06V106.92H106.92V552.81L447.19 893.07H893.08L892.95 447.18V447.19ZM868.91 447.19H552.78V131.19L868.91 447.18V447.19ZM123.99 123.99H535.71V447.19H447.19V535.75H123.99V123.99ZM535.71 464.25V535.75H464.25V464.25H535.71ZM131.04 552.81H447.19V868.94L131.04 552.81ZM876.01 876.01H464.25V552.81H552.77V464.25H876.01V876.01Z" fill="#FF4931"/>
+  </g>
+  <text x="300" y="130" font-family="'Space Grotesk', sans-serif" font-size="22" font-weight="700" letter-spacing="4" fill="#ff4a3d">TREASURE HUNT</text>
+  <text x="80" y="330" font-family="'Space Grotesk', sans-serif" font-size="68" font-weight="700" fill="#ffffff" letter-spacing="-1">The <tspan fill="#ff4a3d">best</tspan> in AI, Quantum,</text>
+  <text x="80" y="410" font-family="'Space Grotesk', sans-serif" font-size="68" font-weight="700" fill="#ffffff" letter-spacing="-1">Cybersecurity &amp; Research.</text>
+  <text x="80" y="490" font-family="'Manrope', sans-serif" font-size="28" font-weight="300" fill="#8a8a8a">One substantial post per hour. Names, numbers, specifics.</text>
+  <g transform="translate(80,550)">
+    <rect width="180" height="44" rx="6" fill="#ff4a3d"/>
+    <text x="90" y="29" text-anchor="middle" font-family="'Manrope', sans-serif" font-size="14" font-weight="600" fill="#fff" letter-spacing="1">READ THE FEED →</text>
+  </g>
+  <text x="1120" y="588" text-anchor="end" font-family="'Manrope', sans-serif" font-size="14" fill="#4a4a4a">treasurehunt.alexandrudan.com</text>
+</svg>

@@ -6,6 +6,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
 const ROOT  = __dirname;
 const QUEUE = path.join(ROOT, 'queue.json');
@@ -49,5 +50,8 @@ posts.unshift({ ...pick.item, publishedAt: new Date().toISOString(), score: Numb
 
 writeJson(QUEUE, rest);
 writeJson(POSTS, posts);
+
+// Regenerate the static site so index.html, per-post pages, sitemap and RSS stay in sync.
+execSync('node build.js', { cwd: ROOT, stdio: 'inherit' });
 
 console.log(`Published: ${pick.item.title} (score ${pick.score.toFixed(2)})`);

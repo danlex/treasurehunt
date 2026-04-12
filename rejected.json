@@ -1,1 +1,76 @@
-[]
+[
+  {
+    "id": "reddit-kills-rall",
+    "category": "Viral",
+    "title": "Reddit shuts down r/all; moves to algorithmic feed",
+    "summary": "The unfiltered discovery feed that built Reddit culture is gone — officially deprecated April 2 in favor of algorithmic personalization. The era of 'what the internet is talking about, raw' just ended on one of the last open platforms.",
+    "tags": [
+      "Reddit",
+      "Platforms",
+      "Algorithms"
+    ],
+    "url": "https://social9.com/news/reddit-shuts-down-rall-to-promote-algorithmic-personalization",
+    "source": "Social9",
+    "rejectedAt": "2026-04-12T18:37:57.776Z"
+  },
+  {
+    "id": "neutral-atom-quantum",
+    "category": "Quantum",
+    "title": "Neutral-atom quantum computing: 2026's big leap",
+    "summary": "IEEE Spectrum on why neutral-atom approaches — led by Atom Computing and partners — are emerging as the architecture to watch. Microsoft plans to deliver an error-corrected level-2 neutral-atom system to customers this year.",
+    "tags": [
+      "Quantum",
+      "Neutral Atom",
+      "Microsoft",
+      "Atom Computing"
+    ],
+    "url": "https://spectrum.ieee.org/neutral-atom-quantum-computing",
+    "source": "IEEE Spectrum",
+    "rejectedAt": "2026-04-12T18:37:55.243Z"
+  },
+  {
+    "id": "quantum-crypto-threat",
+    "category": "Quantum",
+    "title": "Google & Oratomic: encryption-breaking quantum may arrive sooner",
+    "summary": "New papers shorten timelines for cryptographically relevant quantum computers. Cloudflare responded by accelerating its post-quantum roadmap — full system-wide resilience now targeted for 2029.",
+    "tags": [
+      "Post-Quantum",
+      "Cryptography",
+      "Cloudflare"
+    ],
+    "url": "https://thequantuminsider.com/2026/04/07/sp-analysts-report-quantum-computing-arriving-just-as-energy-sector-prepares-for-a-compute-driven-future/",
+    "source": "The Quantum Insider",
+    "rejectedAt": "2026-04-12T18:37:42.038Z"
+  },
+  {
+    "id": "mega-rounds",
+    "category": "Startups",
+    "title": "Four of the five largest VC rounds in history closed this quarter",
+    "summary": "OpenAI ($122B), Anthropic ($30B), xAI ($20B) and Waymo ($16B) collectively raised $188B — 65% of all global venture investment in Q1. D.E. Shaw and MGX co-led OpenAI and Anthropic, a combined $150B+ commitment.",
+    "tags": [
+      "Funding",
+      "OpenAI",
+      "Anthropic",
+      "xAI",
+      "Waymo"
+    ],
+    "url": "https://news.crunchbase.com/venture/foundational-ai-startup-funding-doubled-openai-anthropic-xai-q1-2026/",
+    "source": "Crunchbase News",
+    "rejectedAt": "2026-04-12T18:34:13.863Z"
+  },
+  {
+    "id": "chrome-zero-day-4",
+    "category": "Cybersecurity",
+    "title": "Google patches 4th actively-exploited Chrome zero-day of 2026",
+    "summary": "An out-of-band Chrome 146 release fixes CVE-2026-5281 — already being exploited in the wild. Update immediately: it's the fourth Chrome zero-day patched in just over three months.",
+    "tags": [
+      "Zero-Day",
+      "Chrome",
+      "CVE-2026-5281",
+      "Patch"
+    ],
+    "url": "https://thehackernews.com/",
+    "source": "The Hacker News",
+    "rejectedAt": "2026-04-12T18:34:08.163Z"
+  }
+]

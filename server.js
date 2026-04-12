@@ -50,7 +50,8 @@ function applyLearning(item, verdict) {
 
 function gitPush(msg) {
   const cmd =
-    `git add posts.json preferences.json queue.json && ` +
+    `node build.js && ` +
+    `git add posts.json preferences.json queue.json index.html sitemap.xml feed.xml robots.txt posts/ && ` +
     `git -c user.email="danlex@users.noreply.github.com" -c user.name="danlex" commit -m ${JSON.stringify(msg)} && ` +
     `git push`;
   try {

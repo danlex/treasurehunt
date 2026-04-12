@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /review.html
+Disallow: /server.js
+
+Sitemap: https://treasurehunt.alexandrudan.com/sitemap.xml
