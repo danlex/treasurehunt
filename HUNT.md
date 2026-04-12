@@ -38,9 +38,10 @@ Every candidate news item gets scored against these sources. The hunt agent fetc
   - Karpathy-connected repos (`karpathy/*`, `andrej-karpathy-skills`, nanoGPT forks) are high-signal for practitioner attention
 
 ### Market signals (verification only)
-- **Marketstack** (user has subscription) — confirm a company-specific news item actually moved the stock.
-  - Example: if story claims "OpenAI raises $122B", check MSFT / GOOGL / NVDA for reaction; unusual volume or price move = corroborating signal.
-  - If a story predicts major market impact and there's no stock reaction, downgrade FUD risk.
+- **Marketstack** — wired up via `marketCheck.js`. Call `node marketCheck.js <SYMBOL> <YYYY-MM-DD>` (or `require('./marketCheck').check(sym, date)`). Returns `{changePct, volumeAnomaly, verdict}`. API key in `.env` (gitignored).
+  - **Verdicts**: `reacted` (|Δ| ≥ 2% AND volume ≥ 1.5× avg) · `inconclusive` (one or the other) · `muted` (neither) · `no-data`.
+  - **How to use in scoring**: for any news item naming a public company, run the check. If story implies major impact but verdict is `muted`, bump `fudRisk` by +2. If verdict is `reacted`, bump `authority` and `stakes` by +1. Record the result in `signals.tickerMove`.
+  - **Relevant tickers**: NVDA, MSFT, GOOGL, META, AAPL, AMZN, TSLA, PLTR, AMD, ORCL, IBM, CRM, SNOW, NET (Cloudflare), DDOG, CRWD, PANW, S (SentinelOne), IONQ, RGTI.
 
 ## Scoring (0–10 per dimension)
 
