@@ -14,19 +14,6 @@
     "source": "LLM Stats"
   },
   {
-    "id": "meta-muse-spark",
-    "category": "AI",
-    "title": "Meta debuts Muse Spark — first major model since the $14B Scale deal",
-    "summary": "Alexandr Wang's Meta Superintelligence Labs ships its first flagship. The release is the clearest signal yet of where Meta's record-breaking AI spend is pointed: agentic, multimodal, and built to catch OpenAI and Google.",
-    "tags": [
-      "Meta",
-      "Alexandr Wang",
-      "Superintelligence Labs"
-    ],
-    "url": "https://www.cnbc.com/2026/04/08/meta-debuts-first-major-ai-model-since-14-billion-deal-to-bring-in-alexandr-wang.html",
-    "source": "CNBC"
-  },
-  {
     "id": "ms-quantum-error-detect",
     "category": "Quantum",
     "title": "Quantum error detection in milliseconds — a leap toward reliable QC",

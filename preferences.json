@@ -19,6 +19,10 @@
     "Quantum": {
       "likes": 1,
       "dislikes": 0
+    },
+    "AI": {
+      "likes": 1,
+      "dislikes": 0
     }
   },
   "tags": {
@@ -137,6 +141,18 @@
     "Crunchbase": {
       "likes": 1,
       "dislikes": 0
+    },
+    "Meta": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "Alexandr Wang": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "Superintelligence Labs": {
+      "likes": 1,
+      "dislikes": 0
     }
   },
   "sources": {
@@ -163,11 +179,15 @@
     "Time": {
       "likes": 1,
       "dislikes": 0
+    },
+    "CNBC": {
+      "likes": 1,
+      "dislikes": 0
     }
   },
   "totals": {
-    "likes": 6,
+    "likes": 7,
     "dislikes": 2
   },
-  "lastUpdated": "2026-04-12T18:35:36.297Z"
+  "lastUpdated": "2026-04-12T18:35:46.911Z"
 }

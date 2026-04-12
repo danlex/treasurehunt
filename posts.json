@@ -1,5 +1,19 @@
 [
   {
+    "id": "meta-muse-spark",
+    "category": "AI",
+    "title": "Meta debuts Muse Spark — first major model since the $14B Scale deal",
+    "summary": "Alexandr Wang's Meta Superintelligence Labs ships its first flagship. The release is the clearest signal yet of where Meta's record-breaking AI spend is pointed: agentic, multimodal, and built to catch OpenAI and Google.",
+    "tags": [
+      "Meta",
+      "Alexandr Wang",
+      "Superintelligence Labs"
+    ],
+    "url": "https://www.cnbc.com/2026/04/08/meta-debuts-first-major-ai-model-since-14-billion-deal-to-bring-in-alexandr-wang.html",
+    "source": "CNBC",
+    "publishedAt": "2026-04-12T18:35:46.911Z"
+  },
+  {
     "id": "q1-300b-funding",
     "category": "Startups",
     "title": "Q1 2026 shatters records: $300B in global venture funding, 80% to AI",
