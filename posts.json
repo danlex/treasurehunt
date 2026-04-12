@@ -1,5 +1,22 @@
 [
   {
+    "id": "gemini-3-1-ultra",
+    "category": "AI",
+    "title": "Google ships Gemini 3.1 Ultra — 2M tokens, native multimodal, sandboxed code",
+    "summary": "Google's marquee release of 2026: a 2M-token context window that ingests text, image, audio and video in a single forward pass — no stitched pipelines. Sundar Pichai demoed a sandboxed Code Execution tool that writes, runs and tests Python mid-conversation. On MMMU and VideoMME, Ultra outpaces GPT-5.4; on LM Arena it briefly hit #1 before GPT-5.4 reclaimed top. Available day-one in AI Studio and Vertex, with a 200K 'Flash' tier free up to 1M requests/day.",
+    "tags": [
+      "Google",
+      "Gemini",
+      "Multimodal",
+      "Long Context",
+      "LM Arena"
+    ],
+    "url": "https://llm-stats.com/ai-news",
+    "source": "LLM Stats",
+    "publishedAt": "2026-04-12T19:36:05.492Z",
+    "score": 8
+  },
+  {
     "id": "openai-852b",
     "category": "Startups",
     "title": "OpenAI closes $122B at $852B — most valuable private company in history",
