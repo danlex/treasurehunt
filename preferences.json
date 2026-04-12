@@ -1,8 +1,8 @@
 {
   "categories": {
     "Cybersecurity": {
-      "likes": 2,
-      "dislikes": 2
+      "likes": 1,
+      "dislikes": 3
     },
     "Research": {
       "likes": 3,
@@ -79,16 +79,16 @@
       "dislikes": 0
     },
     "Threat Intel": {
-      "likes": 1,
-      "dislikes": 0
+      "likes": 0,
+      "dislikes": 1
     },
     "Cisco Talos": {
-      "likes": 1,
-      "dislikes": 0
+      "likes": 0,
+      "dislikes": 1
     },
     "Trends": {
-      "likes": 1,
-      "dislikes": 0
+      "likes": 0,
+      "dislikes": 1
     },
     "Zero-Day": {
       "likes": 0,
@@ -333,6 +333,14 @@
     "Hardware": {
       "likes": 0,
       "dislikes": 1
+    },
+    "CVE": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "Ransomware": {
+      "likes": 0,
+      "dislikes": 1
     }
   },
   "sources": {
@@ -349,8 +357,8 @@
       "dislikes": 0
     },
     "Cyber Security Review": {
-      "likes": 1,
-      "dislikes": 0
+      "likes": 0,
+      "dislikes": 1
     },
     "Crunchbase News": {
       "likes": 3,
@@ -398,8 +406,8 @@
     }
   },
   "totals": {
-    "likes": 13,
-    "dislikes": 9
+    "likes": 12,
+    "dislikes": 10
   },
-  "lastUpdated": "2026-04-12T19:47:00.282Z"
+  "lastUpdated": "2026-04-12T19:50:19.283Z"
 }

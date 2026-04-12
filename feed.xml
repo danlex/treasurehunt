@@ -86,15 +86,6 @@
     <description>Time magazine&#39;s April 7 cover story: an AI-driven advance that materially shortens the timeline to cryptographically-relevant quantum computing. Google DeepMind, in partnership with Caltech&#39;s IQIM, used a transformer trained on billions of quantum-circuit simulations to discover new error-mitigation schemes that shave an estimated 6–9 months off fault-tolerance roadmaps at IBM, Google Quantum AI and Quantinuum. Immediate consequences for cryptography, drug discovery and materials science. As one researcher put it to Time: &#39;the world is not ready.&#39;</description>
   </item>
   <item>
-    <title>Vulnerability exploits overtake phishing as #1 initial-access vector</title>
-    <link>https://treasurehunt.alexandrudan.com/posts/exploits-overtake-phishing.html</link>
-    <guid isPermaLink="true">https://treasurehunt.alexandrudan.com/posts/exploits-overtake-phishing.html</guid>
-    <pubDate>Sun, 12 Apr 2026 18:33:39 GMT</pubDate>
-    <category>Cybersecurity</category>
-    <source url="https://www.cybersecurity-review.com/news-april-2026/">Cyber Security Review</source>
-    <description>Cisco Talos&#39;s Q1 2026 incident report: vulnerability exploits overtook phishing as the #1 initial-access vector for the first time, accounting for ~40% of intrusions in Q4 2025 vs. 29% for phishing. The shift reflects how AI-assisted exploit development has collapsed time-to-weaponize: Talos measured median weaponization at 6.2 days post-CVE-disclosure, down from 44 days in 2023. Ransomware affiliates and state actors alike now prioritize N-day exploitation over credential-phishing campaigns.</description>
-  </item>
-  <item>
     <title>Karpathy&#39;s personal-LLM-plus-Obsidian thread hits 18K likes</title>
     <link>https://treasurehunt.alexandrudan.com/posts/karpathy-obsidian.html</link>
     <guid isPermaLink="true">https://treasurehunt.alexandrudan.com/posts/karpathy-obsidian.html</guid>
