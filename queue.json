@@ -41,20 +41,6 @@
     "source": "Time"
   },
   {
-    "id": "claude-code-leak",
-    "category": "Cybersecurity",
-    "title": "Claude Code source code leaked; attackers weaponize it within hours",
-    "summary": "An Anthropic employee accidentally leaked the source of Claude Code. Within hours, threat actors seeded fake GitHub repositories using the leaked code as bait to deliver the Vidar infostealer — a textbook supply-chain opportunism case.",
-    "tags": [
-      "Supply Chain",
-      "Anthropic",
-      "Vidar",
-      "GitHub"
-    ],
-    "url": "https://thehackernews.com/",
-    "source": "The Hacker News"
-  },
-  {
     "id": "ai-energy-100x",
     "category": "Research",
     "title": "Tufts: AI method cuts energy use 100× while boosting accuracy",
