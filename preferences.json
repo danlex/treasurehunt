@@ -1,7 +1,7 @@
 {
   "categories": {
     "Cybersecurity": {
-      "likes": 2,
+      "likes": 3,
       "dislikes": 1
     },
     "Research": {
@@ -241,6 +241,26 @@
     "KubeCon": {
       "likes": 1,
       "dislikes": 0
+    },
+    "Citrix": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "NetScaler": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "CVE-2026-3055": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "Active Exploit": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "CISA KEV": {
+      "likes": 1,
+      "dislikes": 0
     }
   },
   "sources": {
@@ -291,11 +311,15 @@
     "Social9": {
       "likes": 0,
       "dislikes": 1
+    },
+    "DEV Community": {
+      "likes": 1,
+      "dislikes": 0
     }
   },
   "totals": {
-    "likes": 11,
+    "likes": 12,
     "dislikes": 6
   },
-  "lastUpdated": "2026-04-12T18:49:51.561Z"
+  "lastUpdated": "2026-04-12T18:51:34.768Z"
 }

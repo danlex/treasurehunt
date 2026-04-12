@@ -1,5 +1,22 @@
 [
   {
+    "id": "citrix-netscaler",
+    "category": "Cybersecurity",
+    "title": "Citrix NetScaler CVE-2026-3055 (CVSS 9.3) — patch and rotate sessions now",
+    "summary": "CVE-2026-3055 in Citrix NetScaler ADC and Gateway lets unauthenticated attackers read arbitrary memory — enough to pull session tokens, TLS keys and admin credentials, then chain into lateral movement. CVSS 9.3. Citrix confirmed in-the-wild exploitation on April 8 and shipped patches the same day for 13.1, 14.1 and NetScaler Secure Private Access. CISA added it to KEV within 24 hours. This echoes the 2023 'Citrix Bleed' pattern behind Boeing and Comcast breaches — rotate session material after patching.",
+    "tags": [
+      "Citrix",
+      "NetScaler",
+      "CVE-2026-3055",
+      "Active Exploit",
+      "CISA KEV"
+    ],
+    "url": "https://dev.to/ziizium/security-news-weekly-round-up-10th-april-2026-l5n",
+    "source": "DEV Community",
+    "image": "https://loremflickr.com/1200/600/cybersecurity,matrix,red,hacker?lock=206",
+    "publishedAt": "2026-04-12T18:51:34.748Z"
+  },
+  {
     "id": "mcp-97m",
     "category": "AI",
     "title": "MCP crosses 97M installs; Linux Foundation takes governance at KubeCon",
