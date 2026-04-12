@@ -1,0 +1,302 @@
+[
+  {
+    "id": "q1-300b-funding",
+    "category": "Startups",
+    "title": "Q1 2026 shatters records: $300B in global venture funding, 80% to AI",
+    "summary": "Crunchbase reports the biggest venture quarter ever — $300B across 6,000 startups, up 150% YoY. AI alone captured $242B. Four of the five largest rounds in history closed in Q1, led by OpenAI's $122B and Anthropic's $30B.",
+    "tags": [
+      "Venture Capital",
+      "Funding",
+      "AI Boom",
+      "Crunchbase"
+    ],
+    "url": "https://news.crunchbase.com/venture/record-breaking-funding-ai-global-q1-2026/",
+    "source": "Crunchbase News"
+  },
+  {
+    "id": "gemini-3-1-ultra",
+    "category": "AI",
+    "title": "Google Gemini 3.1 Ultra: 2M-token native multimodal",
+    "summary": "Google's biggest model release of 2026 handles text, image, audio and video natively across a 2M-token window — with a sandboxed code execution tool that lets the model write, run and test code mid-conversation.",
+    "tags": [
+      "Google",
+      "Gemini",
+      "Multimodal",
+      "Long Context"
+    ],
+    "url": "https://llm-stats.com/ai-news",
+    "source": "LLM Stats"
+  },
+  {
+    "id": "ai-quantum-breakthrough",
+    "category": "Quantum",
+    "title": "AI just sparked a quantum breakthrough — 'the world is not ready'",
+    "summary": "Time reports an AI-driven quantum advance that materially shortens the timeline to useful quantum computing. The discovery has immediate implications for cryptography, materials science and drug discovery.",
+    "tags": [
+      "Quantum",
+      "AI for Science",
+      "Time"
+    ],
+    "url": "https://time.com/article/2026/04/07/ai-quantum-computing-advance/",
+    "source": "Time"
+  },
+  {
+    "id": "claude-code-leak",
+    "category": "Cybersecurity",
+    "title": "Claude Code source code leaked; attackers weaponize it within hours",
+    "summary": "An Anthropic employee accidentally leaked the source of Claude Code. Within hours, threat actors seeded fake GitHub repositories using the leaked code as bait to deliver the Vidar infostealer — a textbook supply-chain opportunism case.",
+    "tags": [
+      "Supply Chain",
+      "Anthropic",
+      "Vidar",
+      "GitHub"
+    ],
+    "url": "https://thehackernews.com/",
+    "source": "The Hacker News"
+  },
+  {
+    "id": "ai-energy-100x",
+    "category": "Research",
+    "title": "Tufts: AI method cuts energy use 100× while boosting accuracy",
+    "summary": "Researchers combined neural networks with human-like symbolic reasoning in a hybrid that slashes compute requirements by two orders of magnitude and improves accuracy. Could reshape what on-device AI is capable of.",
+    "tags": [
+      "Research",
+      "Efficiency",
+      "Neurosymbolic",
+      "Sustainability"
+    ],
+    "url": "https://www.sciencedaily.com/releases/2026/04/260405003952.htm",
+    "source": "ScienceDaily"
+  },
+  {
+    "id": "meta-muse-spark",
+    "category": "AI",
+    "title": "Meta debuts Muse Spark — first major model since the $14B Scale deal",
+    "summary": "Alexandr Wang's Meta Superintelligence Labs ships its first flagship. The release is the clearest signal yet of where Meta's record-breaking AI spend is pointed: agentic, multimodal, and built to catch OpenAI and Google.",
+    "tags": [
+      "Meta",
+      "Alexandr Wang",
+      "Superintelligence Labs"
+    ],
+    "url": "https://www.cnbc.com/2026/04/08/meta-debuts-first-major-ai-model-since-14-billion-deal-to-bring-in-alexandr-wang.html",
+    "source": "CNBC"
+  },
+  {
+    "id": "mega-rounds",
+    "category": "Startups",
+    "title": "Four of the five largest VC rounds in history closed this quarter",
+    "summary": "OpenAI ($122B), Anthropic ($30B), xAI ($20B) and Waymo ($16B) collectively raised $188B — 65% of all global venture investment in Q1. D.E. Shaw and MGX co-led OpenAI and Anthropic, a combined $150B+ commitment.",
+    "tags": [
+      "Funding",
+      "OpenAI",
+      "Anthropic",
+      "xAI",
+      "Waymo"
+    ],
+    "url": "https://news.crunchbase.com/venture/foundational-ai-startup-funding-doubled-openai-anthropic-xai-q1-2026/",
+    "source": "Crunchbase News"
+  },
+  {
+    "id": "chrome-zero-day-4",
+    "category": "Cybersecurity",
+    "title": "Google patches 4th actively-exploited Chrome zero-day of 2026",
+    "summary": "An out-of-band Chrome 146 release fixes CVE-2026-5281 — already being exploited in the wild. Update immediately: it's the fourth Chrome zero-day patched in just over three months.",
+    "tags": [
+      "Zero-Day",
+      "Chrome",
+      "CVE-2026-5281",
+      "Patch"
+    ],
+    "url": "https://thehackernews.com/",
+    "source": "The Hacker News"
+  },
+  {
+    "id": "ms-quantum-error-detect",
+    "category": "Quantum",
+    "title": "Quantum error detection in milliseconds — a leap toward reliable QC",
+    "summary": "A new detection technique identifies qubit errors orders of magnitude faster than prior methods. Combined with a separate breakthrough measuring data loss 100× faster, researchers can now track errors near real-time.",
+    "tags": [
+      "Quantum",
+      "Error Correction",
+      "Qubits"
+    ],
+    "url": "https://www.sciencedaily.com/releases/2026/04/260407193857.htm",
+    "source": "ScienceDaily"
+  },
+  {
+    "id": "mcp-97m",
+    "category": "AI",
+    "title": "Anthropic's MCP hits 97M installs; Linux Foundation takes governance",
+    "summary": "Model Context Protocol has become the de facto standard for connecting AI to tools and data. Every major AI provider now ships MCP-compatible tooling. The Linux Foundation taking open governance cements it as critical open infrastructure.",
+    "tags": [
+      "MCP",
+      "Anthropic",
+      "Linux Foundation",
+      "Open Source"
+    ],
+    "url": "https://llm-stats.com/ai-news",
+    "source": "LLM Stats"
+  },
+  {
+    "id": "fault-tolerant-no-midcircuit",
+    "category": "Quantum",
+    "title": "Fault-tolerant Grover's algorithm — no mid-circuit measurements needed",
+    "summary": "Innsbruck and Aachen teams demonstrated a universal fault-tolerant quantum algorithm without mid-circuit measurements, running Grover's search on 3 logical qubits on a trapped-ion processor. A major simplification of fault-tolerant QC.",
+    "tags": [
+      "Quantum",
+      "Grover",
+      "Trapped Ion",
+      "Fault Tolerance"
+    ],
+    "url": "https://phys.org/news/2026-04-quantum.html",
+    "source": "Phys.org"
+  },
+  {
+    "id": "exploits-overtake-phishing",
+    "category": "Cybersecurity",
+    "title": "Vulnerability exploits overtake phishing as #1 initial access method",
+    "summary": "Cisco Talos: nearly 40% of Q4 2025 intrusions came from exploited flaws — surpassing phishing for the first time. The shift reflects how AI-assisted exploit development has collapsed the time-to-weaponize for new CVEs.",
+    "tags": [
+      "Threat Intel",
+      "Cisco Talos",
+      "Trends"
+    ],
+    "url": "https://www.cybersecurity-review.com/news-april-2026/",
+    "source": "Cyber Security Review"
+  },
+  {
+    "id": "citrix-netscaler",
+    "category": "Cybersecurity",
+    "title": "Citrix NetScaler CVE-2026-3055 under active exploit",
+    "summary": "Attackers are actively reading sensitive memory from NetScaler ADC and Gateway appliances — enough to steal session material and chain into rapid follow-on access. Patch immediately; rotate sessions.",
+    "tags": [
+      "Citrix",
+      "NetScaler",
+      "CVE-2026-3055",
+      "Active Exploit"
+    ],
+    "url": "https://dev.to/ziizium/security-news-weekly-round-up-10th-april-2026-l5n",
+    "source": "DEV Community"
+  },
+  {
+    "id": "eclipse-1-3b",
+    "category": "Startups",
+    "title": "Eclipse raises $1.3B for robotics and AI infrastructure",
+    "summary": "The firm best known for backing Cerebras closed $1.3B to double down on physical AI — robotics, data center build-outs, and the compute substrate underneath the agentic AI wave.",
+    "tags": [
+      "Eclipse",
+      "Robotics",
+      "AI Infra",
+      "Fundraise"
+    ],
+    "url": "https://www.bloomberg.com/news/articles/2026-04-07/cerebras-backer-eclipse-raises-1-3-billion-for-robotics-ai-infrastructure",
+    "source": "Bloomberg"
+  },
+  {
+    "id": "mit-atomic-defects",
+    "category": "Research",
+    "title": "MIT AI model uncovers atomic defects for better chips and solar",
+    "summary": "The model identifies atomic-scale defects in materials that affect heat transfer and energy conversion — immediate implications for semiconductor yield and renewable-energy efficiency.",
+    "tags": [
+      "MIT",
+      "Materials Science",
+      "Semiconductors"
+    ],
+    "url": "https://www.nextbigfuture.com/2026/04/2026-is-breakthrough-year-for-reliable-ai-world-models-and-continual-learning-prototypes.html",
+    "source": "NextBigFuture"
+  },
+  {
+    "id": "turboquant",
+    "category": "Research",
+    "title": "Google's TurboQuant slashes KV cache memory at ICLR 2026",
+    "summary": "A two-step quantization algorithm — PolarQuant random rotation plus Quantized Johnson-Lindenstrauss compression — materially reduces the memory overhead of long-context inference. Implications for on-device AI and data center cost.",
+    "tags": [
+      "Google",
+      "ICLR 2026",
+      "Quantization",
+      "Long Context"
+    ],
+    "url": "https://llm-stats.com/ai-news",
+    "source": "LLM Stats"
+  },
+  {
+    "id": "openai-852b",
+    "category": "Startups",
+    "title": "OpenAI hits $852B valuation; Anthropic at $380B",
+    "summary": "OpenAI closed its $122B round at $852B post-money on March 31, making it the most valuable standalone startup ever. Anthropic's Series G put it at $380B — both backed heavily by D.E. Shaw and MGX.",
+    "tags": [
+      "OpenAI",
+      "Anthropic",
+      "Valuations"
+    ],
+    "url": "https://news.crunchbase.com/venture/foundational-ai-startup-funding-doubled-openai-anthropic-xai-q1-2026/",
+    "source": "Crunchbase News"
+  },
+  {
+    "id": "reddit-kills-rall",
+    "category": "Viral",
+    "title": "Reddit shuts down r/all; moves to algorithmic feed",
+    "summary": "The unfiltered discovery feed that built Reddit culture is gone — officially deprecated April 2 in favor of algorithmic personalization. The era of 'what the internet is talking about, raw' just ended on one of the last open platforms.",
+    "tags": [
+      "Reddit",
+      "Platforms",
+      "Algorithms"
+    ],
+    "url": "https://social9.com/news/reddit-shuts-down-rall-to-promote-algorithmic-personalization",
+    "source": "Social9"
+  },
+  {
+    "id": "neutral-atom-quantum",
+    "category": "Quantum",
+    "title": "Neutral-atom quantum computing: 2026's big leap",
+    "summary": "IEEE Spectrum on why neutral-atom approaches — led by Atom Computing and partners — are emerging as the architecture to watch. Microsoft plans to deliver an error-corrected level-2 neutral-atom system to customers this year.",
+    "tags": [
+      "Quantum",
+      "Neutral Atom",
+      "Microsoft",
+      "Atom Computing"
+    ],
+    "url": "https://spectrum.ieee.org/neutral-atom-quantum-computing",
+    "source": "IEEE Spectrum"
+  },
+  {
+    "id": "physics-informed-ml",
+    "category": "Research",
+    "title": "Physics-informed ML: AI that respects the laws of physics",
+    "summary": "University of Hawaiʻi researchers published an algorithm that forces AI to adhere to physical laws while processing complex datasets — opening the door to credible AI for fluid dynamics and climate modeling.",
+    "tags": [
+      "Physics-Informed ML",
+      "Climate",
+      "Fluid Dynamics"
+    ],
+    "url": "https://www.nextbigfuture.com/2026/04/2026-is-breakthrough-year-for-reliable-ai-world-models-and-continual-learning-prototypes.html",
+    "source": "NextBigFuture"
+  },
+  {
+    "id": "quantum-crypto-threat",
+    "category": "Quantum",
+    "title": "Google & Oratomic: encryption-breaking quantum may arrive sooner",
+    "summary": "New papers shorten timelines for cryptographically relevant quantum computers. Cloudflare responded by accelerating its post-quantum roadmap — full system-wide resilience now targeted for 2029.",
+    "tags": [
+      "Post-Quantum",
+      "Cryptography",
+      "Cloudflare"
+    ],
+    "url": "https://thequantuminsider.com/2026/04/07/sp-analysts-report-quantum-computing-arriving-just-as-energy-sector-prepares-for-a-compute-driven-future/",
+    "source": "The Quantum Insider"
+  },
+  {
+    "id": "karpathy-obsidian",
+    "category": "Top Tweets",
+    "title": "Karpathy on LLM knowledge bases with Obsidian — 18K likes",
+    "summary": "Andrej Karpathy's practical take on combining personal Obsidian vaults with LLMs struck a nerve — turning a niche workflow into a widely-shared playbook for personal AI.",
+    "tags": [
+      "Karpathy",
+      "Obsidian",
+      "PKM",
+      "Personal AI"
+    ],
+    "url": "https://x.com/ainunnajib/status/2039962318449390007",
+    "source": "X / AI Noon"
+  }
+]

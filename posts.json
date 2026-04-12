@@ -1,0 +1,17 @@
+[
+  {
+    "id": "gpt-5-4",
+    "category": "AI",
+    "title": "OpenAI launches GPT-5.4 — now beating humans at digital work",
+    "summary": "OpenAI's new flagship ships with a 1M-token context window and autonomously executes multi-step workflows across software. On OSWorld-V it scored 75%, edging past the 72.4% human baseline — a decisive shift from AI as chat tool to AI as digital coworker.",
+    "tags": [
+      "OpenAI",
+      "GPT-5",
+      "Agentic AI",
+      "Benchmark"
+    ],
+    "url": "https://llm-stats.com/ai-news",
+    "source": "LLM Stats",
+    "publishedAt": "2026-04-12T18:04:49.053Z"
+  }
+]
