@@ -27,6 +27,18 @@ Every candidate news item gets scored against these sources. The hunt agent fetc
   - Startups: r/venturecapital, r/startups, r/technology.
   - Viral: r/technology, r/Futurology.
 
+### Academic signals (primary-source verification for Research category)
+- **arXiv** — wired up via `arxivCheck.js`. Free public API, no auth.
+  - `node arxivCheck.js search "<query>"` — recent papers, sorted by submission date
+  - `node arxivCheck.js get <arxivId>` — full metadata for a specific paper
+  - Use when a news item cites a paper: confirm it exists, grab the real abstract, correct authors.
+- **Semantic Scholar** — wired up via `scholarCheck.js`. Google-Scholar-equivalent with real API.
+  - `node scholarCheck.js arxiv <arxivId>` or `doi <doi>` or `search "<query>"`
+  - Returns: citation count, **influential** citation count, venue, author h-indexes.
+  - `scoreSignals(paper)` returns suggested authority/novelty deltas.
+  - **Scoring rules**: citations ≥ 500 → authority +3; ≥ 100 → +2; ≥ 25 → +1. Influential citations ≥ 30 → authority +1. Top-author h-index ≥ 40 → authority +1. Same-year publication with ≥5 influential citations → novelty +2.
+  - If a "research breakthrough" news item references a paper that Semantic Scholar can't find, treat it as a strong FUD flag.
+
 ### GitHub trending
 - **https://github.com/trending?since=daily** — daily hot repos
 - **https://github.com/trending?since=weekly** — weekly hot repos
