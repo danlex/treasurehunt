@@ -6,6 +6,23 @@ Reference doc for the hunt agent (cron that refills `queue.json` with researched
 
 Every candidate news item gets scored against these sources. The hunt agent fetches from each and aggregates evidence.
 
+## Candidate sourcing — top trends, not per-item searches
+
+The hunt agent should call **`node trending.js`** (or `require('./trending').collectAll()`) ONCE per hunt. This pulls top items from:
+
+- Hacker News top of last 24h (min 100 points) via Algolia API — free, unlimited
+- 15 target subreddits (r/technology, r/MachineLearning, r/LocalLLaMA, r/OpenAI, r/ClaudeAI, r/singularity, r/QuantumComputing, r/Physics, r/netsec, r/cybersecurity, r/sysadmin, r/venturecapital, r/startups, r/Futurology, r/programming) — free, JSON endpoint
+- Techmeme RSS — curated tech aggregator
+- Google News RSS (AI, Quantum, Cyber feeds)
+- The Hacker News RSS
+- Product Hunt RSS
+- arXiv cs.AI and cs.LG RSS
+- (X trends via `xCheck.topTrends()` when keys exist — budgeted: 1 call per hunt)
+
+Results are cached for 20 minutes on disk, deduped by URL, and scored cross-source (HN: points + comments · Reddit: log-ups + comments · RSS: position).
+
+**Cost discipline:** NO per-candidate API calls at this stage. Enrich + verify (coverage, scholar, market, X mentions) only happens for the top ~10-15 candidates that survive the initial filter, and only where that signal adds verifiable value.
+
 ### Coverage signals
 - **Google News** — broad aggregator; `site:news.google.com` + keyword search gives outlet count.
 - **Yahoo News** — complementary coverage, especially finance-adjacent.

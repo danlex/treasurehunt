@@ -1,6 +1,7 @@
 .claude/
 .DS_Store
 node_modules/
+.cache/
 
 # secrets — never commit
 .env
