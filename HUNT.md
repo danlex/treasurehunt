@@ -8,6 +8,17 @@ Every candidate news item gets scored against these sources. The hunt agent fetc
 
 ## Candidate sourcing — top trends, not per-item searches
 
+### GDELT 2.0 (global multilingual news — free, no auth)
+- **`gdeltCheck.js`** monitors ~100-language news in 15-min updates.
+- Useful modes:
+  - `articles(query, { hours })` — fresh articles with tone scores (-10..+10)
+  - `tone(query)` — sentiment distribution + polarization (stdev). High polarization + negative avg → FUD flag.
+  - `timeline(query, { days })` — volume over time → virality/spike detection.
+  - `hot({ hours })` — curated pass across AI/Quantum/Cyber/Startups beats.
+- Rate limit: **1 query per 5 seconds**, enforced by internal mutex. 20-min disk cache at `.cache/gdelt-*.json`.
+- Use `toneSignals(toneResult)` to get direct FUD-risk deltas for a topic.
+
+
 The hunt agent should call **`node trending.js`** (or `require('./trending').collectAll()`) ONCE per hunt. This pulls top items from:
 
 - Hacker News top of last 24h (min 100 points) via Algolia API — free, unlimited

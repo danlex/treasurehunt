@@ -18,6 +18,10 @@ const rss = require('./rssCheck');
 let xCheck = null;
 try { xCheck = require('./xCheck'); } catch { /* no X module */ }
 
+// GDELT is free and always available.
+let gdelt = null;
+try { gdelt = require('./gdeltCheck'); } catch { /* no GDELT module */ }
+
 const CACHE_FILE = path.join(__dirname, '.cache', 'trending.json');
 const CACHE_TTL_MS = 20 * 60 * 1000;
 
@@ -99,6 +103,21 @@ async function collectAll() {
           meta: { description: r.description }
         })))
         .catch(e => (console.error(`RSS ${source} failed:`, e.message), []))
+    );
+  }
+
+  // GDELT — one call per beat, throttled internally to 1 per 5s. Pulls global
+  // multilingual news with tone scores. Disk-cached for 20min.
+  if (gdelt) {
+    jobs.push(
+      gdelt.hot({ hours: 24, max: 40 })
+        .then(items => items.map(a => ({
+          title: a.title, url: a.url, source: 'GDELT · ' + (a.source || 'news'),
+          score: 60 + (a.tone != null ? Math.max(-10, Math.min(10, a.tone)) : 0), // neutral → 60, positive higher
+          createdAt: a.publishedAt,
+          meta: { tone: a.tone, sourceCountry: a.sourceCountry, language: a.language, domain: a.source }
+        })))
+        .catch(e => (console.error('GDELT hot failed:', e.message), []))
     );
   }
 
