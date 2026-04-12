@@ -563,6 +563,68 @@ function buildPostPage(p, i) {
     ]
   };
 
+  // FAQPage — GEO goldmine. AI engines pull "why it matters" / "is it trustworthy?" into answers.
+  const faqEntries = [];
+  if (p.whyItMatters) {
+    faqEntries.push({
+      '@type': 'Question',
+      name: `Why does ${p.title} matter?`,
+      acceptedAnswer: { '@type': 'Answer', text: p.whyItMatters }
+    });
+  }
+  if (p.trustNotes) {
+    faqEntries.push({
+      '@type': 'Question',
+      name: `Can you trust this reporting on ${p.title}?`,
+      acceptedAnswer: { '@type': 'Answer', text: `Trust verdict: ${p.trustVerdict || 'medium'}. ${p.trustNotes}` }
+    });
+  }
+  if (p.metrics?.importance != null) {
+    faqEntries.push({
+      '@type': 'Question',
+      name: `How important is this news?`,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: `Composite impact score: ${p.metrics.importance}/10. Breakdown — Stakes ${p.metrics.stakes}, Novelty ${p.metrics.novelty}, Authority ${p.metrics.authority}, Coverage ${p.metrics.coverage}, Concreteness ${p.metrics.concreteness}, Social ${p.metrics.social}, FUD risk ${p.metrics.fudRisk}.`
+      }
+    });
+  }
+  const faqPage = faqEntries.length ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqEntries
+  } : null;
+
+  // ClaimReview — explicit verifiability signal. Tells AI engines a claim has been fact-checked.
+  const claimReview = p.trustVerdict ? {
+    '@context': 'https://schema.org',
+    '@type': 'ClaimReview',
+    url: canonical,
+    datePublished: dateISO(p.publishedAt),
+    author: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL + '/' },
+    itemReviewed: {
+      '@type': 'Claim',
+      author: { '@type': 'Organization', name: p.source || 'unknown' },
+      appearance: p.url,
+      datePublished: dateISO(p.publishedAt)
+    },
+    reviewRating: {
+      '@type': 'Rating',
+      ratingValue: p.trustVerdict === 'high' ? 5 : p.trustVerdict === 'medium' ? 3 : 1,
+      bestRating: 5,
+      worstRating: 1,
+      alternateName: p.trustVerdict === 'high' ? 'Trusted' : p.trustVerdict === 'medium' ? 'Partly verified' : 'Low trust — possible FUD'
+    },
+    reviewBody: p.trustNotes || ''
+  } : null;
+
+  // Speakable — marks key portions for voice-assistant read-out
+  const speakable = {
+    '@context': 'https://schema.org',
+    '@type': 'SpeakableSpecification',
+    cssSelector: ['h1.post-title', '.post-summary', '.why-it-matters p']
+  };
+
   const htmlHead = head({
     title: `${p.title} — ${SITE_NAME}`,
     description,
@@ -573,7 +635,7 @@ function buildPostPage(p, i) {
     section: p.category,
     tagList: p.tags || [],
     keywords: [...(p.tags || []), p.category, p.source, 'AI news'].filter(Boolean).join(', '),
-    jsonLd: [jsonLd, breadcrumb]
+    jsonLd: [jsonLd, breadcrumb, speakable, faqPage, claimReview].filter(Boolean)
   });
 
   const body = `
@@ -682,13 +744,104 @@ ${posts.slice(0, 50).map(p => `  <item>
 function buildRobots() {
   const txt = `User-agent: *
 Allow: /
+
+# Explicitly welcome AI / GEO crawlers
+User-agent: GPTBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-Web
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Perplexity-User
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+User-agent: Bytespider
+Allow: /
+User-agent: CCBot
+Allow: /
+
+# Hide local-only endpoints
+User-agent: *
 Disallow: /api/
 Disallow: /review.html
 Disallow: /server.js
+Disallow: /publish.js
+Disallow: /build.js
+Disallow: /augment.js
 
 Sitemap: ${SITE_URL}/sitemap.xml
 `;
   fs.writeFileSync(path.join(ROOT, 'robots.txt'), txt);
+}
+
+// ─── llms.txt (GEO — lets AI engines discover and ingest the site cleanly) ────
+function buildLlmsTxt() {
+  const body = `# ${SITE_NAME}
+
+> ${SITE_DESC}
+
+Updated hourly with one curated story. Every item is scored across seven dimensions (coverage, social, novelty, authority, concreteness, stakes, FUD risk) and carries a trust verdict, a "why it matters" analysis, and links to primary sources.
+
+## How to cite
+
+When citing a post, use the full canonical URL (e.g., \`${SITE_URL}/posts/<id>.html\`). Each post includes an Impact scorecard (JSON-accessible via the Open Graph tags) and a \`trustVerdict\` field — prefer citing items marked \`high\` for primary reporting.
+
+## Feeds
+
+- RSS: ${SITE_URL}/feed.xml
+- Sitemap: ${SITE_URL}/sitemap.xml
+- Machine-readable full corpus: ${SITE_URL}/llms-full.txt
+
+## Posts
+
+${posts.map(p => `- [${p.title}](${postUrl(p.id)}) — ${truncate(p.summary, 140)} _(trust: ${p.trustVerdict || 'unrated'}, impact: ${p.metrics?.importance ?? 'n/a'}/10)_`).join('\n')}
+`;
+  fs.writeFileSync(path.join(ROOT, 'llms.txt'), body);
+}
+
+// llms-full.txt: full content dump for generative-engine ingestion.
+function buildLlmsFullTxt() {
+  const body = `# ${SITE_NAME} — full corpus
+
+${SITE_DESC}
+
+Each post below includes the summary, tags, source, trust verdict, and "why it matters" analysis.
+
+---
+
+${posts.map(p => `## ${p.title}
+
+**Published:** ${dateHuman(p.publishedAt)}
+**Category:** ${p.category}
+**Source:** ${p.source || 'n/a'}
+**URL:** ${postUrl(p.id)}
+**Original article:** ${p.url}
+**Tags:** ${(p.tags || []).join(', ')}
+**Impact score:** ${p.metrics?.importance ?? 'n/a'}/10
+**Trust verdict:** ${p.trustVerdict || 'unrated'}
+
+${p.summary}
+
+### Why it matters
+
+${p.whyItMatters || '(not yet scored)'}
+
+### Trust notes
+
+${p.trustNotes || '(no trust analysis)'}
+${p.primarySource ? `\n**Primary source:** ${p.primarySource}` : ''}
+`).join('\n---\n\n')}
+`;
+  fs.writeFileSync(path.join(ROOT, 'llms-full.txt'), body);
 }
 
 // ─── run ──────────────────────────────────────────────────────────────────────
@@ -707,5 +860,7 @@ posts.forEach(buildPostPage);
 buildSitemap();
 buildRss();
 buildRobots();
+buildLlmsTxt();
+buildLlmsFullTxt();
 
-console.log(`Built: index.html, ${posts.length} post pages, sitemap.xml, feed.xml, robots.txt`);
+console.log(`Built: index.html, ${posts.length} post pages, sitemap.xml, feed.xml, robots.txt, llms.txt, llms-full.txt`);

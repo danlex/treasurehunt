@@ -27,6 +27,16 @@ Every candidate news item gets scored against these sources. The hunt agent fetc
   - Startups: r/venturecapital, r/startups, r/technology.
   - Viral: r/technology, r/Futurology.
 
+### GitHub trending
+- **https://github.com/trending?since=daily** — daily hot repos
+- **https://github.com/trending?since=weekly** — weekly hot repos
+- **https://github.com/trending/python?since=daily** — language-scoped (python/typescript/rust are AI-adjacent)
+- Signal rules:
+  - Repo trending with 1k+ daily stars is news-worthy on its own (often heralds an open-source release)
+  - Trending adjacent to a news story corroborates it (e.g., new model release + repo hits trending)
+  - Watch org accounts: `google-ai-edge/`, `NVIDIA/`, `meta-llama/`, `openai/`, `anthropic/`, `HuggingFace/`, `microsoft/`
+  - Karpathy-connected repos (`karpathy/*`, `andrej-karpathy-skills`, nanoGPT forks) are high-signal for practitioner attention
+
 ### Market signals (verification only)
 - **Marketstack** (user has subscription) — confirm a company-specific news item actually moved the stock.
   - Example: if story claims "OpenAI raises $122B", check MSFT / GOOGL / NVDA for reaction; unusual volume or price move = corroborating signal.

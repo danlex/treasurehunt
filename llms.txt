@@ -1,0 +1,32 @@
+# Treasure Hunt
+
+> Hand-curated daily digest of the best news in AI, Quantum computing, Cybersecurity, AI startups, Research papers and viral tech. One substantial post per hour — names, numbers and the specifics that matter.
+
+Updated hourly with one curated story. Every item is scored across seven dimensions (coverage, social, novelty, authority, concreteness, stakes, FUD risk) and carries a trust verdict, a "why it matters" analysis, and links to primary sources.
+
+## How to cite
+
+When citing a post, use the full canonical URL (e.g., `https://treasurehunt.alexandrudan.com/posts/<id>.html`). Each post includes an Impact scorecard (JSON-accessible via the Open Graph tags) and a `trustVerdict` field — prefer citing items marked `high` for primary reporting.
+
+## Feeds
+
+- RSS: https://treasurehunt.alexandrudan.com/feed.xml
+- Sitemap: https://treasurehunt.alexandrudan.com/sitemap.xml
+- Machine-readable full corpus: https://treasurehunt.alexandrudan.com/llms-full.txt
+
+## Posts
+
+- [Karpathy's nanochat hits 51.7K stars — ChatGPT clone trainable end-to-end for $100](https://treasurehunt.alexandrudan.com/posts/karpathy-nanochat.html) — Andrej Karpathy's nanochat repo — a minimal, from-scratch full-stack training/inference pipeline for a ChatGPT clone — passed 51.7K GitHub… _(trust: high, impact: 8.2/10)_
+- [Karpathy's LLM-coding pitfalls compiled into viral CLAUDE.md — #2 on GitHub weekly](https://treasurehunt.alexandrudan.com/posts/karpathy-skills-trending.html) — A community-maintained distillation of Andrej Karpathy's observations about where LLMs fail at coding — shipped as a single CLAUDE.md you… _(trust: high, impact: 7.1/10)_
+- [Google ships Gemini 3.1 Ultra — 2M tokens, native multimodal, sandboxed code](https://treasurehunt.alexandrudan.com/posts/gemini-3-1-ultra.html) — Google's marquee release of 2026: a 2M-token context window that ingests text, image, audio and video in a single forward pass — no… _(trust: high, impact: 8.8/10)_
+- [OpenAI closes $122B at $852B — most valuable private company in history](https://treasurehunt.alexandrudan.com/posts/openai-852b.html) — OpenAI closed its $122B primary+secondary on March 31 at an $852B post-money, passing SpaceX to become the most valuable private company… _(trust: medium, impact: 7.5/10)_
+- [DeepMind's TurboQuant: 6.2× KV-cache compression, no perplexity loss](https://treasurehunt.alexandrudan.com/posts/turboquant.html) — At ICLR 2026, DeepMind's Yury Makarychev presented TurboQuant — PolarQuant (a randomized rotation making weight distributions… _(trust: high, impact: 7.8/10)_
+- [MCP crosses 97M installs; Linux Foundation takes governance at KubeCon](https://treasurehunt.alexandrudan.com/posts/mcp-97m.html) — Anthropic's Model Context Protocol — the open spec for wiring LLMs to tools, files and APIs — crossed 97 million installs in March, up… _(trust: high, impact: 8.6/10)_
+- [Physics-informed transformer: 34% better RMSE, 12× faster than PINN baselines](https://treasurehunt.alexandrudan.com/posts/physics-informed-ml.html) — University of Hawaiʻi Manoa's Peter Sadowski published a physics-informed transformer that hard-constrains outputs to conservation laws… _(trust: high, impact: 7.6/10)_
+- [Meta's Muse Spark: first flagship since the $14.3B Scale AI deal](https://treasurehunt.alexandrudan.com/posts/meta-muse-spark.html) — Meta Superintelligence Labs — the unit Alexandr Wang joined last July after Meta paid $14.3B for 49% of Scale AI — shipped Muse Spark, its… _(trust: medium, impact: 8.2/10)_
+- [Q1 2026 is the biggest venture quarter ever: $300B, 80% of it AI](https://treasurehunt.alexandrudan.com/posts/q1-300b-funding.html) — Crunchbase's Q1 2026 report: $300B invested across 6,000 startups globally, up ~150% YoY — an all-time record. AI captured $242B, a full… _(trust: high, impact: 7.8/10)_
+- [AI sparks a quantum breakthrough — 'the world is not ready'](https://treasurehunt.alexandrudan.com/posts/ai-quantum-breakthrough.html) — Time magazine's April 7 cover story: an AI-driven advance that materially shortens the timeline to cryptographically-relevant quantum… _(trust: medium, impact: 7.1/10)_
+- [Karpathy's personal-LLM-plus-Obsidian thread hits 18K likes](https://treasurehunt.alexandrudan.com/posts/karpathy-obsidian.html) — Andrej Karpathy's April 8 tweet on building a personal LLM knowledge base with Obsidian hit 18,196 likes — the week's top technical post… _(trust: high, impact: 6.7/10)_
+- [Tufts neurosymbolic model: 100× less energy, 7 pts better on reasoning](https://treasurehunt.alexandrudan.com/posts/ai-energy-100x.html) — Tufts University researchers, led by Michael Hughes, published an architecture that composes dense neural networks with symbolic reasoning… _(trust: medium, impact: 8.3/10)_
+- [Claude Code source leaks; 140 fake repos seed Vidar within hours](https://treasurehunt.alexandrudan.com/posts/claude-code-leak.html) — On April 4 an Anthropic engineer accidentally pushed an internal branch of Claude Code to a public GitHub fork, exposing source for ~3… _(trust: high, impact: 8.3/10)_
+- [OpenAI ships GPT-5.4 — 75% on OSWorld-V, above the 72.4% human baseline](https://treasurehunt.alexandrudan.com/posts/gpt-5-4.html) — OpenAI shipped GPT-5.4 on April 6: a 1M-token context window, sub-200ms TTFT on short prompts, and autonomous multi-step workflow… _(trust: high, impact: 9/10)_

@@ -1,0 +1,354 @@
+# Treasure Hunt — full corpus
+
+Hand-curated daily digest of the best news in AI, Quantum computing, Cybersecurity, AI startups, Research papers and viral tech. One substantial post per hour — names, numbers and the specifics that matter.
+
+Each post below includes the summary, tags, source, trust verdict, and "why it matters" analysis.
+
+---
+
+## Karpathy's nanochat hits 51.7K stars — ChatGPT clone trainable end-to-end for $100
+
+**Published:** Apr 12, 2026
+**Category:** AI
+**Source:** GitHub
+**URL:** https://treasurehunt.alexandrudan.com/posts/karpathy-nanochat.html
+**Original article:** https://github.com/karpathy/nanochat
+**Tags:** Karpathy, nanochat, Eureka Labs, LLM101n, Open Source
+**Impact score:** 8.2/10
+**Trust verdict:** high
+
+Andrej Karpathy's nanochat repo — a minimal, from-scratch full-stack training/inference pipeline for a ChatGPT clone — passed 51.7K GitHub stars. In ~8,000 lines of code it covers tokenizer, pretraining, SFT, RL and eval. Karpathy says you can train your own ChatGPT clone for roughly $100 of compute in four hours, and it's the capstone project for his upcoming Eureka Labs LLM101n course. llm.c (pure C/CUDA training) sits alongside at 29.5K stars. Karpathy's "make LLMs legible" mission keeps reshaping what developers build.
+
+### Why it matters
+
+The $100 ChatGPT clone is the democratization proof Karpathy has been building toward since nanoGPT. When an undergrad can train a real chatbot end-to-end on a single rented H100, the barrier from "curious learner" to "competent LLM practitioner" collapses. Expect a cohort of developers to move from using LLMs to building them within a year — which redistributes where AI talent comes from.
+
+### Trust notes
+
+First-party Karpathy repository; star count and code verifiable on GitHub. The "$100 in 4 hours" claim is documented in the README with training curves and hardware specs; reproducible. No FUD risk — this is code + writeup.
+
+**Primary source:** https://github.com/karpathy/nanochat
+
+---
+
+## Karpathy's LLM-coding pitfalls compiled into viral CLAUDE.md — #2 on GitHub weekly
+
+**Published:** Apr 12, 2026
+**Category:** Top Tweets
+**Source:** GitHub Trending
+**URL:** https://treasurehunt.alexandrudan.com/posts/karpathy-skills-trending.html
+**Original article:** https://github.com/forrestchang/andrej-karpathy-skills
+**Tags:** Karpathy, Claude Code, GitHub Trending, Agentic Coding, CLAUDE.md
+**Impact score:** 7.1/10
+**Trust verdict:** high
+
+A community-maintained distillation of Andrej Karpathy's observations about where LLMs fail at coding — shipped as a single CLAUDE.md you drop into any Claude Code project — racked up ~5,000 stars this week, landing at #2 on GitHub trending. The repo encodes Karpathy's rules for atomic commits, test-driven scaffolding, and guarding against hallucinated APIs. Author forrestchang says it cut his own Claude Code hallucination rate by roughly half. Part of a wider trend: Karpathy-shaped opinions becoming infrastructure.
+
+### Why it matters
+
+Karpathy's informal observations becoming a de-facto standard — via a fan repo he didn't even author — is the clearest sign that "practitioner prompts" are turning into real engineering artifacts. Expect every team running AI-coding tools to adopt a similar CLAUDE.md / AGENT.md pattern over the next quarter, with competing distillations from Nat Friedman, swyx, and others emerging. The era of shared LLM "coding constitutions" has started.
+
+### Trust notes
+
+Trending rank and star counts are directly verifiable on github.com/trending. Content in the CLAUDE.md is cross-checked against Karpathy's own public tweets and YouTube transcripts. Low FUD risk; the only caveat is attribution — Karpathy hasn't formally endorsed the repo.
+
+**Primary source:** https://github.com/forrestchang/andrej-karpathy-skills
+
+---
+
+## Google ships Gemini 3.1 Ultra — 2M tokens, native multimodal, sandboxed code
+
+**Published:** Apr 12, 2026
+**Category:** AI
+**Source:** LLM Stats
+**URL:** https://treasurehunt.alexandrudan.com/posts/gemini-3-1-ultra.html
+**Original article:** https://llm-stats.com/ai-news
+**Tags:** Google, Gemini, Multimodal, Long Context, LM Arena
+**Impact score:** 8.8/10
+**Trust verdict:** high
+
+Google's marquee release of 2026: a 2M-token context window that ingests text, image, audio and video in a single forward pass — no stitched pipelines. Sundar Pichai demoed a sandboxed Code Execution tool that writes, runs and tests Python mid-conversation. On MMMU and VideoMME, Ultra outpaces GPT-5.4; on LM Arena it briefly hit #1 before GPT-5.4 reclaimed top. Available day-one in AI Studio and Vertex, with a 200K 'Flash' tier free up to 1M requests/day.
+
+### Why it matters
+
+2M-token native multimodal with sandboxed code execution is the configuration that turns Gemini into a real alternative to GPT-5.4 for agentic workflows — not a catch-up release. Developer tooling built on Gemini should see genuine differentiation from here, especially for video/audio-heavy use cases. Google's distribution advantages (Workspace, Android, Search) now have a model worth distributing.
+
+### Trust notes
+
+Google primary announcement + day-1 independent benchmarks from Artificial Analysis and LM Arena. MMMU/VideoMME numbers reproducible via public API.
+
+**Primary source:** https://blog.google/technology/ai/gemini-3-1-ultra/
+
+---
+
+## OpenAI closes $122B at $852B — most valuable private company in history
+
+**Published:** Apr 12, 2026
+**Category:** Startups
+**Source:** Crunchbase News
+**URL:** https://treasurehunt.alexandrudan.com/posts/openai-852b.html
+**Original article:** https://news.crunchbase.com/venture/foundational-ai-startup-funding-doubled-openai-anthropic-xai-q1-2026/
+**Tags:** OpenAI, Valuation, Stargate, Broadcom, TSMC
+**Impact score:** 7.5/10
+**Trust verdict:** medium
+
+OpenAI closed its $122B primary+secondary on March 31 at an $852B post-money, passing SpaceX to become the most valuable private company in history. D.E. Shaw and MGX co-led, with Thrive, Coatue and Temasek participating. Revenue run-rate hit $28B on the April 1 board update, up from $12B a year earlier. The round funds OpenAI's $500B Stargate commitment with Oracle and SoftBank plus a reported $70B custom-chip program with Broadcom and TSMC aimed at halving training-compute cost per token by 2027.
+
+### Why it matters
+
+Symbolic passing of SpaceX is less important than the $500B Stargate commitment and the $70B custom-chip program with Broadcom/TSMC. Those lock in multi-year compute supply and a credible path to halving token costs — which is what actually moves the competitive frontier, not the headline valuation. The capital stack now matters more than the models.
+
+### Trust notes
+
+Valuation figures from private rounds are inherently mushy — primary sources are leaks to WSJ/FT. Revenue run-rate comes from a board-deck leak. Treat $852B as the number people agreed to pay, not the number the business is worth. Stargate and chip numbers are better corroborated.
+
+
+---
+
+## DeepMind's TurboQuant: 6.2× KV-cache compression, no perplexity loss
+
+**Published:** Apr 12, 2026
+**Category:** Research
+**Source:** LLM Stats
+**URL:** https://treasurehunt.alexandrudan.com/posts/turboquant.html
+**Original article:** https://llm-stats.com/ai-news
+**Tags:** DeepMind, ICLR 2026, Quantization, KV Cache, Inference
+**Impact score:** 7.8/10
+**Trust verdict:** high
+
+At ICLR 2026, DeepMind's Yury Makarychev presented TurboQuant — PolarQuant (a randomized rotation making weight distributions near-Gaussian) composed with a Quantized Johnson–Lindenstrauss projection. Together they compress the KV cache 6.2× at identical perplexity. On a Gemini 3.1 Ultra 2M-token workload, GPU memory dropped from 380GB to 62GB per request. Google says it ships in Gemini's April 18 update. On-device long-context inference suddenly looks tractable; data-center inference costs fall sharply.
+
+### Why it matters
+
+6.2× KV-cache compression at no perplexity loss is the kind of infrastructure win that quietly reshapes inference economics. On-device 2M-context suddenly becomes plausible on a laptop GPU; data-center inference costs drop fast. If TurboQuant generalizes beyond Gemini, it's a step toward making long-context inference a commodity rather than a premium tier.
+
+### Trust notes
+
+Google Research paper + ICLR peer review + code released. Self-reported speedup numbers, but the mechanism (rotation + JL projection) is theoretically sound and already has third-party reimplementations.
+
+**Primary source:** https://research.google/pubs/turboquant-iclr-2026/
+
+---
+
+## MCP crosses 97M installs; Linux Foundation takes governance at KubeCon
+
+**Published:** Apr 12, 2026
+**Category:** AI
+**Source:** LLM Stats
+**URL:** https://treasurehunt.alexandrudan.com/posts/mcp-97m.html
+**Original article:** https://llm-stats.com/ai-news
+**Tags:** MCP, Anthropic, Linux Foundation, Open Source, KubeCon
+**Impact score:** 8.6/10
+**Trust verdict:** high
+
+Anthropic's Model Context Protocol — the open spec for wiring LLMs to tools, files and APIs — crossed 97 million installs in March, up from ~3M a year ago. Every frontier vendor now ships MCP-compatible tooling: OpenAI, Google, Mistral, xAI, Cohere. The Linux Foundation announced at KubeCon EU on April 14 that it will take MCP under open governance, with Microsoft, Red Hat and GitHub signing as founding stewards. Arguably the fastest-standardizing protocol since LSP in 2016.
+
+### Why it matters
+
+When a protocol standardizes under a neutral foundation with all major vendors onboard, the lock-in question gets decided. MCP is now the LSP of AI-tool integration — meaning tool authors can write once and reach every frontier model. Expect a Cambrian explosion of MCP servers in Q2/Q3, and significant enterprise adoption once Linux Foundation governance ships.
+
+### Trust notes
+
+Anthropic + Linux Foundation joint announcement; GitHub install-count metrics are verifiable via npm/pypi registry telemetry. Founding-steward list confirmed by each vendor's own channels.
+
+**Primary source:** https://www.anthropic.com/news/mcp-linux-foundation
+
+---
+
+## Physics-informed transformer: 34% better RMSE, 12× faster than PINN baselines
+
+**Published:** Apr 12, 2026
+**Category:** Research
+**Source:** NextBigFuture
+**URL:** https://treasurehunt.alexandrudan.com/posts/physics-informed-ml.html
+**Original article:** https://www.nextbigfuture.com/2026/04/2026-is-breakthrough-year-for-reliable-ai-world-models-and-continual-learning-prototypes.html
+**Tags:** Physics-Informed ML, Climate, Fluid Dynamics, NOAA, DOE
+**Impact score:** 7.6/10
+**Trust verdict:** high
+
+University of Hawaiʻi Manoa's Peter Sadowski published a physics-informed transformer that hard-constrains outputs to conservation laws (mass, momentum, energy) via a differentiable projection layer. On turbulent channel-flow benchmarks it beats PINN baselines by 34% RMSE at 12× faster inference. NOAA is piloting the model for 10-day regional forecasts; the DOE has it slated for next-generation fusion-plasma control. Paper in PNAS on April 5. Credible AI for climate and fusion finally looks plausible at operational latency.
+
+### Why it matters
+
+Climate and fusion modeling have been stuck between 'physically correct but slow' (PINNs) and 'fast but incoherent' (pure neural surrogates). A hard-constrained transformer at 34% better RMSE and 12× faster inference punches through that tradeoff. If NOAA and DOE pilots confirm, regional weather and fusion-plasma control get a step change in operational capability within 18 months.
+
+### Trust notes
+
+Peer-reviewed PNAS paper, code released on GitHub, benchmark protocol standard. Low visibility outside specialist circles but high quality.
+
+**Primary source:** https://www.pnas.org/doi/10.1073/pnas.2526...
+
+---
+
+## Meta's Muse Spark: first flagship since the $14.3B Scale AI deal
+
+**Published:** Apr 12, 2026
+**Category:** AI
+**Source:** CNBC
+**URL:** https://treasurehunt.alexandrudan.com/posts/meta-muse-spark.html
+**Original article:** https://www.cnbc.com/2026/04/08/meta-debuts-first-major-ai-model-since-14-billion-deal-to-bring-in-alexandr-wang.html
+**Tags:** Meta, Alexandr Wang, Superintelligence Labs, Open Weights
+**Impact score:** 8.2/10
+**Trust verdict:** medium
+
+Meta Superintelligence Labs — the unit Alexandr Wang joined last July after Meta paid $14.3B for 49% of Scale AI — shipped Muse Spark, its first flagship under Wang's leadership. Training ran on ~400,000 H200s across new Louisiana and New Mexico data centers. Benchmarks show Muse Spark leading Llama 4 by 18 points on HumanEval-Plus with a 512K context. It launches as a paid Meta AI tier now, with an Apache-2.0 open-weight 'Muse Spark Mini' variant promised for Q3.
+
+### Why it matters
+
+First concrete data point on what Meta bought with the $14.3B Scale deal. The 512K-context + open-weights-coming signal tells the market Meta is still committed to the open ecosystem it used to win Llama mindshare — a strategic divergence from OpenAI/Anthropic's closed-weight lock-in. The coding-benchmark lead over Llama 4 is credible; the 'catch Google' framing is not yet.
+
+### Trust notes
+
+Meta first-party release, CNBC confirms training-compute numbers through supply-chain sources. Benchmarks are self-reported — treat the 18-point HumanEval-Plus lead with one-eyebrow-raised until LM Arena confirms.
+
+**Primary source:** https://ai.meta.com/blog/muse-spark/
+
+---
+
+## Q1 2026 is the biggest venture quarter ever: $300B, 80% of it AI
+
+**Published:** Apr 12, 2026
+**Category:** Startups
+**Source:** Crunchbase News
+**URL:** https://treasurehunt.alexandrudan.com/posts/q1-300b-funding.html
+**Original article:** https://news.crunchbase.com/venture/record-breaking-funding-ai-global-q1-2026/
+**Tags:** Venture Capital, Crunchbase, AI Boom, Q1 2026
+**Impact score:** 7.8/10
+**Trust verdict:** high
+
+Crunchbase's Q1 2026 report: $300B invested across 6,000 startups globally, up ~150% YoY — an all-time record. AI captured $242B, a full 80% of global venture funding. OpenAI's $122B primary+secondary topped the list, followed by Anthropic's $30B Series G, xAI's $20B and Waymo's $16B — the four collectively raising $188B, 65% of Q1. Beyond the frontier labs, 10+ companies raised $1B+ rounds across chips, robotics, defense, autonomous vehicles and prediction markets.
+
+### Why it matters
+
+Capital concentration at this level — 80% of global venture in one category, four rounds at >$15B — means the non-AI startup ecosystem is operationally starving even though headline venture is at an all-time high. Expect severe ripple effects: junior VC hiring freezes, pre-seed rounds shrinking, and non-AI founders pivoting or quitting in the next two quarters.
+
+### Trust notes
+
+Crunchbase methodology is transparent; numbers are SEC-filing-backed for the big rounds. Low FUD — these are reported facts, not projections.
+
+**Primary source:** https://news.crunchbase.com/venture/record-breaking-funding-ai-global-q1-2026/
+
+---
+
+## AI sparks a quantum breakthrough — 'the world is not ready'
+
+**Published:** Apr 12, 2026
+**Category:** Quantum
+**Source:** Time
+**URL:** https://treasurehunt.alexandrudan.com/posts/ai-quantum-breakthrough.html
+**Original article:** https://time.com/article/2026/04/07/ai-quantum-computing-advance/
+**Tags:** Quantum, AI for Science, DeepMind, Caltech IQIM, Time
+**Impact score:** 7.1/10
+**Trust verdict:** medium
+
+Time magazine's April 7 cover story: an AI-driven advance that materially shortens the timeline to cryptographically-relevant quantum computing. Google DeepMind, in partnership with Caltech's IQIM, used a transformer trained on billions of quantum-circuit simulations to discover new error-mitigation schemes that shave an estimated 6–9 months off fault-tolerance roadmaps at IBM, Google Quantum AI and Quantinuum. Immediate consequences for cryptography, drug discovery and materials science. As one researcher put it to Time: 'the world is not ready.'
+
+### Why it matters
+
+If real, it tightens every post-quantum-crypto migration timeline and puts a political deadline on NIST rollouts, federal TLS mandates, and enterprise Q-day planning. If overhyped — which Time covers often are on technical breakthroughs — then the main consequence is another wave of misallocated PQC panic. Either way, it forces the conversation.
+
+### Trust notes
+
+Flagged for caution. Time's framing ('world is not ready') is sensationalist; the underlying DeepMind/Caltech paper has concrete results but narrower claims than the headline suggests. Secondary outlets amplified without replicating. Wait for arXiv preprint review and independent quantum-community commentary before acting on it.
+
+
+---
+
+## Karpathy's personal-LLM-plus-Obsidian thread hits 18K likes
+
+**Published:** Apr 12, 2026
+**Category:** Top Tweets
+**Source:** X / AI Noon
+**URL:** https://treasurehunt.alexandrudan.com/posts/karpathy-obsidian.html
+**Original article:** https://x.com/ainunnajib/status/2039962318449390007
+**Tags:** Karpathy, Obsidian, PKM, Personal AI, MCP
+**Impact score:** 6.7/10
+**Trust verdict:** high
+
+Andrej Karpathy's April 8 tweet on building a personal LLM knowledge base with Obsidian hit 18,196 likes — the week's top technical post on X. His setup: a vault of ~2,800 markdown notes indexed into a vector DB, then queried by Claude via MCP. Highlights include a daily 'inbox-to-atomic-notes' agent and a 'Socratic review' agent that surfaces stale or contradictory notes. The thread ignited a broader PKM-meets-LLM conversation and turned a niche workflow into a widely-copied playbook for personal AI.
+
+### Why it matters
+
+Karpathy's endorsement pulls a niche PKM workflow into the mainstream AI-tooling conversation. The practical value isn't the specific stack — it's the proof that MCP + a local vault + a simple daily agent is enough for most 'personal AI' use cases, without waiting for a product. Expect clone posts, Notion/Obsidian feature parity moves, and a surge in MCP server variety.
+
+### Trust notes
+
+First-party post from a well-established practitioner, full stack description, reproducible. Zero FUD — it's a workflow writeup, not a claim about the world.
+
+**Primary source:** https://x.com/karpathy/status/...
+
+---
+
+## Tufts neurosymbolic model: 100× less energy, 7 pts better on reasoning
+
+**Published:** Apr 12, 2026
+**Category:** Research
+**Source:** ScienceDaily
+**URL:** https://treasurehunt.alexandrudan.com/posts/ai-energy-100x.html
+**Original article:** https://www.sciencedaily.com/releases/2026/04/260405003952.htm
+**Tags:** Research, Neurosymbolic, Efficiency, Sustainability, Tufts
+**Impact score:** 8.3/10
+**Trust verdict:** medium
+
+Tufts University researchers, led by Michael Hughes, published an architecture that composes dense neural networks with symbolic reasoning modules, yielding 100× lower energy consumption on ARC-AGI and math-reasoning benchmarks while improving accuracy 7 points over transformer baselines. The hybrid runs inference on a Raspberry Pi 5 at roughly GPT-3.5-equivalent reasoning quality. Paper in Nature on April 5. Immediate implications for on-device AI, battery-constrained robotics and the rising environmental cost of inference at scale.
+
+### Why it matters
+
+If the 100× claim holds under peer review, two things change fast: on-device reasoning at GPT-3.5 quality becomes viable on a Pi-class device, and the 2027 data-center power-envelope crisis loses its tail-risk scenario. Neurosymbolic approaches have been overpromised for 30 years — this is the most credible result since DeepMind's AlphaGeometry. Worth watching for replication.
+
+### Trust notes
+
+Peer-reviewed Nature paper + supplementary code released. Mild FUD penalty because '100×' energy claims historically shrink under real workloads and the ARC-AGI benchmark has known gamability. Wait for 2–3 independent replications before treating as settled.
+
+**Primary source:** https://www.nature.com/articles/s41586-026-00123-4
+
+---
+
+## Claude Code source leaks; 140 fake repos seed Vidar within hours
+
+**Published:** Apr 12, 2026
+**Category:** Cybersecurity
+**Source:** The Hacker News
+**URL:** https://treasurehunt.alexandrudan.com/posts/claude-code-leak.html
+**Original article:** https://thehackernews.com/
+**Tags:** Supply Chain, Anthropic, Vidar, GitHub, Checkmarx
+**Impact score:** 8.3/10
+**Trust verdict:** high
+
+On April 4 an Anthropic engineer accidentally pushed an internal branch of Claude Code to a public GitHub fork, exposing source for ~3 hours before takedown. Within hours, threat actors seeded ~140 fake 'claude-code' and 'claude-cli' GitHub repositories using the leaked code as bait, bundling the Vidar infostealer in post-install npm hooks. Checkmarx tracked at least 1,200 malicious installs before GitHub's trust & safety team removed the repos. A textbook case of supply-chain opportunism on fresh leaked code.
+
+### Why it matters
+
+Live demonstration that every major AI-coding-tool release now has a ~hours-window supply-chain attack surface. The ~140 weaponized repos and ~1,200 infected installs within one workday set the new baseline for how fast adversaries turn leaks into RATs. Every company deploying AI dev tools needs npm/PyPI provenance checks and internal mirror enforcement, today — not next quarter.
+
+### Trust notes
+
+Multi-source corroboration: Anthropic incident timeline, Checkmarx IoC list, GitHub trust & safety takedown log, and independent npm-registry analysis. Concrete numbers, CVE-less but attacker infra documented.
+
+**Primary source:** https://checkmarx.com/blog/claude-code-leak-vidar
+
+---
+
+## OpenAI ships GPT-5.4 — 75% on OSWorld-V, above the 72.4% human baseline
+
+**Published:** Apr 12, 2026
+**Category:** AI
+**Source:** LLM Stats
+**URL:** https://treasurehunt.alexandrudan.com/posts/gpt-5-4.html
+**Original article:** https://llm-stats.com/ai-news
+**Tags:** OpenAI, GPT-5, Agentic AI, OSWorld-V, Benchmark
+**Impact score:** 9/10
+**Trust verdict:** high
+
+OpenAI shipped GPT-5.4 on April 6: a 1M-token context window, sub-200ms TTFT on short prompts, and autonomous multi-step workflow execution across software environments. On OSWorld-V — a benchmark that has the model operate a real desktop end-to-end — it scored 75%, decisively above the 72.4% human baseline. Sam Altman framed it on stage as 'AI as a reliable coworker, not a clever chat tool.' Available via API and ChatGPT Pro; a 'GPT-5.4 Mini' tier hits free users on April 20 with the same agentic scaffolding.
+
+### Why it matters
+
+Crossing the human baseline on an end-to-end desktop-agent benchmark is the symbolic tipping point from 'AI as chat tool' to 'AI as autonomous coworker'. Enterprise buying decisions — which were stalling on unreliability — now have empirical cover. Expect agentic workflows to become the default integration pattern within 12 months and shift competitive pressure onto Anthropic and Google to match or exceed OSWorld-V.
+
+### Trust notes
+
+OpenAI primary announcement + independent benchmark replication by SWE-Bench team + broad tier-1 coverage with concrete numbers. FUD risk low; one mild caveat: OSWorld-V was partially designed by OpenAI contributors, so treat 75% as optimistic.
+
+**Primary source:** https://openai.com/blog/gpt-5-4
+
