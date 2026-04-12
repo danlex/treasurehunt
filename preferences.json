@@ -21,7 +21,7 @@
       "dislikes": 0
     },
     "AI": {
-      "likes": 1,
+      "likes": 2,
       "dislikes": 0
     }
   },
@@ -31,7 +31,7 @@
       "dislikes": 0
     },
     "Anthropic": {
-      "likes": 1,
+      "likes": 2,
       "dislikes": 1
     },
     "Vidar": {
@@ -153,6 +153,18 @@
     "Superintelligence Labs": {
       "likes": 1,
       "dislikes": 0
+    },
+    "MCP": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "Linux Foundation": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "Open Source": {
+      "likes": 1,
+      "dislikes": 0
     }
   },
   "sources": {
@@ -183,11 +195,15 @@
     "CNBC": {
       "likes": 1,
       "dislikes": 0
+    },
+    "LLM Stats": {
+      "likes": 1,
+      "dislikes": 0
     }
   },
   "totals": {
-    "likes": 7,
+    "likes": 8,
     "dislikes": 2
   },
-  "lastUpdated": "2026-04-12T18:35:46.911Z"
+  "lastUpdated": "2026-04-12T18:35:51.209Z"
 }

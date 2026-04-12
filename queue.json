@@ -27,20 +27,6 @@
     "source": "ScienceDaily"
   },
   {
-    "id": "mcp-97m",
-    "category": "AI",
-    "title": "Anthropic's MCP hits 97M installs; Linux Foundation takes governance",
-    "summary": "Model Context Protocol has become the de facto standard for connecting AI to tools and data. Every major AI provider now ships MCP-compatible tooling. The Linux Foundation taking open governance cements it as critical open infrastructure.",
-    "tags": [
-      "MCP",
-      "Anthropic",
-      "Linux Foundation",
-      "Open Source"
-    ],
-    "url": "https://llm-stats.com/ai-news",
-    "source": "LLM Stats"
-  },
-  {
     "id": "fault-tolerant-no-midcircuit",
     "category": "Quantum",
     "title": "Fault-tolerant Grover's algorithm — no mid-circuit measurements needed",
