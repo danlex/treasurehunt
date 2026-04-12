@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Review — Treasure Hunt</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --red: #ff4a3d;
+    --red-dark: #d63a2a;
+    --green: #10b981;
+    --green-dark: #059669;
+    --dark: #0f0f0f;
+    --light-bg: #f7f6f4;
+    --text: #111111;
+    --text-sec: #4a4a4a;
+    --text-mute: #8a8a8a;
+    --border: #ebebeb;
+    --font-display: 'Space Grotesk', 'Segoe UI', sans-serif;
+    --font-body: 'Manrope', 'Segoe UI', sans-serif;
+  }
+  body {
+    font-family: var(--font-body);
+    color: var(--text);
+    background: var(--light-bg);
+    line-height: 1.5;
+  }
+  h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.01em; }
+
+  nav {
+    position: sticky; top: 0;
+    height: 72px;
+    background: #fff;
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 32px;
+    z-index: 100;
+  }
+  .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .nav-logo-text {
+    font-family: var(--font-display);
+    font-size: 15px; font-weight: 700;
+    color: var(--red);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .nav-right { display: flex; align-items: center; gap: 20px; font-size: 13px; color: var(--text-sec); }
+  .nav-right b { color: var(--text); font-weight: 600; }
+  .nav-right a {
+    color: var(--text-sec);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 6px 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    transition: all 0.15s;
+  }
+  .nav-right a:hover { color: var(--red); border-color: var(--red); }
+
+  .layout {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px;
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 32px;
+  }
+
+  .hero { margin-bottom: 24px; }
+  .red-label {
+    color: var(--red);
+    font-size: 13px; font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    display: block;
+  }
+  .hero h1 {
+    font-size: clamp(28px, 4vw, 38px);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 8px;
+  }
+  .hero h1 span { color: var(--red); }
+  .hero p {
+    color: var(--text-sec);
+    font-size: 15px;
+    max-width: 560px;
+  }
+
+  .empty {
+    background: #fff;
+    border: 1px dashed var(--border);
+    border-radius: 12px;
+    padding: 60px 30px;
+    text-align: center;
+    color: var(--text-sec);
+  }
+  .empty h3 { font-size: 18px; color: var(--text); margin-bottom: 8px; }
+
+  .card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 22px 24px;
+    margin-bottom: 14px;
+    transition: transform 0.2s, opacity 0.2s, box-shadow 0.15s, border-color 0.15s;
+  }
+  .card:hover { border-color: #d4d4d4; box-shadow: 0 2px 10px rgba(0,0,0,0.04); }
+  .card.leaving-like    { transform: translateX(24px); opacity: 0; border-color: var(--green); }
+  .card.leaving-dislike { transform: translateX(-24px); opacity: 0; border-color: var(--dark); }
+
+  .card-meta {
+    display: flex; align-items: center; gap: 10px;
+    margin-bottom: 10px;
+    font-size: 11px;
+    color: var(--text-mute);
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .cat-badge {
+    padding: 4px 10px;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 10px;
+    letter-spacing: 1.2px;
+  }
+  .cat-AI             { background: linear-gradient(135deg, #ff4a3d, #ff9a8f); }
+  .cat-Quantum        { background: linear-gradient(135deg, #5b3eff, #b78fff); }
+  .cat-Cybersecurity  { background: linear-gradient(135deg, #0f0f0f, #4a4a4a); }
+  .cat-Startups       { background: linear-gradient(135deg, #10b981, #6ee7b7); }
+  .cat-Research       { background: linear-gradient(135deg, #0ea5e9, #7dd3fc); }
+  .cat-TopTweets      { background: linear-gradient(135deg, #f59e0b, #fcd34d); }
+  .cat-Viral          { background: linear-gradient(135deg, #ec4899, #f9a8d4); }
+
+  .card-title {
+    font-family: var(--font-display);
+    font-size: 20px; font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 10px;
+  }
+  .card-summary {
+    color: var(--text-sec);
+    font-size: 14px;
+    line-height: 1.65;
+    margin-bottom: 14px;
+  }
+  .card-tags {
+    display: flex; gap: 6px; flex-wrap: wrap;
+    margin-bottom: 16px;
+  }
+  .tag {
+    font-size: 11px; font-weight: 600;
+    color: var(--text-sec);
+    background: var(--light-bg);
+    padding: 3px 9px;
+    border-radius: 4px;
+    letter-spacing: 0.3px;
+  }
+  .card-footer {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .source-link {
+    color: var(--text-sec);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .source-link:hover { color: var(--red); }
+  .actions { display: flex; gap: 8px; }
+  .btn {
+    font-family: var(--font-body);
+    padding: 8px 20px;
+    border-radius: 6px;
+    border: 0;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.15s;
+    display: inline-flex; align-items: center; gap: 6px;
+  }
+  .btn-like {
+    background: var(--green);
+    color: #fff;
+  }
+  .btn-like:hover { background: var(--green-dark); }
+  .btn-dislike {
+    background: #fff;
+    color: var(--text);
+    border: 1px solid var(--border);
+  }
+  .btn-dislike:hover { background: var(--dark); color: #fff; border-color: var(--dark); }
+  .btn:disabled { opacity: 0.5; cursor: wait; }
+
+  /* TASTE PANEL */
+  aside {
+    position: sticky;
+    top: 104px;
+    align-self: start;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 22px 20px;
+    font-size: 13px;
+  }
+  aside h3 {
+    font-family: var(--font-display);
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+  aside .sub { color: var(--text-sec); margin-bottom: 18px; font-size: 12px; }
+  .taste-section {
+    margin-bottom: 18px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--border);
+  }
+  .taste-section:last-child { border-bottom: 0; margin-bottom: 0; padding-bottom: 0; }
+  .taste-label {
+    font-size: 10px;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: var(--text-mute);
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .taste-row {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 5px 0;
+    color: var(--text);
+  }
+  .taste-row .score {
+    font-variant-numeric: tabular-nums;
+    font-size: 12px;
+    font-weight: 600;
+    min-width: 60px; text-align: right;
+  }
+  .taste-row .score .up   { color: var(--green); }
+  .taste-row .score .down { color: var(--red); }
+  .taste-empty { color: var(--text-mute); font-size: 12px; font-style: italic; }
+
+  .toast {
+    position: fixed;
+    bottom: 24px; right: 24px;
+    background: var(--dark);
+    color: #fff;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.2s, transform 0.2s;
+    pointer-events: none;
+    z-index: 1000;
+  }
+  .toast.show { opacity: 1; transform: translateY(0); }
+  .toast.ok { background: var(--green); }
+  .toast.err { background: var(--red); }
+
+  @media (max-width: 900px) {
+    .layout { grid-template-columns: 1fr; padding: 20px; }
+    aside { position: static; }
+    nav { padding: 0 20px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="/">
+    <svg width="28" height="28" viewBox="107 107 786 786" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="32" height="32" rx="6" fill="#f7f6f4"/>
+      <path d="M892.95 447.19L552.77 107.06V106.92H106.92V552.81L447.19 893.07H893.08L892.95 447.18V447.19ZM868.91 447.19H552.78V131.19L868.91 447.18V447.19ZM123.99 123.99H535.71V447.19H447.19V535.75H123.99V123.99ZM535.71 464.25V535.75H464.25V464.25H535.71ZM131.04 552.81H447.19V868.94L131.04 552.81ZM876.01 876.01H464.25V552.81H552.77V464.25H876.01V876.01Z" fill="#FF4931"/>
+      <path d="M290.55 255.08V272.11H273.12V389.18H255.88V281.12L236.53 272.11V255.08H290.55Z" fill="#FF4931"/>
+      <path d="M366.8 255.08L346.7 389.18H321.03L300.92 255.08H318.53L329.85 330.57L331.7 342.92H336.02L337.88 330.57L349.19 255.08H366.8Z" fill="#FF4931"/>
+      <path d="M424.68 372.12V389.18H382.92V255.08H400.17V372.12H424.68Z" fill="#FF4931"/>
+      <path d="M552.77 641.5L572.22 650.55V759.11H589.54V658.63V641.5H607.06V624.37H552.77V641.5Z" fill="#FF4931"/>
+      <path d="M642.28 700.21H668.27V683.08H642.28L641.92 641.5H668.84V624.37H636.12H624.96V641.5V651.53V759.11H626.91H668.84H669.45V741.98H642.28V700.21Z" fill="#FF4931"/>
+      <path d="M687.35 741.98V759.11H729.89V741.98H704.67V641.5H729.89V624.37H687.35V741.98Z" fill="#FF4931"/>
+      <path d="M788.8 624.37V683.08H767.63V624.37H750.3V759.11H767.63V700.21H788.8V759.11H806.12V624.37H788.8Z" fill="#FF4931"/>
+    </svg>
+    <span class="nav-logo-text">TREASURE HUNT · REVIEW</span>
+  </a>
+  <div class="nav-right">
+    <span>Pending <b id="stat-queue">0</b></span>
+    <span>Published <b id="stat-posts">0</b></span>
+    <span>Rejected <b id="stat-rejected">0</b></span>
+    <a href="https://treasurehunt.alexandrudan.com" target="_blank" rel="noopener">Live feed ↗</a>
+  </div>
+</nav>
+
+<div class="layout">
+  <section>
+    <div class="hero">
+      <span class="red-label">Your desk · local review</span>
+      <h1>Like to <span>publish</span>. Dislike to <span>forget</span>.</h1>
+      <p>Every Like pushes the item to the public feed. Every Dislike deletes it and tunes your taste profile.</p>
+    </div>
+    <div id="queue"></div>
+  </section>
+
+  <aside>
+    <h3>Your taste</h3>
+    <p class="sub" id="taste-sub">Like / dislike a few items to start.</p>
+
+    <div class="taste-section">
+      <div class="taste-label">Categories</div>
+      <div id="taste-categories"><div class="taste-empty">No data yet</div></div>
+    </div>
+    <div class="taste-section">
+      <div class="taste-label">Top tags</div>
+      <div id="taste-tags"><div class="taste-empty">No data yet</div></div>
+    </div>
+    <div class="taste-section">
+      <div class="taste-label">Sources</div>
+      <div id="taste-sources"><div class="taste-empty">No data yet</div></div>
+    </div>
+  </aside>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+let state = { queue: [], posts: [], rejected: [], preferences: { categories: {}, tags: {}, sources: {}, totals: { likes: 0, dislikes: 0 } } };
+
+function catClass(cat) { return "cat-" + cat.replace(/[^A-Za-z]/g, ""); }
+
+function showToast(msg, kind = "") {
+  const el = document.getElementById("toast");
+  el.textContent = msg;
+  el.className = "toast show " + kind;
+  clearTimeout(el._t);
+  el._t = setTimeout(() => el.classList.remove("show"), 2200);
+}
+
+function renderQueue() {
+  const feed = document.getElementById("queue");
+  if (!state.queue.length) {
+    feed.innerHTML = `
+      <div class="empty">
+        <h3>Queue empty</h3>
+        <p>Nothing left to review. Ask me to hunt for more news.</p>
+      </div>`;
+    return;
+  }
+  feed.innerHTML = state.queue.map(item => `
+    <article class="card" data-id="${item.id}">
+      <div class="card-meta">
+        <span class="cat-badge ${catClass(item.category)}">${item.category}</span>
+        <span>·</span>
+        <span>${item.source || ""}</span>
+      </div>
+      <h2 class="card-title">${escapeHtml(item.title)}</h2>
+      <p class="card-summary">${escapeHtml(item.summary)}</p>
+      <div class="card-tags">
+        ${(item.tags || []).map(t => `<span class="tag">${escapeHtml(t)}</span>`).join("")}
+      </div>
+      <div class="card-footer">
+        <a class="source-link" href="${item.url}" target="_blank" rel="noopener">Read source ↗</a>
+        <div class="actions">
+          <button class="btn btn-dislike" data-action="dislike">Dislike</button>
+          <button class="btn btn-like" data-action="like">Like → Publish</button>
+        </div>
+      </div>
+    </article>
+  `).join("");
+
+  feed.querySelectorAll(".card").forEach(card => {
+    const id = card.dataset.id;
+    card.querySelectorAll("button[data-action]").forEach(btn => {
+      btn.addEventListener("click", () => act(card, id, btn.dataset.action));
+    });
+  });
+}
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
+}
+
+function renderStats() {
+  document.getElementById("stat-queue").textContent = state.queue.length;
+  document.getElementById("stat-posts").textContent = state.posts.length;
+  document.getElementById("stat-rejected").textContent = state.rejected.length;
+}
+
+function renderTaste() {
+  const p = state.preferences;
+  const totals = p.totals || { likes: 0, dislikes: 0 };
+  const sub = document.getElementById("taste-sub");
+  sub.textContent = totals.likes + totals.dislikes === 0
+    ? "Like / dislike a few items to start."
+    : `${totals.likes} liked · ${totals.dislikes} disliked across ${Object.keys(p.tags || {}).length} tags.`;
+
+  renderTasteSection("taste-categories", p.categories, 6);
+  renderTasteSection("taste-tags", p.tags, 8);
+  renderTasteSection("taste-sources", p.sources, 6);
+}
+
+function renderTasteSection(id, bucket, limit) {
+  const entries = Object.entries(bucket || {})
+    .map(([k, v]) => ({ k, score: (v.likes || 0) - (v.dislikes || 0), likes: v.likes || 0, dislikes: v.dislikes || 0 }))
+    .filter(e => e.likes || e.dislikes)
+    .sort((a, b) => Math.abs(b.score) - Math.abs(a.score) || (b.likes + b.dislikes) - (a.likes + a.dislikes))
+    .slice(0, limit);
+  const el = document.getElementById(id);
+  if (!entries.length) { el.innerHTML = '<div class="taste-empty">No data yet</div>'; return; }
+  el.innerHTML = entries.map(e => `
+    <div class="taste-row">
+      <span>${escapeHtml(e.k)}</span>
+      <span class="score">
+        ${e.likes ? `<span class="up">+${e.likes}</span>` : ""}
+        ${e.likes && e.dislikes ? " / " : ""}
+        ${e.dislikes ? `<span class="down">−${e.dislikes}</span>` : ""}
+      </span>
+    </div>
+  `).join("");
+}
+
+async function fetchState() {
+  const r = await fetch("/api/state", { cache: "no-store" });
+  state = await r.json();
+  renderStats();
+  renderQueue();
+  renderTaste();
+}
+
+async function act(card, id, action) {
+  card.querySelectorAll("button").forEach(b => b.disabled = true);
+  card.classList.add("leaving-" + action);
+
+  try {
+    const r = await fetch(`/api/${action}/${id}`, { method: "POST" });
+    const j = await r.json();
+    if (!r.ok) throw new Error(j.error || "failed");
+
+    if (action === "like") {
+      if (j.published) showToast("Published to live feed", "ok");
+      else             showToast("Saved locally, but push failed: " + (j.error || "check git"), "err");
+    } else {
+      showToast("Learned. Removed from queue.", "");
+    }
+
+    setTimeout(fetchState, 400);
+  } catch (e) {
+    card.classList.remove("leaving-" + action);
+    card.querySelectorAll("button").forEach(b => b.disabled = false);
+    showToast("Error: " + e.message, "err");
+  }
+}
+
+fetchState();
+</script>
+</body>
+</html>
