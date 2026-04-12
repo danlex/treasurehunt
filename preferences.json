@@ -13,7 +13,7 @@
       "dislikes": 0
     },
     "Startups": {
-      "likes": 0,
+      "likes": 1,
       "dislikes": 1
     },
     "Quantum": {
@@ -99,7 +99,7 @@
       "dislikes": 1
     },
     "Funding": {
-      "likes": 0,
+      "likes": 1,
       "dislikes": 1
     },
     "OpenAI": {
@@ -125,6 +125,18 @@
     "Time": {
       "likes": 1,
       "dislikes": 0
+    },
+    "Venture Capital": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "AI Boom": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "Crunchbase": {
+      "likes": 1,
+      "dislikes": 0
     }
   },
   "sources": {
@@ -145,7 +157,7 @@
       "dislikes": 0
     },
     "Crunchbase News": {
-      "likes": 0,
+      "likes": 1,
       "dislikes": 1
     },
     "Time": {
@@ -154,8 +166,8 @@
     }
   },
   "totals": {
-    "likes": 5,
+    "likes": 6,
     "dislikes": 2
   },
-  "lastUpdated": "2026-04-12T18:35:16.174Z"
+  "lastUpdated": "2026-04-12T18:35:36.297Z"
 }

@@ -1,5 +1,20 @@
 [
   {
+    "id": "q1-300b-funding",
+    "category": "Startups",
+    "title": "Q1 2026 shatters records: $300B in global venture funding, 80% to AI",
+    "summary": "Crunchbase reports the biggest venture quarter ever — $300B across 6,000 startups, up 150% YoY. AI alone captured $242B. Four of the five largest rounds in history closed in Q1, led by OpenAI's $122B and Anthropic's $30B.",
+    "tags": [
+      "Venture Capital",
+      "Funding",
+      "AI Boom",
+      "Crunchbase"
+    ],
+    "url": "https://news.crunchbase.com/venture/record-breaking-funding-ai-global-q1-2026/",
+    "source": "Crunchbase News",
+    "publishedAt": "2026-04-12T18:35:36.296Z"
+  },
+  {
     "id": "ai-quantum-breakthrough",
     "category": "Quantum",
     "title": "AI just sparked a quantum breakthrough — 'the world is not ready'",
