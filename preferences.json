@@ -21,8 +21,8 @@
       "dislikes": 4
     },
     "AI": {
-      "likes": 3,
-      "dislikes": 1
+      "likes": 4,
+      "dislikes": 0
     },
     "Viral": {
       "likes": 0,
@@ -63,8 +63,8 @@
       "dislikes": 0
     },
     "Karpathy": {
-      "likes": 2,
-      "dislikes": 1
+      "likes": 3,
+      "dislikes": 0
     },
     "Obsidian": {
       "likes": 1,
@@ -167,8 +167,8 @@
       "dislikes": 0
     },
     "Open Source": {
-      "likes": 2,
-      "dislikes": 1
+      "likes": 3,
+      "dislikes": 0
     },
     "Post-Quantum": {
       "likes": 0,
@@ -363,16 +363,16 @@
       "dislikes": 1
     },
     "nanochat": {
-      "likes": 0,
-      "dislikes": 1
+      "likes": 1,
+      "dislikes": 0
     },
     "Eureka Labs": {
-      "likes": 0,
-      "dislikes": 1
+      "likes": 1,
+      "dislikes": 0
     },
     "LLM101n": {
-      "likes": 0,
-      "dislikes": 1
+      "likes": 1,
+      "dislikes": 0
     },
     "Claude Code": {
       "likes": 1,
@@ -453,8 +453,8 @@
       "dislikes": 1
     },
     "GitHub": {
-      "likes": 0,
-      "dislikes": 1
+      "likes": 1,
+      "dislikes": 0
     },
     "GitHub Trending": {
       "likes": 1,
@@ -462,8 +462,8 @@
     }
   },
   "totals": {
-    "likes": 13,
-    "dislikes": 12
+    "likes": 14,
+    "dislikes": 11
   },
-  "lastUpdated": "2026-04-12T20:04:09.987Z"
+  "lastUpdated": "2026-04-12T20:04:18.300Z"
 }

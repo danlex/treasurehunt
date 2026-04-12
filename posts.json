@@ -1,5 +1,74 @@
 [
   {
+    "id": "karpathy-nanochat",
+    "category": "AI",
+    "title": "Karpathy's nanochat hits 51.7K stars — ChatGPT clone trainable end-to-end for $100",
+    "summary": "Andrej Karpathy's nanochat repo — a minimal, from-scratch full-stack training/inference pipeline for a ChatGPT clone — passed 51.7K GitHub stars. In ~8,000 lines of code it covers tokenizer, pretraining, SFT, RL and eval. Karpathy says you can train your own ChatGPT clone for roughly $100 of compute in four hours, and it's the capstone project for his upcoming Eureka Labs LLM101n course. llm.c (pure C/CUDA training) sits alongside at 29.5K stars. Karpathy's \"make LLMs legible\" mission keeps reshaping what developers build.",
+    "tags": [
+      "Karpathy",
+      "nanochat",
+      "Eureka Labs",
+      "LLM101n",
+      "Open Source"
+    ],
+    "url": "https://github.com/karpathy/nanochat",
+    "source": "GitHub",
+    "metrics": {
+      "coverage": 7.5,
+      "social": 9,
+      "novelty": 8,
+      "authority": 9.5,
+      "concreteness": 9.5,
+      "stakes": 7.5,
+      "fudRisk": 1,
+      "importance": 8.2,
+      "trust": 9
+    },
+    "signals": {
+      "outletCount": 22,
+      "tier1Count": 3,
+      "outlets": [
+        "GitHub",
+        "The Pragmatic Engineer",
+        "Hacker News",
+        "Every.to",
+        "VentureBeat",
+        "Simon Willison's Weblog",
+        "Ars Technica"
+      ],
+      "twitterMentions": 14000,
+      "topTweets": [
+        {
+          "handle": "@karpathy",
+          "likes": 58000
+        },
+        {
+          "handle": "@simonw",
+          "likes": 7200
+        }
+      ],
+      "subreddits": [
+        "r/MachineLearning",
+        "r/LocalLLaMA",
+        "r/learnmachinelearning"
+      ],
+      "redditTop": {
+        "sub": "r/MachineLearning",
+        "upvotes": 8900
+      },
+      "githubTrending": {
+        "rank": null,
+        "period": "cumulative",
+        "stars": 51700
+      }
+    },
+    "whyItMatters": "The $100 ChatGPT clone is the democratization proof Karpathy has been building toward since nanoGPT. When an undergrad can train a real chatbot end-to-end on a single rented H100, the barrier from \"curious learner\" to \"competent LLM practitioner\" collapses. Expect a cohort of developers to move from using LLMs to building them within a year — which redistributes where AI talent comes from.",
+    "trustVerdict": "high",
+    "trustNotes": "First-party Karpathy repository; star count and code verifiable on GitHub. The \"$100 in 4 hours\" claim is documented in the README with training curves and hardware specs; reproducible. No FUD risk — this is code + writeup.",
+    "primarySource": "https://github.com/karpathy/nanochat",
+    "publishedAt": "2026-04-12T20:04:18.284Z"
+  },
+  {
     "id": "karpathy-skills-trending",
     "category": "Top Tweets",
     "title": "Karpathy's LLM-coding pitfalls compiled into viral CLAUDE.md — #2 on GitHub weekly",

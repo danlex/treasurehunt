@@ -4,9 +4,15 @@
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
     <loc>https://treasurehunt.alexandrudan.com/</loc>
-    <lastmod>2026-04-12T20:04:09.982Z</lastmod>
+    <lastmod>2026-04-12T20:04:18.284Z</lastmod>
     <changefreq>hourly</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://treasurehunt.alexandrudan.com/posts/karpathy-nanochat.html</loc>
+    <lastmod>2026-04-12T20:04:18.284Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://treasurehunt.alexandrudan.com/posts/karpathy-skills-trending.html</loc>
