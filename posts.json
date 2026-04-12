@@ -1,5 +1,19 @@
 [
   {
+    "id": "exploits-overtake-phishing",
+    "category": "Cybersecurity",
+    "title": "Vulnerability exploits overtake phishing as #1 initial access method",
+    "summary": "Cisco Talos: nearly 40% of Q4 2025 intrusions came from exploited flaws — surpassing phishing for the first time. The shift reflects how AI-assisted exploit development has collapsed the time-to-weaponize for new CVEs.",
+    "tags": [
+      "Threat Intel",
+      "Cisco Talos",
+      "Trends"
+    ],
+    "url": "https://www.cybersecurity-review.com/news-april-2026/",
+    "source": "Cyber Security Review",
+    "publishedAt": "2026-04-12T18:33:39.462Z"
+  },
+  {
     "id": "karpathy-obsidian",
     "category": "Top Tweets",
     "title": "Karpathy on LLM knowledge bases with Obsidian — 18K likes",
