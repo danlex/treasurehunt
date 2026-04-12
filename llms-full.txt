@@ -6,6 +6,80 @@ Each post below includes the summary, tags, source, trust verdict, and "why it m
 
 ---
 
+## Hacker uses Claude and ChatGPT as assistant-in-the-loop to breach multiple government agencies
+
+**Published:** Apr 12, 2026
+**Category:** Cybersecurity
+**Source:** Reddit · r/technology
+**URL:** https://treasurehunt.alexandrudan.com/posts/claude-chatgpt-gov-breach.html
+**Original article:** https://www.reddit.com/r/technology/
+**Tags:** Claude, ChatGPT, LLM Abuse, Federal Breach, Prompt Injection, MCP
+**Impact score:** 7.8/10
+**Trust verdict:** medium
+
+A threat-actor profile reported on r/technology and escalated across AI-security Twitter this weekend: an individual used Claude and ChatGPT as coding assistants to compose novel exploit chains against at least three US federal agencies. The attacker reportedly fed LLMs the target environment's architecture via open-source filings, had them generate bespoke phishing payloads and post-exploitation scripts, and iterated until bypasses worked. Anthropic and OpenAI have since rotated safety filters; Anthropic disclosed they had downgraded MCP cache TTL on March 6 specifically to shorten the window for adversarial prompt-cache poisoning. Sets the new baseline for "AI-assisted threat actor" reporting.
+
+### Why it matters
+
+This is the canonical "AI made this attack trivial" narrative that security-budget conversations have been waiting for. Even if the technical details turn out overstated, the political impact is real — expect federal guidance on LLM usage in sensitive environments within 30 days, and a new wave of enterprise policies banning personal LLM accounts on work devices. Claude and ChatGPT will face pressure to ship tighter abuse detection on code-completion and multi-step planning in the next few releases.
+
+### Trust notes
+
+Core claim (LLM-assisted government breach) has multi-outlet coverage and credible security-Twitter amplification — but details are still partly single-sourced and the attacker profile comes from one investigative thread. Wait for Anthropic or OpenAI's official post-mortem before treating specific capability claims as verified. Moderate FUD risk because "AI-assisted hacker" framing is politically charged.
+
+
+---
+
+## Gemma 4 crosses 10M downloads in one week; Gemma family at 500M total
+
+**Published:** Apr 12, 2026
+**Category:** AI
+**Source:** X
+**URL:** https://treasurehunt.alexandrudan.com/posts/gemma-4-500m-downloads.html
+**Original article:** https://x.com/sundarpichai/status/2042014040055276028
+**Tags:** Google, Gemma, Open Weights, Hugging Face, Download Milestone
+**Impact score:** 7.4/10
+**Trust verdict:** high
+
+Sundar Pichai confirmed Gemma 4 has been downloaded 10M+ times in its first week, and the full Gemma open-weights family has now crossed 500M lifetime downloads on Hugging Face and Kaggle. Gemma 4 ships with 9B and 31B dense variants plus a 27B MoE version, all under a license permitting commercial use. Speculative-decoding benchmarks on r/LocalLLaMA report +29% average throughput and +50% on code with an E2B draft model. Reinforces Google's open-weights-parity strategy against Llama and Mistral, and makes Gemma the default choice for teams optimizing latency on open models.
+
+### Why it matters
+
+A 500M-download lifetime milestone makes Gemma the most-adopted open-weights family after Llama. 10M in one week for Gemma 4 specifically indicates strong practitioner adoption, not just curiosity — enough that downstream tooling, finetunes, and quantized variants will stabilize around it within 4-6 weeks. Expect a wave of Gemma-4-based agent and coding products to launch over the next quarter, and renewed pressure on Meta to ship a Llama refresh.
+
+### Trust notes
+
+First-party announcement from Google CEO, download counts verifiable on Hugging Face model pages and Kaggle. Speculative-decoding numbers are Reddit community results — directionally reliable but not peer-reviewed.
+
+**Primary source:** https://blog.google/technology/ai/gemma-4/
+
+---
+
+## Karpathy: "a growing gap in understanding AI capability" — 19.4K likes
+
+**Published:** Apr 12, 2026
+**Category:** Top Tweets
+**Source:** X
+**URL:** https://treasurehunt.alexandrudan.com/posts/karpathy-capability-gap.html
+**Original article:** https://x.com/karpathy/status/2042334451611693415
+**Tags:** Karpathy, AI Literacy, Frontier Models, Benchmarks
+**Impact score:** 7.5/10
+**Trust verdict:** high
+
+Andrej Karpathy posted a viral thread arguing there's a widening gap in how people perceive AI capability, driven by two factors: recency (models advance faster than any single demo captures) and tier (people who only ever used free-tier ChatGPT extrapolate its limits to frontier models). The post hit ~19,436 likes and 2,346 retweets — his biggest engagement in April. It ignited a broader thread about the need for baseline-literacy on what current-generation models can actually do, and why enterprise pilots keep under-delivering against expectations calibrated on 2023-era systems.
+
+### Why it matters
+
+Karpathy is one of the few voices whose observations directly shape how practitioners calibrate AI adoption. This thread reframes the "AI disappointment" narrative: users judging frontier models by their free-tier experience is a measurement problem, not a capability problem. For enterprise buyers, the implication is concrete — budget for paid-tier access before concluding a model can't do the job. Expect this framing to appear in consultant decks and enterprise-AI talks for the next quarter.
+
+### Trust notes
+
+First-party post from a highly-credible practitioner with full reach and receipt metrics directly visible on X. Zero FUD risk — it is an observation about user perception, not a testable capability claim.
+
+**Primary source:** https://x.com/karpathy/status/2042334451611693415
+
+---
+
 ## Karpathy's nanochat hits 51.7K stars — ChatGPT clone trainable end-to-end for $100
 
 **Published:** Apr 12, 2026

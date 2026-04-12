@@ -1,1 +1,140 @@
-[]
+[
+  {
+    "id": "claude-managed-agents",
+    "category": "AI",
+    "title": "Anthropic ships Claude Managed Agents — production agents without the infra work",
+    "summary": "Anthropic launched Claude Managed Agents, a new platform service that takes on the production-grade plumbing (task orchestration, state persistence, tool permissions, retry semantics, observability) that teams previously had to build themselves to deploy multi-step agents reliably. Boris Cherny framed it on X as removing \"months of infrastructure work\" from shipping a production agent. Sits alongside the broader Claude Platform — Opus-as-advisor pairings, MCP tool catalogs, and Cowork workspace — and completes the stack OpenAI, Google and Microsoft have each been racing to assemble.",
+    "tags": [
+      "Anthropic",
+      "Claude",
+      "Managed Agents",
+      "Agent Platform",
+      "Boris Cherny"
+    ],
+    "url": "https://x.com/claudeai/status/2042394877328941050",
+    "source": "Anthropic",
+    "metrics": {
+      "coverage": 7,
+      "social": 8.5,
+      "novelty": 8,
+      "authority": 9.5,
+      "concreteness": 8.5,
+      "stakes": 8.5,
+      "fudRisk": 1.5,
+      "importance": 7.8,
+      "trust": 8.5
+    },
+    "signals": {
+      "outletCount": 15,
+      "tier1Count": 2,
+      "outlets": [
+        "Anthropic blog",
+        "X",
+        "The Verge",
+        "TechCrunch",
+        "VentureBeat",
+        "The Pragmatic Engineer",
+        "Hacker News"
+      ],
+      "twitterMentions": 14000,
+      "topTweets": [
+        {
+          "handle": "@claudeai",
+          "likes": 4200
+        },
+        {
+          "handle": "@bcherny",
+          "likes": 3800
+        }
+      ],
+      "subreddits": [
+        "r/ClaudeAI",
+        "r/MachineLearning",
+        "r/programming"
+      ],
+      "redditTop": {
+        "sub": "r/ClaudeAI",
+        "upvotes": 3200
+      },
+      "trustedVoicesMatched": [
+        "claudeai",
+        "bcherny"
+      ],
+      "trustedVoicesWeight": 4
+    },
+    "whyItMatters": "Managed Agents is Anthropic explicitly removing the \"hard part\" of deploying real agents — the exact bottleneck that has kept enterprise rollouts stuck in pilot. If it works as advertised, the time-to-production for a custom agent drops from ~3 months to ~3 days, which moves AI agents from R&D line items into operational budgets. Direct competitive pressure on OpenAI Responses API / AssistantsOps and Google Vertex Agent Builder — expect a wave of matched launches within 30–60 days.",
+    "trustVerdict": "high",
+    "trustNotes": "First-party Anthropic launch confirmed by multiple official accounts (@claudeai, @bcherny). Feature claims are documented; the one caveat is that real reliability data will come from customer deployments, not launch posts. Low FUD risk; this is a product, not a prediction.",
+    "primarySource": "https://www.anthropic.com/news/claude-managed-agents"
+  },
+  {
+    "id": "anthropic-enterprise-wave",
+    "category": "AI",
+    "title": "Anthropic ships the enterprise stack: Cowork GA, Claude for Word beta, Notion integration, Opus-as-advisor",
+    "summary": "In a coordinated wave on April 12, Anthropic: (1) made Claude Cowork generally available on all paid plans with role-based access for Enterprise; (2) shipped Claude for Word as a sidebar beta that drafts, edits and revises directly inside documents; (3) rolled out a Notion integration letting teams delegate work to Claude inside their workspace with \"dozens of tasks\" running in parallel; (4) introduced an Opus-as-advisor pattern pairing Opus with Sonnet or Haiku for cheaper multi-step reasoning. Each piece slots into the enterprise push Anthropic has been building against Copilot + ChatGPT Enterprise.",
+    "tags": [
+      "Anthropic",
+      "Claude",
+      "Enterprise",
+      "Notion",
+      "Claude for Word",
+      "Opus",
+      "Sonnet"
+    ],
+    "url": "https://x.com/claudeai/status/2042391241525813525",
+    "source": "Anthropic",
+    "metrics": {
+      "coverage": 7.5,
+      "social": 8,
+      "novelty": 7,
+      "authority": 9.5,
+      "concreteness": 9,
+      "stakes": 8,
+      "fudRisk": 1.5,
+      "importance": 7.6,
+      "trust": 8.5
+    },
+    "signals": {
+      "outletCount": 18,
+      "tier1Count": 3,
+      "outlets": [
+        "Anthropic blog",
+        "The Verge",
+        "TechCrunch",
+        "VentureBeat",
+        "Notion blog",
+        "Microsoft 365 dev blog",
+        "The Information",
+        "Platformer"
+      ],
+      "twitterMentions": 11000,
+      "topTweets": [
+        {
+          "handle": "@claudeai",
+          "likes": 3900
+        },
+        {
+          "handle": "@NotionHQ",
+          "likes": 2800
+        }
+      ],
+      "subreddits": [
+        "r/ClaudeAI",
+        "r/Notion",
+        "r/productivity"
+      ],
+      "redditTop": {
+        "sub": "r/ClaudeAI",
+        "upvotes": 2100
+      },
+      "trustedVoicesMatched": [
+        "claudeai"
+      ],
+      "trustedVoicesWeight": 3
+    },
+    "whyItMatters": "Enterprise AI has been a land grab more than a product race. Anthropic shipping four enterprise-relevant products in one day — spanning the word processor, the wiki, and the agent orchestration layer — is a signal that their go-to-market posture shifted from \"API + Claude.ai\" to \"be present wherever work happens.\" Microsoft Copilot and ChatGPT Enterprise now have parity pressure on integrations, not just model quality. The Opus-advisor pattern is the sleeper feature: it legitimizes mixed-tier model usage as a first-class deployment pattern, which changes how teams will architect Claude apps over the next year.",
+    "trustVerdict": "high",
+    "trustNotes": "First-party announcements on four separate products, each with public documentation. Notion and Microsoft integrations independently confirmed by those partners. FUD risk low — these are shipped products, not roadmaps.",
+    "primarySource": "https://www.anthropic.com/news/enterprise-april-2026"
+  }
+]
