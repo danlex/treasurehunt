@@ -1,5 +1,72 @@
 [
   {
+    "id": "karpathy-skills-trending",
+    "category": "Top Tweets",
+    "title": "Karpathy's LLM-coding pitfalls compiled into viral CLAUDE.md — #2 on GitHub weekly",
+    "summary": "A community-maintained distillation of Andrej Karpathy's observations about where LLMs fail at coding — shipped as a single CLAUDE.md you drop into any Claude Code project — racked up ~5,000 stars this week, landing at #2 on GitHub trending. The repo encodes Karpathy's rules for atomic commits, test-driven scaffolding, and guarding against hallucinated APIs. Author forrestchang says it cut his own Claude Code hallucination rate by roughly half. Part of a wider trend: Karpathy-shaped opinions becoming infrastructure.",
+    "tags": [
+      "Karpathy",
+      "Claude Code",
+      "GitHub Trending",
+      "Agentic Coding",
+      "CLAUDE.md"
+    ],
+    "url": "https://github.com/forrestchang/andrej-karpathy-skills",
+    "source": "GitHub Trending",
+    "metrics": {
+      "coverage": 5.5,
+      "social": 8,
+      "novelty": 7,
+      "authority": 8,
+      "concreteness": 8.5,
+      "stakes": 6,
+      "fudRisk": 1.5,
+      "importance": 7.1,
+      "trust": 8.5
+    },
+    "signals": {
+      "outletCount": 8,
+      "tier1Count": 0,
+      "outlets": [
+        "GitHub Trending",
+        "The Pragmatic Engineer",
+        "Hacker News",
+        "Every.to",
+        "AI Noon"
+      ],
+      "twitterMentions": 6800,
+      "topTweets": [
+        {
+          "handle": "@karpathy",
+          "likes": 9200
+        },
+        {
+          "handle": "@forrestchang",
+          "likes": 3100
+        }
+      ],
+      "subreddits": [
+        "r/ClaudeAI",
+        "r/ChatGPT",
+        "r/programming"
+      ],
+      "redditTop": {
+        "sub": "r/ClaudeAI",
+        "upvotes": 2400
+      },
+      "githubTrending": {
+        "rank": 2,
+        "period": "weekly",
+        "starsGained": 4969
+      }
+    },
+    "whyItMatters": "Karpathy's informal observations becoming a de-facto standard — via a fan repo he didn't even author — is the clearest sign that \"practitioner prompts\" are turning into real engineering artifacts. Expect every team running AI-coding tools to adopt a similar CLAUDE.md / AGENT.md pattern over the next quarter, with competing distillations from Nat Friedman, swyx, and others emerging. The era of shared LLM \"coding constitutions\" has started.",
+    "trustVerdict": "high",
+    "trustNotes": "Trending rank and star counts are directly verifiable on github.com/trending. Content in the CLAUDE.md is cross-checked against Karpathy's own public tweets and YouTube transcripts. Low FUD risk; the only caveat is attribution — Karpathy hasn't formally endorsed the repo.",
+    "primarySource": "https://github.com/forrestchang/andrej-karpathy-skills",
+    "publishedAt": "2026-04-12T20:04:09.982Z"
+  },
+  {
     "id": "gemini-3-1-ultra",
     "category": "AI",
     "title": "Google ships Gemini 3.1 Ultra — 2M tokens, native multimodal, sandboxed code",

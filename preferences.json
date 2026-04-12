@@ -6,10 +6,10 @@
     },
     "Research": {
       "likes": 3,
-      "dislikes": 0
+      "dislikes": 1
     },
     "Top Tweets": {
-      "likes": 1,
+      "likes": 2,
       "dislikes": 0
     },
     "Startups": {
@@ -22,7 +22,7 @@
     },
     "AI": {
       "likes": 3,
-      "dislikes": 0
+      "dislikes": 1
     },
     "Viral": {
       "likes": 0,
@@ -63,8 +63,8 @@
       "dislikes": 0
     },
     "Karpathy": {
-      "likes": 1,
-      "dislikes": 0
+      "likes": 2,
+      "dislikes": 1
     },
     "Obsidian": {
       "likes": 1,
@@ -168,7 +168,7 @@
     },
     "Open Source": {
       "likes": 2,
-      "dislikes": 0
+      "dislikes": 1
     },
     "Post-Quantum": {
       "likes": 0,
@@ -341,6 +341,54 @@
     "Ransomware": {
       "likes": 0,
       "dislikes": 1
+    },
+    "MIT": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "Materials Science": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "Semiconductors": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "GNN": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "Applied Materials": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "nanochat": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "Eureka Labs": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "LLM101n": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "Claude Code": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "GitHub Trending": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "Agentic Coding": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "CLAUDE.md": {
+      "likes": 1,
+      "dislikes": 0
     }
   },
   "sources": {
@@ -382,7 +430,7 @@
     },
     "NextBigFuture": {
       "likes": 1,
-      "dislikes": 0
+      "dislikes": 1
     },
     "IEEE Spectrum": {
       "likes": 0,
@@ -403,11 +451,19 @@
     "Bloomberg": {
       "likes": 0,
       "dislikes": 1
+    },
+    "GitHub": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "GitHub Trending": {
+      "likes": 1,
+      "dislikes": 0
     }
   },
   "totals": {
-    "likes": 12,
-    "dislikes": 10
+    "likes": 13,
+    "dislikes": 12
   },
-  "lastUpdated": "2026-04-12T19:50:19.283Z"
+  "lastUpdated": "2026-04-12T20:04:09.987Z"
 }
