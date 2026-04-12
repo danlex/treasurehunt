@@ -1,5 +1,22 @@
 [
   {
+    "id": "openai-852b",
+    "category": "Startups",
+    "title": "OpenAI closes $122B at $852B — most valuable private company in history",
+    "summary": "OpenAI closed its $122B primary+secondary on March 31 at an $852B post-money, passing SpaceX to become the most valuable private company in history. D.E. Shaw and MGX co-led, with Thrive, Coatue and Temasek participating. Revenue run-rate hit $28B on the April 1 board update, up from $12B a year earlier. The round funds OpenAI's $500B Stargate commitment with Oracle and SoftBank plus a reported $70B custom-chip program with Broadcom and TSMC aimed at halving training-compute cost per token by 2027.",
+    "tags": [
+      "OpenAI",
+      "Valuation",
+      "Stargate",
+      "Broadcom",
+      "TSMC"
+    ],
+    "url": "https://news.crunchbase.com/venture/foundational-ai-startup-funding-doubled-openai-anthropic-xai-q1-2026/",
+    "source": "Crunchbase News",
+    "image": "https://loremflickr.com/1200/600/skyline,tower,finance,night?lock=210",
+    "publishedAt": "2026-04-12T18:51:52.331Z"
+  },
+  {
     "id": "turboquant",
     "category": "Research",
     "title": "DeepMind's TurboQuant: 6.2× KV-cache compression, no perplexity loss",

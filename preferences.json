@@ -13,7 +13,7 @@
       "dislikes": 0
     },
     "Startups": {
-      "likes": 2,
+      "likes": 3,
       "dislikes": 1
     },
     "Quantum": {
@@ -111,7 +111,7 @@
       "dislikes": 1
     },
     "OpenAI": {
-      "likes": 1,
+      "likes": 2,
       "dislikes": 1
     },
     "xAI": {
@@ -281,6 +281,22 @@
     "Inference": {
       "likes": 1,
       "dislikes": 0
+    },
+    "Valuation": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "Stargate": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "Broadcom": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "TSMC": {
+      "likes": 1,
+      "dislikes": 0
     }
   },
   "sources": {
@@ -301,7 +317,7 @@
       "dislikes": 0
     },
     "Crunchbase News": {
-      "likes": 2,
+      "likes": 3,
       "dislikes": 1
     },
     "Time": {
@@ -338,8 +354,8 @@
     }
   },
   "totals": {
-    "likes": 13,
+    "likes": 14,
     "dislikes": 6
   },
-  "lastUpdated": "2026-04-12T18:51:44.249Z"
+  "lastUpdated": "2026-04-12T18:51:52.335Z"
 }
