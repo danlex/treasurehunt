@@ -17,7 +17,11 @@ The hunt agent should call **`node trending.js`** (or `require('./trending').col
 - The Hacker News RSS
 - Product Hunt RSS
 - arXiv cs.AI and cs.LG RSS
-- (X trends via `xCheck.topTrends()` when keys exist — budgeted: 1 call per hunt)
+- X via `xCheck.trustedVoicesActivity()` — 1 API call returns ~50 recent tweets from tier-1+2 followed handles (Karpathy, LeCun, Hinton, Sutskever, Ng, Pichai, Wei, hardmaru, bcherny, rasbt, huggingface, etc.). Budget-gated; refuses past `X_DAILY_CALL_BUDGET` (default 50/day). Cached 20 min.
+
+**X signal usage beyond trending:**
+- When enriching a specific candidate, `xCheck.mentionsFromTrusted(topic)` fires a SECOND call only if the item looks high-stakes. Most candidates get scored purely from the trending pull's trusted-voice activity — no extra call.
+- Hard budget floor: do not exceed 4 X calls per hunt (1 trending + up to 3 mention-checks).
 
 Results are cached for 20 minutes on disk, deduped by URL, and scored cross-source (HN: points + comments · Reddit: log-ups + comments · RSS: position).
 

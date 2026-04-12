@@ -14,6 +14,10 @@ const hn = require('./hnCheck');
 const reddit = require('./redditCheck');
 const rss = require('./rssCheck');
 
+// X is optional — only loaded if the module exists. xCheck.js loads .env itself.
+let xCheck = null;
+try { xCheck = require('./xCheck'); } catch { /* no X module */ }
+
 const CACHE_FILE = path.join(__dirname, '.cache', 'trending.json');
 const CACHE_TTL_MS = 20 * 60 * 1000;
 
@@ -95,6 +99,23 @@ async function collectAll() {
           meta: { description: r.description }
         })))
         .catch(e => (console.error(`RSS ${source} failed:`, e.message), []))
+    );
+  }
+
+  // X trusted voices — one call, fetches top recent tweets from tier-1+2 handles.
+  // Skip silently if bearer token missing or daily budget exhausted.
+  if (xCheck && process.env.X_BEARER_TOKEN) {
+    jobs.push(
+      xCheck.trustedVoicesActivity({ tierScope: 'tier1+tier2', maxResults: 100 })
+        .then(r => (r.tweets || []).map(t => ({
+          title: t.text.replace(/\s+/g, ' ').slice(0, 140),
+          url: t.url,
+          source: 'X · @' + t.handle,
+          score: Math.min(100, Math.log10(Math.max(1, t.likes)) * 20 + t.retweets * 0.5),
+          createdAt: t.createdAt,
+          meta: { likes: t.likes, retweets: t.retweets, handle: t.handle, fullText: t.text }
+        })))
+        .catch(e => (console.error('X voices failed:', e.message), []))
     );
   }
 

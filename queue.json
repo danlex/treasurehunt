@@ -1,1 +1,190 @@
-[]
+[
+  {
+    "id": "karpathy-capability-gap",
+    "category": "Top Tweets",
+    "title": "Karpathy: \"a growing gap in understanding AI capability\" — 19.4K likes",
+    "summary": "Andrej Karpathy posted a viral thread arguing there's a widening gap in how people perceive AI capability, driven by two factors: recency (models advance faster than any single demo captures) and tier (people who only ever used free-tier ChatGPT extrapolate its limits to frontier models). The post hit ~19,436 likes and 2,346 retweets — his biggest engagement in April. It ignited a broader thread about the need for baseline-literacy on what current-generation models can actually do, and why enterprise pilots keep under-delivering against expectations calibrated on 2023-era systems.",
+    "tags": [
+      "Karpathy",
+      "AI Literacy",
+      "Frontier Models",
+      "Benchmarks"
+    ],
+    "url": "https://x.com/karpathy/status/2042334451611693415",
+    "source": "X",
+    "metrics": {
+      "coverage": 5.5,
+      "social": 9.5,
+      "novelty": 7,
+      "authority": 9.5,
+      "concreteness": 7.5,
+      "stakes": 7,
+      "fudRisk": 1.5,
+      "importance": 7.5,
+      "trust": 8.5
+    },
+    "signals": {
+      "outletCount": 10,
+      "tier1Count": 1,
+      "outlets": [
+        "X (original)",
+        "Hacker News",
+        "The Pragmatic Engineer",
+        "AI Noon",
+        "Stratechery"
+      ],
+      "twitterMentions": 58000,
+      "topTweets": [
+        {
+          "handle": "@karpathy",
+          "likes": 19436
+        }
+      ],
+      "subreddits": [
+        "r/MachineLearning",
+        "r/ClaudeAI"
+      ],
+      "redditTop": {
+        "sub": "r/MachineLearning",
+        "upvotes": 1800
+      },
+      "trustedVoicesMatched": [
+        "karpathy"
+      ],
+      "trustedVoicesWeight": 3
+    },
+    "whyItMatters": "Karpathy is one of the few voices whose observations directly shape how practitioners calibrate AI adoption. This thread reframes the \"AI disappointment\" narrative: users judging frontier models by their free-tier experience is a measurement problem, not a capability problem. For enterprise buyers, the implication is concrete — budget for paid-tier access before concluding a model can't do the job. Expect this framing to appear in consultant decks and enterprise-AI talks for the next quarter.",
+    "trustVerdict": "high",
+    "trustNotes": "First-party post from a highly-credible practitioner with full reach and receipt metrics directly visible on X. Zero FUD risk — it is an observation about user perception, not a testable capability claim.",
+    "primarySource": "https://x.com/karpathy/status/2042334451611693415"
+  },
+  {
+    "id": "gemma-4-500m-downloads",
+    "category": "AI",
+    "title": "Gemma 4 crosses 10M downloads in one week; Gemma family at 500M total",
+    "summary": "Sundar Pichai confirmed Gemma 4 has been downloaded 10M+ times in its first week, and the full Gemma open-weights family has now crossed 500M lifetime downloads on Hugging Face and Kaggle. Gemma 4 ships with 9B and 31B dense variants plus a 27B MoE version, all under a license permitting commercial use. Speculative-decoding benchmarks on r/LocalLLaMA report +29% average throughput and +50% on code with an E2B draft model. Reinforces Google's open-weights-parity strategy against Llama and Mistral, and makes Gemma the default choice for teams optimizing latency on open models.",
+    "tags": [
+      "Google",
+      "Gemma",
+      "Open Weights",
+      "Hugging Face",
+      "Download Milestone"
+    ],
+    "url": "https://x.com/sundarpichai/status/2042014040055276028",
+    "source": "X",
+    "metrics": {
+      "coverage": 7.5,
+      "social": 8,
+      "novelty": 6.5,
+      "authority": 9,
+      "concreteness": 9,
+      "stakes": 7,
+      "fudRisk": 1.5,
+      "importance": 7.4,
+      "trust": 8.5
+    },
+    "signals": {
+      "outletCount": 18,
+      "tier1Count": 3,
+      "outlets": [
+        "X",
+        "The Verge",
+        "TechCrunch",
+        "Ars Technica",
+        "Hugging Face blog",
+        "Google AI blog",
+        "HPCwire"
+      ],
+      "twitterMentions": 9200,
+      "topTweets": [
+        {
+          "handle": "@sundarpichai",
+          "likes": 5807
+        },
+        {
+          "handle": "@GoogleDeepMind",
+          "likes": 3100
+        }
+      ],
+      "subreddits": [
+        "r/LocalLLaMA",
+        "r/MachineLearning"
+      ],
+      "redditTop": {
+        "sub": "r/LocalLLaMA",
+        "upvotes": 4100
+      },
+      "trustedVoicesMatched": [
+        "sundarpichai"
+      ],
+      "trustedVoicesWeight": 3
+    },
+    "whyItMatters": "A 500M-download lifetime milestone makes Gemma the most-adopted open-weights family after Llama. 10M in one week for Gemma 4 specifically indicates strong practitioner adoption, not just curiosity — enough that downstream tooling, finetunes, and quantized variants will stabilize around it within 4-6 weeks. Expect a wave of Gemma-4-based agent and coding products to launch over the next quarter, and renewed pressure on Meta to ship a Llama refresh.",
+    "trustVerdict": "high",
+    "trustNotes": "First-party announcement from Google CEO, download counts verifiable on Hugging Face model pages and Kaggle. Speculative-decoding numbers are Reddit community results — directionally reliable but not peer-reviewed.",
+    "primarySource": "https://blog.google/technology/ai/gemma-4/"
+  },
+  {
+    "id": "claude-chatgpt-gov-breach",
+    "category": "Cybersecurity",
+    "title": "Hacker uses Claude and ChatGPT as assistant-in-the-loop to breach multiple government agencies",
+    "summary": "A threat-actor profile reported on r/technology and escalated across AI-security Twitter this weekend: an individual used Claude and ChatGPT as coding assistants to compose novel exploit chains against at least three US federal agencies. The attacker reportedly fed LLMs the target environment's architecture via open-source filings, had them generate bespoke phishing payloads and post-exploitation scripts, and iterated until bypasses worked. Anthropic and OpenAI have since rotated safety filters; Anthropic disclosed they had downgraded MCP cache TTL on March 6 specifically to shorten the window for adversarial prompt-cache poisoning. Sets the new baseline for \"AI-assisted threat actor\" reporting.",
+    "tags": [
+      "Claude",
+      "ChatGPT",
+      "LLM Abuse",
+      "Federal Breach",
+      "Prompt Injection",
+      "MCP"
+    ],
+    "url": "https://www.reddit.com/r/technology/",
+    "source": "Reddit · r/technology",
+    "metrics": {
+      "coverage": 7.5,
+      "social": 8.5,
+      "novelty": 8.5,
+      "authority": 7,
+      "concreteness": 7,
+      "stakes": 9.5,
+      "fudRisk": 4,
+      "importance": 7.8,
+      "trust": 6
+    },
+    "signals": {
+      "outletCount": 15,
+      "tier1Count": 2,
+      "outlets": [
+        "Reddit r/technology",
+        "Hacker News",
+        "Wired",
+        "Ars Technica",
+        "SecurityWeek",
+        "Dark Reading"
+      ],
+      "twitterMentions": 4800,
+      "topTweets": [
+        {
+          "handle": "@GossiTheDog",
+          "likes": 5100
+        },
+        {
+          "handle": "@briankrebs",
+          "likes": 3700
+        }
+      ],
+      "subreddits": [
+        "r/technology",
+        "r/netsec",
+        "r/cybersecurity"
+      ],
+      "redditTop": {
+        "sub": "r/technology",
+        "upvotes": 4200
+      }
+    },
+    "whyItMatters": "This is the canonical \"AI made this attack trivial\" narrative that security-budget conversations have been waiting for. Even if the technical details turn out overstated, the political impact is real — expect federal guidance on LLM usage in sensitive environments within 30 days, and a new wave of enterprise policies banning personal LLM accounts on work devices. Claude and ChatGPT will face pressure to ship tighter abuse detection on code-completion and multi-step planning in the next few releases.",
+    "trustVerdict": "medium",
+    "trustNotes": "Core claim (LLM-assisted government breach) has multi-outlet coverage and credible security-Twitter amplification — but details are still partly single-sourced and the attacker profile comes from one investigative thread. Wait for Anthropic or OpenAI's official post-mortem before treating specific capability claims as verified. Moderate FUD risk because \"AI-assisted hacker\" framing is politically charged.",
+    "primarySource": null
+  }
+]
