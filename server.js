@@ -48,6 +48,23 @@ function applyLearning(item, verdict) {
   writeJson(FILES.preferences, prefs);
 }
 
+// Reverse a prior Like: subtract 1 like and add 1 dislike across category/tags/source.
+function reverseLike(item) {
+  const prefs = readJson(FILES.preferences);
+  const touch = (bucket, key) => {
+    if (!bucket[key]) bucket[key] = { likes: 0, dislikes: 0 };
+    bucket[key].likes    = Math.max(0, (bucket[key].likes || 0) - 1);
+    bucket[key].dislikes = (bucket[key].dislikes || 0) + 1;
+  };
+  touch(prefs.categories, item.category);
+  (item.tags || []).forEach(t => touch(prefs.tags, t));
+  if (item.source) touch(prefs.sources, item.source);
+  prefs.totals.likes    = Math.max(0, (prefs.totals.likes || 0) - 1);
+  prefs.totals.dislikes = (prefs.totals.dislikes || 0) + 1;
+  prefs.lastUpdated = new Date().toISOString();
+  writeJson(FILES.preferences, prefs);
+}
+
 function gitPush(msg) {
   const cmd =
     `node build.js && ` +
@@ -111,6 +128,69 @@ const server = http.createServer(async (req, res) => {
         rejected:    readJson(FILES.rejected),
         preferences: readJson(FILES.preferences),
       });
+    } catch (e) {
+      return sendJson(res, 500, { error: String(e) });
+    }
+  }
+
+  // Restore: send a previously-rejected item back into the queue.
+  const restore = pathname.match(/^\/api\/restore\/([\w-]+)$/);
+  if (req.method === 'POST' && restore) {
+    const [, id] = restore;
+    try {
+      const rejected = readJson(FILES.rejected);
+      const idx = rejected.findIndex(r => r.id === id);
+      if (idx < 0) return sendJson(res, 404, { error: 'not in rejected' });
+      const [item] = rejected.splice(idx, 1);
+      writeJson(FILES.rejected, rejected);
+
+      // Undo a prior dislike: -1 dislike across dimensions
+      const prefs = readJson(FILES.preferences);
+      const touch = (bucket, key) => {
+        if (!bucket[key]) return;
+        bucket[key].dislikes = Math.max(0, (bucket[key].dislikes || 0) - 1);
+      };
+      touch(prefs.categories, item.category);
+      (item.tags || []).forEach(t => touch(prefs.tags, t));
+      if (item.source) touch(prefs.sources, item.source);
+      prefs.totals.dislikes = Math.max(0, (prefs.totals.dislikes || 0) - 1);
+      prefs.lastUpdated = new Date().toISOString();
+      writeJson(FILES.preferences, prefs);
+
+      // Strip verdict-specific fields before returning to queue
+      delete item.rejectedAt;
+      delete item.wasPublished;
+      delete item.publishedAt;
+      delete item.score;
+
+      const queue = readJson(FILES.queue);
+      queue.unshift(item);
+      writeJson(FILES.queue, queue);
+
+      return sendJson(res, 200, { ok: true, action: 'restore' });
+    } catch (e) {
+      return sendJson(res, 500, { error: String(e) });
+    }
+  }
+
+  // Unpublish: pull an already-published post off the live feed and flip its learning.
+  const unpub = pathname.match(/^\/api\/unpublish\/([\w-]+)$/);
+  if (req.method === 'POST' && unpub) {
+    const [, id] = unpub;
+    try {
+      const posts = readJson(FILES.posts);
+      const idx = posts.findIndex(p => p.id === id);
+      if (idx < 0) return sendJson(res, 404, { error: 'not in posts' });
+      const [item] = posts.splice(idx, 1);
+      writeJson(FILES.posts, posts);
+
+      const rejected = readJson(FILES.rejected);
+      rejected.unshift({ ...item, rejectedAt: new Date().toISOString(), wasPublished: true });
+      writeJson(FILES.rejected, rejected);
+
+      reverseLike(item);
+      const push = gitPush(`Unpublish: ${item.title}`);
+      return sendJson(res, 200, { ok: true, action: 'unpublish', pushed: push.ok, error: push.error || null });
     } catch (e) {
       return sendJson(res, 500, { error: String(e) });
     }

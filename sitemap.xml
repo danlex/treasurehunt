@@ -4,85 +4,86 @@
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
     <loc>https://treasurehunt.alexandrudan.com/</loc>
-    <lastmod>2026-04-12T18:38:00.808Z</lastmod>
+    <lastmod>2026-04-12T18:51:52.331Z</lastmod>
     <changefreq>hourly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://treasurehunt.alexandrudan.com/posts/openai-852b.html</loc>
-    <lastmod>2026-04-12T18:38:00.808Z</lastmod>
+    <lastmod>2026-04-12T18:51:52.331Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <image:image><image:loc>https://loremflickr.com/1200/600/skyline,tower,finance,night?lock=210</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://treasurehunt.alexandrudan.com/posts/turboquant.html</loc>
+    <lastmod>2026-04-12T18:51:44.247Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://treasurehunt.alexandrudan.com/posts/citrix-netscaler.html</loc>
+    <lastmod>2026-04-12T18:51:34.748Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://treasurehunt.alexandrudan.com/posts/mcp-97m.html</loc>
+    <lastmod>2026-04-12T18:49:51.560Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://treasurehunt.alexandrudan.com/posts/physics-informed-ml.html</loc>
     <lastmod>2026-04-12T18:37:45.897Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <image:image><image:loc>https://loremflickr.com/1200/600/ocean,wave,turbulence,fluid?lock=213</image:loc></image:image>
-  </url>
-  <url>
-    <loc>https://treasurehunt.alexandrudan.com/posts/mcp-97m.html</loc>
-    <lastmod>2026-04-12T18:35:51.209Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image><image:loc>https://loremflickr.com/1200/600/code,terminal,open,source?lock=204</image:loc></image:image>
   </url>
   <url>
     <loc>https://treasurehunt.alexandrudan.com/posts/meta-muse-spark.html</loc>
     <lastmod>2026-04-12T18:35:46.911Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <image:image><image:loc>https://loremflickr.com/1200/600/data,center,servers,dark?lock=202</image:loc></image:image>
   </url>
   <url>
     <loc>https://treasurehunt.alexandrudan.com/posts/q1-300b-funding.html</loc>
     <lastmod>2026-04-12T18:35:36.296Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <image:image><image:loc>https://loremflickr.com/1200/600/money,stocks,chart,green?lock=101</image:loc></image:image>
   </url>
   <url>
     <loc>https://treasurehunt.alexandrudan.com/posts/ai-quantum-breakthrough.html</loc>
     <lastmod>2026-04-12T18:35:16.173Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <image:image><image:loc>https://loremflickr.com/1200/600/quantum,dna,molecule,science?lock=102</image:loc></image:image>
   </url>
   <url>
     <loc>https://treasurehunt.alexandrudan.com/posts/exploits-overtake-phishing.html</loc>
     <lastmod>2026-04-12T18:33:39.462Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <image:image><image:loc>https://loremflickr.com/1200/600/hacker,breach,dark,red?lock=103</image:loc></image:image>
   </url>
   <url>
     <loc>https://treasurehunt.alexandrudan.com/posts/karpathy-obsidian.html</loc>
     <lastmod>2026-04-12T18:32:23.828Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <image:image><image:loc>https://loremflickr.com/1200/600/notebook,notes,desk,writing?lock=104</image:loc></image:image>
   </url>
   <url>
     <loc>https://treasurehunt.alexandrudan.com/posts/ai-energy-100x.html</loc>
     <lastmod>2026-04-12T18:32:04.743Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <image:image><image:loc>https://loremflickr.com/1200/600/brain,green,energy,leaf?lock=105</image:loc></image:image>
   </url>
   <url>
     <loc>https://treasurehunt.alexandrudan.com/posts/claude-code-leak.html</loc>
     <lastmod>2026-04-12T18:31:50.446Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <image:image><image:loc>https://loremflickr.com/1200/600/code,repository,dark,keyboard?lock=106</image:loc></image:image>
   </url>
   <url>
     <loc>https://treasurehunt.alexandrudan.com/posts/gpt-5-4.html</loc>
     <lastmod>2026-04-12T18:04:49.053Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <image:image><image:loc>https://loremflickr.com/1200/600/ai,robot,office,computer?lock=107</image:loc></image:image>
   </url>
 </urlset>

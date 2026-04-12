@@ -365,7 +365,7 @@ function buildPostPage(p, i) {
     description,
     url: canonical,
     mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
-    image: p.image ? [p.image] : [SITE_URL + '/og-cover.svg'],
+    image: [SITE_URL + '/og-cover.svg'],
     datePublished: dateISO(p.publishedAt),
     dateModified: dateISO(p.publishedAt),
     articleSection: p.category,
@@ -395,7 +395,6 @@ function buildPostPage(p, i) {
     title: `${p.title} — ${SITE_NAME}`,
     description,
     canonical,
-    image: p.image || undefined,
     imageAlt: p.title,
     ogType: 'article',
     publishedTime: dateISO(p.publishedAt),
@@ -422,7 +421,6 @@ ${navbar}
       <span class="dot">·</span>
       <span class="source">${esc(p.source || '')}</span>
     </div>
-    ${p.image ? `<img class="hero-image" src="${esc(p.image)}" alt="${esc(p.title)}" itemprop="image" loading="eager" width="1200" height="600">` : ''}
     <p class="post-summary" itemprop="description">${esc(p.summary)}</p>
     <div class="tags" itemprop="keywords" content="${esc((p.tags || []).join(', '))}">${(p.tags || []).map(t => `<span class="tag">${esc(t)}</span>`).join('')}</div>
     <aside class="cta">

@@ -12,23 +12,7 @@
       "LM Arena"
     ],
     "url": "https://llm-stats.com/ai-news",
-    "source": "LLM Stats",
-    "image": "https://loremflickr.com/1200/600/ai,neural,network,blue?lock=201"
-  },
-  {
-    "id": "meta-muse-spark",
-    "category": "AI",
-    "title": "Meta's Muse Spark: first flagship since the $14.3B Scale AI deal",
-    "summary": "Meta Superintelligence Labs — the unit Alexandr Wang joined last July after Meta paid $14.3B for 49% of Scale AI — shipped Muse Spark, its first flagship under Wang's leadership. Training ran on ~400,000 H200s across new Louisiana and New Mexico data centers. Benchmarks show Muse Spark leading Llama 4 by 18 points on HumanEval-Plus with a 512K context. It launches as a paid Meta AI tier now, with an Apache-2.0 open-weight 'Muse Spark Mini' variant promised for Q3.",
-    "tags": [
-      "Meta",
-      "Alexandr Wang",
-      "Superintelligence Labs",
-      "Open Weights"
-    ],
-    "url": "https://www.cnbc.com/2026/04/08/meta-debuts-first-major-ai-model-since-14-billion-deal-to-bring-in-alexandr-wang.html",
-    "source": "CNBC",
-    "image": "https://loremflickr.com/1200/600/data,center,servers,dark?lock=202"
+    "source": "LLM Stats"
   },
   {
     "id": "fault-tolerant-no-midcircuit",
@@ -43,8 +27,7 @@
       "Nature"
     ],
     "url": "https://phys.org/news/2026-04-quantum.html",
-    "source": "Phys.org",
-    "image": "https://loremflickr.com/1200/600/quantum,ion,trap,physics?lock=205"
+    "source": "Phys.org"
   },
   {
     "id": "eclipse-1-3b",
@@ -59,8 +42,7 @@
       "Hardware"
     ],
     "url": "https://www.bloomberg.com/news/articles/2026-04-07/cerebras-backer-eclipse-raises-1-3-billion-for-robotics-ai-infrastructure",
-    "source": "Bloomberg",
-    "image": "https://loremflickr.com/1200/600/robot,industrial,automation?lock=207"
+    "source": "Bloomberg"
   },
   {
     "id": "mit-atomic-defects",
@@ -75,70 +57,6 @@
       "Applied Materials"
     ],
     "url": "https://www.nextbigfuture.com/2026/04/2026-is-breakthrough-year-for-reliable-ai-world-models-and-continual-learning-prototypes.html",
-    "source": "NextBigFuture",
-    "image": "https://loremflickr.com/1200/600/microscope,atom,crystal,lab?lock=208"
-  },
-  {
-    "id": "reddit-kills-rall",
-    "category": "Viral",
-    "title": "Reddit kills r/all after 17 years — moves to ML-ranked home feed",
-    "summary": "On April 2 Reddit officially deprecated r/all — the unfiltered front-page feed that drove discovery for 17 years — replacing it with 'Home (Algorithmic)', an ML-ranked stream CEO Steve Huffman says lifts 7-day retention 12% in A/B tests. Moderators from r/AskHistorians, r/science and r/programming signed an open letter warning the shift kills cross-subreddit discovery and narrows the Overton window. RDDT shares jumped 4% intraday on the news. Another raw, open corner of the internet closes.",
-    "tags": [
-      "Reddit",
-      "Platforms",
-      "Algorithms",
-      "Steve Huffman"
-    ],
-    "url": "https://social9.com/news/reddit-shuts-down-rall-to-promote-algorithmic-personalization",
-    "source": "Social9",
-    "image": "https://loremflickr.com/1200/600/social,network,phone,crowd?lock=211"
-  },
-  {
-    "id": "neutral-atom-quantum",
-    "category": "Quantum",
-    "title": "Neutral-atom quantum eats IBM's roadmap: QuEra 99.5%, Atom Computing 99.7%",
-    "summary": "IEEE Spectrum's April cover argues neutral-atom quantum is pulling ahead of superconducting and trapped-ion architectures. QuEra's 256-qubit Aquila hit 99.5% two-qubit gate fidelity in March; Atom Computing's 1,180-qubit system — built for Microsoft's upcoming level-2 Azure offering — runs at 99.7%. Pasqal and Infleqtion raised a combined $280M to scale. Neutral atoms reconfigure dynamically for arbitrary connectivity and scale more cheaply than ion traps, eating into IBM's planned 2026 superconducting roadmap.",
-    "tags": [
-      "Quantum",
-      "Neutral Atom",
-      "Microsoft",
-      "Atom Computing",
-      "QuEra"
-    ],
-    "url": "https://spectrum.ieee.org/neutral-atom-quantum-computing",
-    "source": "IEEE Spectrum",
-    "image": "https://loremflickr.com/1200/600/atom,laser,physics,blue?lock=212"
-  },
-  {
-    "id": "physics-informed-ml",
-    "category": "Research",
-    "title": "Physics-informed transformer: 34% better RMSE, 12× faster than PINN baselines",
-    "summary": "University of Hawaiʻi Manoa's Peter Sadowski published a physics-informed transformer that hard-constrains outputs to conservation laws (mass, momentum, energy) via a differentiable projection layer. On turbulent channel-flow benchmarks it beats PINN baselines by 34% RMSE at 12× faster inference. NOAA is piloting the model for 10-day regional forecasts; the DOE has it slated for next-generation fusion-plasma control. Paper in PNAS on April 5. Credible AI for climate and fusion finally looks plausible at operational latency.",
-    "tags": [
-      "Physics-Informed ML",
-      "Climate",
-      "Fluid Dynamics",
-      "NOAA",
-      "DOE"
-    ],
-    "url": "https://www.nextbigfuture.com/2026/04/2026-is-breakthrough-year-for-reliable-ai-world-models-and-continual-learning-prototypes.html",
-    "source": "NextBigFuture",
-    "image": "https://loremflickr.com/1200/600/ocean,wave,turbulence,fluid?lock=213"
-  },
-  {
-    "id": "quantum-crypto-threat",
-    "category": "Quantum",
-    "title": "Q-day shrinks: factoring RSA-2048 drops to 20M noisy qubits",
-    "summary": "A Google paper posted April 3 by Craig Gidney shows factoring RSA-2048 needs only ~20 million noisy qubits — down from the 20 billion estimate in 2019 — by combining magic-state distillation with better modular-exponentiation circuits. A companion paper from stealth startup Oratomic claims a 50× speedup on cryptographically relevant quantum workloads. Cloudflare pulled its post-quantum rollout target forward from 2035 to 2029 and said 38% of its TLS traffic is already hybrid ML-KEM. The Q-day horizon just shrank by years.",
-    "tags": [
-      "Post-Quantum",
-      "Cryptography",
-      "Cloudflare",
-      "Craig Gidney",
-      "RSA"
-    ],
-    "url": "https://thequantuminsider.com/2026/04/07/sp-analysts-report-quantum-computing-arriving-just-as-energy-sector-prepares-for-a-compute-driven-future/",
-    "source": "The Quantum Insider",
-    "image": "https://loremflickr.com/1200/600/lock,security,cryptography,binary?lock=214"
+    "source": "NextBigFuture"
   }
 ]

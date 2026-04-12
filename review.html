@@ -103,6 +103,56 @@
   }
   .empty h3 { font-size: 18px; color: var(--text); margin-bottom: 8px; }
 
+  .tabs {
+    display: flex;
+    gap: 4px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 18px;
+  }
+  .tab {
+    background: transparent;
+    border: 0;
+    padding: 10px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-mute);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-body);
+  }
+  .tab:hover { color: var(--text); }
+  .tab.active { color: var(--red); border-bottom-color: var(--red); }
+  .tab-count {
+    background: var(--light-bg);
+    color: var(--text-sec);
+    font-size: 11px;
+    padding: 1px 8px;
+    border-radius: 10px;
+    font-weight: 700;
+  }
+  .tab.active .tab-count { background: var(--red); color: #fff; }
+  .panel { display: none; }
+  .panel.active { display: block; }
+
+  .verdict {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    margin-left: auto;
+  }
+  .verdict.liked    { background: #dcfce7; color: #166534; }
+  .verdict.disliked { background: #fee2e2; color: #991b1b; }
+
   .card {
     background: #fff;
     border: 1px solid var(--border);
@@ -111,6 +161,8 @@
     margin-bottom: 14px;
     transition: transform 0.2s, opacity 0.2s, box-shadow 0.15s, border-color 0.15s;
   }
+  .card.is-liked    { border-left: 3px solid var(--green); }
+  .card.is-disliked { border-left: 3px solid var(--dark); opacity: 0.7; }
   .card:hover { border-color: #d4d4d4; box-shadow: 0 2px 10px rgba(0,0,0,0.04); }
   .card.leaving-like    { transform: translateX(24px); opacity: 0; border-color: var(--green); }
   .card.leaving-dislike { transform: translateX(-24px); opacity: 0; border-color: var(--dark); }
@@ -303,9 +355,18 @@
     <div class="hero">
       <span class="red-label">Your desk · local review</span>
       <h1>Like to <span>publish</span>. Dislike to <span>forget</span>.</h1>
-      <p>Every Like pushes the item to the public feed. Every Dislike deletes it and tunes your taste profile.</p>
+      <p>Every Like pushes to the public feed. Every Dislike deletes and learns. Already liked something? You can still dislike it — it'll be pulled down.</p>
     </div>
-    <div id="queue"></div>
+
+    <div class="tabs" id="tabs">
+      <button class="tab active" data-tab="pending">Pending <span class="tab-count" id="tab-count-pending">0</span></button>
+      <button class="tab" data-tab="liked">Liked <span class="tab-count" id="tab-count-liked">0</span></button>
+      <button class="tab" data-tab="disliked">Disliked <span class="tab-count" id="tab-count-disliked">0</span></button>
+    </div>
+
+    <div id="panel-pending"  class="panel active"></div>
+    <div id="panel-liked"    class="panel"></div>
+    <div id="panel-disliked" class="panel"></div>
   </section>
 
   <aside>
@@ -342,22 +403,30 @@ function showToast(msg, kind = "") {
   el._t = setTimeout(() => el.classList.remove("show"), 2200);
 }
 
-function renderQueue() {
-  const feed = document.getElementById("queue");
-  if (!state.queue.length) {
-    feed.innerHTML = `
-      <div class="empty">
-        <h3>Queue empty</h3>
-        <p>Nothing left to review. Ask me to hunt for more news.</p>
-      </div>`;
-    return;
-  }
-  feed.innerHTML = state.queue.map(item => `
-    <article class="card" data-id="${item.id}">
+function cardHTML(item, variant) {
+  // variant: 'pending' | 'liked' | 'disliked'
+  const verdictBadge =
+    variant === 'liked'    ? `<span class="verdict liked">✓ LIKED</span>` :
+    variant === 'disliked' ? `<span class="verdict disliked">✗ DISLIKED</span>` : "";
+  const klass =
+    variant === 'liked'    ? 'is-liked' :
+    variant === 'disliked' ? 'is-disliked' : '';
+  const actions =
+    variant === 'pending' ? `
+        <button class="btn btn-dislike" data-action="dislike">Dislike</button>
+        <button class="btn btn-like" data-action="like">Like → Publish</button>` :
+    variant === 'liked' ? `
+        <button class="btn btn-dislike" data-action="unpublish">Change mind · Dislike</button>` :
+    variant === 'disliked' ? `
+        <button class="btn btn-dislike" data-action="restore">Restore to queue</button>` : '';
+
+  return `
+    <article class="card ${klass}" data-id="${item.id}" data-variant="${variant}">
       <div class="card-meta">
         <span class="cat-badge ${catClass(item.category)}">${item.category}</span>
         <span>·</span>
         <span>${item.source || ""}</span>
+        ${verdictBadge}
       </div>
       <h2 class="card-title">${escapeHtml(item.title)}</h2>
       <p class="card-summary">${escapeHtml(item.summary)}</p>
@@ -366,21 +435,42 @@ function renderQueue() {
       </div>
       <div class="card-footer">
         <a class="source-link" href="${item.url}" target="_blank" rel="noopener">Read source ↗</a>
-        <div class="actions">
-          <button class="btn btn-dislike" data-action="dislike">Dislike</button>
-          <button class="btn btn-like" data-action="like">Like → Publish</button>
-        </div>
+        <div class="actions">${actions}</div>
       </div>
-    </article>
-  `).join("");
-
-  feed.querySelectorAll(".card").forEach(card => {
-    const id = card.dataset.id;
-    card.querySelectorAll("button[data-action]").forEach(btn => {
-      btn.addEventListener("click", () => act(card, id, btn.dataset.action));
-    });
-  });
+    </article>`;
 }
+
+function renderPanels() {
+  const panels = {
+    pending:  { items: state.queue,                  empty: "Queue empty. Ask me to hunt for more news." },
+    liked:    { items: state.posts,                  empty: "Nothing liked yet." },
+    disliked: { items: state.rejected,               empty: "Nothing disliked yet." },
+  };
+  for (const [variant, { items, empty }] of Object.entries(panels)) {
+    const el = document.getElementById("panel-" + variant);
+    document.getElementById("tab-count-" + variant).textContent = items.length;
+    if (!items.length) {
+      el.innerHTML = `<div class="empty"><h3>${empty}</h3></div>`;
+      continue;
+    }
+    el.innerHTML = items.map(item => cardHTML(item, variant)).join("");
+    el.querySelectorAll(".card").forEach(card => {
+      const id = card.dataset.id;
+      card.querySelectorAll("button[data-action]").forEach(btn => {
+        btn.addEventListener("click", () => act(card, id, btn.dataset.action));
+      });
+    });
+  }
+}
+
+// Tab switching
+document.getElementById("tabs").addEventListener("click", e => {
+  const btn = e.target.closest(".tab");
+  if (!btn) return;
+  document.querySelectorAll(".tab").forEach(t => t.classList.toggle("active", t === btn));
+  const name = btn.dataset.tab;
+  document.querySelectorAll(".panel").forEach(p => p.classList.toggle("active", p.id === "panel-" + name));
+});
 
 function escapeHtml(s) {
   return String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
@@ -429,29 +519,35 @@ async function fetchState() {
   const r = await fetch("/api/state", { cache: "no-store" });
   state = await r.json();
   renderStats();
-  renderQueue();
+  renderPanels();
   renderTaste();
 }
 
+const endpointFor = action => action === "unpublish" ? "unpublish"
+                            : action === "restore"   ? "restore"
+                            : action;
+
 async function act(card, id, action) {
   card.querySelectorAll("button").forEach(b => b.disabled = true);
-  card.classList.add("leaving-" + action);
+  card.classList.add("leaving-" + (action === "like" ? "like" : "dislike"));
 
   try {
-    const r = await fetch(`/api/${action}/${id}`, { method: "POST" });
+    const r = await fetch(`/api/${endpointFor(action)}/${id}`, { method: "POST" });
     const j = await r.json();
     if (!r.ok) throw new Error(j.error || "failed");
 
-    if (action === "like") {
-      if (j.published) showToast("Published to live feed", "ok");
-      else             showToast("Saved locally, but push failed: " + (j.error || "check git"), "err");
-    } else {
-      showToast("Learned. Removed from queue.", "");
-    }
+    const messages = {
+      like:      j.published ? "Published to live feed" : "Saved locally; push failed: " + (j.error || "check git"),
+      dislike:   "Learned. Removed from queue.",
+      unpublish: j.pushed ? "Pulled from live feed" : "Pulled locally; push failed: " + (j.error || "check git"),
+      restore:   "Restored to queue.",
+    };
+    const tone = action === "like" ? "ok" : (action === "unpublish" || (action === "like" && !j.published)) && !j.pushed && !j.published ? "err" : action === "like" ? "ok" : "";
+    showToast(messages[action] || "Done.", tone);
 
     setTimeout(fetchState, 400);
   } catch (e) {
-    card.classList.remove("leaving-" + action);
+    card.classList.remove("leaving-like", "leaving-dislike");
     card.querySelectorAll("button").forEach(b => b.disabled = false);
     showToast("Error: " + e.message, "err");
   }

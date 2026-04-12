@@ -13,7 +13,6 @@
     ],
     "url": "https://news.crunchbase.com/venture/foundational-ai-startup-funding-doubled-openai-anthropic-xai-q1-2026/",
     "source": "Crunchbase News",
-    "image": "https://loremflickr.com/1200/600/skyline,tower,finance,night?lock=210",
     "publishedAt": "2026-04-12T18:51:52.331Z"
   },
   {
@@ -30,7 +29,6 @@
     ],
     "url": "https://llm-stats.com/ai-news",
     "source": "LLM Stats",
-    "image": "https://loremflickr.com/1200/600/chip,semiconductor,circuit,hardware?lock=209",
     "publishedAt": "2026-04-12T18:51:44.247Z"
   },
   {
@@ -47,7 +45,6 @@
     ],
     "url": "https://dev.to/ziizium/security-news-weekly-round-up-10th-april-2026-l5n",
     "source": "DEV Community",
-    "image": "https://loremflickr.com/1200/600/cybersecurity,matrix,red,hacker?lock=206",
     "publishedAt": "2026-04-12T18:51:34.748Z"
   },
   {
@@ -64,25 +61,7 @@
     ],
     "url": "https://llm-stats.com/ai-news",
     "source": "LLM Stats",
-    "image": "https://loremflickr.com/1200/600/code,terminal,open,source?lock=204",
     "publishedAt": "2026-04-12T18:49:51.560Z"
-  },
-  {
-    "id": "openai-852b",
-    "category": "Startups",
-    "title": "OpenAI closes $122B at $852B — most valuable private company in history",
-    "summary": "OpenAI closed its $122B primary+secondary on March 31 at an $852B post-money, passing SpaceX to become the most valuable private company in history. D.E. Shaw and MGX co-led, with Thrive, Coatue and Temasek participating. Revenue run-rate hit $28B on the April 1 board update, up from $12B a year earlier. The round funds OpenAI's $500B Stargate commitment with Oracle and SoftBank plus a reported $70B custom-chip program with Broadcom and TSMC aimed at halving training-compute cost per token by 2027.",
-    "tags": [
-      "OpenAI",
-      "Valuation",
-      "Stargate",
-      "Broadcom",
-      "TSMC"
-    ],
-    "url": "https://news.crunchbase.com/venture/foundational-ai-startup-funding-doubled-openai-anthropic-xai-q1-2026/",
-    "source": "Crunchbase News",
-    "image": "https://loremflickr.com/1200/600/skyline,tower,finance,night?lock=210",
-    "publishedAt": "2026-04-12T18:38:00.808Z"
   },
   {
     "id": "physics-informed-ml",
@@ -98,25 +77,7 @@
     ],
     "url": "https://www.nextbigfuture.com/2026/04/2026-is-breakthrough-year-for-reliable-ai-world-models-and-continual-learning-prototypes.html",
     "source": "NextBigFuture",
-    "image": "https://loremflickr.com/1200/600/ocean,wave,turbulence,fluid?lock=213",
     "publishedAt": "2026-04-12T18:37:45.897Z"
-  },
-  {
-    "id": "mcp-97m",
-    "category": "AI",
-    "title": "MCP crosses 97M installs; Linux Foundation takes governance at KubeCon",
-    "summary": "Anthropic's Model Context Protocol — the open spec for wiring LLMs to tools, files and APIs — crossed 97 million installs in March, up from ~3M a year ago. Every frontier vendor now ships MCP-compatible tooling: OpenAI, Google, Mistral, xAI, Cohere. The Linux Foundation announced at KubeCon EU on April 14 that it will take MCP under open governance, with Microsoft, Red Hat and GitHub signing as founding stewards. Arguably the fastest-standardizing protocol since LSP in 2016.",
-    "tags": [
-      "MCP",
-      "Anthropic",
-      "Linux Foundation",
-      "Open Source",
-      "KubeCon"
-    ],
-    "url": "https://llm-stats.com/ai-news",
-    "source": "LLM Stats",
-    "image": "https://loremflickr.com/1200/600/code,terminal,open,source?lock=204",
-    "publishedAt": "2026-04-12T18:35:51.209Z"
   },
   {
     "id": "meta-muse-spark",
@@ -131,7 +92,6 @@
     ],
     "url": "https://www.cnbc.com/2026/04/08/meta-debuts-first-major-ai-model-since-14-billion-deal-to-bring-in-alexandr-wang.html",
     "source": "CNBC",
-    "image": "https://loremflickr.com/1200/600/data,center,servers,dark?lock=202",
     "publishedAt": "2026-04-12T18:35:46.911Z"
   },
   {
@@ -147,7 +107,6 @@
     ],
     "url": "https://news.crunchbase.com/venture/record-breaking-funding-ai-global-q1-2026/",
     "source": "Crunchbase News",
-    "image": "https://loremflickr.com/1200/600/money,stocks,chart,green?lock=101",
     "publishedAt": "2026-04-12T18:35:36.296Z"
   },
   {
@@ -164,7 +123,6 @@
     ],
     "url": "https://time.com/article/2026/04/07/ai-quantum-computing-advance/",
     "source": "Time",
-    "image": "https://loremflickr.com/1200/600/quantum,dna,molecule,science?lock=102",
     "publishedAt": "2026-04-12T18:35:16.173Z"
   },
   {
@@ -181,7 +139,6 @@
     ],
     "url": "https://www.cybersecurity-review.com/news-april-2026/",
     "source": "Cyber Security Review",
-    "image": "https://loremflickr.com/1200/600/hacker,breach,dark,red?lock=103",
     "publishedAt": "2026-04-12T18:33:39.462Z"
   },
   {
@@ -198,7 +155,6 @@
     ],
     "url": "https://x.com/ainunnajib/status/2039962318449390007",
     "source": "X / AI Noon",
-    "image": "https://loremflickr.com/1200/600/notebook,notes,desk,writing?lock=104",
     "publishedAt": "2026-04-12T18:32:23.828Z"
   },
   {
@@ -215,7 +171,6 @@
     ],
     "url": "https://www.sciencedaily.com/releases/2026/04/260405003952.htm",
     "source": "ScienceDaily",
-    "image": "https://loremflickr.com/1200/600/brain,green,energy,leaf?lock=105",
     "publishedAt": "2026-04-12T18:32:04.743Z"
   },
   {
@@ -232,7 +187,6 @@
     ],
     "url": "https://thehackernews.com/",
     "source": "The Hacker News",
-    "image": "https://loremflickr.com/1200/600/code,repository,dark,keyboard?lock=106",
     "publishedAt": "2026-04-12T18:31:50.446Z"
   },
   {
@@ -249,7 +203,6 @@
     ],
     "url": "https://llm-stats.com/ai-news",
     "source": "LLM Stats",
-    "image": "https://loremflickr.com/1200/600/ai,robot,office,computer?lock=107",
     "publishedAt": "2026-04-12T18:04:49.053Z"
   }
 ]

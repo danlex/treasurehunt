@@ -1,5 +1,22 @@
 [
   {
+    "id": "ms-quantum-error-detect",
+    "category": "Quantum",
+    "title": "Quantum errors caught in under 4ms — 100× faster than prior art",
+    "summary": "A Purdue-led team unveiled an error-detection scheme that flags qubit faults in under 4 milliseconds — roughly two orders of magnitude faster than the prior state of the art. Paired with a companion Nature Physics paper measuring decoherence in superconducting qubits at microsecond resolution, researchers can watch errors unfold live instead of reconstructing them post-mortem. IBM, Google Quantum AI and Quantinuum are already using the technique to benchmark fault-tolerant prototypes more credibly — a critical instrumentation upgrade.",
+    "tags": [
+      "Quantum",
+      "Error Correction",
+      "Purdue",
+      "IBM",
+      "Quantinuum"
+    ],
+    "url": "https://www.sciencedaily.com/releases/2026/04/260407193857.htm",
+    "source": "ScienceDaily",
+    "image": "https://loremflickr.com/1200/600/quantum,laser,physics?lock=203",
+    "rejectedAt": "2026-04-12T18:49:49.056Z"
+  },
+  {
     "id": "reddit-kills-rall",
     "category": "Viral",
     "title": "Reddit shuts down r/all; moves to algorithmic feed",
