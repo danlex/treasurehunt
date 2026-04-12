@@ -134,31 +134,5 @@
     ],
     "url": "https://spectrum.ieee.org/neutral-atom-quantum-computing",
     "source": "IEEE Spectrum"
-  },
-  {
-    "id": "physics-informed-ml",
-    "category": "Research",
-    "title": "Physics-informed ML: AI that respects the laws of physics",
-    "summary": "University of Hawaiʻi researchers published an algorithm that forces AI to adhere to physical laws while processing complex datasets — opening the door to credible AI for fluid dynamics and climate modeling.",
-    "tags": [
-      "Physics-Informed ML",
-      "Climate",
-      "Fluid Dynamics"
-    ],
-    "url": "https://www.nextbigfuture.com/2026/04/2026-is-breakthrough-year-for-reliable-ai-world-models-and-continual-learning-prototypes.html",
-    "source": "NextBigFuture"
-  },
-  {
-    "id": "quantum-crypto-threat",
-    "category": "Quantum",
-    "title": "Google & Oratomic: encryption-breaking quantum may arrive sooner",
-    "summary": "New papers shorten timelines for cryptographically relevant quantum computers. Cloudflare responded by accelerating its post-quantum roadmap — full system-wide resilience now targeted for 2029.",
-    "tags": [
-      "Post-Quantum",
-      "Cryptography",
-      "Cloudflare"
-    ],
-    "url": "https://thequantuminsider.com/2026/04/07/sp-analysts-report-quantum-computing-arriving-just-as-energy-sector-prepares-for-a-compute-driven-future/",
-    "source": "The Quantum Insider"
   }
 ]

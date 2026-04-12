@@ -1,5 +1,19 @@
 [
   {
+    "id": "physics-informed-ml",
+    "category": "Research",
+    "title": "Physics-informed ML: AI that respects the laws of physics",
+    "summary": "University of Hawaiʻi researchers published an algorithm that forces AI to adhere to physical laws while processing complex datasets — opening the door to credible AI for fluid dynamics and climate modeling.",
+    "tags": [
+      "Physics-Informed ML",
+      "Climate",
+      "Fluid Dynamics"
+    ],
+    "url": "https://www.nextbigfuture.com/2026/04/2026-is-breakthrough-year-for-reliable-ai-world-models-and-continual-learning-prototypes.html",
+    "source": "NextBigFuture",
+    "publishedAt": "2026-04-12T18:37:45.897Z"
+  },
+  {
     "id": "mcp-97m",
     "category": "AI",
     "title": "Anthropic's MCP hits 97M installs; Linux Foundation takes governance",
