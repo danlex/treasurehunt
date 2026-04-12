@@ -2,153 +2,257 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Treasure Hunt — AI News Picks</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Treasure Hunt — TVL Tech</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
-    --bg: #0b0d12;
-    --card: #141821;
-    --card-hover: #1a1f2b;
-    --text: #e6e9ef;
-    --muted: #8892a6;
-    --accent: #f5c518;
-    --like: #22c55e;
-    --dislike: #ef4444;
-    --skip: #64748b;
-    --border: #232838;
+    --red: #ff4a3d;
+    --red-dark: #d63a2a;
+    --red-light: #ff9a8f;
+    --dark: #0f0f0f;
+    --light-bg: #f7f6f4;
+    --text: #111111;
+    --text-sec: #4a4a4a;
+    --border: #ebebeb;
+    --font-display: 'Space Grotesk', 'Segoe UI', sans-serif;
+    --font-body: 'Manrope', 'Segoe UI', sans-serif;
   }
-  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
   body {
-    margin: 0;
-    background: var(--bg);
+    font-family: var(--font-body);
     color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #fff;
     line-height: 1.5;
   }
-  header {
-    padding: 32px 24px 16px;
-    border-bottom: 1px solid var(--border);
+  h1, h2, h3 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+
+  /* NAV */
+  nav {
     position: sticky;
     top: 0;
-    background: var(--bg);
-    z-index: 10;
-  }
-  h1 {
-    margin: 0 0 8px;
-    font-size: 28px;
-  }
-  h1 .gem { color: var(--accent); }
-  .stats {
-    color: var(--muted);
-    font-size: 14px;
+    height: 72px;
+    background: #fff;
+    border-bottom: 1px solid var(--border);
     display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    z-index: 1000;
   }
-  .stats span b { color: var(--text); }
-  main {
-    max-width: 880px;
-    margin: 0 auto;
-    padding: 24px;
-  }
-  .category {
-    margin-top: 32px;
-    margin-bottom: 8px;
-    font-size: 12px;
+  .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .nav-logo-text {
+    font-family: var(--font-display);
+    font-size: 15px;
+    font-weight: 700;
+    color: #FF4931;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: var(--accent);
+  }
+  .nav-stats {
+    display: flex;
+    gap: 20px;
+    font-size: 13px;
+    color: var(--text-sec);
+  }
+  .nav-stats b { color: var(--text); font-weight: 600; }
+
+  /* HERO */
+  .hero {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 64px 40px 32px;
+  }
+  .red-label {
+    display: inline-block;
+    color: var(--red);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .hero h1 {
+    font-size: clamp(34px, 5vw, 52px);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 18px;
+  }
+  .hero h1 span { color: var(--red); }
+  .hero p {
+    font-size: 17px;
+    color: var(--text-sec);
+    font-weight: 300;
+    max-width: 620px;
+  }
+
+  /* FEED */
+  main {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 16px 40px 120px;
+  }
+  .category {
+    margin: 40px 0 14px;
+    padding-left: 14px;
+    border-left: 4px solid var(--red);
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text);
   }
   .card {
-    background: var(--card);
+    background: #fff;
     border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 18px 20px;
+    border-radius: 10px;
+    padding: 20px 22px;
     margin-bottom: 12px;
-    transition: background 0.15s, transform 0.15s, opacity 0.3s;
+    transition: border-color 0.15s, box-shadow 0.15s, opacity 0.25s;
   }
-  .card.liked { border-color: var(--like); }
-  .card.disliked { border-color: var(--dislike); opacity: 0.45; }
+  .card:hover { border-color: #d4d4d4; }
+  .card.liked {
+    border-color: var(--red);
+    box-shadow: 0 2px 8px rgba(255, 74, 61, 0.1);
+  }
+  .card.disliked { opacity: 0.4; background: var(--light-bg); }
   .card.skipped { opacity: 0.55; }
   .card-title {
-    font-size: 16px;
+    font-family: var(--font-display);
+    font-size: 17px;
     font-weight: 600;
+    color: var(--text);
     margin-bottom: 6px;
   }
   .card-desc {
-    color: var(--muted);
+    color: var(--text-sec);
     font-size: 14px;
-    margin-bottom: 12px;
+    line-height: 1.6;
+    margin-bottom: 14px;
   }
-  .actions {
-    display: flex;
-    gap: 8px;
-  }
+  .actions { display: flex; gap: 8px; }
   button {
-    background: transparent;
+    font-family: var(--font-body);
+    background: #fff;
     border: 1px solid var(--border);
-    color: var(--muted);
-    padding: 6px 14px;
-    border-radius: 8px;
+    color: var(--text-sec);
+    padding: 7px 18px;
+    border-radius: 6px;
     cursor: pointer;
     font-size: 13px;
     font-weight: 500;
     transition: all 0.15s;
   }
-  button:hover { background: var(--card-hover); color: var(--text); }
-  button.active.like { background: var(--like); border-color: var(--like); color: white; }
-  button.active.dislike { background: var(--dislike); border-color: var(--dislike); color: white; }
-  button.active.skip { background: var(--skip); border-color: var(--skip); color: white; }
-  .toolbar {
-    margin-top: 24px;
+  button:hover { border-color: #c8c8c8; color: var(--text); }
+  button.like.active {
+    background: var(--red);
+    border-color: var(--red);
+    color: #fff;
+  }
+  button.dislike.active {
+    background: var(--dark);
+    border-color: var(--dark);
+    color: #fff;
+  }
+  button.skip.active {
+    background: var(--light-bg);
+    border-color: #c8c8c8;
+    color: var(--text);
+  }
+
+  /* SUBMIT BAR */
+  .submit-bar {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: #fff;
+    border-top: 1px solid var(--border);
+    padding: 16px 40px;
     display: flex;
+    justify-content: center;
+    gap: 12px;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.04);
+    z-index: 100;
+  }
+  .btn-primary {
+    background: var(--red);
+    color: #fff;
+    border: 0;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background 0.2s;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
     gap: 8px;
-    flex-wrap: wrap;
   }
-  .toolbar button {
-    padding: 8px 16px;
-    font-size: 13px;
-  }
-  .export {
-    margin-top: 16px;
-    padding: 16px;
-    background: var(--card);
+  .btn-primary:hover { background: var(--red-dark); }
+  .btn-secondary {
+    background: #fff;
+    color: var(--text);
     border: 1px solid var(--border);
-    border-radius: 12px;
-    font-family: ui-monospace, Menlo, monospace;
-    font-size: 12px;
-    white-space: pre-wrap;
-    display: none;
-    color: var(--muted);
-    max-height: 320px;
-    overflow: auto;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 14px;
   }
-  .export.visible { display: block; }
+  .btn-secondary:hover { border-color: #c8c8c8; }
+
+  @media (max-width: 640px) {
+    nav { padding: 0 20px; }
+    .nav-stats { gap: 12px; font-size: 12px; }
+    .hero, main { padding-left: 20px; padding-right: 20px; }
+    .submit-bar { padding: 12px 20px; }
+  }
 </style>
 </head>
 <body>
 
-<header>
-  <h1><span class="gem">◆</span> Treasure Hunt — April 12, 2026</h1>
-  <div class="stats">
-    <span>Liked: <b id="stat-like">0</b></span>
-    <span>Disliked: <b id="stat-dislike">0</b></span>
-    <span>Skipped: <b id="stat-skip">0</b></span>
-    <span>Unreviewed: <b id="stat-none">0</b></span>
+<nav>
+  <a class="nav-logo" href="#">
+    <svg width="28" height="28" viewBox="107 107 786 786" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="32" height="32" rx="6" fill="#f7f6f4"/>
+      <path d="M892.95 447.19L552.77 107.06V106.92H106.92V552.81L447.19 893.07H893.08L892.95 447.18V447.19ZM868.91 447.19H552.78V131.19L868.91 447.18V447.19ZM123.99 123.99H535.71V447.19H447.19V535.75H123.99V123.99ZM535.71 464.25V535.75H464.25V464.25H535.71ZM131.04 552.81H447.19V868.94L131.04 552.81ZM876.01 876.01H464.25V552.81H552.77V464.25H876.01V876.01Z" fill="#FF4931"/>
+      <path d="M290.55 255.08V272.11H273.12V389.18H255.88V281.12L236.53 272.11V255.08H290.55Z" fill="#FF4931"/>
+      <path d="M366.8 255.08L346.7 389.18H321.03L300.92 255.08H318.53L329.85 330.57L331.7 342.92H336.02L337.88 330.57L349.19 255.08H366.8Z" fill="#FF4931"/>
+      <path d="M424.68 372.12V389.18H382.92V255.08H400.17V372.12H424.68Z" fill="#FF4931"/>
+      <path d="M552.77 641.5L572.22 650.55V759.11H589.54V658.63V641.5H607.06V624.37H552.77V641.5Z" fill="#FF4931"/>
+      <path d="M642.28 700.21H668.27V683.08H642.28L641.92 641.5H668.84V624.37H636.12H624.96V641.5V651.53V759.11H626.91H668.84H669.45V741.98H642.28V700.21Z" fill="#FF4931"/>
+      <path d="M687.35 741.98V759.11H729.89V741.98H704.67V641.5H729.89V624.37H687.35V741.98Z" fill="#FF4931"/>
+      <path d="M788.8 624.37V683.08H767.63V624.37H750.3V759.11H767.63V700.21H788.8V759.11H806.12V624.37H788.8Z" fill="#FF4931"/>
+    </svg>
+    <span class="nav-logo-text">TREASURE HUNT</span>
+  </a>
+  <div class="nav-stats">
+    <span>Liked <b id="stat-like">0</b></span>
+    <span>Disliked <b id="stat-dislike">0</b></span>
+    <span>Left <b id="stat-none">0</b></span>
   </div>
-</header>
+</nav>
+
+<section class="hero">
+  <span class="red-label">Daily digest · April 12, 2026</span>
+  <h1>Find today's <span>treasure</span> in AI news.</h1>
+  <p>Like what's worth a deeper dive. Dislike the noise. When done, submit — picks go straight back to the agent as a GitHub issue. No copy-paste.</p>
+</section>
 
 <main id="feed"></main>
 
-<main>
-  <div class="toolbar">
-    <button onclick="showExport()">Show Picks</button>
-    <button onclick="copyExport()">Copy Liked to Clipboard</button>
-    <button onclick="resetAll()">Reset All</button>
-  </div>
-  <pre class="export" id="export"></pre>
-</main>
+<div class="submit-bar">
+  <button class="btn-secondary" onclick="resetAll()">Reset</button>
+  <a id="submitBtn" class="btn-primary" href="#" target="_blank" rel="noopener">Submit picks via GitHub →</a>
+</div>
 
 <script>
+const REPO = "danlex/treasurehunt";
 const ITEMS = [
   { cat: "AI", title: "OpenAI GPT-5.4 launches", desc: "1M token context, 75% on OSWorld-V (above human 72.4%) — autonomous digital coworker." },
   { cat: "AI", title: "Google Gemini 3.1 Ultra", desc: "2M token context, natively multimodal across text/image/audio/video, sandboxed code execution mid-conversation." },
@@ -202,7 +306,7 @@ function render() {
   ITEMS.forEach((item, i) => {
     if (item.cat !== currentCat) {
       currentCat = item.cat;
-      const h = document.createElement("div");
+      const h = document.createElement("h2");
       h.className = "category";
       h.textContent = currentCat;
       feed.appendChild(h);
@@ -211,17 +315,23 @@ function render() {
     const card = document.createElement("div");
     card.className = "card " + (verdict || "");
     card.innerHTML = `
-      <div class="card-title">${item.title}</div>
-      <div class="card-desc">${item.desc}</div>
+      <div class="card-title"></div>
+      <div class="card-desc"></div>
       <div class="actions">
-        <button class="like ${verdict === "liked" ? "active" : ""}" onclick="vote(${i}, 'liked')">Like</button>
-        <button class="dislike ${verdict === "disliked" ? "active" : ""}" onclick="vote(${i}, 'disliked')">Dislike</button>
-        <button class="skip ${verdict === "skipped" ? "active" : ""}" onclick="vote(${i}, 'skipped')">Skip</button>
+        <button class="like ${verdict === "liked" ? "active" : ""}" data-i="${i}" data-v="liked">Like</button>
+        <button class="dislike ${verdict === "disliked" ? "active" : ""}" data-i="${i}" data-v="disliked">Dislike</button>
+        <button class="skip ${verdict === "skipped" ? "active" : ""}" data-i="${i}" data-v="skipped">Skip</button>
       </div>
     `;
+    card.querySelector(".card-title").textContent = item.title;
+    card.querySelector(".card-desc").textContent = item.desc;
+    card.querySelectorAll("button").forEach(b => {
+      b.addEventListener("click", () => vote(+b.dataset.i, b.dataset.v));
+    });
     feed.appendChild(card);
   });
   updateStats();
+  updateSubmitLink();
 }
 
 function vote(i, verdict) {
@@ -232,40 +342,34 @@ function vote(i, verdict) {
 }
 
 function updateStats() {
-  const counts = { liked: 0, disliked: 0, skipped: 0 };
-  Object.values(state).forEach(v => counts[v] !== undefined && counts[v]++);
-  document.getElementById("stat-like").textContent = counts.liked;
-  document.getElementById("stat-dislike").textContent = counts.disliked;
-  document.getElementById("stat-skip").textContent = counts.skipped;
-  document.getElementById("stat-none").textContent = ITEMS.length - counts.liked - counts.disliked - counts.skipped;
+  const c = { liked: 0, disliked: 0, skipped: 0 };
+  Object.values(state).forEach(v => c[v] !== undefined && c[v]++);
+  document.getElementById("stat-like").textContent = c.liked;
+  document.getElementById("stat-dislike").textContent = c.disliked;
+  document.getElementById("stat-none").textContent = ITEMS.length - c.liked - c.disliked - c.skipped;
 }
 
-function exportText() {
-  const sections = { liked: [], disliked: [], skipped: [] };
+function buildIssueBody() {
+  const groups = { liked: [], disliked: [], skipped: [] };
   ITEMS.forEach((item, i) => {
     const v = state[i];
-    if (v) sections[v].push(`[${item.cat}] ${item.title}`);
+    if (v) groups[v].push(`- **[${item.cat}]** ${item.title} — ${item.desc}`);
   });
-  let out = "";
-  if (sections.liked.length)    out += "LIKED\n"    + sections.liked.map(s => "  + " + s).join("\n") + "\n\n";
-  if (sections.disliked.length) out += "DISLIKED\n" + sections.disliked.map(s => "  - " + s).join("\n") + "\n\n";
-  if (sections.skipped.length)  out += "SKIPPED\n"  + sections.skipped.map(s => "  ~ " + s).join("\n") + "\n\n";
-  return out || "No picks yet.";
+  let body = `Treasure Hunt picks — ${new Date().toISOString().slice(0, 10)}\n\n`;
+  if (groups.liked.length)    body += `## Liked (${groups.liked.length})\n\n${groups.liked.join("\n")}\n\n`;
+  if (groups.disliked.length) body += `## Disliked (${groups.disliked.length})\n\n${groups.disliked.join("\n")}\n\n`;
+  if (groups.skipped.length)  body += `## Skipped (${groups.skipped.length})\n\n${groups.skipped.join("\n")}\n\n`;
+  if (!groups.liked.length && !groups.disliked.length && !groups.skipped.length) {
+    body += `_No picks yet._\n`;
+  }
+  return body;
 }
 
-function showExport() {
-  const el = document.getElementById("export");
-  el.textContent = exportText();
-  el.classList.toggle("visible");
-}
-
-function copyExport() {
-  const liked = ITEMS
-    .map((item, i) => state[i] === "liked" ? `[${item.cat}] ${item.title} — ${item.desc}` : null)
-    .filter(Boolean)
-    .join("\n");
-  navigator.clipboard.writeText(liked || "(no liked items)");
-  alert("Liked items copied to clipboard!");
+function updateSubmitLink() {
+  const title = `Picks ${new Date().toISOString().slice(0, 10)}`;
+  const body = buildIssueBody();
+  const url = `https://github.com/${REPO}/issues/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}&labels=picks`;
+  document.getElementById("submitBtn").href = url;
 }
 
 function resetAll() {
