@@ -1,11 +1,46 @@
 {
-  "_note": "X / Twitter handles you trust. Paste your @KryptonAi follow list here (or a curated subset). The hunt pipeline boosts a news item's Social score when people on this list discuss it — so a tweet from a trusted voice counts far more than 1,000 random mentions.",
-  "_howToPopulate": "Open https://x.com/KryptonAi/following, copy all handles, paste them as strings into the 'handles' array. No @ prefix needed.",
-  "tiers": {
-    "tier1_must_watch": [],
-    "tier2_trusted":    [],
-    "tier3_interesting": []
+  "_note": "X / Twitter handles Alexandru Dan (@KryptonAi) follows. The hunt pipeline boosts a news item's Social score when these voices discuss it — tier_1 counts 3×, tier_2 counts 2×, tier_3 counts 1×. Presence strongly positive; absence not negative.",
+  "_scoring": {
+    "tier_1_weight": 3,
+    "tier_2_weight": 2,
+    "tier_3_weight": 1,
+    "baseBump": 0.5
   },
-  "handles": [],
-  "lastUpdated": null
+  "tiers": {
+    "tier_1_must_watch": [
+      { "handle": "karpathy",        "name": "Andrej Karpathy",   "why": "Ex-OpenAI founding team, ex-Tesla Director of AI. Highest-signal individual voice in AI." },
+      { "handle": "ylecun",          "name": "Yann LeCun",        "why": "Turing Award, ex-Meta Chief AI Scientist. Strong opinions move the open-source debate." },
+      { "handle": "geoffreyhinton",  "name": "Geoffrey Hinton",   "why": "Turing Award. When he speaks about risk, it makes headlines." },
+      { "handle": "ilyasut",         "name": "Ilya Sutskever",    "why": "SSI co-founder, ex-OpenAI Chief Scientist. Rare but load-bearing tweets." },
+      { "handle": "AndrewYNg",       "name": "Andrew Ng",         "why": "Coursera/DeepLearning.ai founder. Sets ML-education and enterprise-AI narrative." },
+      { "handle": "sundarpichai",    "name": "Sundar Pichai",     "why": "Google/Alphabet CEO. Every tweet is a Google AI strategy signal." },
+      { "handle": "_jasonwei",       "name": "Jason Wei",         "why": "Meta Superintelligence Labs researcher (ex-OpenAI). Chain-of-thought, emergent abilities." }
+    ],
+    "tier_2_trusted_practitioners": [
+      { "handle": "hardmaru",        "name": "David Ha",          "why": "Sakana AI CEO; thoughtful research-grounded takes." },
+      { "handle": "bcherny",         "name": "Boris Cherny",      "why": "Anthropic / Claude Code. First-party signal on Claude tooling." },
+      { "handle": "rasbt",           "name": "Sebastian Raschka", "why": "Author of 'Build an LLM From Scratch'. Technical depth on model internals." },
+      { "handle": "claudeai",        "name": "Anthropic / Claude","why": "Official Anthropic product channel." },
+      { "handle": "huggingface",     "name": "Hugging Face",      "why": "Official HF account — open-source model releases and community." },
+      { "handle": "AIatMeta",        "name": "Meta AI",           "why": "Official Meta AI research channel." },
+      { "handle": "SakanaAILabs",    "name": "Sakana AI",         "why": "Research-heavy Tokyo lab; evolutionary model-merging work." },
+      { "handle": "arxiv",           "name": "arXiv",             "why": "Primary-source preprint stream." },
+      { "handle": "arankomatsuzaki", "name": "Aran Komatsuzaki",  "why": "Early GPT-J / scaling work. Reliable AI research aggregator." },
+      { "handle": "alexcornell",     "name": "Alex Cornell",      "why": "Design Director at Meta Superintelligence Labs." }
+    ],
+    "tier_3_interesting": [
+      { "handle": "svpino",          "name": "Santiago",           "why": "ML/AI engineering educator; pragmatic takes." },
+      { "handle": "ai__pub",         "name": "AI Pub",             "why": "Paper-explanation account for technical readers." },
+      { "handle": "rohanpaul_ai",    "name": "Rohan Paul",         "why": "Daily AGI-race aggregator newsletter." },
+      { "handle": "DataChaz",        "name": "Charly Wargnier",    "why": "Tinkerer voice — LLMs, agents, Claude/Streamlit tooling." },
+      { "handle": "M1Astra",         "name": "M1",                 "why": "Accelerationist perspective; eclectic AI commentary." }
+    ]
+  },
+  "handles": [
+    "karpathy", "ylecun", "geoffreyhinton", "ilyasut", "AndrewYNg", "sundarpichai", "_jasonwei",
+    "hardmaru", "bcherny", "rasbt", "claudeai", "huggingface", "AIatMeta", "SakanaAILabs",
+    "arxiv", "arankomatsuzaki", "alexcornell",
+    "svpino", "ai__pub", "rohanpaul_ai", "DataChaz", "M1Astra"
+  ],
+  "lastUpdated": "2026-04-12"
 }
