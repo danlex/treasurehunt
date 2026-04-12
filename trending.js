@@ -32,6 +32,7 @@ const REDDIT_SUBS = [
 ];
 
 const RSS_FEEDS = [
+  // Tech aggregators
   { url: 'https://www.techmeme.com/feed.xml',                                          source: 'Techmeme' },
   { url: 'https://news.google.com/rss/search?q=artificial+intelligence&hl=en-US&gl=US', source: 'Google News (AI)' },
   { url: 'https://news.google.com/rss/search?q=quantum+computing&hl=en-US',            source: 'Google News (Quantum)' },
@@ -39,7 +40,48 @@ const RSS_FEEDS = [
   { url: 'https://feeds.feedburner.com/TheHackersNews',                                source: 'The Hacker News' },
   { url: 'https://www.producthunt.com/feed',                                           source: 'Product Hunt' },
   { url: 'https://export.arxiv.org/rss/cs.AI',                                         source: 'arXiv cs.AI' },
-  { url: 'https://export.arxiv.org/rss/cs.LG',                                         source: 'arXiv cs.LG' }
+  { url: 'https://export.arxiv.org/rss/cs.LG',                                         source: 'arXiv cs.LG' },
+  { url: 'https://export.arxiv.org/rss/cs.CL',                                         source: 'arXiv cs.CL' },
+  { url: 'https://export.arxiv.org/rss/quant-ph',                                      source: 'arXiv quant-ph' },
+
+  // Tier-1 general news (world + tech desks)
+  { url: 'http://feeds.bbci.co.uk/news/technology/rss.xml',                            source: 'BBC Technology' },
+  { url: 'http://feeds.bbci.co.uk/news/world/rss.xml',                                 source: 'BBC World' },
+  { url: 'http://feeds.bbci.co.uk/news/science_and_environment/rss.xml',               source: 'BBC Science' },
+  { url: 'http://rss.cnn.com/rss/cnn_tech.rss',                                        source: 'CNN Tech' },
+  { url: 'http://rss.cnn.com/rss/edition.rss',                                         source: 'CNN Top' },
+  { url: 'https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml',                source: 'NYT Technology' },
+  { url: 'https://rss.nytimes.com/services/xml/rss/nyt/Science.xml',                   source: 'NYT Science' },
+  { url: 'https://rss.nytimes.com/services/xml/rss/nyt/Business.xml',                  source: 'NYT Business' },
+  { url: 'https://www.theguardian.com/technology/rss',                                 source: 'The Guardian Tech' },
+  { url: 'https://www.theguardian.com/science/rss',                                    source: 'The Guardian Science' },
+  { url: 'https://feeds.washingtonpost.com/rss/business/technology',                   source: 'Washington Post Tech' },
+  { url: 'https://feeds.npr.org/1019/rss.xml',                                         source: 'NPR Technology' },
+  { url: 'https://apnews.com/hub/technology/feed',                                     source: 'AP Technology' },
+  { url: 'https://www.aljazeera.com/xml/rss/all.xml',                                  source: 'Al Jazeera' },
+  { url: 'https://www.reuters.com/rssFeed/technologyNews',                             source: 'Reuters Tech' },
+  { url: 'https://feeds.bloomberg.com/technology/news.rss',                            source: 'Bloomberg Tech' },
+
+  // Tech-focused outlets
+  { url: 'https://www.theverge.com/rss/index.xml',                                     source: 'The Verge' },
+  { url: 'http://feeds.arstechnica.com/arstechnica/index',                             source: 'Ars Technica' },
+  { url: 'https://www.wired.com/feed/rss',                                             source: 'Wired' },
+  { url: 'https://techcrunch.com/feed/',                                               source: 'TechCrunch' },
+  { url: 'https://www.technologyreview.com/feed/',                                     source: 'MIT Tech Review' },
+  { url: 'https://spectrum.ieee.org/rss/fulltext',                                     source: 'IEEE Spectrum' },
+  { url: 'https://venturebeat.com/feed/',                                              source: 'VentureBeat' },
+
+  // Cybersecurity specialists
+  { url: 'https://krebsonsecurity.com/feed/',                                          source: 'Krebs on Security' },
+  { url: 'https://www.schneier.com/feed/atom/',                                        source: 'Schneier on Security' },
+  { url: 'https://www.darkreading.com/rss.xml',                                        source: 'Dark Reading' },
+  { url: 'https://www.bleepingcomputer.com/feed/',                                     source: 'BleepingComputer' },
+
+  // Science / research
+  { url: 'https://www.nature.com/nature.rss',                                          source: 'Nature' },
+  { url: 'https://www.science.org/rss/news_current.xml',                               source: 'Science Magazine' },
+  { url: 'https://www.quantamagazine.org/feed/',                                       source: 'Quanta Magazine' },
+  { url: 'https://phys.org/rss-feed/',                                                 source: 'Phys.org' }
 ];
 
 function ensureCacheDir() {
