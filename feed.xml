@@ -32,15 +32,6 @@
     <description>At ICLR 2026, DeepMind&#39;s Yury Makarychev presented TurboQuant — PolarQuant (a randomized rotation making weight distributions near-Gaussian) composed with a Quantized Johnson–Lindenstrauss projection. Together they compress the KV cache 6.2× at identical perplexity. On a Gemini 3.1 Ultra 2M-token workload, GPU memory dropped from 380GB to 62GB per request. Google says it ships in Gemini&#39;s April 18 update. On-device long-context inference suddenly looks tractable; data-center inference costs fall sharply.</description>
   </item>
   <item>
-    <title>Citrix NetScaler CVE-2026-3055 (CVSS 9.3) — patch and rotate sessions now</title>
-    <link>https://treasurehunt.alexandrudan.com/posts/citrix-netscaler.html</link>
-    <guid isPermaLink="true">https://treasurehunt.alexandrudan.com/posts/citrix-netscaler.html</guid>
-    <pubDate>Sun, 12 Apr 2026 18:51:34 GMT</pubDate>
-    <category>Cybersecurity</category>
-    <source url="https://dev.to/ziizium/security-news-weekly-round-up-10th-april-2026-l5n">DEV Community</source>
-    <description>CVE-2026-3055 in Citrix NetScaler ADC and Gateway lets unauthenticated attackers read arbitrary memory — enough to pull session tokens, TLS keys and admin credentials, then chain into lateral movement. CVSS 9.3. Citrix confirmed in-the-wild exploitation on April 8 and shipped patches the same day for 13.1, 14.1 and NetScaler Secure Private Access. CISA added it to KEV within 24 hours. This echoes the 2023 &#39;Citrix Bleed&#39; pattern behind Boeing and Comcast breaches — rotate session material after patching.</description>
-  </item>
-  <item>
     <title>MCP crosses 97M installs; Linux Foundation takes governance at KubeCon</title>
     <link>https://treasurehunt.alexandrudan.com/posts/mcp-97m.html</link>
     <guid isPermaLink="true">https://treasurehunt.alexandrudan.com/posts/mcp-97m.html</guid>
