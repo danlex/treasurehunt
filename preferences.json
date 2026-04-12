@@ -21,7 +21,7 @@
       "dislikes": 4
     },
     "AI": {
-      "likes": 4,
+      "likes": 5,
       "dislikes": 0
     },
     "Viral": {
@@ -401,6 +401,26 @@
     "Benchmarks": {
       "likes": 1,
       "dislikes": 0
+    },
+    "Google": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "Gemma": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "Open Weights": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "Hugging Face": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "Download Milestone": {
+      "likes": 1,
+      "dislikes": 0
     }
   },
   "sources": {
@@ -473,13 +493,13 @@
       "dislikes": 0
     },
     "X": {
-      "likes": 1,
+      "likes": 2,
       "dislikes": 0
     }
   },
   "totals": {
-    "likes": 15,
+    "likes": 16,
     "dislikes": 11
   },
-  "lastUpdated": "2026-04-12T21:19:04.112Z"
+  "lastUpdated": "2026-04-12T21:19:11.766Z"
 }
