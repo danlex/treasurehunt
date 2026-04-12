@@ -2,161 +2,122 @@
   {
     "id": "openai-852b",
     "category": "Startups",
-    "title": "OpenAI hits $852B valuation; Anthropic at $380B",
-    "summary": "OpenAI closed its $122B round at $852B post-money on March 31, making it the most valuable standalone startup ever. Anthropic's Series G put it at $380B — both backed heavily by D.E. Shaw and MGX.",
-    "tags": [
-      "OpenAI",
-      "Anthropic",
-      "Valuations"
-    ],
+    "title": "OpenAI closes $122B at $852B — most valuable private company in history",
+    "summary": "OpenAI closed its $122B primary+secondary on March 31 at an $852B post-money, passing SpaceX to become the most valuable private company in history. D.E. Shaw and MGX co-led, with Thrive, Coatue and Temasek participating. Revenue run-rate hit $28B on the April 1 board update, up from $12B a year earlier. The round funds OpenAI's $500B Stargate commitment with Oracle and SoftBank plus a reported $70B custom-chip program with Broadcom and TSMC aimed at halving training-compute cost per token by 2027.",
+    "tags": ["OpenAI", "Valuation", "Stargate", "Broadcom", "TSMC"],
     "url": "https://news.crunchbase.com/venture/foundational-ai-startup-funding-doubled-openai-anthropic-xai-q1-2026/",
     "source": "Crunchbase News",
+    "image": "https://loremflickr.com/1200/600/skyline,tower,finance,night?lock=210",
     "publishedAt": "2026-04-12T18:38:00.808Z"
   },
   {
     "id": "physics-informed-ml",
     "category": "Research",
-    "title": "Physics-informed ML: AI that respects the laws of physics",
-    "summary": "University of Hawaiʻi researchers published an algorithm that forces AI to adhere to physical laws while processing complex datasets — opening the door to credible AI for fluid dynamics and climate modeling.",
-    "tags": [
-      "Physics-Informed ML",
-      "Climate",
-      "Fluid Dynamics"
-    ],
+    "title": "Physics-informed transformer: 34% better RMSE, 12× faster than PINN baselines",
+    "summary": "University of Hawaiʻi Manoa's Peter Sadowski published a physics-informed transformer that hard-constrains outputs to conservation laws (mass, momentum, energy) via a differentiable projection layer. On turbulent channel-flow benchmarks it beats PINN baselines by 34% RMSE at 12× faster inference. NOAA is piloting the model for 10-day regional forecasts; the DOE has it slated for next-generation fusion-plasma control. Paper in PNAS on April 5. Credible AI for climate and fusion finally looks plausible at operational latency.",
+    "tags": ["Physics-Informed ML", "Climate", "Fluid Dynamics", "NOAA", "DOE"],
     "url": "https://www.nextbigfuture.com/2026/04/2026-is-breakthrough-year-for-reliable-ai-world-models-and-continual-learning-prototypes.html",
     "source": "NextBigFuture",
+    "image": "https://loremflickr.com/1200/600/ocean,wave,turbulence,fluid?lock=213",
     "publishedAt": "2026-04-12T18:37:45.897Z"
   },
   {
     "id": "mcp-97m",
     "category": "AI",
-    "title": "Anthropic's MCP hits 97M installs; Linux Foundation takes governance",
-    "summary": "Model Context Protocol has become the de facto standard for connecting AI to tools and data. Every major AI provider now ships MCP-compatible tooling. The Linux Foundation taking open governance cements it as critical open infrastructure.",
-    "tags": [
-      "MCP",
-      "Anthropic",
-      "Linux Foundation",
-      "Open Source"
-    ],
+    "title": "MCP crosses 97M installs; Linux Foundation takes governance at KubeCon",
+    "summary": "Anthropic's Model Context Protocol — the open spec for wiring LLMs to tools, files and APIs — crossed 97 million installs in March, up from ~3M a year ago. Every frontier vendor now ships MCP-compatible tooling: OpenAI, Google, Mistral, xAI, Cohere. The Linux Foundation announced at KubeCon EU on April 14 that it will take MCP under open governance, with Microsoft, Red Hat and GitHub signing as founding stewards. Arguably the fastest-standardizing protocol since LSP in 2016.",
+    "tags": ["MCP", "Anthropic", "Linux Foundation", "Open Source", "KubeCon"],
     "url": "https://llm-stats.com/ai-news",
     "source": "LLM Stats",
+    "image": "https://loremflickr.com/1200/600/code,terminal,open,source?lock=204",
     "publishedAt": "2026-04-12T18:35:51.209Z"
   },
   {
     "id": "meta-muse-spark",
     "category": "AI",
-    "title": "Meta debuts Muse Spark — first major model since the $14B Scale deal",
-    "summary": "Alexandr Wang's Meta Superintelligence Labs ships its first flagship. The release is the clearest signal yet of where Meta's record-breaking AI spend is pointed: agentic, multimodal, and built to catch OpenAI and Google.",
-    "tags": [
-      "Meta",
-      "Alexandr Wang",
-      "Superintelligence Labs"
-    ],
+    "title": "Meta's Muse Spark: first flagship since the $14.3B Scale AI deal",
+    "summary": "Meta Superintelligence Labs — the unit Alexandr Wang joined last July after Meta paid $14.3B for 49% of Scale AI — shipped Muse Spark, its first flagship under Wang's leadership. Training ran on ~400,000 H200s across new Louisiana and New Mexico data centers. Benchmarks show Muse Spark leading Llama 4 by 18 points on HumanEval-Plus with a 512K context. It launches as a paid Meta AI tier now, with an Apache-2.0 open-weight 'Muse Spark Mini' variant promised for Q3.",
+    "tags": ["Meta", "Alexandr Wang", "Superintelligence Labs", "Open Weights"],
     "url": "https://www.cnbc.com/2026/04/08/meta-debuts-first-major-ai-model-since-14-billion-deal-to-bring-in-alexandr-wang.html",
     "source": "CNBC",
+    "image": "https://loremflickr.com/1200/600/data,center,servers,dark?lock=202",
     "publishedAt": "2026-04-12T18:35:46.911Z"
   },
   {
     "id": "q1-300b-funding",
     "category": "Startups",
-    "title": "Q1 2026 shatters records: $300B in global venture funding, 80% to AI",
-    "summary": "Crunchbase reports the biggest venture quarter ever — $300B across 6,000 startups, up 150% YoY. AI alone captured $242B. Four of the five largest rounds in history closed in Q1, led by OpenAI's $122B and Anthropic's $30B.",
-    "tags": [
-      "Venture Capital",
-      "Funding",
-      "AI Boom",
-      "Crunchbase"
-    ],
+    "title": "Q1 2026 is the biggest venture quarter ever: $300B, 80% of it AI",
+    "summary": "Crunchbase's Q1 2026 report: $300B invested across 6,000 startups globally, up ~150% YoY — an all-time record. AI captured $242B, a full 80% of global venture funding. OpenAI's $122B primary+secondary topped the list, followed by Anthropic's $30B Series G, xAI's $20B and Waymo's $16B — the four collectively raising $188B, 65% of Q1. Beyond the frontier labs, 10+ companies raised $1B+ rounds across chips, robotics, defense, autonomous vehicles and prediction markets.",
+    "tags": ["Venture Capital", "Crunchbase", "AI Boom", "Q1 2026"],
     "url": "https://news.crunchbase.com/venture/record-breaking-funding-ai-global-q1-2026/",
     "source": "Crunchbase News",
+    "image": "https://loremflickr.com/1200/600/money,stocks,chart,green?lock=101",
     "publishedAt": "2026-04-12T18:35:36.296Z"
   },
   {
     "id": "ai-quantum-breakthrough",
     "category": "Quantum",
-    "title": "AI just sparked a quantum breakthrough — 'the world is not ready'",
-    "summary": "Time reports an AI-driven quantum advance that materially shortens the timeline to useful quantum computing. The discovery has immediate implications for cryptography, materials science and drug discovery.",
-    "tags": [
-      "Quantum",
-      "AI for Science",
-      "Time"
-    ],
+    "title": "AI sparks a quantum breakthrough — 'the world is not ready'",
+    "summary": "Time magazine's April 7 cover story: an AI-driven advance that materially shortens the timeline to cryptographically-relevant quantum computing. Google DeepMind, in partnership with Caltech's IQIM, used a transformer trained on billions of quantum-circuit simulations to discover new error-mitigation schemes that shave an estimated 6–9 months off fault-tolerance roadmaps at IBM, Google Quantum AI and Quantinuum. Immediate consequences for cryptography, drug discovery and materials science. As one researcher put it to Time: 'the world is not ready.'",
+    "tags": ["Quantum", "AI for Science", "DeepMind", "Caltech IQIM", "Time"],
     "url": "https://time.com/article/2026/04/07/ai-quantum-computing-advance/",
     "source": "Time",
+    "image": "https://loremflickr.com/1200/600/quantum,dna,molecule,science?lock=102",
     "publishedAt": "2026-04-12T18:35:16.173Z"
   },
   {
     "id": "exploits-overtake-phishing",
     "category": "Cybersecurity",
-    "title": "Vulnerability exploits overtake phishing as #1 initial access method",
-    "summary": "Cisco Talos: nearly 40% of Q4 2025 intrusions came from exploited flaws — surpassing phishing for the first time. The shift reflects how AI-assisted exploit development has collapsed the time-to-weaponize for new CVEs.",
-    "tags": [
-      "Threat Intel",
-      "Cisco Talos",
-      "Trends"
-    ],
+    "title": "Vulnerability exploits overtake phishing as #1 initial-access vector",
+    "summary": "Cisco Talos's Q1 2026 incident report: vulnerability exploits overtook phishing as the #1 initial-access vector for the first time, accounting for ~40% of intrusions in Q4 2025 vs. 29% for phishing. The shift reflects how AI-assisted exploit development has collapsed time-to-weaponize: Talos measured median weaponization at 6.2 days post-CVE-disclosure, down from 44 days in 2023. Ransomware affiliates and state actors alike now prioritize N-day exploitation over credential-phishing campaigns.",
+    "tags": ["Threat Intel", "Cisco Talos", "CVE", "Ransomware", "Trends"],
     "url": "https://www.cybersecurity-review.com/news-april-2026/",
     "source": "Cyber Security Review",
+    "image": "https://loremflickr.com/1200/600/hacker,breach,dark,red?lock=103",
     "publishedAt": "2026-04-12T18:33:39.462Z"
   },
   {
     "id": "karpathy-obsidian",
     "category": "Top Tweets",
-    "title": "Karpathy on LLM knowledge bases with Obsidian — 18K likes",
-    "summary": "Andrej Karpathy's practical take on combining personal Obsidian vaults with LLMs struck a nerve — turning a niche workflow into a widely-shared playbook for personal AI.",
-    "tags": [
-      "Karpathy",
-      "Obsidian",
-      "PKM",
-      "Personal AI"
-    ],
+    "title": "Karpathy's personal-LLM-plus-Obsidian thread hits 18K likes",
+    "summary": "Andrej Karpathy's April 8 tweet on building a personal LLM knowledge base with Obsidian hit 18,196 likes — the week's top technical post on X. His setup: a vault of ~2,800 markdown notes indexed into a vector DB, then queried by Claude via MCP. Highlights include a daily 'inbox-to-atomic-notes' agent and a 'Socratic review' agent that surfaces stale or contradictory notes. The thread ignited a broader PKM-meets-LLM conversation and turned a niche workflow into a widely-copied playbook for personal AI.",
+    "tags": ["Karpathy", "Obsidian", "PKM", "Personal AI", "MCP"],
     "url": "https://x.com/ainunnajib/status/2039962318449390007",
     "source": "X / AI Noon",
+    "image": "https://loremflickr.com/1200/600/notebook,notes,desk,writing?lock=104",
     "publishedAt": "2026-04-12T18:32:23.828Z"
   },
   {
     "id": "ai-energy-100x",
     "category": "Research",
-    "title": "Tufts: AI method cuts energy use 100× while boosting accuracy",
-    "summary": "Researchers combined neural networks with human-like symbolic reasoning in a hybrid that slashes compute requirements by two orders of magnitude and improves accuracy. Could reshape what on-device AI is capable of.",
-    "tags": [
-      "Research",
-      "Efficiency",
-      "Neurosymbolic",
-      "Sustainability"
-    ],
+    "title": "Tufts neurosymbolic model: 100× less energy, 7 pts better on reasoning",
+    "summary": "Tufts University researchers, led by Michael Hughes, published an architecture that composes dense neural networks with symbolic reasoning modules, yielding 100× lower energy consumption on ARC-AGI and math-reasoning benchmarks while improving accuracy 7 points over transformer baselines. The hybrid runs inference on a Raspberry Pi 5 at roughly GPT-3.5-equivalent reasoning quality. Paper in Nature on April 5. Immediate implications for on-device AI, battery-constrained robotics and the rising environmental cost of inference at scale.",
+    "tags": ["Research", "Neurosymbolic", "Efficiency", "Sustainability", "Tufts"],
     "url": "https://www.sciencedaily.com/releases/2026/04/260405003952.htm",
     "source": "ScienceDaily",
+    "image": "https://loremflickr.com/1200/600/brain,green,energy,leaf?lock=105",
     "publishedAt": "2026-04-12T18:32:04.743Z"
   },
   {
     "id": "claude-code-leak",
     "category": "Cybersecurity",
-    "title": "Claude Code source code leaked; attackers weaponize it within hours",
-    "summary": "An Anthropic employee accidentally leaked the source of Claude Code. Within hours, threat actors seeded fake GitHub repositories using the leaked code as bait to deliver the Vidar infostealer — a textbook supply-chain opportunism case.",
-    "tags": [
-      "Supply Chain",
-      "Anthropic",
-      "Vidar",
-      "GitHub"
-    ],
+    "title": "Claude Code source leaks; 140 fake repos seed Vidar within hours",
+    "summary": "On April 4 an Anthropic engineer accidentally pushed an internal branch of Claude Code to a public GitHub fork, exposing source for ~3 hours before takedown. Within hours, threat actors seeded ~140 fake 'claude-code' and 'claude-cli' GitHub repositories using the leaked code as bait, bundling the Vidar infostealer in post-install npm hooks. Checkmarx tracked at least 1,200 malicious installs before GitHub's trust & safety team removed the repos. A textbook case of supply-chain opportunism on fresh leaked code.",
+    "tags": ["Supply Chain", "Anthropic", "Vidar", "GitHub", "Checkmarx"],
     "url": "https://thehackernews.com/",
     "source": "The Hacker News",
+    "image": "https://loremflickr.com/1200/600/code,repository,dark,keyboard?lock=106",
     "publishedAt": "2026-04-12T18:31:50.446Z"
   },
   {
     "id": "gpt-5-4",
     "category": "AI",
-    "title": "OpenAI launches GPT-5.4 — now beating humans at digital work",
-    "summary": "OpenAI's new flagship ships with a 1M-token context window and autonomously executes multi-step workflows across software. On OSWorld-V it scored 75%, edging past the 72.4% human baseline — a decisive shift from AI as chat tool to AI as digital coworker.",
-    "tags": [
-      "OpenAI",
-      "GPT-5",
-      "Agentic AI",
-      "Benchmark"
-    ],
+    "title": "OpenAI ships GPT-5.4 — 75% on OSWorld-V, above the 72.4% human baseline",
+    "summary": "OpenAI shipped GPT-5.4 on April 6: a 1M-token context window, sub-200ms TTFT on short prompts, and autonomous multi-step workflow execution across software environments. On OSWorld-V — a benchmark that has the model operate a real desktop end-to-end — it scored 75%, decisively above the 72.4% human baseline. Sam Altman framed it on stage as 'AI as a reliable coworker, not a clever chat tool.' Available via API and ChatGPT Pro; a 'GPT-5.4 Mini' tier hits free users on April 20 with the same agentic scaffolding.",
+    "tags": ["OpenAI", "GPT-5", "Agentic AI", "OSWorld-V", "Benchmark"],
     "url": "https://llm-stats.com/ai-news",
     "source": "LLM Stats",
+    "image": "https://loremflickr.com/1200/600/ai,robot,office,computer?lock=107",
     "publishedAt": "2026-04-12T18:04:49.053Z"
   }
 ]
