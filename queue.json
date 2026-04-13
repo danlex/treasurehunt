@@ -116,68 +116,6 @@
     "primarySource": null
   },
   {
-    "id": "quanta-ai-math-revolution-2026",
-    "category": "Research",
-    "title": "Quanta Magazine: The AI revolution in math has arrived",
-    "summary": "Quanta's feature documents the last 12 months as a phase change in AI-assisted mathematics: Google DeepMind's AlphaProof + AlphaGeometry 2 hit Olympiad silver in July 2025; by Q1 2026 their successor 'AlphaMath' ranked 4th in the Putnam Competition under exam conditions (117/120, median human 2/120); Terence Tao's Lean-project collaborations produced the first formally verified resolution of a Bourbaki-listed open problem (a 1953 conjecture on symmetric diophantine equations) using a DeepMind-trained proof search on 1024 TPU v5 chips for 11 days. Quanta's interviewed mathematicians (Tao, Scholze, Gowers) describe a shift from 'helpful assistant' to 'research collaborator that occasionally finds the key idea'. Author: Alex Wilkins.",
-    "tags": [
-      "Mathematics",
-      "AlphaProof",
-      "DeepMind",
-      "Lean",
-      "Tao",
-      "Research"
-    ],
-    "url": "https://www.quantamagazine.org/the-ai-revolution-in-math-has-arrived/",
-    "source": "Quanta Magazine",
-    "metrics": {
-      "coverage": 6.5,
-      "social": 8.5,
-      "novelty": 8,
-      "authority": 8.5,
-      "concreteness": 8,
-      "stakes": 7.5,
-      "fudRisk": 2.5,
-      "importance": 7.49,
-      "trust": 8.5
-    },
-    "signals": {
-      "outletCount": 12,
-      "tier1Count": 4,
-      "outlets": [
-        "Quanta",
-        "Nature News",
-        "MIT Tech Review",
-        "The Guardian",
-        "Ars Technica"
-      ],
-      "twitterMentions": 7800,
-      "topTweets": [
-        {
-          "handle": "@tao",
-          "likes": 14000
-        },
-        {
-          "handle": "@demishassabis",
-          "likes": 9400
-        }
-      ],
-      "subreddits": [
-        "r/math",
-        "r/MachineLearning",
-        "r/singularity"
-      ],
-      "redditTop": {
-        "sub": "r/math",
-        "upvotes": 5100
-      }
-    },
-    "whyItMatters": "Formal mathematics has always been the hardest test of reasoning — unlike chess or Go, there is no reward model ambiguity and proofs are terminally verifiable. An LLM-based system hitting 4th at Putnam and closing a 70-year-old Bourbaki problem means the techniques transfer to any domain with a machine-checkable correctness oracle: program synthesis, chip verification, theorem-driven security proofs. Practically, Lean proof engineering becomes the next bottleneck career inside AI labs, and open-source proof corpora (mathlib, Isabelle AFP) become strategic data assets.",
-    "trustVerdict": "high",
-    "trustNotes": "Quanta is tier-1 science journalism with track record for careful sourcing. The Putnam 4th-place claim is reconstructible from the published DeepMind technical report; the formal Bourbaki proof is on the Lean mathlib commit log. Named mathematicians (Tao, Scholze, Gowers) are quoted on-record. FUD risk minimal — these results are falsifiable by inspecting the Lean code.",
-    "primarySource": "https://deepmind.google/research/"
-  },
-  {
     "id": "adobe-acrobat-zeroday-emergency-2026",
     "category": "Cybersecurity",
     "title": "Adobe rolls out emergency fix for Acrobat, Reader zero-day exploited in the wild",
