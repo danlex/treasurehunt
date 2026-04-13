@@ -16,6 +16,7 @@ When citing a post, use the full canonical URL (e.g., `https://treasurehunt.alex
 
 ## Posts
 
+- [Anthropic ships Claude Managed Agents — production agents without the infra work](https://treasurehunt.alexandrudan.com/posts/claude-managed-agents.html) — Anthropic launched Claude Managed Agents, a new platform service that takes on the production-grade plumbing (task orchestration, state… _(trust: high, impact: 7.8/10)_
 - [Hacker uses Claude and ChatGPT as assistant-in-the-loop to breach multiple government agencies](https://treasurehunt.alexandrudan.com/posts/claude-chatgpt-gov-breach.html) — A threat-actor profile reported on r/technology and escalated across AI-security Twitter this weekend: an individual used Claude and… _(trust: medium, impact: 7.8/10)_
 - [Gemma 4 crosses 10M downloads in one week; Gemma family at 500M total](https://treasurehunt.alexandrudan.com/posts/gemma-4-500m-downloads.html) — Sundar Pichai confirmed Gemma 4 has been downloaded 10M+ times in its first week, and the full Gemma open-weights family has now crossed… _(trust: high, impact: 7.4/10)_
 - [Karpathy: "a growing gap in understanding AI capability" — 19.4K likes](https://treasurehunt.alexandrudan.com/posts/karpathy-capability-gap.html) — Andrej Karpathy posted a viral thread arguing there's a widening gap in how people perceive AI capability, driven by two factors: recency… _(trust: high, impact: 7.5/10)_

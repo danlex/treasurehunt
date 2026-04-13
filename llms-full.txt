@@ -6,6 +6,31 @@ Each post below includes the summary, tags, source, trust verdict, and "why it m
 
 ---
 
+## Anthropic ships Claude Managed Agents — production agents without the infra work
+
+**Published:** Apr 13, 2026
+**Category:** AI
+**Source:** Anthropic
+**URL:** https://treasurehunt.alexandrudan.com/posts/claude-managed-agents.html
+**Original article:** https://x.com/claudeai/status/2042394877328941050
+**Tags:** Anthropic, Claude, Managed Agents, Agent Platform, Boris Cherny
+**Impact score:** 7.8/10
+**Trust verdict:** high
+
+Anthropic launched Claude Managed Agents, a new platform service that takes on the production-grade plumbing (task orchestration, state persistence, tool permissions, retry semantics, observability) that teams previously had to build themselves to deploy multi-step agents reliably. Boris Cherny framed it on X as removing "months of infrastructure work" from shipping a production agent. Sits alongside the broader Claude Platform — Opus-as-advisor pairings, MCP tool catalogs, and Cowork workspace — and completes the stack OpenAI, Google and Microsoft have each been racing to assemble.
+
+### Why it matters
+
+Managed Agents is Anthropic explicitly removing the "hard part" of deploying real agents — the exact bottleneck that has kept enterprise rollouts stuck in pilot. If it works as advertised, the time-to-production for a custom agent drops from ~3 months to ~3 days, which moves AI agents from R&D line items into operational budgets. Direct competitive pressure on OpenAI Responses API / AssistantsOps and Google Vertex Agent Builder — expect a wave of matched launches within 30–60 days.
+
+### Trust notes
+
+First-party Anthropic launch confirmed by multiple official accounts (@claudeai, @bcherny). Feature claims are documented; the one caveat is that real reliability data will come from customer deployments, not launch posts. Low FUD risk; this is a product, not a prediction.
+
+**Primary source:** https://www.anthropic.com/news/claude-managed-agents
+
+---
+
 ## Hacker uses Claude and ChatGPT as assistant-in-the-loop to breach multiple government agencies
 
 **Published:** Apr 12, 2026

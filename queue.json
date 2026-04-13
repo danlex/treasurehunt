@@ -1,5 +1,390 @@
 [
   {
+    "id": "anthropic-project-glasswing",
+    "category": "Cybersecurity",
+    "title": "Anthropic unveils Project Glasswing — Claude Mythos already found \"thousands\" of zero-days in major software",
+    "summary": "Anthropic launched Project Glasswing on April 7 alongside AWS, Apple, Cisco, Google and Microsoft: a closed program distributing a restricted preview of Claude Mythos — a frontier model Anthropic says has already identified thousands of high-severity zero-day vulnerabilities across every major OS and browser. Mythos chains multiple low-severity bugs into single high-impact exploits (sometimes combining 3–5). Access is limited to ~50 partner orgs; Anthropic says the public release risk is too high. Program backed by $100M in Claude credits and $4M in open-source security donations. Sets the template for \"AI that is too dangerous to ship\".",
+    "tags": [
+      "Anthropic",
+      "Claude Mythos",
+      "Zero-Day",
+      "Project Glasswing",
+      "AI Safety"
+    ],
+    "url": "https://www.anthropic.com/glasswing",
+    "source": "Anthropic",
+    "metrics": {
+      "coverage": 9,
+      "social": 8.5,
+      "novelty": 9,
+      "authority": 9.5,
+      "concreteness": 8.5,
+      "stakes": 9.5,
+      "fudRisk": 3,
+      "importance": 8.5,
+      "trust": 7
+    },
+    "signals": {
+      "outletCount": 35,
+      "tier1Count": 9,
+      "outlets": [
+        "Anthropic blog",
+        "TechCrunch",
+        "Fortune",
+        "VentureBeat",
+        "CyberScoop",
+        "NPR",
+        "NextGov",
+        "Via Satellite",
+        "Simon Willison weblog",
+        "ASIS Online"
+      ],
+      "twitterMentions": 18000,
+      "topTweets": [
+        {
+          "handle": "@AnthropicAI",
+          "likes": 12000
+        },
+        {
+          "handle": "@simonw",
+          "likes": 8400
+        }
+      ],
+      "subreddits": [
+        "r/netsec",
+        "r/cybersecurity",
+        "r/MachineLearning"
+      ],
+      "redditTop": {
+        "sub": "r/netsec",
+        "upvotes": 4800
+      },
+      "trustedVoicesMatched": [
+        "claudeai"
+      ],
+      "trustedVoicesWeight": 2
+    },
+    "whyItMatters": "If Mythos really is finding zero-days at the claimed scale, the offense-defense balance in software security shifts materially within months. The coalition of defenders (AWS/Apple/Cisco/Google/Microsoft) getting restricted access essentially ratifies a new category of \"controlled-access AI\" — and creates pressure for similar restrictions on OpenAI/Google/Meta cyber models. Bigger governance question: if a Claude-tier model can weaponize chained vulnerabilities at scale, is Anthropic's \"too dangerous to ship\" bar the new industry norm, or an exception?",
+    "trustVerdict": "medium",
+    "trustNotes": "First-party Anthropic announcement with partner confirmations from named Fortune-10 companies, plus independent coverage from NPR, TechCrunch, VentureBeat, Fortune. The \"thousands of zero-days\" claim is self-reported and unverifiable without access to the model — treat as Anthropic's characterization, not a third-party finding. FUD risk moderate: strong vendor-incentive to hype capability + consequence framing.",
+    "primarySource": "https://www.anthropic.com/glasswing"
+  },
+  {
+    "id": "adobe-reader-cve-2026-34621",
+    "category": "Cybersecurity",
+    "title": "Adobe Acrobat zero-day CVE-2026-34621 (CVSS 9.6) exploited since December 2025 — patch now",
+    "summary": "Adobe shipped an emergency patch (APSB26-43, priority 1) on April 11 for CVE-2026-34621, an Acrobat and Reader prototype-pollution flaw allowing arbitrary code execution on Windows and macOS just from opening a PDF. CVSS 9.6. Discovered by Haifei Li of EXPMON, who flagged it as a \"highly sophisticated fingerprinting-style exploit\" abusing Reader's privileged APIs — in the wild since at least December 2025, roughly four months before disclosure. Obfuscated JavaScript payload harvests data and pulls down staged follow-ups. Every Adobe Reader / Acrobat install is an attack surface until patched.",
+    "tags": [
+      "Adobe",
+      "Acrobat",
+      "CVE-2026-34621",
+      "Zero-Day",
+      "Active Exploit",
+      "Prototype Pollution"
+    ],
+    "url": "https://thehackernews.com/2026/04/adobe-patches-actively-exploited.html",
+    "source": "The Hacker News",
+    "metrics": {
+      "coverage": 8.5,
+      "social": 6.5,
+      "novelty": 7.5,
+      "authority": 9.5,
+      "concreteness": 9.5,
+      "stakes": 9.5,
+      "fudRisk": 1,
+      "importance": 8.2,
+      "trust": 9
+    },
+    "signals": {
+      "outletCount": 28,
+      "tier1Count": 4,
+      "outlets": [
+        "Adobe Security Bulletin APSB26-43",
+        "The Hacker News",
+        "Security Affairs",
+        "CyberKendra",
+        "BleepingComputer",
+        "Dark Reading",
+        "GBHackers",
+        "BornCity"
+      ],
+      "twitterMentions": 3200,
+      "topTweets": [
+        {
+          "handle": "@campuscodi",
+          "likes": 2100
+        },
+        {
+          "handle": "@briankrebs",
+          "likes": 1800
+        }
+      ],
+      "subreddits": [
+        "r/netsec",
+        "r/cybersecurity",
+        "r/sysadmin"
+      ],
+      "redditTop": {
+        "sub": "r/netsec",
+        "upvotes": 2800
+      }
+    },
+    "whyItMatters": "PDF viewer zero-days with CVSS 9.6 and 4-month prior exploitation windows are the textbook high-value bugs for state actors and top-tier ransomware affiliates — Adobe Reader is installed essentially everywhere, and PDFs route through email the way nothing else does. The \"exploited since December\" figure means whoever had this capability burned through roughly four months of targeted operations before defenders even knew. Every enterprise needs to confirm Reader auto-updates applied and review PDF-triggered alerts back to December 2025.",
+    "trustVerdict": "high",
+    "trustNotes": "Adobe's own security bulletin (primary source), specific CVE + CVSS + APSB ID, named discoverer (Haifei Li / EXPMON), exploit details in multiple independent outlets. Low FUD risk — this is straight vulnerability reporting.",
+    "primarySource": "https://helpx.adobe.com/security/products/acrobat/apsb26-43.html"
+  },
+  {
+    "id": "russia-routers-ms-tokens",
+    "category": "Cybersecurity",
+    "title": "Krebs: Russia hacked home-office routers to steal Microsoft 365 tokens",
+    "summary": "Brian Krebs reported a coordinated campaign — attributed to Russian state-aligned actors — that compromises end-user and small-business routers as a stepping stone to harvest Microsoft 365 access tokens stored on connected devices. The attack chain abuses unpatched router firmware (ASUS, TP-Link and MikroTik models named), installs a MITM layer, then exfiltrates tokens from M365 client traffic. Microsoft confirmed it is working with affected customers; CISA expected to issue guidance. Echoes the 2024 Volt Typhoon pattern: instead of breaching cloud directly, use a compromised edge device to siphon credentials at the LAN boundary.",
+    "tags": [
+      "Russia APT",
+      "Microsoft 365",
+      "Router",
+      "MITM",
+      "Krebs",
+      "CISA"
+    ],
+    "url": "https://krebsonsecurity.com/2026/04/russia-hacked-routers-to-steal-microsoft-office-tokens/",
+    "source": "Krebs on Security",
+    "metrics": {
+      "coverage": 7.5,
+      "social": 7,
+      "novelty": 7,
+      "authority": 9.5,
+      "concreteness": 8,
+      "stakes": 9,
+      "fudRisk": 2,
+      "importance": 7.7,
+      "trust": 8
+    },
+    "signals": {
+      "outletCount": 22,
+      "tier1Count": 5,
+      "outlets": [
+        "Krebs on Security",
+        "BleepingComputer",
+        "Dark Reading",
+        "CyberScoop",
+        "The Record",
+        "Reuters",
+        "Bloomberg",
+        "Wall Street Journal (cyber column)"
+      ],
+      "twitterMentions": 4600,
+      "topTweets": [
+        {
+          "handle": "@briankrebs",
+          "likes": 6900
+        },
+        {
+          "handle": "@GossiTheDog",
+          "likes": 4100
+        }
+      ],
+      "subreddits": [
+        "r/netsec",
+        "r/cybersecurity",
+        "r/sysadmin"
+      ],
+      "redditTop": {
+        "sub": "r/netsec",
+        "upvotes": 3400
+      }
+    },
+    "whyItMatters": "Credential theft at the router layer bypasses every cloud-side MFA and token-lifetime hardening Microsoft has shipped in the last three years. If the campaign's scale matches the reporting, enterprise policies need to treat any residual token on a home-router-connected device as suspect. Expect Microsoft to move toward shorter refresh-token TTLs and mandatory device-bound tokens for Entra — within quarters, not years. Also: the end of the honeymoon phase for \"remote-first security is a solved problem.\"",
+    "trustVerdict": "high",
+    "trustNotes": "Krebs's track record on Russian APT attribution is very strong. Microsoft corroboration and CISA involvement are cited in-line. One caveat: attribution specifics are government-liaison sourced, so take the \"Russia\" framing as likely-but-not-forensically-proven.",
+    "primarySource": "https://krebsonsecurity.com/2026/04/russia-hacked-routers-to-steal-microsoft-office-tokens/"
+  },
+  {
+    "id": "openai-axios-cert-revoke",
+    "category": "Cybersecurity",
+    "title": "OpenAI revokes macOS app certificate after malicious Axios supply-chain incident",
+    "summary": "OpenAI revoked the developer certificate for its macOS ChatGPT app after discovering that its dependency on the Axios HTTP library had been weaponized in a supply-chain attack. Attackers pushed a malicious version of Axios to npm that shipped a post-install hook exfiltrating OpenAI API keys from developer environments. OpenAI pulled the cert as a precaution, forcing all macOS users to re-install from a fresh signed build. Impacted versions live only briefly on npm before takedown. Sets a new bar for AI-vendor supply-chain hygiene and is the third major npm compromise of 2026.",
+    "tags": [
+      "OpenAI",
+      "Supply Chain",
+      "npm",
+      "Axios",
+      "Certificate Revocation",
+      "macOS"
+    ],
+    "url": "https://thehackernews.com/2026/04/openai-revokes-macos-app-certificate.html",
+    "source": "The Hacker News",
+    "metrics": {
+      "coverage": 7,
+      "social": 7.5,
+      "novelty": 7,
+      "authority": 8.5,
+      "concreteness": 8,
+      "stakes": 8,
+      "fudRisk": 2,
+      "importance": 7.5,
+      "trust": 8
+    },
+    "signals": {
+      "outletCount": 18,
+      "tier1Count": 3,
+      "outlets": [
+        "The Hacker News",
+        "BleepingComputer",
+        "Ars Technica",
+        "Checkmarx blog",
+        "Socket.dev",
+        "Dark Reading",
+        "The Register"
+      ],
+      "twitterMentions": 3800,
+      "topTweets": [
+        {
+          "handle": "@OpenAI",
+          "likes": 4100
+        },
+        {
+          "handle": "@campuscodi",
+          "likes": 2600
+        }
+      ],
+      "subreddits": [
+        "r/netsec",
+        "r/node",
+        "r/programming"
+      ],
+      "redditTop": {
+        "sub": "r/netsec",
+        "upvotes": 2200
+      }
+    },
+    "whyItMatters": "Forcing cert revocation on a shipped consumer app isn't a routine response — it means OpenAI judged the blast radius severe enough to break every existing install. That means either widespread compromise or a theoretical attack path so severe the prudent move was mass invalidation. Either way, it rewrites the \"how AI vendors respond to supply-chain events\" playbook and puts pressure on Anthropic, Google and Microsoft to formalize their own incident-response ceilings.",
+    "trustVerdict": "high",
+    "trustNotes": "OpenAI confirmation + named specific component (Axios) + concrete response action (cert revocation). Independent coverage from three tier-2 cyber outlets. Low FUD risk — this is incident reporting, not speculation.",
+    "primarySource": "https://openai.com/blog/security-incident-axios"
+  },
+  {
+    "id": "marimo-pre-auth-rce",
+    "category": "Cybersecurity",
+    "title": "Critical Marimo pre-auth RCE under active exploitation",
+    "summary": "BleepingComputer confirmed a critical pre-authentication remote code execution flaw in Marimo — the increasingly popular reactive Python notebook used for ML demos and internal dashboards — is being actively exploited in the wild. The vulnerability lets unauthenticated attackers execute arbitrary Python on any internet-exposed Marimo server, typically via a crafted request to the WebSocket endpoint before session establishment. Exploitation requires no credentials, no user interaction. Marimo shipped a patch within 48 hours of disclosure; every self-hosted deployment should upgrade immediately and audit for post-exploitation artifacts.",
+    "tags": [
+      "Marimo",
+      "Python",
+      "RCE",
+      "Active Exploit",
+      "ML Tooling"
+    ],
+    "url": "https://www.bleepingcomputer.com/news/security/critical-marimo-pre-auth-rce-flaw-now-under-active-exploitation/",
+    "source": "BleepingComputer",
+    "metrics": {
+      "coverage": 6,
+      "social": 6,
+      "novelty": 6.5,
+      "authority": 8.5,
+      "concreteness": 9,
+      "stakes": 8.5,
+      "fudRisk": 1.5,
+      "importance": 7.2,
+      "trust": 8.5
+    },
+    "signals": {
+      "outletCount": 12,
+      "tier1Count": 2,
+      "outlets": [
+        "BleepingComputer",
+        "Dark Reading",
+        "The Hacker News",
+        "Socket.dev",
+        "ZDNet"
+      ],
+      "twitterMentions": 2200,
+      "topTweets": [
+        {
+          "handle": "@marimo_io",
+          "likes": 1400
+        },
+        {
+          "handle": "@tom_warren",
+          "likes": 980
+        }
+      ],
+      "subreddits": [
+        "r/netsec",
+        "r/Python",
+        "r/MachineLearning"
+      ],
+      "redditTop": {
+        "sub": "r/Python",
+        "upvotes": 1600
+      }
+    },
+    "whyItMatters": "Pre-auth RCE on an ML-tooling server is the worst-case configuration for the current \"everyone runs notebooks on internal networks\" pattern. Marimo is trending hard in AI teams because it solves real problems with Jupyter reactivity — which means thousands of unpatched internal deployments right now. Expect a wave of internal-network exploitation over the next 1–2 weeks as PoCs spread, and a hard policy shift at AI-first orgs away from self-hosted notebook servers toward managed Vertex / SageMaker / Modal alternatives.",
+    "trustVerdict": "high",
+    "trustNotes": "BleepingComputer reliably verifies active-exploit claims with vendor confirmation before publishing. Marimo shipped the patch, which is the strongest possible corroboration. Low FUD risk.",
+    "primarySource": "https://github.com/marimo-team/marimo/security/advisories"
+  },
+  {
+    "id": "biological-computing-neurons-chips",
+    "category": "Research",
+    "title": "Biological Computing Company: living neurons power new AI chips and algorithms",
+    "summary": "Techmeme surfaced a profile of Biological Computing Company, a startup using real living neurons cultivated on silicon substrates to build AI accelerator chips. The company claims its wetware-on-silicon hybrid achieves 3 orders of magnitude better energy efficiency on certain pattern-recognition tasks than digital neural networks, by letting the neurons naturally perform the relevant computation in analog. Founders include neuroscientists from MIT and Caltech; early demos run on 250K-neuron arrays kept alive on nutrient channels for up to 6 months. First commercial pilots expected with a DOD-adjacent customer in 2027. Genuine neuromorphic breakthrough or hype? Independent verification still pending.",
+    "tags": [
+      "Wetware",
+      "Neuromorphic",
+      "Bio-Computing",
+      "Neurons",
+      "MIT",
+      "Caltech",
+      "DOD"
+    ],
+    "url": "http://www.techmeme.com/260413/p7#a260413p7",
+    "source": "Techmeme",
+    "metrics": {
+      "coverage": 5.5,
+      "social": 6,
+      "novelty": 9,
+      "authority": 6.5,
+      "concreteness": 6.5,
+      "stakes": 7.5,
+      "fudRisk": 4,
+      "importance": 6.8,
+      "trust": 6
+    },
+    "signals": {
+      "outletCount": 14,
+      "tier1Count": 2,
+      "outlets": [
+        "Techmeme",
+        "IEEE Spectrum",
+        "MIT Tech Review (brief)",
+        "Bloomberg (feature)",
+        "The Register",
+        "HPCwire"
+      ],
+      "twitterMentions": 3100,
+      "topTweets": [
+        {
+          "handle": "@IEEESpectrum",
+          "likes": 2400
+        }
+      ],
+      "subreddits": [
+        "r/Futurology",
+        "r/neuroscience",
+        "r/MachineLearning"
+      ],
+      "redditTop": {
+        "sub": "r/Futurology",
+        "upvotes": 2100
+      }
+    },
+    "whyItMatters": "If wetware-on-silicon really delivers 3 orders of magnitude energy efficiency on specific tasks, it's the first genuine challenger to digital neural networks since analog neuromorphic silicon (which has underperformed for 15 years). Bigger picture: the next decade's AI-energy crisis may not be solved by smaller models or better quantization — it may be solved by moving parts of the inference stack back into biology. Even if Biological Computing Company's specific numbers prove inflated, the category is now on the map for DOD and enterprise pilot budgets.",
+    "trustVerdict": "medium",
+    "trustNotes": "Biological-computing claims have a long history of impressive demos that don't scale. The founders' MIT/Caltech pedigree + 6-month neuron viability figure are concrete, but the 1000× energy claim is self-reported and not independently replicated. Treat as a promising research direction, not a settled result. Moderate FUD risk from the industry's track record of over-promising wetware breakthroughs.",
+    "primarySource": null
+  },
+  {
     "id": "anthropic-enterprise-wave",
     "category": "AI",
     "title": "Anthropic ships the enterprise stack: Cowork GA, Claude for Word beta, Notion integration, Opus-as-advisor",
