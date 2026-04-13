@@ -1,5 +1,66 @@
 [
   {
+    "id": "biological-computing-neurons-chips",
+    "category": "Research",
+    "title": "Biological Computing Company: living neurons power new AI chips and algorithms",
+    "summary": "Techmeme surfaced a profile of Biological Computing Company, a startup using real living neurons cultivated on silicon substrates to build AI accelerator chips. The company claims its wetware-on-silicon hybrid achieves 3 orders of magnitude better energy efficiency on certain pattern-recognition tasks than digital neural networks, by letting the neurons naturally perform the relevant computation in analog. Founders include neuroscientists from MIT and Caltech; early demos run on 250K-neuron arrays kept alive on nutrient channels for up to 6 months. First commercial pilots expected with a DOD-adjacent customer in 2027. Genuine neuromorphic breakthrough or hype? Independent verification still pending.",
+    "tags": [
+      "Wetware",
+      "Neuromorphic",
+      "Bio-Computing",
+      "Neurons",
+      "MIT",
+      "Caltech",
+      "DOD"
+    ],
+    "url": "http://www.techmeme.com/260413/p7#a260413p7",
+    "source": "Techmeme",
+    "metrics": {
+      "coverage": 5.5,
+      "social": 6,
+      "novelty": 9,
+      "authority": 6.5,
+      "concreteness": 6.5,
+      "stakes": 7.5,
+      "fudRisk": 4,
+      "importance": 6.8,
+      "trust": 6
+    },
+    "signals": {
+      "outletCount": 14,
+      "tier1Count": 2,
+      "outlets": [
+        "Techmeme",
+        "IEEE Spectrum",
+        "MIT Tech Review (brief)",
+        "Bloomberg (feature)",
+        "The Register",
+        "HPCwire"
+      ],
+      "twitterMentions": 3100,
+      "topTweets": [
+        {
+          "handle": "@IEEESpectrum",
+          "likes": 2400
+        }
+      ],
+      "subreddits": [
+        "r/Futurology",
+        "r/neuroscience",
+        "r/MachineLearning"
+      ],
+      "redditTop": {
+        "sub": "r/Futurology",
+        "upvotes": 2100
+      }
+    },
+    "whyItMatters": "If wetware-on-silicon really delivers 3 orders of magnitude energy efficiency on specific tasks, it's the first genuine challenger to digital neural networks since analog neuromorphic silicon (which has underperformed for 15 years). Bigger picture: the next decade's AI-energy crisis may not be solved by smaller models or better quantization — it may be solved by moving parts of the inference stack back into biology. Even if Biological Computing Company's specific numbers prove inflated, the category is now on the map for DOD and enterprise pilot budgets.",
+    "trustVerdict": "medium",
+    "trustNotes": "Biological-computing claims have a long history of impressive demos that don't scale. The founders' MIT/Caltech pedigree + 6-month neuron viability figure are concrete, but the 1000× energy claim is self-reported and not independently replicated. Treat as a promising research direction, not a settled result. Moderate FUD risk from the industry's track record of over-promising wetware breakthroughs.",
+    "primarySource": null,
+    "publishedAt": "2026-04-13T08:25:27.033Z"
+  },
+  {
     "id": "anthropic-project-glasswing",
     "category": "Cybersecurity",
     "title": "Anthropic unveils Project Glasswing — Claude Mythos already found \"thousands\" of zero-days in major software",

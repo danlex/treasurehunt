@@ -2,10 +2,10 @@
   "categories": {
     "Cybersecurity": {
       "likes": 3,
-      "dislikes": 3
+      "dislikes": 7
     },
     "Research": {
-      "likes": 3,
+      "likes": 4,
       "dislikes": 1
     },
     "Top Tweets": {
@@ -32,7 +32,7 @@
   "tags": {
     "Supply Chain": {
       "likes": 1,
-      "dislikes": 0
+      "dislikes": 1
     },
     "Anthropic": {
       "likes": 5,
@@ -92,7 +92,7 @@
     },
     "Zero-Day": {
       "likes": 1,
-      "dislikes": 1
+      "dislikes": 2
     },
     "Chrome": {
       "likes": 0,
@@ -112,7 +112,7 @@
     },
     "OpenAI": {
       "likes": 2,
-      "dislikes": 1
+      "dislikes": 2
     },
     "xAI": {
       "likes": 0,
@@ -256,7 +256,7 @@
     },
     "Active Exploit": {
       "likes": 0,
-      "dislikes": 1
+      "dislikes": 3
     },
     "CISA KEV": {
       "likes": 0,
@@ -343,7 +343,7 @@
       "dislikes": 1
     },
     "MIT": {
-      "likes": 0,
+      "likes": 1,
       "dislikes": 1
     },
     "Materials Science": {
@@ -453,12 +453,108 @@
     "AI Safety": {
       "likes": 1,
       "dislikes": 0
+    },
+    "Adobe": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "Acrobat": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "CVE-2026-34621": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "Prototype Pollution": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "Russia APT": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "Microsoft 365": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "Router": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "MITM": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "Krebs": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "CISA": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "npm": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "Axios": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "Certificate Revocation": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "macOS": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "Marimo": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "Python": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "RCE": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "ML Tooling": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "Wetware": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "Neuromorphic": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "Bio-Computing": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "Neurons": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "Caltech": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "DOD": {
+      "likes": 1,
+      "dislikes": 0
     }
   },
   "sources": {
     "The Hacker News": {
       "likes": 1,
-      "dislikes": 1
+      "dislikes": 3
     },
     "ScienceDaily": {
       "likes": 1,
@@ -535,11 +631,23 @@
     "Anthropic": {
       "likes": 1,
       "dislikes": 0
+    },
+    "Krebs on Security": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "BleepingComputer": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "Techmeme": {
+      "likes": 1,
+      "dislikes": 0
     }
   },
   "totals": {
-    "likes": 18,
-    "dislikes": 11
+    "likes": 19,
+    "dislikes": 15
   },
-  "lastUpdated": "2026-04-13T08:24:26.789Z"
+  "lastUpdated": "2026-04-13T08:25:27.036Z"
 }
