@@ -1,5 +1,67 @@
 [
   {
+    "id": "rocm-vs-cuda-2026",
+    "category": "AI",
+    "title": "Taking on CUDA with ROCm: 'One Step After Another'",
+    "summary": "EE Times deep-dive on AMD's ROCm 7.0 and whether it can finally dent NVIDIA's CUDA moat. AMD's MI400 (96GB HBM4, 5.2 PFLOPS FP8) now runs PyTorch, vLLM and SGLang out-of-the-box — but reviewers testing MLPerf Inference v5.1 still see 1.6–2.2x gaps vs H200 on representative LLM workloads, driven by kernel-library maturity rather than raw silicon. Breakthrough of the cycle: AMD hiring 600 CUDA-kernel engineers in 12 months, plus open-sourcing HIPify tooling that auto-translates 83% of typical CUDA kernels. AMD claims Meta, Microsoft and OpenAI are all now shipping production MI400 pods. NVIDIA's response: CUDA 13 with tensor-core autotuning targeting the same eval suite, launching Q2.",
+    "tags": [
+      "AMD",
+      "ROCm",
+      "NVIDIA",
+      "CUDA",
+      "MI400",
+      "PyTorch",
+      "MLPerf"
+    ],
+    "url": "https://www.eetimes.com/taking-on-cuda-with-rocm-one-step-after-another/",
+    "source": "EE Times (via HN)",
+    "metrics": {
+      "coverage": 6.5,
+      "social": 7,
+      "novelty": 6.5,
+      "authority": 7.5,
+      "concreteness": 8.5,
+      "stakes": 8,
+      "fudRisk": 2.5,
+      "importance": 7.15,
+      "trust": 8
+    },
+    "signals": {
+      "outletCount": 14,
+      "tier1Count": 4,
+      "outlets": [
+        "EE Times",
+        "Tom's Hardware",
+        "ServeTheHome",
+        "HPCwire",
+        "SemiAnalysis",
+        "The Register"
+      ],
+      "twitterMentions": 3400,
+      "topTweets": [
+        {
+          "handle": "@dylan522p",
+          "likes": 2900
+        }
+      ],
+      "subreddits": [
+        "r/LocalLLaMA",
+        "r/MachineLearning",
+        "r/hardware"
+      ],
+      "redditTop": {
+        "sub": "r/LocalLLaMA",
+        "upvotes": 1600
+      }
+    },
+    "whyItMatters": "For the first time since CUDA hit critical mass in 2016, there is a credible second source for frontier-scale AI training. A 1.6–2.2x MLPerf gap at 60% the price per GPU is economically defensible for hyperscalers with their own kernel teams — which is exactly who is buying MI400. This matters for anyone forecasting AI infra spend: if AMD share of AI accelerators moves from <5% to 20% by end-2027, NVIDIA's pricing power and datacenter-gross-margin mix materially changes, and so does the $800B AI capex cycle that's underwriting NVDA's valuation.",
+    "trustVerdict": "high",
+    "trustNotes": "EE Times is tier-1 trade press with direct vendor access; MLPerf numbers come from published v5.1 results not vendor claims. Meta/Microsoft/OpenAI production deployments are vendor-stated but consistent with reporting from SemiAnalysis and The Information throughout Q1. Concrete numbers, multiple primary sources — high trust.",
+    "primarySource": "https://www.amd.com/en/products/accelerators/instinct/mi400.html",
+    "publishedAt": "2026-04-13T13:41:30.974Z",
+    "score": 10.4
+  },
+  {
     "id": "claude-advisor-strategy-2026",
     "category": "AI",
     "title": "Anthropic brings \"advisor strategy\" to Claude Platform: Opus advises Sonnet/Haiku at inference",

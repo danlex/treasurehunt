@@ -4,26 +4,32 @@
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
     <loc>https://treasurehunt.alexandrudan.com/</loc>
-    <lastmod>2026-04-13T13:41:26.419Z</lastmod>
+    <lastmod>2026-04-13T13:41:30.974Z</lastmod>
     <changefreq>hourly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://treasurehunt.alexandrudan.com/about.html</loc>
-    <lastmod>2026-04-13T13:41:26.512Z</lastmod>
+    <lastmod>2026-04-13T13:41:31.034Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://treasurehunt.alexandrudan.com/methodology.html</loc>
-    <lastmod>2026-04-13T13:41:26.512Z</lastmod>
+    <lastmod>2026-04-13T13:41:31.034Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://treasurehunt.alexandrudan.com/archive.html</loc>
-    <lastmod>2026-04-13T13:41:26.512Z</lastmod>
+    <lastmod>2026-04-13T13:41:31.034Z</lastmod>
     <changefreq>hourly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://treasurehunt.alexandrudan.com/posts/rocm-vs-cuda-2026.html</loc>
+    <lastmod>2026-04-13T13:41:30.974Z</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
