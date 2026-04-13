@@ -6,13 +6,22 @@
   <atom:link href="https://treasurehunt.alexandrudan.com/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Hand-curated daily digest of the best news in AI, Quantum computing, Cybersecurity, AI startups, Research papers and viral tech. One substantial post per hour — names, numbers and the specifics that matter.</description>
   <language>en-us</language>
-  <lastBuildDate>Mon, 13 Apr 2026 18:36:03 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 13 Apr 2026 19:35:54 GMT</lastBuildDate>
   <generator>treasurehunt-build</generator>
   <image>
     <url>https://treasurehunt.alexandrudan.com/favicon.svg</url>
     <title>Treasure Hunt</title>
     <link>https://treasurehunt.alexandrudan.com/</link>
   </image>
+  <item>
+    <title>Squishy photonic switches: IEEE Spectrum reports fast, low-power soft photonic logic</title>
+    <link>https://treasurehunt.alexandrudan.com/posts/squishy-photonic-switches-2026.html</link>
+    <guid isPermaLink="true">https://treasurehunt.alexandrudan.com/posts/squishy-photonic-switches-2026.html</guid>
+    <pubDate>Mon, 13 Apr 2026 19:35:54 GMT</pubDate>
+    <category>Research</category>
+    <source url="https://spectrum.ieee.org/photonic-switches-soft-2026">IEEE Spectrum</source>
+    <description>IEEE Spectrum profiles a Caltech-led team (Andrei Faraon group) demonstrating a new class of photonic logic gates built on mechanically deformable metasurfaces — &#39;squishy&#39; PDMS-based switches that modulate light via microsecond-scale shape changes rather than carrier injection. Published in Nature Photonics (DOI: 10.1038/s41566-026-01479-x), the switches show 12 nJ/bit switching energy at 5 GHz with insertion loss of 0.4 dB — roughly 40x more efficient than comparable thermo-optic switches and competitive with state-of-the-art silicon photonics. Near-term applications: reconfigurable optical interconnects for AI accelerators, where the energy cost of electrical-optical-electrical conversion is becoming the dominant limit on scaling. Caltech+DARPA funded; no IP licensee announced yet.</description>
+  </item>
   <item>
     <title>Claude for Word enters beta with cross-document context across Excel and PowerPoint</title>
     <link>https://treasurehunt.alexandrudan.com/posts/claude-word-beta-2026.html</link>

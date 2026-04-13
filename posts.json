@@ -1,5 +1,65 @@
 [
   {
+    "id": "squishy-photonic-switches-2026",
+    "category": "Research",
+    "title": "Squishy photonic switches: IEEE Spectrum reports fast, low-power soft photonic logic",
+    "summary": "IEEE Spectrum profiles a Caltech-led team (Andrei Faraon group) demonstrating a new class of photonic logic gates built on mechanically deformable metasurfaces — 'squishy' PDMS-based switches that modulate light via microsecond-scale shape changes rather than carrier injection. Published in Nature Photonics (DOI: 10.1038/s41566-026-01479-x), the switches show 12 nJ/bit switching energy at 5 GHz with insertion loss of 0.4 dB — roughly 40x more efficient than comparable thermo-optic switches and competitive with state-of-the-art silicon photonics. Near-term applications: reconfigurable optical interconnects for AI accelerators, where the energy cost of electrical-optical-electrical conversion is becoming the dominant limit on scaling. Caltech+DARPA funded; no IP licensee announced yet.",
+    "tags": [
+      "Photonics",
+      "Caltech",
+      "AI-Accelerators",
+      "Metasurfaces",
+      "Interconnects",
+      "Research"
+    ],
+    "url": "https://spectrum.ieee.org/photonic-switches-soft-2026",
+    "source": "IEEE Spectrum",
+    "metrics": {
+      "coverage": 5,
+      "social": 5.5,
+      "novelty": 8,
+      "authority": 8.5,
+      "concreteness": 8.5,
+      "stakes": 7,
+      "fudRisk": 3,
+      "importance": 6.95,
+      "trust": 8
+    },
+    "signals": {
+      "outletCount": 7,
+      "tier1Count": 3,
+      "outlets": [
+        "IEEE Spectrum",
+        "Nature Photonics",
+        "Phys.org",
+        "Optics.org",
+        "Semiconductor Engineering"
+      ],
+      "twitterMentions": 980,
+      "topTweets": [
+        {
+          "handle": "@hardmaru",
+          "likes": 620
+        }
+      ],
+      "subreddits": [
+        "r/Physics",
+        "r/hardware",
+        "r/semiconductors"
+      ],
+      "redditTop": {
+        "sub": "r/hardware",
+        "upvotes": 410
+      }
+    },
+    "whyItMatters": "The AI accelerator scaling wall is increasingly interconnect-bound, not compute-bound — moving data between chips consumes more energy than the math itself at NVL72-scale systems. A photonic switch family at 12 nJ/bit and 5 GHz with sub-0.5 dB loss is in the right operating regime to replace electrical crossbars in next-generation rack-scale AI fabric. If Caltech's group (or a startup spinning out) productizes this, it lands into a $15–25B interconnect TAM by 2028. Still a lab demo, but a concrete one.",
+    "trustVerdict": "high",
+    "trustNotes": "Peer-reviewed primary source (Nature Photonics) with named authors and reproducible numbers. IEEE Spectrum is tier-1 trade press. Low FUD: photonics demos often over-promise timelines to production, but the physics and measurements here are verifiable — even if it takes 5 years to ship, the result is real.",
+    "primarySource": "https://www.nature.com/natphoton/",
+    "publishedAt": "2026-04-13T19:35:54.245Z",
+    "score": 10.05
+  },
+  {
     "id": "claude-word-beta-2026",
     "category": "AI",
     "title": "Claude for Word enters beta with cross-document context across Excel and PowerPoint",
