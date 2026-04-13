@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Archive — all Treasure Hunt posts</title>
+<meta name="description" content="Complete archive of 17 Treasure Hunt posts covering AI, Quantum, Cybersecurity, Startups and Research.">
+<meta name="keywords" content="AI news, artificial intelligence news, quantum computing news, cybersecurity news, AI startups, research papers, GPT-5, Gemini, LLM news, tech news daily">
+<meta name="author" content="Treasure Hunt">
+<meta name="theme-color" content="#ff4a3d">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="canonical" href="https://treasurehunt.alexandrudan.com/archive.html">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/favicon.svg">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Treasure Hunt">
+<meta property="og:title" content="Archive — all Treasure Hunt posts">
+<meta property="og:description" content="Complete archive of 17 Treasure Hunt posts covering AI, Quantum, Cybersecurity, Startups and Research.">
+<meta property="og:url" content="https://treasurehunt.alexandrudan.com/archive.html">
+<meta property="og:image" content="https://treasurehunt.alexandrudan.com/og-cover.svg">
+<meta property="og:image:alt" content="Archive — all Treasure Hunt posts">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+
+
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Archive — all Treasure Hunt posts">
+<meta name="twitter:description" content="Complete archive of 17 Treasure Hunt posts covering AI, Quantum, Cybersecurity, Startups and Research.">
+<meta name="twitter:image" content="https://treasurehunt.alexandrudan.com/og-cover.svg">
+<meta name="twitter:image:alt" content="Archive — all Treasure Hunt posts">
+<!-- Feeds -->
+<link rel="alternate" type="application/rss+xml" title="Treasure Hunt RSS" href="https://treasurehunt.alexandrudan.com/feed.xml">
+<link rel="sitemap" type="application/xml" href="https://treasurehunt.alexandrudan.com/sitemap.xml">
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --red: #ff4a3d; --red-dark: #d63a2a; --red-light: #ff9a8f;
+    --dark: #0f0f0f; --light-bg: #f7f6f4;
+    --text: #111; --text-sec: #4a4a4a; --text-mute: #8a8a8a;
+    --border: #ebebeb;
+    --font-display: 'Space Grotesk', 'Segoe UI', sans-serif;
+    --font-body: 'Manrope', 'Segoe UI', sans-serif;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font-body); color: var(--text); background: #fff; line-height: 1.6; }
+  h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.01em; }
+  a { color: var(--red); }
+  a:hover { color: var(--red-dark); }
+
+  nav {
+    position: sticky; top: 0;
+    height: 72px;
+    background: #fff;
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 40px;
+    z-index: 100;
+  }
+  .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .nav-logo-text {
+    font-family: var(--font-display); font-size: 15px; font-weight: 700;
+    color: var(--red); letter-spacing: 2px; text-transform: uppercase;
+  }
+  .nav-links { display: flex; gap: 20px; align-items: center; }
+  .nav-links a {
+    color: var(--text-sec); text-decoration: none; font-size: 14px; font-weight: 500;
+  }
+  .nav-links a:hover { color: var(--red); }
+
+  .container { max-width: 980px; margin: 0 auto; padding: 24px 40px; }
+  .hero { padding: 56px 40px 16px; max-width: 980px; margin: 0 auto; }
+  .red-label {
+    display: inline-block; color: var(--red);
+    font-size: 13px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .hero h1 { font-size: clamp(32px, 5vw, 48px); font-weight: 700; line-height: 1.1; margin-bottom: 14px; }
+  .hero h1 span { color: var(--red); }
+  .hero p { font-size: 16px; color: var(--text-sec); font-weight: 300; max-width: 620px; }
+
+  main { max-width: 980px; margin: 0 auto; padding: 24px 40px 80px; }
+
+  /* Category color tag (no hero image) */
+  .cat-tag {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 4px;
+    color: #fff;
+    font-family: var(--font-display);
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .cat-AI             { background: linear-gradient(135deg, #ff4a3d 0%, #ff9a8f 100%); }
+  .cat-Quantum        { background: linear-gradient(135deg, #5b3eff 0%, #b78fff 100%); }
+  .cat-Cybersecurity  { background: linear-gradient(135deg, #0f0f0f 0%, #4a4a4a 100%); color: #fff; }
+  .cat-Startups       { background: linear-gradient(135deg, #10b981 0%, #6ee7b7 100%); }
+  .cat-Research       { background: linear-gradient(135deg, #0ea5e9 0%, #7dd3fc 100%); }
+  .cat-TopTweets      { background: linear-gradient(135deg, #f59e0b 0%, #fcd34d 100%); }
+  .cat-Viral          { background: linear-gradient(135deg, #ec4899 0%, #f9a8d4 100%); }
+
+  article.post {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px 30px;
+    margin-bottom: 20px;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+
+  /* Impact badge on feed cards */
+  .impact-strip {
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+    padding: 10px 14px;
+    background: var(--light-bg);
+    border-radius: 8px;
+    margin: 12px 0 14px;
+    font-size: 12px;
+    color: var(--text-sec);
+  }
+  .impact-score {
+    font-family: var(--font-display); font-weight: 700;
+    font-size: 15px;
+    color: var(--text);
+  }
+  .impact-score .num { color: var(--red); }
+  .trust-pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 3px 10px; border-radius: 4px;
+    font-size: 10px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase;
+  }
+  .trust-high   { background: #dcfce7; color: #166534; }
+  .trust-medium { background: #fef3c7; color: #854d0e; }
+  .trust-low    { background: #fee2e2; color: #991b1b; }
+  .signals-inline { display: flex; gap: 12px; flex-wrap: wrap; font-variant-numeric: tabular-nums; }
+
+  /* Full scorecard on article pages */
+  .scorecard {
+    background: var(--light-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px 26px;
+    margin: 28px 0;
+  }
+  .scorecard-header {
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 12px; margin-bottom: 20px;
+  }
+  .scorecard-header h3 {
+    font-size: 13px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 2px;
+    color: var(--text-sec);
+  }
+  .importance {
+    font-family: var(--font-display); font-weight: 700;
+    font-size: 36px; line-height: 1;
+    color: var(--text);
+  }
+  .importance .slash { color: var(--text-mute); font-size: 20px; }
+  .importance .out   { color: var(--text-mute); font-size: 20px; }
+  .metric-row {
+    display: grid; grid-template-columns: 140px 1fr auto;
+    align-items: center; gap: 16px;
+    padding: 6px 0;
+    font-size: 13px;
+  }
+  .metric-label { color: var(--text-sec); font-weight: 500; }
+  .metric-bar {
+    height: 6px; background: #e5e5e5; border-radius: 3px; overflow: hidden;
+  }
+  .metric-bar span {
+    display: block; height: 100%;
+    background: linear-gradient(90deg, var(--red), #ff7a6e);
+    border-radius: 3px;
+  }
+  .metric-bar.fud span { background: linear-gradient(90deg, #991b1b, #ef4444); }
+  .metric-val { font-weight: 700; font-variant-numeric: tabular-nums; min-width: 38px; text-align: right; }
+  .scorecard-signals {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px 24px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+  .signal-block strong {
+    display: block;
+    font-size: 10px; letter-spacing: 1.4px; text-transform: uppercase;
+    color: var(--text-mute); font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .signal-block { font-size: 13px; color: var(--text); line-height: 1.6; }
+  .signal-block .num { font-family: var(--font-display); font-weight: 700; color: var(--red); font-size: 18px; }
+  .signal-block .outlet-list { color: var(--text-sec); }
+
+  .why-it-matters, .trust-notes {
+    margin-top: 28px;
+    padding: 22px 24px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+  }
+  .why-it-matters { background: #fff; border-left: 4px solid var(--red); }
+  .trust-notes { background: var(--light-bg); }
+  .why-it-matters h3, .trust-notes h3 {
+    font-size: 12px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 2px;
+    margin-bottom: 10px;
+    color: var(--text-sec);
+  }
+  .why-it-matters p { font-size: 15px; line-height: 1.7; color: var(--text); }
+  .trust-notes p    { font-size: 13px; line-height: 1.65; color: var(--text-sec); }
+  .trust-notes .verdict-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .trust-notes .primary-src { display: block; margin-top: 10px; font-size: 12px; }
+  article.post:hover { border-color: #d4d4d4; box-shadow: 0 4px 18px rgba(0,0,0,0.05); }
+  .post-meta {
+    display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+    font-size: 12px; color: var(--text-sec);
+    margin-bottom: 8px;
+  }
+  .post-meta .dot { color: #ccc; }
+  .post-meta time { font-weight: 500; }
+  .post-meta .source {
+    font-size: 11px; font-weight: 600; color: var(--text-sec);
+    text-transform: uppercase; letter-spacing: 1px;
+  }
+  .post-title { font-family: var(--font-display); font-size: 24px; font-weight: 700; line-height: 1.25; margin-bottom: 12px; }
+  .post-title a { color: var(--text); text-decoration: none; }
+  .post-title a:hover { color: var(--red); }
+  .post-summary { color: var(--text-sec); font-size: 15px; line-height: 1.7; margin-bottom: 18px; }
+  .post-footer {
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 12px;
+  }
+  .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .tag {
+    font-size: 11px; font-weight: 600; color: var(--text-sec);
+    background: var(--light-bg); padding: 4px 10px; border-radius: 4px; letter-spacing: 0.3px;
+  }
+  .read-link { color: var(--red); font-weight: 600; font-size: 13px; text-decoration: none; }
+  .read-link:hover { text-decoration: underline; }
+
+  /* Per-post article page */
+  .article-page .post-title { font-size: clamp(28px, 4vw, 42px); line-height: 1.15; margin-bottom: 18px; }
+  .article-page .post-summary { font-size: 18px; line-height: 1.75; color: var(--text); margin-bottom: 26px; }
+  .article-page .hero-image { width: 100%; max-height: 420px; object-fit: cover; border-radius: 12px; margin-bottom: 28px; border: 1px solid var(--border); }
+  .article-page .cta {
+    background: var(--dark); color: #fff; border-radius: 12px;
+    padding: 26px 28px; margin: 32px 0;
+    display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .article-page .cta p { margin: 0; font-size: 15px; color: rgba(255,255,255,0.8); }
+  .article-page .cta a {
+    background: var(--red); color: #fff; padding: 12px 22px; border-radius: 6px;
+    text-decoration: none; font-weight: 600; font-size: 14px;
+  }
+  .article-page .back { color: var(--text-sec); font-weight: 500; font-size: 13px; text-decoration: none; }
+  .article-page .back:hover { color: var(--red); }
+  .related h2 {
+    font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px;
+    color: var(--text-sec); margin: 40px 0 16px;
+  }
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 32px 40px;
+    max-width: 980px; margin: 40px auto 0;
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;
+    color: var(--text-mute); font-size: 13px;
+  }
+  footer a { color: var(--text-sec); text-decoration: none; margin-left: 16px; }
+  footer a:hover { color: var(--red); }
+
+  @media (max-width: 640px) {
+    nav { padding: 0 20px; }
+    .hero, main, footer, .container { padding-left: 20px; padding-right: 20px; }
+    article.post { padding: 22px 20px; }
+  }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Treasure Hunt Archive","url":"https://treasurehunt.alexandrudan.com/archive.html","description":"Complete archive of all published Treasure Hunt posts.","mainEntity":{"@type":"ItemList","numberOfItems":17,"itemListElement":[{"@type":"ListItem","position":1,"url":"https://treasurehunt.alexandrudan.com/posts/claude-chatgpt-gov-breach.html","name":"Hacker uses Claude and ChatGPT as assistant-in-the-loop to breach multiple government agencies"},{"@type":"ListItem","position":2,"url":"https://treasurehunt.alexandrudan.com/posts/gemma-4-500m-downloads.html","name":"Gemma 4 crosses 10M downloads in one week; Gemma family at 500M total"},{"@type":"ListItem","position":3,"url":"https://treasurehunt.alexandrudan.com/posts/karpathy-capability-gap.html","name":"Karpathy: \"a growing gap in understanding AI capability\" — 19.4K likes"},{"@type":"ListItem","position":4,"url":"https://treasurehunt.alexandrudan.com/posts/karpathy-nanochat.html","name":"Karpathy's nanochat hits 51.7K stars — ChatGPT clone trainable end-to-end for $100"},{"@type":"ListItem","position":5,"url":"https://treasurehunt.alexandrudan.com/posts/karpathy-skills-trending.html","name":"Karpathy's LLM-coding pitfalls compiled into viral CLAUDE.md — #2 on GitHub weekly"},{"@type":"ListItem","position":6,"url":"https://treasurehunt.alexandrudan.com/posts/gemini-3-1-ultra.html","name":"Google ships Gemini 3.1 Ultra — 2M tokens, native multimodal, sandboxed code"},{"@type":"ListItem","position":7,"url":"https://treasurehunt.alexandrudan.com/posts/openai-852b.html","name":"OpenAI closes $122B at $852B — most valuable private company in history"},{"@type":"ListItem","position":8,"url":"https://treasurehunt.alexandrudan.com/posts/turboquant.html","name":"DeepMind's TurboQuant: 6.2× KV-cache compression, no perplexity loss"},{"@type":"ListItem","position":9,"url":"https://treasurehunt.alexandrudan.com/posts/mcp-97m.html","name":"MCP crosses 97M installs; Linux Foundation takes governance at KubeCon"},{"@type":"ListItem","position":10,"url":"https://treasurehunt.alexandrudan.com/posts/physics-informed-ml.html","name":"Physics-informed transformer: 34% better RMSE, 12× faster than PINN baselines"},{"@type":"ListItem","position":11,"url":"https://treasurehunt.alexandrudan.com/posts/meta-muse-spark.html","name":"Meta's Muse Spark: first flagship since the $14.3B Scale AI deal"},{"@type":"ListItem","position":12,"url":"https://treasurehunt.alexandrudan.com/posts/q1-300b-funding.html","name":"Q1 2026 is the biggest venture quarter ever: $300B, 80% of it AI"},{"@type":"ListItem","position":13,"url":"https://treasurehunt.alexandrudan.com/posts/ai-quantum-breakthrough.html","name":"AI sparks a quantum breakthrough — 'the world is not ready'"},{"@type":"ListItem","position":14,"url":"https://treasurehunt.alexandrudan.com/posts/karpathy-obsidian.html","name":"Karpathy's personal-LLM-plus-Obsidian thread hits 18K likes"},{"@type":"ListItem","position":15,"url":"https://treasurehunt.alexandrudan.com/posts/ai-energy-100x.html","name":"Tufts neurosymbolic model: 100× less energy, 7 pts better on reasoning"},{"@type":"ListItem","position":16,"url":"https://treasurehunt.alexandrudan.com/posts/claude-code-leak.html","name":"Claude Code source leaks; 140 fake repos seed Vidar within hours"},{"@type":"ListItem","position":17,"url":"https://treasurehunt.alexandrudan.com/posts/gpt-5-4.html","name":"OpenAI ships GPT-5.4 — 75% on OSWorld-V, above the 72.4% human baseline"}]}}</script>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="/">
+    <svg width="28" height="28" viewBox="107 107 786 786" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Treasure Hunt logo">
+      <rect width="32" height="32" rx="6" fill="#f7f6f4"/>
+      <path d="M892.95 447.19L552.77 107.06V106.92H106.92V552.81L447.19 893.07H893.08L892.95 447.18V447.19ZM868.91 447.19H552.78V131.19L868.91 447.18V447.19ZM123.99 123.99H535.71V447.19H447.19V535.75H123.99V123.99ZM535.71 464.25V535.75H464.25V464.25H535.71ZM131.04 552.81H447.19V868.94L131.04 552.81ZM876.01 876.01H464.25V552.81H552.77V464.25H876.01V876.01Z" fill="#FF4931"/>
+      <path d="M290.55 255.08V272.11H273.12V389.18H255.88V281.12L236.53 272.11V255.08H290.55Z" fill="#FF4931"/>
+      <path d="M366.8 255.08L346.7 389.18H321.03L300.92 255.08H318.53L329.85 330.57L331.7 342.92H336.02L337.88 330.57L349.19 255.08H366.8Z" fill="#FF4931"/>
+      <path d="M424.68 372.12V389.18H382.92V255.08H400.17V372.12H424.68Z" fill="#FF4931"/>
+      <path d="M552.77 641.5L572.22 650.55V759.11H589.54V658.63V641.5H607.06V624.37H552.77V641.5Z" fill="#FF4931"/>
+      <path d="M642.28 700.21H668.27V683.08H642.28L641.92 641.5H668.84V624.37H636.12H624.96V641.5V651.53V759.11H626.91H668.84H669.45V741.98H642.28V700.21Z" fill="#FF4931"/>
+      <path d="M687.35 741.98V759.11H729.89V741.98H704.67V641.5H729.89V624.37H687.35V741.98Z" fill="#FF4931"/>
+      <path d="M788.8 624.37V683.08H767.63V624.37H750.3V759.11H767.63V700.21H788.8V759.11H806.12V624.37H788.8Z" fill="#FF4931"/>
+    </svg>
+    <span class="nav-logo-text">Treasure Hunt</span>
+  </a>
+  <div class="nav-links">
+    <a href="/archive.html">Archive</a>
+    <a href="/methodology.html">Methodology</a>
+    <a href="/about.html">About</a>
+    <a href="/feed.xml">RSS</a>
+    <a href="https://github.com/danlex/treasurehunt" target="_blank" rel="noopener">GitHub ↗</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <span class="red-label">Archive</span>
+  <h1>All <span>17</span> posts.</h1>
+  <p>Complete chronological archive. For the latest 20, see the <a href="/">front page</a>.</p>
+</section>
+<main class="container">
+  
+    <section>
+      <h2 style="margin:28px 0 14px; font-size:20px;">April 2026</h2>
+      <ul style="list-style: none; padding: 0;">
+        
+          <li style="padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap;">
+            <time datetime="2026-04-12T21:19:25.629Z" style="color: var(--text-mute); font-size: 12px; min-width: 80px;">Apr 12, 2026</time>
+            <span class="cat-tag cat-Cybersecurity" style="font-size: 9px; padding: 2px 8px;">Cybersecurity</span>
+            <a href="/posts/claude-chatgpt-gov-breach.html" style="color: var(--text); text-decoration: none; flex: 1; min-width: 280px;">Hacker uses Claude and ChatGPT as assistant-in-the-loop to breach multiple government agencies</a>
+            <span style="color: var(--text-mute); font-size: 12px; font-variant-numeric: tabular-nums;">impact 7.8</span>
+          </li>
+        
+          <li style="padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap;">
+            <time datetime="2026-04-12T21:19:11.758Z" style="color: var(--text-mute); font-size: 12px; min-width: 80px;">Apr 12, 2026</time>
+            <span class="cat-tag cat-AI" style="font-size: 9px; padding: 2px 8px;">AI</span>
+            <a href="/posts/gemma-4-500m-downloads.html" style="color: var(--text); text-decoration: none; flex: 1; min-width: 280px;">Gemma 4 crosses 10M downloads in one week; Gemma family at 500M total</a>
+            <span style="color: var(--text-mute); font-size: 12px; font-variant-numeric: tabular-nums;">impact 7.4</span>
+          </li>
+        
+          <li style="padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap;">
+            <time datetime="2026-04-12T21:19:04.073Z" style="color: var(--text-mute); font-size: 12px; min-width: 80px;">Apr 12, 2026</time>
+            <span class="cat-tag cat-TopTweets" style="font-size: 9px; padding: 2px 8px;">Top Tweets</span>
+            <a href="/posts/karpathy-capability-gap.html" style="color: var(--text); text-decoration: none; flex: 1; min-width: 280px;">Karpathy: &quot;a growing gap in understanding AI capability&quot; — 19.4K likes</a>
+            <span style="color: var(--text-mute); font-size: 12px; font-variant-numeric: tabular-nums;">impact 7.5</span>
+          </li>
+        
+          <li style="padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap;">
+            <time datetime="2026-04-12T20:04:18.284Z" style="color: var(--text-mute); font-size: 12px; min-width: 80px;">Apr 12, 2026</time>
+            <span class="cat-tag cat-AI" style="font-size: 9px; padding: 2px 8px;">AI</span>
+            <a href="/posts/karpathy-nanochat.html" style="color: var(--text); text-decoration: none; flex: 1; min-width: 280px;">Karpathy&#39;s nanochat hits 51.7K stars — ChatGPT clone trainable end-to-end for $100</a>
+            <span style="color: var(--text-mute); font-size: 12px; font-variant-numeric: tabular-nums;">impact 8.2</span>
+          </li>
+        
+          <li style="padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap;">
+            <time datetime="2026-04-12T20:04:09.982Z" style="color: var(--text-mute); font-size: 12px; min-width: 80px;">Apr 12, 2026</time>
+            <span class="cat-tag cat-TopTweets" style="font-size: 9px; padding: 2px 8px;">Top Tweets</span>
+            <a href="/posts/karpathy-skills-trending.html" style="color: var(--text); text-decoration: none; flex: 1; min-width: 280px;">Karpathy&#39;s LLM-coding pitfalls compiled into viral CLAUDE.md — #2 on GitHub weekly</a>
+            <span style="color: var(--text-mute); font-size: 12px; font-variant-numeric: tabular-nums;">impact 7.1</span>
+          </li>
+        
+          <li style="padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap;">
+            <time datetime="2026-04-12T19:36:05.492Z" style="color: var(--text-mute); font-size: 12px; min-width: 80px;">Apr 12, 2026</time>
+            <span class="cat-tag cat-AI" style="font-size: 9px; padding: 2px 8px;">AI</span>
+            <a href="/posts/gemini-3-1-ultra.html" style="color: var(--text); text-decoration: none; flex: 1; min-width: 280px;">Google ships Gemini 3.1 Ultra — 2M tokens, native multimodal, sandboxed code</a>
+            <span style="color: var(--text-mute); font-size: 12px; font-variant-numeric: tabular-nums;">impact 8.8</span>
+          </li>
+        
+          <li style="padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap;">
+            <time datetime="2026-04-12T18:51:52.331Z" style="color: var(--text-mute); font-size: 12px; min-width: 80px;">Apr 12, 2026</time>
+            <span class="cat-tag cat-Startups" style="font-size: 9px; padding: 2px 8px;">Startups</span>
+            <a href="/posts/openai-852b.html" style="color: var(--text); text-decoration: none; flex: 1; min-width: 280px;">OpenAI closes $122B at $852B — most valuable private company in history</a>
+            <span style="color: var(--text-mute); font-size: 12px; font-variant-numeric: tabular-nums;">impact 7.5</span>
+          </li>
+        
+          <li style="padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap;">
+            <time datetime="2026-04-12T18:51:44.247Z" style="color: var(--text-mute); font-size: 12px; min-width: 80px;">Apr 12, 2026</time>
+            <span class="cat-tag cat-Research" style="font-size: 9px; padding: 2px 8px;">Research</span>
+            <a href="/posts/turboquant.html" style="color: var(--text); text-decoration: none; flex: 1; min-width: 280px;">DeepMind&#39;s TurboQuant: 6.2× KV-cache compression, no perplexity loss</a>
+            <span style="color: var(--text-mute); font-size: 12px; font-variant-numeric: tabular-nums;">impact 7.8</span>
+          </li>
+        
+          <li style="padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap;">
+            <time datetime="2026-04-12T18:49:51.560Z" style="color: var(--text-mute); font-size: 12px; min-width: 80px;">Apr 12, 2026</time>
+            <span class="cat-tag cat-AI" style="font-size: 9px; padding: 2px 8px;">AI</span>
+            <a href="/posts/mcp-97m.html" style="color: var(--text); text-decoration: none; flex: 1; min-width: 280px;">MCP crosses 97M installs; Linux Foundation takes governance at KubeCon</a>
+            <span style="color: var(--text-mute); font-size: 12px; font-variant-numeric: tabular-nums;">impact 8.6</span>
+          </li>
+        
+          <li style="padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap;">
+            <time datetime="2026-04-12T18:37:45.897Z" style="color: var(--text-mute); font-size: 12px; min-width: 80px;">Apr 12, 2026</time>
+            <span class="cat-tag cat-Research" style="font-size: 9px; padding: 2px 8px;">Research</span>
+            <a href="/posts/physics-informed-ml.html" style="color: var(--text); text-decoration: none; flex: 1; min-width: 280px;">Physics-informed transformer: 34% better RMSE, 12× faster than PINN baselines</a>
+            <span style="color: var(--text-mute); font-size: 12px; font-variant-numeric: tabular-nums;">impact 7.6</span>
+          </li>
+        
+          <li style="padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap;">
+            <time datetime="2026-04-12T18:35:46.911Z" style="color: var(--text-mute); font-size: 12px; min-width: 80px;">Apr 12, 2026</time>
+            <span class="cat-tag cat-AI" style="font-size: 9px; padding: 2px 8px;">AI</span>
+            <a href="/posts/meta-muse-spark.html" style="color: var(--text); text-decoration: none; flex: 1; min-width: 280px;">Meta&#39;s Muse Spark: first flagship since the $14.3B Scale AI deal</a>
+            <span style="color: var(--text-mute); font-size: 12px; font-variant-numeric: tabular-nums;">impact 8.2</span>
+          </li>
+        
+          <li style="padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap;">
+            <time datetime="2026-04-12T18:35:36.296Z" style="color: var(--text-mute); font-size: 12px; min-width: 80px;">Apr 12, 2026</time>
+            <span class="cat-tag cat-Startups" style="font-size: 9px; padding: 2px 8px;">Startups</span>
+            <a href="/posts/q1-300b-funding.html" style="color: var(--text); text-decoration: none; flex: 1; min-width: 280px;">Q1 2026 is the biggest venture quarter ever: $300B, 80% of it AI</a>
+            <span style="color: var(--text-mute); font-size: 12px; font-variant-numeric: tabular-nums;">impact 7.8</span>
+          </li>
+        
+          <li style="padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap;">
+            <time datetime="2026-04-12T18:35:16.173Z" style="color: var(--text-mute); font-size: 12px; min-width: 80px;">Apr 12, 2026</time>
+            <span class="cat-tag cat-Quantum" style="font-size: 9px; padding: 2px 8px;">Quantum</span>
+            <a href="/posts/ai-quantum-breakthrough.html" style="color: var(--text); text-decoration: none; flex: 1; min-width: 280px;">AI sparks a quantum breakthrough — &#39;the world is not ready&#39;</a>
+            <span style="color: var(--text-mute); font-size: 12px; font-variant-numeric: tabular-nums;">impact 7.1</span>
+          </li>
+        
+          <li style="padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap;">
+            <time datetime="2026-04-12T18:32:23.828Z" style="color: var(--text-mute); font-size: 12px; min-width: 80px;">Apr 12, 2026</time>
+            <span class="cat-tag cat-TopTweets" style="font-size: 9px; padding: 2px 8px;">Top Tweets</span>
+            <a href="/posts/karpathy-obsidian.html" style="color: var(--text); text-decoration: none; flex: 1; min-width: 280px;">Karpathy&#39;s personal-LLM-plus-Obsidian thread hits 18K likes</a>
+            <span style="color: var(--text-mute); font-size: 12px; font-variant-numeric: tabular-nums;">impact 6.7</span>
+          </li>
+        
+          <li style="padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap;">
+            <time datetime="2026-04-12T18:32:04.743Z" style="color: var(--text-mute); font-size: 12px; min-width: 80px;">Apr 12, 2026</time>
+            <span class="cat-tag cat-Research" style="font-size: 9px; padding: 2px 8px;">Research</span>
+            <a href="/posts/ai-energy-100x.html" style="color: var(--text); text-decoration: none; flex: 1; min-width: 280px;">Tufts neurosymbolic model: 100× less energy, 7 pts better on reasoning</a>
+            <span style="color: var(--text-mute); font-size: 12px; font-variant-numeric: tabular-nums;">impact 8.3</span>
+          </li>
+        
+          <li style="padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap;">
+            <time datetime="2026-04-12T18:31:50.446Z" style="color: var(--text-mute); font-size: 12px; min-width: 80px;">Apr 12, 2026</time>
+            <span class="cat-tag cat-Cybersecurity" style="font-size: 9px; padding: 2px 8px;">Cybersecurity</span>
+            <a href="/posts/claude-code-leak.html" style="color: var(--text); text-decoration: none; flex: 1; min-width: 280px;">Claude Code source leaks; 140 fake repos seed Vidar within hours</a>
+            <span style="color: var(--text-mute); font-size: 12px; font-variant-numeric: tabular-nums;">impact 8.3</span>
+          </li>
+        
+          <li style="padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap;">
+            <time datetime="2026-04-12T18:04:49.053Z" style="color: var(--text-mute); font-size: 12px; min-width: 80px;">Apr 12, 2026</time>
+            <span class="cat-tag cat-AI" style="font-size: 9px; padding: 2px 8px;">AI</span>
+            <a href="/posts/gpt-5-4.html" style="color: var(--text); text-decoration: none; flex: 1; min-width: 280px;">OpenAI ships GPT-5.4 — 75% on OSWorld-V, above the 72.4% human baseline</a>
+            <span style="color: var(--text-mute); font-size: 12px; font-variant-numeric: tabular-nums;">impact 9</span>
+          </li>
+        
+      </ul>
+    </section>
+  
+</main>
+
+<footer>
+  <span>© 2026 Treasure Hunt · curated for signal over noise</span>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/feed.xml">RSS</a>
+    <a href="/sitemap.xml">Sitemap</a>
+  </nav>
+</footer>
+
+</body>
+</html>

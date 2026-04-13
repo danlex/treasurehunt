@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About — Treasure Hunt</title>
+<meta name="description" content="About Treasure Hunt: a curated hourly news feed for AI, Quantum, Cybersecurity, Startups and Research, with explicit trust verdicts and transparent scoring. Built by Alexandru Dan (@KryptonAi).">
+<meta name="keywords" content="AI news, artificial intelligence news, quantum computing news, cybersecurity news, AI startups, research papers, GPT-5, Gemini, LLM news, tech news daily">
+<meta name="author" content="Treasure Hunt">
+<meta name="theme-color" content="#ff4a3d">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="canonical" href="https://treasurehunt.alexandrudan.com/about.html">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/favicon.svg">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Treasure Hunt">
+<meta property="og:title" content="About — Treasure Hunt">
+<meta property="og:description" content="About Treasure Hunt: a curated hourly news feed for AI, Quantum, Cybersecurity, Startups and Research, with explicit trust verdicts and transparent scoring. Built by Alexandru Dan (@KryptonAi).">
+<meta property="og:url" content="https://treasurehunt.alexandrudan.com/about.html">
+<meta property="og:image" content="https://treasurehunt.alexandrudan.com/og-cover.svg">
+<meta property="og:image:alt" content="About — Treasure Hunt">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+
+
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="About — Treasure Hunt">
+<meta name="twitter:description" content="About Treasure Hunt: a curated hourly news feed for AI, Quantum, Cybersecurity, Startups and Research, with explicit trust verdicts and transparent scoring. Built by Alexandru Dan (@KryptonAi).">
+<meta name="twitter:image" content="https://treasurehunt.alexandrudan.com/og-cover.svg">
+<meta name="twitter:image:alt" content="About — Treasure Hunt">
+<!-- Feeds -->
+<link rel="alternate" type="application/rss+xml" title="Treasure Hunt RSS" href="https://treasurehunt.alexandrudan.com/feed.xml">
+<link rel="sitemap" type="application/xml" href="https://treasurehunt.alexandrudan.com/sitemap.xml">
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --red: #ff4a3d; --red-dark: #d63a2a; --red-light: #ff9a8f;
+    --dark: #0f0f0f; --light-bg: #f7f6f4;
+    --text: #111; --text-sec: #4a4a4a; --text-mute: #8a8a8a;
+    --border: #ebebeb;
+    --font-display: 'Space Grotesk', 'Segoe UI', sans-serif;
+    --font-body: 'Manrope', 'Segoe UI', sans-serif;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font-body); color: var(--text); background: #fff; line-height: 1.6; }
+  h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.01em; }
+  a { color: var(--red); }
+  a:hover { color: var(--red-dark); }
+
+  nav {
+    position: sticky; top: 0;
+    height: 72px;
+    background: #fff;
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 40px;
+    z-index: 100;
+  }
+  .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .nav-logo-text {
+    font-family: var(--font-display); font-size: 15px; font-weight: 700;
+    color: var(--red); letter-spacing: 2px; text-transform: uppercase;
+  }
+  .nav-links { display: flex; gap: 20px; align-items: center; }
+  .nav-links a {
+    color: var(--text-sec); text-decoration: none; font-size: 14px; font-weight: 500;
+  }
+  .nav-links a:hover { color: var(--red); }
+
+  .container { max-width: 980px; margin: 0 auto; padding: 24px 40px; }
+  .hero { padding: 56px 40px 16px; max-width: 980px; margin: 0 auto; }
+  .red-label {
+    display: inline-block; color: var(--red);
+    font-size: 13px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .hero h1 { font-size: clamp(32px, 5vw, 48px); font-weight: 700; line-height: 1.1; margin-bottom: 14px; }
+  .hero h1 span { color: var(--red); }
+  .hero p { font-size: 16px; color: var(--text-sec); font-weight: 300; max-width: 620px; }
+
+  main { max-width: 980px; margin: 0 auto; padding: 24px 40px 80px; }
+
+  /* Category color tag (no hero image) */
+  .cat-tag {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 4px;
+    color: #fff;
+    font-family: var(--font-display);
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .cat-AI             { background: linear-gradient(135deg, #ff4a3d 0%, #ff9a8f 100%); }
+  .cat-Quantum        { background: linear-gradient(135deg, #5b3eff 0%, #b78fff 100%); }
+  .cat-Cybersecurity  { background: linear-gradient(135deg, #0f0f0f 0%, #4a4a4a 100%); color: #fff; }
+  .cat-Startups       { background: linear-gradient(135deg, #10b981 0%, #6ee7b7 100%); }
+  .cat-Research       { background: linear-gradient(135deg, #0ea5e9 0%, #7dd3fc 100%); }
+  .cat-TopTweets      { background: linear-gradient(135deg, #f59e0b 0%, #fcd34d 100%); }
+  .cat-Viral          { background: linear-gradient(135deg, #ec4899 0%, #f9a8d4 100%); }
+
+  article.post {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px 30px;
+    margin-bottom: 20px;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+
+  /* Impact badge on feed cards */
+  .impact-strip {
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+    padding: 10px 14px;
+    background: var(--light-bg);
+    border-radius: 8px;
+    margin: 12px 0 14px;
+    font-size: 12px;
+    color: var(--text-sec);
+  }
+  .impact-score {
+    font-family: var(--font-display); font-weight: 700;
+    font-size: 15px;
+    color: var(--text);
+  }
+  .impact-score .num { color: var(--red); }
+  .trust-pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 3px 10px; border-radius: 4px;
+    font-size: 10px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase;
+  }
+  .trust-high   { background: #dcfce7; color: #166534; }
+  .trust-medium { background: #fef3c7; color: #854d0e; }
+  .trust-low    { background: #fee2e2; color: #991b1b; }
+  .signals-inline { display: flex; gap: 12px; flex-wrap: wrap; font-variant-numeric: tabular-nums; }
+
+  /* Full scorecard on article pages */
+  .scorecard {
+    background: var(--light-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px 26px;
+    margin: 28px 0;
+  }
+  .scorecard-header {
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 12px; margin-bottom: 20px;
+  }
+  .scorecard-header h3 {
+    font-size: 13px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 2px;
+    color: var(--text-sec);
+  }
+  .importance {
+    font-family: var(--font-display); font-weight: 700;
+    font-size: 36px; line-height: 1;
+    color: var(--text);
+  }
+  .importance .slash { color: var(--text-mute); font-size: 20px; }
+  .importance .out   { color: var(--text-mute); font-size: 20px; }
+  .metric-row {
+    display: grid; grid-template-columns: 140px 1fr auto;
+    align-items: center; gap: 16px;
+    padding: 6px 0;
+    font-size: 13px;
+  }
+  .metric-label { color: var(--text-sec); font-weight: 500; }
+  .metric-bar {
+    height: 6px; background: #e5e5e5; border-radius: 3px; overflow: hidden;
+  }
+  .metric-bar span {
+    display: block; height: 100%;
+    background: linear-gradient(90deg, var(--red), #ff7a6e);
+    border-radius: 3px;
+  }
+  .metric-bar.fud span { background: linear-gradient(90deg, #991b1b, #ef4444); }
+  .metric-val { font-weight: 700; font-variant-numeric: tabular-nums; min-width: 38px; text-align: right; }
+  .scorecard-signals {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px 24px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+  .signal-block strong {
+    display: block;
+    font-size: 10px; letter-spacing: 1.4px; text-transform: uppercase;
+    color: var(--text-mute); font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .signal-block { font-size: 13px; color: var(--text); line-height: 1.6; }
+  .signal-block .num { font-family: var(--font-display); font-weight: 700; color: var(--red); font-size: 18px; }
+  .signal-block .outlet-list { color: var(--text-sec); }
+
+  .why-it-matters, .trust-notes {
+    margin-top: 28px;
+    padding: 22px 24px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+  }
+  .why-it-matters { background: #fff; border-left: 4px solid var(--red); }
+  .trust-notes { background: var(--light-bg); }
+  .why-it-matters h3, .trust-notes h3 {
+    font-size: 12px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 2px;
+    margin-bottom: 10px;
+    color: var(--text-sec);
+  }
+  .why-it-matters p { font-size: 15px; line-height: 1.7; color: var(--text); }
+  .trust-notes p    { font-size: 13px; line-height: 1.65; color: var(--text-sec); }
+  .trust-notes .verdict-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .trust-notes .primary-src { display: block; margin-top: 10px; font-size: 12px; }
+  article.post:hover { border-color: #d4d4d4; box-shadow: 0 4px 18px rgba(0,0,0,0.05); }
+  .post-meta {
+    display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+    font-size: 12px; color: var(--text-sec);
+    margin-bottom: 8px;
+  }
+  .post-meta .dot { color: #ccc; }
+  .post-meta time { font-weight: 500; }
+  .post-meta .source {
+    font-size: 11px; font-weight: 600; color: var(--text-sec);
+    text-transform: uppercase; letter-spacing: 1px;
+  }
+  .post-title { font-family: var(--font-display); font-size: 24px; font-weight: 700; line-height: 1.25; margin-bottom: 12px; }
+  .post-title a { color: var(--text); text-decoration: none; }
+  .post-title a:hover { color: var(--red); }
+  .post-summary { color: var(--text-sec); font-size: 15px; line-height: 1.7; margin-bottom: 18px; }
+  .post-footer {
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 12px;
+  }
+  .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .tag {
+    font-size: 11px; font-weight: 600; color: var(--text-sec);
+    background: var(--light-bg); padding: 4px 10px; border-radius: 4px; letter-spacing: 0.3px;
+  }
+  .read-link { color: var(--red); font-weight: 600; font-size: 13px; text-decoration: none; }
+  .read-link:hover { text-decoration: underline; }
+
+  /* Per-post article page */
+  .article-page .post-title { font-size: clamp(28px, 4vw, 42px); line-height: 1.15; margin-bottom: 18px; }
+  .article-page .post-summary { font-size: 18px; line-height: 1.75; color: var(--text); margin-bottom: 26px; }
+  .article-page .hero-image { width: 100%; max-height: 420px; object-fit: cover; border-radius: 12px; margin-bottom: 28px; border: 1px solid var(--border); }
+  .article-page .cta {
+    background: var(--dark); color: #fff; border-radius: 12px;
+    padding: 26px 28px; margin: 32px 0;
+    display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .article-page .cta p { margin: 0; font-size: 15px; color: rgba(255,255,255,0.8); }
+  .article-page .cta a {
+    background: var(--red); color: #fff; padding: 12px 22px; border-radius: 6px;
+    text-decoration: none; font-weight: 600; font-size: 14px;
+  }
+  .article-page .back { color: var(--text-sec); font-weight: 500; font-size: 13px; text-decoration: none; }
+  .article-page .back:hover { color: var(--red); }
+  .related h2 {
+    font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px;
+    color: var(--text-sec); margin: 40px 0 16px;
+  }
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 32px 40px;
+    max-width: 980px; margin: 40px auto 0;
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;
+    color: var(--text-mute); font-size: 13px;
+  }
+  footer a { color: var(--text-sec); text-decoration: none; margin-left: 16px; }
+  footer a:hover { color: var(--red); }
+
+  @media (max-width: 640px) {
+    nav { padding: 0 20px; }
+    .hero, main, footer, .container { padding-left: 20px; padding-right: 20px; }
+    article.post { padding: 22px 20px; }
+  }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"AboutPage","name":"About Treasure Hunt","url":"https://treasurehunt.alexandrudan.com/about.html","mainEntity":{"@id":"https://treasurehunt.alexandrudan.com/#organization"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","@id":"https://treasurehunt.alexandrudan.com/about.html#person","name":"Alexandru Dan","alternateName":"KryptonAi","url":"https://treasurehunt.alexandrudan.com/about.html","sameAs":["https://x.com/KryptonAi","https://github.com/danlex"]}</script>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="/">
+    <svg width="28" height="28" viewBox="107 107 786 786" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Treasure Hunt logo">
+      <rect width="32" height="32" rx="6" fill="#f7f6f4"/>
+      <path d="M892.95 447.19L552.77 107.06V106.92H106.92V552.81L447.19 893.07H893.08L892.95 447.18V447.19ZM868.91 447.19H552.78V131.19L868.91 447.18V447.19ZM123.99 123.99H535.71V447.19H447.19V535.75H123.99V123.99ZM535.71 464.25V535.75H464.25V464.25H535.71ZM131.04 552.81H447.19V868.94L131.04 552.81ZM876.01 876.01H464.25V552.81H552.77V464.25H876.01V876.01Z" fill="#FF4931"/>
+      <path d="M290.55 255.08V272.11H273.12V389.18H255.88V281.12L236.53 272.11V255.08H290.55Z" fill="#FF4931"/>
+      <path d="M366.8 255.08L346.7 389.18H321.03L300.92 255.08H318.53L329.85 330.57L331.7 342.92H336.02L337.88 330.57L349.19 255.08H366.8Z" fill="#FF4931"/>
+      <path d="M424.68 372.12V389.18H382.92V255.08H400.17V372.12H424.68Z" fill="#FF4931"/>
+      <path d="M552.77 641.5L572.22 650.55V759.11H589.54V658.63V641.5H607.06V624.37H552.77V641.5Z" fill="#FF4931"/>
+      <path d="M642.28 700.21H668.27V683.08H642.28L641.92 641.5H668.84V624.37H636.12H624.96V641.5V651.53V759.11H626.91H668.84H669.45V741.98H642.28V700.21Z" fill="#FF4931"/>
+      <path d="M687.35 741.98V759.11H729.89V741.98H704.67V641.5H729.89V624.37H687.35V741.98Z" fill="#FF4931"/>
+      <path d="M788.8 624.37V683.08H767.63V624.37H750.3V759.11H767.63V700.21H788.8V759.11H806.12V624.37H788.8Z" fill="#FF4931"/>
+    </svg>
+    <span class="nav-logo-text">Treasure Hunt</span>
+  </a>
+  <div class="nav-links">
+    <a href="/archive.html">Archive</a>
+    <a href="/methodology.html">Methodology</a>
+    <a href="/about.html">About</a>
+    <a href="/feed.xml">RSS</a>
+    <a href="https://github.com/danlex/treasurehunt" target="_blank" rel="noopener">GitHub ↗</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <span class="red-label">About</span>
+  <h1>News with <span>numbers</span>, not narratives.</h1>
+  <p>Treasure Hunt is a small daily operation with a simple rule: every story carries a score, a trust verdict, and a concrete <em>why it matters</em>. If we can't verify it, we say so. If a claim fails to move the market it predicted, we flag it.</p>
+</section>
+<main class="container">
+  <article>
+    <h2>Who runs it</h2>
+    <p>Treasure Hunt is assembled by <strong><a href="https://x.com/KryptonAi" rel="me" target="_blank">Alexandru Dan (@KryptonAi)</a></strong>, using a pipeline of open signal sources — GDELT, Hacker News, Reddit, 43 RSS feeds including BBC / CNN / NYT / Guardian / Bloomberg / Nature / Science, GitHub trending, arXiv, Semantic Scholar, Marketstack, and a curated list of researchers followed on X.</p>
+
+    <h2>What's different</h2>
+    <ul>
+      <li><strong>Trust is explicit.</strong> Every post is marked <code>high</code>, <code>medium</code>, or <code>low</code> trust, with notes on what is verified and what is still single-sourced. Schema.org <code>ClaimReview</code> is embedded so AI search engines can surface the verdict directly.</li>
+      <li><strong>Impact is numeric.</strong> We publish the 0–10 scores on seven dimensions for every item. No editorial black box.</li>
+      <li><strong>Consequences are spelled out.</strong> Each post includes a <em>Why it matters</em> paragraph — what changes, for whom, and on what timeline.</li>
+      <li><strong>FUD detection is automated.</strong> Tone/polarization on GDELT, citation lookup on Semantic Scholar, ticker reaction on Marketstack. If a market-moving story didn't move the market, we bump FUD risk. If a "breakthrough" paper can't be found, we bump FUD risk.</li>
+    </ul>
+
+    <h2>Publishing cadence</h2>
+    <p>One post per hour, autonomous. Fresh candidates are pulled every six hours across all signal sources, scored, filtered for duplicates against already-published and already-rejected items, and queued. The highest-scoring item publishes at the top of the next hour.</p>
+
+    <h2>Methodology</h2>
+    <p>Full scoring methodology, signal sources, and FUD-detection rules are documented on the <a href="/methodology.html">methodology page</a>. Source code is on <a href="https://github.com/danlex/treasurehunt" target="_blank" rel="noopener">GitHub</a>.</p>
+
+    <h2>Feeds &amp; machine-readable</h2>
+    <p>
+      <a href="/feed.xml">RSS</a> · <a href="/sitemap.xml">Sitemap</a> · <a href="/archive.html">Archive</a> · <a href="/llms.txt">llms.txt</a> · <a href="/llms-full.txt">llms-full.txt</a>
+    </p>
+  </article>
+</main>
+
+<footer>
+  <span>© 2026 Treasure Hunt · curated for signal over noise</span>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/feed.xml">RSS</a>
+    <a href="/sitemap.xml">Sitemap</a>
+  </nav>
+</footer>
+
+</body>
+</html>

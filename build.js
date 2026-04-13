@@ -358,6 +358,9 @@ const navbar = `
     <span class="nav-logo-text">Treasure Hunt</span>
   </a>
   <div class="nav-links">
+    <a href="/archive.html">Archive</a>
+    <a href="/methodology.html">Methodology</a>
+    <a href="/about.html">About</a>
     <a href="/feed.xml">RSS</a>
     <a href="https://github.com/danlex/treasurehunt" target="_blank" rel="noopener">GitHub ↗</a>
   </div>
@@ -471,31 +474,62 @@ function buildIndex() {
       '@context': 'https://schema.org',
       '@type': 'WebSite',
       name: SITE_NAME,
+      alternateName: 'TreasureHunt',
       url: SITE_URL + '/',
       description: SITE_DESC,
-      potentialAction: {
-        '@type': 'SearchAction',
-        target: SITE_URL + '/?q={search_term_string}',
-        'query-input': 'required name=search_term_string'
-      }
+      inLanguage: 'en-US',
+      publisher: { '@id': SITE_URL + '/#organization' }
     },
     {
       '@context': 'https://schema.org',
       '@type': 'Organization',
+      '@id': SITE_URL + '/#organization',
       name: SITE_NAME,
       url: SITE_URL + '/',
-      logo: SITE_URL + '/favicon.svg'
+      logo: {
+        '@type': 'ImageObject',
+        url: SITE_URL + '/favicon.svg',
+        width: 256, height: 256
+      },
+      foundingDate: '2026-04-12',
+      founder: { '@id': SITE_URL + '/about.html#person' },
+      sameAs: [
+        'https://github.com/danlex/treasurehunt',
+        'https://x.com/KryptonAi'
+      ]
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      '@id': SITE_URL + '/about.html#person',
+      name: 'Alexandru Dan',
+      alternateName: 'KryptonAi',
+      url: SITE_URL + '/about.html',
+      sameAs: ['https://x.com/KryptonAi']
     },
     {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
       name: 'Treasure Hunt — latest posts',
+      itemListOrder: 'https://schema.org/ItemListOrderDescending',
+      numberOfItems: posts.length,
       itemListElement: posts.slice(0, 20).map((p, i) => ({
         '@type': 'ListItem',
         position: i + 1,
         url: postUrl(p.id),
         name: p.title
       }))
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'What is Treasure Hunt?', acceptedAnswer: { '@type': 'Answer', text: 'Treasure Hunt is a curated hourly news feed covering AI, Quantum computing, Cybersecurity, AI startups and Research papers. Every item is scored across seven dimensions and given an explicit trust verdict with a "why it matters" analysis.' } },
+        { '@type': 'Question', name: 'How are stories scored?', acceptedAnswer: { '@type': 'Answer', text: 'Each post gets a 0–10 score on Coverage, Social, Novelty, Authority, Concreteness, Stakes, and FUD risk. The composite Impact score is 0.22·Stakes + 0.18·Novelty + 0.15·Authority + 0.12·Coverage + 0.12·Concreteness + 0.11·Social + 0.10·(10 − FUD risk).' } },
+        { '@type': 'Question', name: 'Where does the data come from?', acceptedAnswer: { '@type': 'Answer', text: 'Discovery runs across 43 RSS feeds (BBC, CNN, NYT, Guardian, NPR, Bloomberg, Al Jazeera, Verge, Ars Technica, Wired, TechCrunch, MIT Tech Review, Nature, Science, arXiv), Hacker News, 15 subreddits, GDELT (100+ language news with tone scores), GitHub trending, and X trusted voices. Verification uses arXiv, Semantic Scholar for citation counts, and Marketstack for ticker reaction checks.' } },
+        { '@type': 'Question', name: 'How is FUD detected?', acceptedAnswer: { '@type': 'Answer', text: 'Stories get a FUD-risk score boosted when headlines use sensationalist framing without matching primary sources; when only one outlet covers a claim; when market-moving news fails to move the named ticker; when cited papers cannot be found on arXiv or Semantic Scholar; or when tone polarization across coverage is unusually high.' } },
+        { '@type': 'Question', name: 'Who runs Treasure Hunt?', acceptedAnswer: { '@type': 'Answer', text: 'Treasure Hunt is assembled and maintained by Alexandru Dan (@KryptonAi). The "trusted voices" scoring weight comes from the X accounts Alexandru follows.' } }
+      ]
     }
   ];
 
@@ -512,7 +546,7 @@ ${navbar}
 <section class="hero">
   <span class="red-label">Updated hourly · curated daily</span>
   <h1>The <span>best</span> in AI, Quantum, Cybersecurity, Startups &amp; Research.</h1>
-  <p>One substantial post per hour, packed with names, numbers and the specifics that matter. No filler, no SEO spam — just the highlights from each day's tech crawl, scored by signal.</p>
+  <p>One substantial post per hour, packed with names, numbers and the specifics that matter. Every item scored across seven dimensions (Stakes · Novelty · Authority · Coverage · Concreteness · Social · FUD risk) and given an explicit trust verdict. Methodology is <a href="/methodology.html">public</a>.</p>
 </section>
 <main>
   ${posts.length ? posts.map(postCard).join('\n') : '<p>No posts yet — check back soon.</p>'}
@@ -522,6 +556,255 @@ ${footer}
 </html>`;
 
   fs.writeFileSync(path.join(ROOT, 'index.html'), htmlHead + body);
+}
+
+// ─── about.html ───────────────────────────────────────────────────────────────
+function buildAbout() {
+  const jsonLd = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'AboutPage',
+      name: 'About Treasure Hunt',
+      url: SITE_URL + '/about.html',
+      mainEntity: { '@id': SITE_URL + '/#organization' }
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      '@id': SITE_URL + '/about.html#person',
+      name: 'Alexandru Dan',
+      alternateName: 'KryptonAi',
+      url: SITE_URL + '/about.html',
+      sameAs: ['https://x.com/KryptonAi', 'https://github.com/danlex']
+    }
+  ];
+  const head1 = head({
+    title: 'About — Treasure Hunt',
+    description: 'About Treasure Hunt: a curated hourly news feed for AI, Quantum, Cybersecurity, Startups and Research, with explicit trust verdicts and transparent scoring. Built by Alexandru Dan (@KryptonAi).',
+    canonical: SITE_URL + '/about.html',
+    jsonLd
+  });
+  const body = `
+<body>
+${navbar}
+<section class="hero">
+  <span class="red-label">About</span>
+  <h1>News with <span>numbers</span>, not narratives.</h1>
+  <p>Treasure Hunt is a small daily operation with a simple rule: every story carries a score, a trust verdict, and a concrete <em>why it matters</em>. If we can't verify it, we say so. If a claim fails to move the market it predicted, we flag it.</p>
+</section>
+<main class="container">
+  <article>
+    <h2>Who runs it</h2>
+    <p>Treasure Hunt is assembled by <strong><a href="https://x.com/KryptonAi" rel="me" target="_blank">Alexandru Dan (@KryptonAi)</a></strong>, using a pipeline of open signal sources — GDELT, Hacker News, Reddit, 43 RSS feeds including BBC / CNN / NYT / Guardian / Bloomberg / Nature / Science, GitHub trending, arXiv, Semantic Scholar, Marketstack, and a curated list of researchers followed on X.</p>
+
+    <h2>What's different</h2>
+    <ul>
+      <li><strong>Trust is explicit.</strong> Every post is marked <code>high</code>, <code>medium</code>, or <code>low</code> trust, with notes on what is verified and what is still single-sourced. Schema.org <code>ClaimReview</code> is embedded so AI search engines can surface the verdict directly.</li>
+      <li><strong>Impact is numeric.</strong> We publish the 0–10 scores on seven dimensions for every item. No editorial black box.</li>
+      <li><strong>Consequences are spelled out.</strong> Each post includes a <em>Why it matters</em> paragraph — what changes, for whom, and on what timeline.</li>
+      <li><strong>FUD detection is automated.</strong> Tone/polarization on GDELT, citation lookup on Semantic Scholar, ticker reaction on Marketstack. If a market-moving story didn't move the market, we bump FUD risk. If a "breakthrough" paper can't be found, we bump FUD risk.</li>
+    </ul>
+
+    <h2>Publishing cadence</h2>
+    <p>One post per hour, autonomous. Fresh candidates are pulled every six hours across all signal sources, scored, filtered for duplicates against already-published and already-rejected items, and queued. The highest-scoring item publishes at the top of the next hour.</p>
+
+    <h2>Methodology</h2>
+    <p>Full scoring methodology, signal sources, and FUD-detection rules are documented on the <a href="/methodology.html">methodology page</a>. Source code is on <a href="https://github.com/danlex/treasurehunt" target="_blank" rel="noopener">GitHub</a>.</p>
+
+    <h2>Feeds &amp; machine-readable</h2>
+    <p>
+      <a href="/feed.xml">RSS</a> · <a href="/sitemap.xml">Sitemap</a> · <a href="/archive.html">Archive</a> · <a href="/llms.txt">llms.txt</a> · <a href="/llms-full.txt">llms-full.txt</a>
+    </p>
+  </article>
+</main>
+${footer}
+</body>
+</html>`;
+  fs.writeFileSync(path.join(ROOT, 'about.html'), head1 + body);
+}
+
+// ─── methodology.html ─────────────────────────────────────────────────────────
+function buildMethodology() {
+  const jsonLd = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'TechArticle',
+      headline: 'Treasure Hunt methodology',
+      url: SITE_URL + '/methodology.html',
+      author: { '@id': SITE_URL + '/about.html#person' },
+      publisher: { '@id': SITE_URL + '/#organization' },
+      datePublished: '2026-04-13',
+      dateModified: new Date().toISOString().slice(0, 10),
+      description: 'How Treasure Hunt scores, verifies and ranks news items across Coverage, Social, Novelty, Authority, Concreteness, Stakes, and FUD risk.',
+      inLanguage: 'en-US'
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: 'How Treasure Hunt scores a news item',
+      totalTime: 'PT5M',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'Discovery', text: 'Pull top-trending items across 43 RSS feeds, 15 subreddits, Hacker News, GDELT, GitHub trending, and X trusted voices in one consolidated pass.' },
+        { '@type': 'HowToStep', position: 2, name: 'Dedupe', text: 'Remove items whose id or normalized URL already exists in posts.json, queue.json, or rejected.json.' },
+        { '@type': 'HowToStep', position: 3, name: 'Filter', text: 'Reject generic opinion pieces, politics, personal-experience posts, and low-concreteness items. Prefer primary-source links and named entities.' },
+        { '@type': 'HowToStep', position: 4, name: 'Enrich', text: 'For top 8 survivors: WebSearch for coverage, arXiv/Semantic Scholar for paper existence and citations, Marketstack for ticker-reaction verification, X for trusted-voice engagement.' },
+        { '@type': 'HowToStep', position: 5, name: 'Score', text: 'Grade 0-10 on Coverage, Social, Novelty, Authority, Concreteness, Stakes, FUD risk. Composite Impact = 0.22·Stakes + 0.18·Novelty + 0.15·Authority + 0.12·Coverage + 0.12·Concreteness + 0.11·Social + 0.10·(10 − FUD).' },
+        { '@type': 'HowToStep', position: 6, name: 'Verdict', text: 'Assign high / medium / low trust with explicit reasoning on what is verified and what remains single-sourced or sensationalized.' }
+      ]
+    }
+  ];
+  const head1 = head({
+    title: 'Methodology — Treasure Hunt',
+    description: 'How Treasure Hunt scores, verifies and ranks news: seven scoring dimensions (Stakes · Novelty · Authority · Coverage · Concreteness · Social · FUD risk), composite Impact formula, signal sources, and FUD-detection rules.',
+    canonical: SITE_URL + '/methodology.html',
+    jsonLd
+  });
+  const body = `
+<body>
+${navbar}
+<section class="hero">
+  <span class="red-label">Methodology</span>
+  <h1>How <span>Treasure Hunt</span> scores, trusts, and ranks news.</h1>
+  <p>No editorial black box. Here's exactly what goes into every Impact score, trust verdict, and publish decision.</p>
+</section>
+<main class="container">
+  <article>
+    <h2 id="dimensions">The seven scoring dimensions</h2>
+    <p>Every item is graded 0–10 on seven dimensions:</p>
+    <ul>
+      <li><strong>Coverage</strong> — how many independent outlets cover it. Tier-1 outlets (Reuters, Bloomberg, FT, WSJ, NYT, The Economist, BBC, Guardian, NPR) count 2×. A 20+ outlet / 5+ tier-1 story scores high.</li>
+      <li><strong>Social</strong> — volume and quality of discussion. Weighted toward trusted voices: a Karpathy or LeCun tweet counts 3×; other tier-1 voices 2×; tier-2 practitioners 1×. Raw mention count without signal from researchers we trust does not move this score much.</li>
+      <li><strong>Novelty</strong> — how genuinely new the development is. First-of-kind breakthrough vs. incremental update vs. rehash.</li>
+      <li><strong>Authority</strong> — quality of primary source. Peer-reviewed paper (Nature, Science, PNAS, arXiv with citations), official vendor announcement, regulator filing, or first-party disclosure all score high.</li>
+      <li><strong>Concreteness</strong> — named entities, hard numbers, dates, reproducible details. "OpenAI raised $122B at $852B on March 31" scores high. "AI is changing everything" scores zero.</li>
+      <li><strong>Stakes</strong> — real-world consequences. Safety-critical, economic, policy, or scientific impact. A CVE with active exploitation scores higher than a model release of incremental improvement.</li>
+      <li><strong>FUD risk</strong> <em>(inverted when combined)</em> — sensationalism, single-source claims, hype without substance, anonymous leaks that can't be verified, claims that break physics or prior benchmarks by &gt;2 orders of magnitude.</li>
+    </ul>
+
+    <h2 id="formula">The composite formula</h2>
+    <pre><code>Importance = 0.22·Stakes
+           + 0.18·Novelty
+           + 0.15·Authority
+           + 0.12·Coverage
+           + 0.12·Concreteness
+           + 0.11·Social
+           + 0.10·(10 − FUD_risk)</code></pre>
+    <p>Stakes and Novelty carry the most weight because <em>what changes</em> matters more than <em>how much we've heard about it</em>. Social is weighted modestly because volume without signal is easy to fake. FUD risk is inverted so trust <em>adds</em> to the score.</p>
+
+    <h2 id="sources">Signal sources</h2>
+    <h3>Discovery (once per hunt)</h3>
+    <ul>
+      <li>43 RSS feeds — BBC Technology/World/Science, CNN Top &amp; Tech, NYT Tech/Science/Business, Guardian Tech/Science, NPR Tech, Washington Post Tech, Al Jazeera, Bloomberg, Reuters, The Verge, Ars Technica, Wired, TechCrunch, MIT Tech Review, IEEE Spectrum, VentureBeat, Krebs on Security, Schneier, BleepingComputer, Dark Reading, Nature, Science, Quanta, Phys.org, arXiv (cs.AI, cs.LG, cs.CL, quant-ph), Techmeme, Google News (AI/Quantum/Cyber), Product Hunt, The Hacker News.</li>
+      <li>Hacker News — top stories in last 24 h with ≥100 points, via Algolia.</li>
+      <li>Reddit — 15 subreddits (r/technology, r/MachineLearning, r/LocalLLaMA, r/OpenAI, r/ClaudeAI, r/singularity, r/QuantumComputing, r/Physics, r/netsec, r/cybersecurity, r/sysadmin, r/venturecapital, r/startups, r/Futurology, r/programming), top-of-day.</li>
+      <li>GDELT 2.0 — ~100-language news monitoring with per-article tone (-10..+10) and sentiment polarization.</li>
+      <li>GitHub trending — daily and weekly top repos.</li>
+      <li>X trusted voices — one API call per hunt returns recent tweets from ~15 tier-1+2 handles.</li>
+    </ul>
+    <h3>Verification (top 8 candidates only)</h3>
+    <ul>
+      <li><strong>arXiv</strong> — confirm a cited paper exists; pull the real abstract.</li>
+      <li><strong>Semantic Scholar</strong> — citation count, influential-citation count, venue, author h-index. ≥500 citations adds +3 to Authority.</li>
+      <li><strong>Marketstack</strong> — for stories naming a public company, fetch the stock's EOD data. "Reacted" (≥2% move + ≥1.5× avg volume) adds +1 to Authority and Stakes; "muted" on a story claiming major impact adds +2 to FUD risk.</li>
+      <li><strong>X mentions from trusted</strong> — check whether Karpathy / LeCun / Hinton / Sutskever / Ng / Pichai / Wei have discussed the topic.</li>
+    </ul>
+
+    <h2 id="fud">FUD detection rules</h2>
+    <p>FUD risk is bumped when:</p>
+    <ul>
+      <li>Headline uses "world is not ready", "changes everything", "nobody saw this coming" — without proportional primary-source backing.</li>
+      <li>Coverage is thin (&lt;5 outlets) or single-sourced.</li>
+      <li>Tone polarization on GDELT exceeds 2.8 with negative average tone (contested narrative).</li>
+      <li>Research paper is claimed but not findable on arXiv or Semantic Scholar.</li>
+      <li>Market-moving news fails to move the named ticker.</li>
+      <li>Company or token has a financial incentive to publish the claim.</li>
+      <li>Quantum / AI claims break prior benchmarks by &gt;2 orders of magnitude without independent replication.</li>
+    </ul>
+
+    <h2 id="trust">Trust verdicts</h2>
+    <ul>
+      <li><span class="trust-pill trust-high">high</span> — primary source exists, tier-1 corroboration, concrete numbers, no FUD flags. Safe to cite.</li>
+      <li><span class="trust-pill trust-medium">medium</span> — some gaps (missing primary source, single-outlet leak, modest FUD flags). Plausible but unreplicated.</li>
+      <li><span class="trust-pill trust-low">low</span> — anonymous sources, sensational framing, market signals contradicting the story. Treat as rumor.</li>
+    </ul>
+
+    <h2 id="machine">Machine-readable output</h2>
+    <p>Every post exposes its scorecard via Schema.org JSON-LD:</p>
+    <ul>
+      <li><code>NewsArticle</code> with full metadata</li>
+      <li><code>ClaimReview</code> with a 1–5 reviewRating (maps directly from the trust verdict)</li>
+      <li><code>FAQPage</code> with "Why does this matter?", "Can you trust this?", "How important is it?"</li>
+      <li><code>BreadcrumbList</code>, <code>SpeakableSpecification</code></li>
+    </ul>
+    <p>Full corpus also available as plain text: <a href="/llms.txt">/llms.txt</a> and <a href="/llms-full.txt">/llms-full.txt</a>.</p>
+  </article>
+</main>
+${footer}
+</body>
+</html>`;
+  fs.writeFileSync(path.join(ROOT, 'methodology.html'), head1 + body);
+}
+
+// ─── archive.html (all posts, chronological) ──────────────────────────────────
+function buildArchive() {
+  const byMonth = {};
+  for (const p of posts) {
+    const key = (p.publishedAt || '').slice(0, 7); // YYYY-MM
+    (byMonth[key] ||= []).push(p);
+  }
+  const months = Object.keys(byMonth).sort().reverse();
+  const monthName = (k) => new Date(k + '-01').toLocaleString('en-US', { year: 'numeric', month: 'long' });
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'Treasure Hunt Archive',
+    url: SITE_URL + '/archive.html',
+    description: 'Complete archive of all published Treasure Hunt posts.',
+    mainEntity: {
+      '@type': 'ItemList',
+      numberOfItems: posts.length,
+      itemListElement: posts.map((p, i) => ({
+        '@type': 'ListItem', position: i + 1,
+        url: postUrl(p.id), name: p.title
+      }))
+    }
+  };
+  const head1 = head({
+    title: 'Archive — all Treasure Hunt posts',
+    description: `Complete archive of ${posts.length} Treasure Hunt posts covering AI, Quantum, Cybersecurity, Startups and Research.`,
+    canonical: SITE_URL + '/archive.html',
+    jsonLd
+  });
+  const body = `
+<body>
+${navbar}
+<section class="hero">
+  <span class="red-label">Archive</span>
+  <h1>All <span>${posts.length}</span> posts.</h1>
+  <p>Complete chronological archive. For the latest 20, see the <a href="/">front page</a>.</p>
+</section>
+<main class="container">
+  ${months.map(m => `
+    <section>
+      <h2 style="margin:28px 0 14px; font-size:20px;">${esc(monthName(m))}</h2>
+      <ul style="list-style: none; padding: 0;">
+        ${byMonth[m].map(p => `
+          <li style="padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap;">
+            <time datetime="${dateISO(p.publishedAt)}" style="color: var(--text-mute); font-size: 12px; min-width: 80px;">${dateHuman(p.publishedAt)}</time>
+            <span class="cat-tag ${catClass(p.category)}" style="font-size: 9px; padding: 2px 8px;">${esc(p.category)}</span>
+            <a href="${postPath(p.id)}" style="color: var(--text); text-decoration: none; flex: 1; min-width: 280px;">${esc(p.title)}</a>
+            ${p.metrics?.importance != null ? `<span style="color: var(--text-mute); font-size: 12px; font-variant-numeric: tabular-nums;">impact ${p.metrics.importance}</span>` : ''}
+          </li>
+        `).join('')}
+      </ul>
+    </section>
+  `).join('')}
+</main>
+${footer}
+</body>
+</html>`;
+  fs.writeFileSync(path.join(ROOT, 'archive.html'), head1 + body);
 }
 
 // ─── Per-post article pages ───────────────────────────────────────────────────
@@ -681,8 +964,12 @@ ${footer}
 
 // ─── sitemap.xml ──────────────────────────────────────────────────────────────
 function buildSitemap() {
+  const nowIso = new Date().toISOString();
   const urls = [
-    { loc: SITE_URL + '/', changefreq: 'hourly', priority: '1.0', lastmod: posts[0] ? dateISO(posts[0].publishedAt) : new Date().toISOString() },
+    { loc: SITE_URL + '/',                  changefreq: 'hourly',  priority: '1.0', lastmod: posts[0] ? dateISO(posts[0].publishedAt) : nowIso },
+    { loc: SITE_URL + '/about.html',        changefreq: 'monthly', priority: '0.7', lastmod: nowIso },
+    { loc: SITE_URL + '/methodology.html',  changefreq: 'monthly', priority: '0.8', lastmod: nowIso },
+    { loc: SITE_URL + '/archive.html',      changefreq: 'hourly',  priority: '0.8', lastmod: nowIso },
     ...posts.map(p => ({
       loc: postUrl(p.id),
       changefreq: 'weekly',
@@ -856,6 +1143,9 @@ for (const f of fs.readdirSync(OUT_POSTS_DIR)) {
 }
 
 buildIndex();
+buildAbout();
+buildMethodology();
+buildArchive();
 posts.forEach(buildPostPage);
 buildSitemap();
 buildRss();
@@ -863,4 +1153,4 @@ buildRobots();
 buildLlmsTxt();
 buildLlmsFullTxt();
 
-console.log(`Built: index.html, ${posts.length} post pages, sitemap.xml, feed.xml, robots.txt, llms.txt, llms-full.txt`);
+console.log(`Built: index.html, about.html, methodology.html, archive.html, ${posts.length} post pages, sitemap.xml, feed.xml, robots.txt, llms.txt, llms-full.txt`);
