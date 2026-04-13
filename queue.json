@@ -181,68 +181,6 @@
     "primarySource": "https://helpx.adobe.com/security.html"
   },
   {
-    "id": "claude-word-beta-2026",
-    "category": "AI",
-    "title": "Claude for Word enters beta with cross-document context across Excel and PowerPoint",
-    "summary": "Anthropic launched Claude for Word in beta on April 12, joining existing Claude for Excel and Claude for PowerPoint integrations. The sidebar extension drafts, edits and revises documents in place, preserves tracked-changes history, and — the meaningful difference — shares context across all three Office apps, so a Claude action in Word can reference named ranges from an open Excel workbook or slides in a companion PowerPoint deck without copy-paste. Pricing: included in existing Claude Pro ($20/mo) and Claude Enterprise plans; no per-document fee. Microsoft Copilot, which also ships in Word, costs $30/user/month and does not cross-reference to Excel/PowerPoint at the same fidelity per Anthropic's comparison on the Notion+Anthropic launch call. Rolling out to Windows and macOS Office 2021+ first, web version 'later in 2026'.",
-    "tags": [
-      "Anthropic",
-      "Claude",
-      "Word",
-      "Office",
-      "Microsoft",
-      "Copilot"
-    ],
-    "url": "https://x.com/claudeai/status/2042670341915295865",
-    "source": "X · @claudeai",
-    "metrics": {
-      "coverage": 5.5,
-      "social": 7.5,
-      "novelty": 7,
-      "authority": 9,
-      "concreteness": 8,
-      "stakes": 6.5,
-      "fudRisk": 2,
-      "importance": 6.93,
-      "trust": 9
-    },
-    "signals": {
-      "outletCount": 11,
-      "tier1Count": 3,
-      "outlets": [
-        "@AnthropicAI",
-        "The Verge",
-        "TechCrunch",
-        "The Information",
-        "VentureBeat"
-      ],
-      "twitterMentions": 5400,
-      "topTweets": [
-        {
-          "handle": "@claudeai",
-          "likes": 6100
-        },
-        {
-          "handle": "@bcherny",
-          "likes": 1800
-        }
-      ],
-      "subreddits": [
-        "r/ClaudeAI",
-        "r/microsoft",
-        "r/productivity"
-      ],
-      "redditTop": {
-        "sub": "r/ClaudeAI",
-        "upvotes": 2900
-      }
-    },
-    "whyItMatters": "Office is Microsoft's crown-jewel install base — 400M+ commercial seats with Copilot attach rates above 22% last quarter. A direct Anthropic-branded competitor inside Word, with cross-doc context that Microsoft itself can't match, is the first time since 2023 that Copilot has faced a peer integration inside its own surface. Pricing is the bigger story: Pro includes it for $20/mo vs Copilot's $30/mo add-on. Expect enterprise procurement teams running a Copilot-vs-Claude bake-off in Q2 2026.",
-    "trustVerdict": "high",
-    "trustNotes": "Anthropic primary source, product demonstrated live on launch call. All pricing and feature comparisons are self-reported; independent reviewers are likely to confirm or refine the cross-app context claim within two weeks. Low FUD risk.",
-    "primarySource": "https://www.anthropic.com/news"
-  },
-  {
     "id": "squishy-photonic-switches-2026",
     "category": "Research",
     "title": "Squishy photonic switches: IEEE Spectrum reports fast, low-power soft photonic logic",
