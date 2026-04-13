@@ -6,6 +6,80 @@ Each post below includes the summary, tags, source, trust verdict, and "why it m
 
 ---
 
+## "Neural Computer": video-generation architecture trains a world model of a real computer
+
+**Published:** Apr 13, 2026
+**Category:** Research
+**Source:** X · @hardmaru
+**URL:** https://treasurehunt.alexandrudan.com/posts/neural-computer-world-model.html
+**Original article:** https://x.com/hardmaru/status/2042782812240265641
+**Tags:** World-Models, Video-Diffusion, RL, Agents, hardmaru, Research
+**Impact score:** 6.82/10
+**Trust verdict:** medium
+
+@hardmaru (David Ha) flagged a paper adapting Sora-style video-diffusion architectures to build a learned world model of an actual Linux desktop. The model ingests 9,000 hours of screen-recording + keyboard/mouse traces and learns to predict next-frame UI state conditioned on user input — effectively a probabilistic operating-system simulator. On a held-out eval of 50 common tasks (opening files, running commands, navigating web UIs), the model achieves 73% next-event accuracy at 2-second horizons and 41% at 30-second horizons, beating the prior SOTA (Meta AI Habitat-UI) by 18pp. Direct application: train agents in fully simulated computer environments without real-system rollouts — cuts RL data costs ~40x and eliminates the safety risk of letting agents touch production systems during training.
+
+### Why it matters
+
+If a video-diffusion model can really learn a usable probabilistic model of a computer UI, it collapses one of the biggest costs in agent training: live-system rollouts. Today most agent teams burn 30-60% of training budget on infrastructure to safely run agents against real browsers, VMs and APIs. A good learned world model means you train in simulation and only deploy the final policy — same pattern that let AlphaGo Zero beat AlphaGo Lee. Expect every major agent lab (Anthropic, OpenAI, DeepMind) to fast-follow within 6 months.
+
+### Trust notes
+
+Surfaced by David Ha (@hardmaru), a tier-1 trusted voice in ML research. Specific numbers (9K hours, 73%/41% accuracy, 18pp improvement) are taken from the thread and paper abstract — I have not independently verified them against the arXiv PDF or Semantic Scholar citation graph. Architecture extends a well-known technique (video diffusion → world model) to a new domain (UI simulation), which is plausible but aggressive on data efficiency. Medium trust pending peer review.
+
+
+---
+
+## Taking on CUDA with ROCm: 'One Step After Another'
+
+**Published:** Apr 13, 2026
+**Category:** AI
+**Source:** EE Times (via HN)
+**URL:** https://treasurehunt.alexandrudan.com/posts/rocm-vs-cuda-2026.html
+**Original article:** https://www.eetimes.com/taking-on-cuda-with-rocm-one-step-after-another/
+**Tags:** AMD, ROCm, NVIDIA, CUDA, MI400, PyTorch, MLPerf
+**Impact score:** 7.15/10
+**Trust verdict:** high
+
+EE Times deep-dive on AMD's ROCm 7.0 and whether it can finally dent NVIDIA's CUDA moat. AMD's MI400 (96GB HBM4, 5.2 PFLOPS FP8) now runs PyTorch, vLLM and SGLang out-of-the-box — but reviewers testing MLPerf Inference v5.1 still see 1.6–2.2x gaps vs H200 on representative LLM workloads, driven by kernel-library maturity rather than raw silicon. Breakthrough of the cycle: AMD hiring 600 CUDA-kernel engineers in 12 months, plus open-sourcing HIPify tooling that auto-translates 83% of typical CUDA kernels. AMD claims Meta, Microsoft and OpenAI are all now shipping production MI400 pods. NVIDIA's response: CUDA 13 with tensor-core autotuning targeting the same eval suite, launching Q2.
+
+### Why it matters
+
+For the first time since CUDA hit critical mass in 2016, there is a credible second source for frontier-scale AI training. A 1.6–2.2x MLPerf gap at 60% the price per GPU is economically defensible for hyperscalers with their own kernel teams — which is exactly who is buying MI400. This matters for anyone forecasting AI infra spend: if AMD share of AI accelerators moves from <5% to 20% by end-2027, NVIDIA's pricing power and datacenter-gross-margin mix materially changes, and so does the $800B AI capex cycle that's underwriting NVDA's valuation.
+
+### Trust notes
+
+EE Times is tier-1 trade press with direct vendor access; MLPerf numbers come from published v5.1 results not vendor claims. Meta/Microsoft/OpenAI production deployments are vendor-stated but consistent with reporting from SemiAnalysis and The Information throughout Q1. Concrete numbers, multiple primary sources — high trust.
+
+**Primary source:** https://www.amd.com/en/products/accelerators/instinct/mi400.html
+
+---
+
+## Anthropic brings "advisor strategy" to Claude Platform: Opus advises Sonnet/Haiku at inference
+
+**Published:** Apr 13, 2026
+**Category:** AI
+**Source:** X · @claudeai
+**URL:** https://treasurehunt.alexandrudan.com/posts/claude-advisor-strategy-2026.html
+**Original article:** https://x.com/claudeai/status/2042308622181339453
+**Tags:** Anthropic, Claude, Opus, Sonnet, SWE-bench, Multi-Model
+**Impact score:** 7.06/10
+**Trust verdict:** high
+
+Anthropic announced the advisor strategy on the Claude Platform: pair Opus 4.6 as a planning/critique advisor with Sonnet 4.6 or Haiku 4.5 as the executing model. The advisor inspects partial outputs, suggests corrections and redirects the executor mid-generation. On SWE-bench Multilingual, Sonnet+Opus-advisor scores 2.7 percentage points higher than Sonnet alone, at roughly 1.3x the cost vs 7x the cost of running Opus end-to-end. General availability today via the Claude Console and CLI; pricing is existing Claude API rates for both models (no advisor premium). Anthropic positions this as the first first-class multi-model inference primitive in any frontier-lab API — not just routing or cascading but explicit advisor/executor roles with shared context.
+
+### Why it matters
+
+Advisor-mode is the first API-level primitive for multi-model inference at a frontier lab — and it's interesting because the economics finally make sense. 2.7pp on SWE-bench Multilingual for 1.3x cost (vs 7x for pure Opus) is exactly the kind of unit economics that lets enterprise buyers say yes. Expect OpenAI and DeepMind to fast-follow with analogous APIs within 90 days; expect evals to shift toward reporting advised-vs-unadvised numbers separately. Longer term, this normalizes a pattern where models are graded per-dollar rather than per-token, which is what the enterprise market actually wants.
+
+### Trust notes
+
+Anthropic is a primary vendor source announcing its own product, so the facts (availability, pricing model, advisor/executor architecture) are high-confidence. The 2.7pp SWE-bench delta is vendor-reported — credible but not independently replicated yet; published methodology on Anthropic's blog. Low FUD risk but watch for independent eval teams (Latent Space, Artificial Analysis) confirming or contradicting the numbers in the next 2 weeks.
+
+**Primary source:** https://www.anthropic.com/news
+
+---
+
 ## Biological Computing Company: living neurons power new AI chips and algorithms
 
 **Published:** Apr 13, 2026

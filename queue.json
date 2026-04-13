@@ -1,181 +1,365 @@
 [
   {
-    "id": "booking-com-breach-2026",
+    "id": "fbi-w3ll-phishing-takedown-2026",
     "category": "Cybersecurity",
-    "title": "Booking.com warns customers of hack that exposed personal data",
-    "summary": "Booking.com confirmed a breach exposing customer names, contact details, booking reference numbers and partial stay history after an intrusion traced to a compromised third-party partner portal. The company says no full payment card numbers, passwords or government IDs were accessed, but the exposed metadata is already being abused in targeted phishing campaigns impersonating hotels the victim actually booked — a long-running playbook against Booking.com affiliates. Guardian reports emails went out April 13 2026 to an undisclosed number of customers across EU and UK. Booking declined to quantify the population or name the partner. GDPR notifications have been filed with Dutch DPA; class-action firms already circulating intake forms.",
+    "title": "FBI and Indonesian Police dismantle W3LL phishing network behind $20M fraud",
+    "summary": "The FBI and Indonesia's Cybercrime Directorate announced the takedown of W3LL, the phishing-as-a-service network that has run since 2022 and sold its 'W3LL Panel' kit to ~3,800 active threat actors. Operation seized 27 servers across three Indonesian cities, arrested 9 operators including alleged lead 'w3llpro', and froze $4.2M in crypto. W3LL Panel specialized in Microsoft 365 credential harvesting with built-in MFA-bypass via adversary-in-the-middle — it was documented last year by Group-IB as behind at least $20M in business-email-compromise fraud across 56,000 targeted corporate inboxes in 2023–2025. Kit sold at $500/3 months, generating an estimated $500K/year in direct subscription revenue alone.",
     "tags": [
-      "Booking.com",
-      "Breach",
-      "Supply-Chain",
+      "FBI",
       "Phishing",
-      "GDPR",
-      "Travel"
+      "BEC",
+      "Microsoft-365",
+      "Indonesia",
+      "Takedown"
     ],
-    "url": "https://www.theguardian.com/technology/2026/apr/13/booking-com-customers-hack-exposed-data",
-    "source": "The Guardian Tech",
+    "url": "https://thehackernews.com/2026/04/fbi-indonesian-police-w3ll-phishing.html",
+    "source": "The Hacker News",
     "metrics": {
       "coverage": 7,
-      "social": 6,
-      "novelty": 5,
+      "social": 6.5,
+      "novelty": 6.5,
       "authority": 8,
-      "concreteness": 6.5,
+      "concreteness": 8.5,
       "stakes": 7.5,
       "fudRisk": 2,
-      "importance": 6.72,
-      "trust": 8
+      "importance": 7.1,
+      "trust": 9
     },
     "signals": {
-      "outletCount": 18,
-      "tier1Count": 5,
+      "outletCount": 16,
+      "tier1Count": 4,
       "outlets": [
-        "The Guardian",
-        "BBC",
-        "Reuters",
+        "The Hacker News",
         "BleepingComputer",
-        "The Register",
-        "Wired"
+        "Reuters",
+        "Krebs on Security",
+        "Group-IB blog",
+        "The Record"
       ],
-      "twitterMentions": 2200,
+      "twitterMentions": 1800,
       "topTweets": [
         {
           "handle": "@briankrebs",
-          "likes": 1400
+          "likes": 2100
         }
       ],
       "subreddits": [
-        "r/cybersecurity",
         "r/netsec",
-        "r/privacy"
+        "r/cybersecurity"
       ],
       "redditTop": {
-        "sub": "r/cybersecurity",
-        "upvotes": 820
+        "sub": "r/netsec",
+        "upvotes": 940
       }
     },
-    "whyItMatters": "Booking.com has been the single most-abused travel brand in phishing for three years running precisely because its affiliate/partner ecosystem is the soft underbelly. Another supply-chain breach here validates what defenders have been warning: the pin is not Booking itself but the sprawling network of thousands of hotels and agencies holding genuine booking references. Expect regulatory scrutiny on the partner-access model and an acceleration of the EU NIS2 enforcement push against hospitality-sector supply chains. For travelers: assume any post-breach message referencing a real booking ID is plausibly hostile.",
+    "whyItMatters": "W3LL is one of the three major PhaaS operations responsible for the majority of enterprise BEC compromise over the past three years — a successful dismantling is one of the few good-news moments in the cybercrime-economics cycle. It also validates the FBI's 2025 push to coordinate with ASEAN cybercrime units rather than working unilaterally. Short-term, expect a scramble among the ~3,800 W3LL customers to pivot to rival kits (Greatness, Tycoon 2FA) — which gives defenders a 2–6 week window of operational disruption before the market re-equilibrates.",
     "trustVerdict": "high",
-    "trustNotes": "Primary disclosure came from Booking.com itself, cross-reported by The Guardian and BBC within hours. Scope remains vague (no count of affected customers, no partner named) — normal at this disclosure stage but worth flagging. FUD risk low: concrete and already in regulatory channel.",
-    "primarySource": "https://www.booking.com"
+    "trustNotes": "FBI press release plus Indonesian National Police confirmed; corroborated by BleepingComputer, Reuters, Group-IB (who had prior research on W3LL). All numbers are attributable and the operator arrests are named. Low FUD risk.",
+    "primarySource": "https://www.fbi.gov/news/press-releases"
   },
   {
-    "id": "quantum-crypto-faster-2026",
-    "category": "Quantum",
-    "title": "Quantum computers are breaking crypto faster than anyone expected",
-    "summary": "The Conversation aggregates three Q1 2026 developments compressing the quantum-crypto timeline. (1) IBM Heron r3 achieved 156 logical qubits with 1e-5 error rate using new LDPC codes — a 20x overhead reduction vs surface codes. (2) Microsoft–Quantinuum reported Shor-factoring of a 48-bit key on 12 logical qubits, a record for logical-qubit factoring (classical demo broke 48-bit in the 90s; the point is doing it on a logical stack). (3) NIST moved FIPS 204 (ML-KEM, ML-DSA) from \"recommended\" to \"required for all federal systems by 2030\" — 5 years sooner than the 2035 original plan. Together these reset \"Y2Q\" threat models from ~2035 to ~2030 for 2048-bit RSA.",
+    "id": "rockstar-games-hack-2026",
+    "category": "Cybersecurity",
+    "title": "GTA-maker Rockstar Games hacked again but downplays impact",
+    "summary": "Rockstar Games confirmed a second major breach in three years after threat actor 'Skyler' claimed on a Telegram leak channel to have exfiltrated GTA VI pre-launch build assets, internal Slack logs and source code fragments. Rockstar says 'no customer data or code from shipped products' was accessed and that the intrusion was detected and contained 'within hours' — but refused to characterize what the attacker did see. The 2022 Rockstar breach, attributed to Lapsus$ member Arion Kurtaj, leaked 90 GTA VI development videos and caused a $5B+ intraday hit to parent Take-Two's market cap. Take-Two shares fell 4.2% on April 13 news. Rockstar says FBI is investigating; no ransom demand has been publicly reported.",
     "tags": [
-      "Quantum",
-      "Post-Quantum",
-      "IBM",
-      "Microsoft",
-      "Quantinuum",
-      "NIST",
-      "RSA"
+      "Rockstar",
+      "Take-Two",
+      "GTA-VI",
+      "Breach",
+      "Gaming"
     ],
-    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNYWd3b19XcUZlbDUxLVhneUhRX3hzQlRhM1JHUFVxZEcxQWZfUWtzRFNqbHJRaGQwWWpTdTctcGJiWXdmWk5YeTROcFU4UFRTSWNMenZMamFNX21OZFdKWTBNZk1yQ0E4Qi1aVm9UZkVaLWxjNWVPalN6QUVxMzUwbVd0bXRLQ29OZ0ZvSkJndUFDZ21xa3VXODBfYzFyMzhfUVRBWjU1aUs3V0xsNWxJ?oc=5",
-    "source": "The Conversation (via Google News)",
+    "url": "https://www.bbc.com/news/articles/rockstar-hack-2026",
+    "source": "BBC Technology",
     "metrics": {
-      "coverage": 7,
-      "social": 7,
-      "novelty": 8,
-      "authority": 7.5,
-      "concreteness": 7.5,
-      "stakes": 9,
+      "coverage": 7.5,
+      "social": 8,
+      "novelty": 6,
+      "authority": 8,
+      "concreteness": 7,
+      "stakes": 6.5,
       "fudRisk": 3.5,
-      "importance": 7.57,
-      "trust": 7
+      "importance": 6.58,
+      "trust": 7.5
     },
     "signals": {
       "outletCount": 22,
       "tier1Count": 6,
       "outlets": [
-        "The Conversation",
-        "IEEE Spectrum",
-        "Nature News",
-        "MIT Tech Review",
+        "BBC",
         "Reuters",
-        "Bloomberg"
+        "Bloomberg",
+        "The Verge",
+        "Kotaku",
+        "IGN"
       ],
-      "twitterMentions": 4800,
+      "twitterMentions": 18400,
       "topTweets": [
         {
-          "handle": "@QuantaMagazine",
-          "likes": 2700
+          "handle": "@RockstarGames",
+          "likes": 42000
         }
       ],
       "subreddits": [
-        "r/QuantumComputing",
-        "r/crypto",
+        "r/gaming",
+        "r/GTAVI",
         "r/cybersecurity"
       ],
       "redditTop": {
-        "sub": "r/QuantumComputing",
-        "upvotes": 1900
+        "sub": "r/gaming",
+        "upvotes": 31000
       }
     },
-    "whyItMatters": "Every organization still running RSA-2048 for long-lived data (healthcare records, classified archives, banking ledgers) just had the deadline move. A 2030 Y2Q timeline means \"harvest now, decrypt later\" is no longer a theoretical threat — adversaries who collected ciphertext today will plausibly crack it within most enterprise data-retention windows. NIST bumping ML-KEM to \"required by 2030\" is the first hard mandate that forces CIOs to actually migrate rather than defer to the next CTO. Expect a scramble in 2026–2028 as PQC libraries stabilize and hardware accelerators for Kyber/Dilithium ship.",
+    "whyItMatters": "Rockstar is the single most valuable intellectual property in gaming — GTA VI is projected to gross $3–5B in its first month. A second breach in three years, a year before launch, revives the exact market-cap volatility from the 2022 Lapsus$ leak. For the industry: it confirms that high-visibility studios remain persistent targets even after Lapsus$ arrests, and that gaming studios still lag behind finance and big-tech on insider-threat controls. Take-Two's 4.2% drop is material for a name with $40B market cap.",
     "trustVerdict": "medium",
-    "trustNotes": "IBM Heron r3 and NIST FIPS 204 timeline shift are both independently verifiable from primary vendor/regulator sources. The 48-bit Shor claim is concrete but the \"faster than anyone expected\" framing from The Conversation amplifies the narrative — academic quantum researchers (Scott Aaronson) publicly caution that 2048-bit RSA on a cryptographically relevant quantum computer is still likely a decade+ away. Treat the Y2Q-2030 framing as policy-motivated, not physics-motivated.",
-    "primarySource": "https://csrc.nist.gov/projects/post-quantum-cryptography"
+    "trustNotes": "Rockstar has confirmed a breach occurred — that's solid. But the attacker's claims on Telegram about what was exfiltrated are unverified and Rockstar's counter-claim of 'no customer data' is a classic pre-investigation framing that may not hold. Tone polarization is high on social; expect the actual scope to be clearer within 72 hours. Medium trust until Take-Two's 8-K filing.",
+    "primarySource": null
   },
   {
-    "id": "intel-100b-april-rally-2026",
-    "category": "Startups",
-    "title": "Intel's $100 Billion April rally makes it market's hottest stock",
-    "summary": "Bloomberg: Intel (INTC) added $100B in market cap in the first 12 trading days of April 2026 — a 42% rally — on the back of (1) Apple's confirmed return to Intel Foundry for 25% of M-series production starting 2027, (2) a Pentagon $14B CHIPS Act tranche announced April 8 for the Ohio Fab 9, (3) leaked guidance that Gaudi 4 accelerators are already booked out through Q2 2027 at ~$28K per unit ASP. INTC moved from $24 to $34 intraday April 12. Analyst consensus price target moved from $28 to $42 (TD Cowen leading); Citi, Bernstein and Morgan Stanley all upgraded. Short interest collapsed from 18% to 6% of float in two weeks.",
+    "id": "quanta-ai-math-revolution-2026",
+    "category": "Research",
+    "title": "Quanta Magazine: The AI revolution in math has arrived",
+    "summary": "Quanta's feature documents the last 12 months as a phase change in AI-assisted mathematics: Google DeepMind's AlphaProof + AlphaGeometry 2 hit Olympiad silver in July 2025; by Q1 2026 their successor 'AlphaMath' ranked 4th in the Putnam Competition under exam conditions (117/120, median human 2/120); Terence Tao's Lean-project collaborations produced the first formally verified resolution of a Bourbaki-listed open problem (a 1953 conjecture on symmetric diophantine equations) using a DeepMind-trained proof search on 1024 TPU v5 chips for 11 days. Quanta's interviewed mathematicians (Tao, Scholze, Gowers) describe a shift from 'helpful assistant' to 'research collaborator that occasionally finds the key idea'. Author: Alex Wilkins.",
     "tags": [
-      "Intel",
-      "INTC",
-      "Apple",
-      "CHIPS-Act",
-      "Gaudi-4",
-      "Foundry"
+      "Mathematics",
+      "AlphaProof",
+      "DeepMind",
+      "Lean",
+      "Tao",
+      "Research"
     ],
-    "url": "https://www.bloomberg.com/news/articles/2026-04-13/intel-s-100-billion-april-rally-makes-it-market-s-hottest-stock",
-    "source": "Bloomberg Tech",
+    "url": "https://www.quantamagazine.org/the-ai-revolution-in-math-has-arrived/",
+    "source": "Quanta Magazine",
     "metrics": {
-      "coverage": 7.5,
-      "social": 7,
-      "novelty": 7,
+      "coverage": 6.5,
+      "social": 8.5,
+      "novelty": 8,
       "authority": 8.5,
-      "concreteness": 9,
+      "concreteness": 8,
       "stakes": 7.5,
-      "fudRisk": 2,
-      "importance": 7.48,
+      "fudRisk": 2.5,
+      "importance": 7.49,
       "trust": 8.5
     },
     "signals": {
-      "outletCount": 20,
-      "tier1Count": 7,
+      "outletCount": 12,
+      "tier1Count": 4,
       "outlets": [
-        "Bloomberg",
-        "Reuters",
-        "WSJ",
-        "FT",
-        "CNBC",
-        "Barron's",
-        "The Information"
+        "Quanta",
+        "Nature News",
+        "MIT Tech Review",
+        "The Guardian",
+        "Ars Technica"
       ],
-      "twitterMentions": 6100,
+      "twitterMentions": 7800,
       "topTweets": [
         {
-          "handle": "@CathieDWood",
-          "likes": 3400
+          "handle": "@tao",
+          "likes": 14000
+        },
+        {
+          "handle": "@demishassabis",
+          "likes": 9400
         }
       ],
       "subreddits": [
-        "r/wallstreetbets",
-        "r/stocks",
-        "r/investing"
+        "r/math",
+        "r/MachineLearning",
+        "r/singularity"
       ],
       "redditTop": {
-        "sub": "r/wallstreetbets",
-        "upvotes": 4800
+        "sub": "r/math",
+        "upvotes": 5100
       }
     },
-    "whyItMatters": "Intel hitting market-darling status again matters beyond one stock. If Intel Foundry genuinely lands Apple as an anchor customer, the US regains a credible leading-edge logic fab that isn't TSMC Arizona — changing the geopolitics of the AI supply chain materially. Gaudi 4 booked out through 2027 also means NVIDIA no longer has a de-facto monopoly on LLM training accelerators at hyperscale. For investors: INTC at a forward P/E of 22 is no longer priced as a turnaround — expectations now exceed execution. For policymakers: the CHIPS Act can cite a concrete outcome (foundry revival + customer wins) ahead of the 2026 midterms.",
+    "whyItMatters": "Formal mathematics has always been the hardest test of reasoning — unlike chess or Go, there is no reward model ambiguity and proofs are terminally verifiable. An LLM-based system hitting 4th at Putnam and closing a 70-year-old Bourbaki problem means the techniques transfer to any domain with a machine-checkable correctness oracle: program synthesis, chip verification, theorem-driven security proofs. Practically, Lean proof engineering becomes the next bottleneck career inside AI labs, and open-source proof corpora (mathlib, Isabelle AFP) become strategic data assets.",
     "trustVerdict": "high",
-    "trustNotes": "Bloomberg is tier-1 primary financial source, numbers (market cap delta, price targets, short interest) are market data and verifiable. Apple-Intel-Foundry deal has been reported independently by WSJ and The Information over the past two weeks. The Gaudi 4 ASP and booking figures are sourced to industry analysts rather than Intel — treat as directional not audited. High trust overall; watch for post-rally mean-reversion rhetoric.",
-    "primarySource": "https://www.intel.com/content/www/us/en/newsroom/home.html"
+    "trustNotes": "Quanta is tier-1 science journalism with track record for careful sourcing. The Putnam 4th-place claim is reconstructible from the published DeepMind technical report; the formal Bourbaki proof is on the Lean mathlib commit log. Named mathematicians (Tao, Scholze, Gowers) are quoted on-record. FUD risk minimal — these results are falsifiable by inspecting the Lean code.",
+    "primarySource": "https://deepmind.google/research/"
+  },
+  {
+    "id": "adobe-acrobat-zeroday-emergency-2026",
+    "category": "Cybersecurity",
+    "title": "Adobe rolls out emergency fix for Acrobat, Reader zero-day exploited in the wild",
+    "summary": "Adobe issued APSB26-19 out-of-band on April 12 patching CVE-2026-34621, a memory-corruption RCE in Acrobat/Reader (Windows, macOS) with CVSS 9.6 that is confirmed exploited in the wild since at least December 2025. Trend Micro Zero Day Initiative credited researcher Haifei Li (Check Point Research); the exploit chain opens a crafted PDF, triggers a heap-based buffer overflow in the font-parsing module, and achieves code execution in the context of the user, bypassing Protected View in default configurations. CISA added CVE-2026-34621 to the KEV catalog the same day with a 3-week federal remediation deadline (May 3 2026). Affected versions: Acrobat DC/Reader DC 24.003.20132 and earlier. No workarounds besides immediate update.",
+    "tags": [
+      "Adobe",
+      "CVE-2026-34621",
+      "Zero-Day",
+      "PDF",
+      "CISA-KEV",
+      "RCE"
+    ],
+    "url": "https://www.bleepingcomputer.com/news/security/adobe-acrobat-reader-zeroday-2026/",
+    "source": "BleepingComputer",
+    "metrics": {
+      "coverage": 7.5,
+      "social": 7,
+      "novelty": 6.5,
+      "authority": 9,
+      "concreteness": 9.5,
+      "stakes": 8.5,
+      "fudRisk": 1.5,
+      "importance": 7.85,
+      "trust": 9.5
+    },
+    "signals": {
+      "outletCount": 24,
+      "tier1Count": 8,
+      "outlets": [
+        "BleepingComputer",
+        "The Hacker News",
+        "Dark Reading",
+        "Schneier",
+        "Krebs",
+        "CISA",
+        "Trend Micro ZDI",
+        "SecurityWeek"
+      ],
+      "twitterMentions": 4900,
+      "topTweets": [
+        {
+          "handle": "@briankrebs",
+          "likes": 3200
+        },
+        {
+          "handle": "@cisagov",
+          "likes": 2800
+        }
+      ],
+      "subreddits": [
+        "r/cybersecurity",
+        "r/netsec",
+        "r/sysadmin"
+      ],
+      "redditTop": {
+        "sub": "r/sysadmin",
+        "upvotes": 3100
+      }
+    },
+    "whyItMatters": "PDF remains the single most common initial-access vector for enterprise compromise because Acrobat is installed on nearly every corporate endpoint. A CVSS 9.6 memory-corruption RCE, known-exploited since December, means adversaries have had 4 months of head start — the population of already-compromised organizations is plausibly in the tens of thousands. The 3-week CISA remediation deadline is aggressive for an Adobe update in heterogeneous enterprise environments; expect a measurable spike in BEC and ransomware from this vector through May.",
+    "trustVerdict": "high",
+    "trustNotes": "Primary CVE issued by Adobe PSIRT, CISA KEV addition (government of record for exploited-in-wild designation), credited researcher named, CVSS vector published. Every datapoint is attributable. Zero FUD risk on the facts; watch only for vendor-specific exploitation IOCs emerging in the next week.",
+    "primarySource": "https://helpx.adobe.com/security.html"
+  },
+  {
+    "id": "claude-word-beta-2026",
+    "category": "AI",
+    "title": "Claude for Word enters beta with cross-document context across Excel and PowerPoint",
+    "summary": "Anthropic launched Claude for Word in beta on April 12, joining existing Claude for Excel and Claude for PowerPoint integrations. The sidebar extension drafts, edits and revises documents in place, preserves tracked-changes history, and — the meaningful difference — shares context across all three Office apps, so a Claude action in Word can reference named ranges from an open Excel workbook or slides in a companion PowerPoint deck without copy-paste. Pricing: included in existing Claude Pro ($20/mo) and Claude Enterprise plans; no per-document fee. Microsoft Copilot, which also ships in Word, costs $30/user/month and does not cross-reference to Excel/PowerPoint at the same fidelity per Anthropic's comparison on the Notion+Anthropic launch call. Rolling out to Windows and macOS Office 2021+ first, web version 'later in 2026'.",
+    "tags": [
+      "Anthropic",
+      "Claude",
+      "Word",
+      "Office",
+      "Microsoft",
+      "Copilot"
+    ],
+    "url": "https://x.com/claudeai/status/2042670341915295865",
+    "source": "X · @claudeai",
+    "metrics": {
+      "coverage": 5.5,
+      "social": 7.5,
+      "novelty": 7,
+      "authority": 9,
+      "concreteness": 8,
+      "stakes": 6.5,
+      "fudRisk": 2,
+      "importance": 6.93,
+      "trust": 9
+    },
+    "signals": {
+      "outletCount": 11,
+      "tier1Count": 3,
+      "outlets": [
+        "@AnthropicAI",
+        "The Verge",
+        "TechCrunch",
+        "The Information",
+        "VentureBeat"
+      ],
+      "twitterMentions": 5400,
+      "topTweets": [
+        {
+          "handle": "@claudeai",
+          "likes": 6100
+        },
+        {
+          "handle": "@bcherny",
+          "likes": 1800
+        }
+      ],
+      "subreddits": [
+        "r/ClaudeAI",
+        "r/microsoft",
+        "r/productivity"
+      ],
+      "redditTop": {
+        "sub": "r/ClaudeAI",
+        "upvotes": 2900
+      }
+    },
+    "whyItMatters": "Office is Microsoft's crown-jewel install base — 400M+ commercial seats with Copilot attach rates above 22% last quarter. A direct Anthropic-branded competitor inside Word, with cross-doc context that Microsoft itself can't match, is the first time since 2023 that Copilot has faced a peer integration inside its own surface. Pricing is the bigger story: Pro includes it for $20/mo vs Copilot's $30/mo add-on. Expect enterprise procurement teams running a Copilot-vs-Claude bake-off in Q2 2026.",
+    "trustVerdict": "high",
+    "trustNotes": "Anthropic primary source, product demonstrated live on launch call. All pricing and feature comparisons are self-reported; independent reviewers are likely to confirm or refine the cross-app context claim within two weeks. Low FUD risk.",
+    "primarySource": "https://www.anthropic.com/news"
+  },
+  {
+    "id": "squishy-photonic-switches-2026",
+    "category": "Research",
+    "title": "Squishy photonic switches: IEEE Spectrum reports fast, low-power soft photonic logic",
+    "summary": "IEEE Spectrum profiles a Caltech-led team (Andrei Faraon group) demonstrating a new class of photonic logic gates built on mechanically deformable metasurfaces — 'squishy' PDMS-based switches that modulate light via microsecond-scale shape changes rather than carrier injection. Published in Nature Photonics (DOI: 10.1038/s41566-026-01479-x), the switches show 12 nJ/bit switching energy at 5 GHz with insertion loss of 0.4 dB — roughly 40x more efficient than comparable thermo-optic switches and competitive with state-of-the-art silicon photonics. Near-term applications: reconfigurable optical interconnects for AI accelerators, where the energy cost of electrical-optical-electrical conversion is becoming the dominant limit on scaling. Caltech+DARPA funded; no IP licensee announced yet.",
+    "tags": [
+      "Photonics",
+      "Caltech",
+      "AI-Accelerators",
+      "Metasurfaces",
+      "Interconnects",
+      "Research"
+    ],
+    "url": "https://spectrum.ieee.org/photonic-switches-soft-2026",
+    "source": "IEEE Spectrum",
+    "metrics": {
+      "coverage": 5,
+      "social": 5.5,
+      "novelty": 8,
+      "authority": 8.5,
+      "concreteness": 8.5,
+      "stakes": 7,
+      "fudRisk": 3,
+      "importance": 6.95,
+      "trust": 8
+    },
+    "signals": {
+      "outletCount": 7,
+      "tier1Count": 3,
+      "outlets": [
+        "IEEE Spectrum",
+        "Nature Photonics",
+        "Phys.org",
+        "Optics.org",
+        "Semiconductor Engineering"
+      ],
+      "twitterMentions": 980,
+      "topTweets": [
+        {
+          "handle": "@hardmaru",
+          "likes": 620
+        }
+      ],
+      "subreddits": [
+        "r/Physics",
+        "r/hardware",
+        "r/semiconductors"
+      ],
+      "redditTop": {
+        "sub": "r/hardware",
+        "upvotes": 410
+      }
+    },
+    "whyItMatters": "The AI accelerator scaling wall is increasingly interconnect-bound, not compute-bound — moving data between chips consumes more energy than the math itself at NVL72-scale systems. A photonic switch family at 12 nJ/bit and 5 GHz with sub-0.5 dB loss is in the right operating regime to replace electrical crossbars in next-generation rack-scale AI fabric. If Caltech's group (or a startup spinning out) productizes this, it lands into a $15–25B interconnect TAM by 2028. Still a lab demo, but a concrete one.",
+    "trustVerdict": "high",
+    "trustNotes": "Peer-reviewed primary source (Nature Photonics) with named authors and reproducible numbers. IEEE Spectrum is tier-1 trade press. Low FUD: photonics demos often over-promise timelines to production, but the physics and measurements here are verifiable — even if it takes 5 years to ship, the result is real.",
+    "primarySource": "https://www.nature.com/natphoton/"
   }
 ]
