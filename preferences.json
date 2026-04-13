@@ -2,7 +2,7 @@
   "categories": {
     "Cybersecurity": {
       "likes": 3,
-      "dislikes": 7
+      "dislikes": 11
     },
     "Research": {
       "likes": 4,
@@ -14,15 +14,15 @@
     },
     "Startups": {
       "likes": 3,
-      "dislikes": 2
+      "dislikes": 3
     },
     "Quantum": {
       "likes": 1,
-      "dislikes": 4
+      "dislikes": 5
     },
     "AI": {
       "likes": 5,
-      "dislikes": 0
+      "dislikes": 1
     },
     "Viral": {
       "likes": 0,
@@ -36,7 +36,7 @@
     },
     "Anthropic": {
       "likes": 5,
-      "dislikes": 1
+      "dislikes": 2
     },
     "Vidar": {
       "likes": 1,
@@ -92,7 +92,7 @@
     },
     "Zero-Day": {
       "likes": 1,
-      "dislikes": 2
+      "dislikes": 3
     },
     "Chrome": {
       "likes": 0,
@@ -124,7 +124,7 @@
     },
     "Quantum": {
       "likes": 1,
-      "dislikes": 3
+      "dislikes": 4
     },
     "AI for Science": {
       "likes": 1,
@@ -172,7 +172,7 @@
     },
     "Post-Quantum": {
       "likes": 0,
-      "dislikes": 1
+      "dislikes": 2
     },
     "Cryptography": {
       "likes": 0,
@@ -200,7 +200,7 @@
     },
     "Microsoft": {
       "likes": 0,
-      "dislikes": 1
+      "dislikes": 2
     },
     "Atom Computing": {
       "likes": 0,
@@ -232,11 +232,11 @@
     },
     "IBM": {
       "likes": 0,
-      "dislikes": 1
+      "dislikes": 2
     },
     "Quantinuum": {
       "likes": 0,
-      "dislikes": 1
+      "dislikes": 2
     },
     "KubeCon": {
       "likes": 1,
@@ -424,7 +424,7 @@
     },
     "Claude": {
       "likes": 1,
-      "dislikes": 0
+      "dislikes": 1
     },
     "ChatGPT": {
       "likes": 1,
@@ -456,7 +456,7 @@
     },
     "Adobe": {
       "likes": 0,
-      "dislikes": 1
+      "dislikes": 2
     },
     "Acrobat": {
       "likes": 0,
@@ -464,7 +464,7 @@
     },
     "CVE-2026-34621": {
       "likes": 0,
-      "dislikes": 1
+      "dislikes": 2
     },
     "Prototype Pollution": {
       "likes": 0,
@@ -520,7 +520,7 @@
     },
     "RCE": {
       "likes": 0,
-      "dislikes": 1
+      "dislikes": 2
     },
     "ML Tooling": {
       "likes": 0,
@@ -549,12 +549,132 @@
     "DOD": {
       "likes": 1,
       "dislikes": 0
+    },
+    "Enterprise": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "Notion": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "Claude for Word": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "Opus": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "Sonnet": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "Booking.com": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "Breach": {
+      "likes": 0,
+      "dislikes": 2
+    },
+    "Supply-Chain": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "Phishing": {
+      "likes": 0,
+      "dislikes": 2
+    },
+    "GDPR": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "Travel": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "NIST": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "RSA": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "Intel": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "INTC": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "Apple": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "CHIPS-Act": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "Gaudi-4": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "Foundry": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "FBI": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "BEC": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "Microsoft-365": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "Indonesia": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "Takedown": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "Rockstar": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "Take-Two": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "GTA-VI": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "Gaming": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "PDF": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "CISA-KEV": {
+      "likes": 0,
+      "dislikes": 1
     }
   },
   "sources": {
     "The Hacker News": {
       "likes": 1,
-      "dislikes": 3
+      "dislikes": 4
     },
     "ScienceDaily": {
       "likes": 1,
@@ -630,7 +750,7 @@
     },
     "Anthropic": {
       "likes": 1,
-      "dislikes": 0
+      "dislikes": 1
     },
     "Krebs on Security": {
       "likes": 0,
@@ -638,16 +758,32 @@
     },
     "BleepingComputer": {
       "likes": 0,
-      "dislikes": 1
+      "dislikes": 2
     },
     "Techmeme": {
       "likes": 1,
       "dislikes": 0
+    },
+    "The Guardian Tech": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "The Conversation (via Google News)": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "Bloomberg Tech": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "BBC Technology": {
+      "likes": 0,
+      "dislikes": 1
     }
   },
   "totals": {
     "likes": 19,
-    "dislikes": 15
+    "dislikes": 22
   },
-  "lastUpdated": "2026-04-13T08:25:27.036Z"
+  "lastUpdated": "2026-04-13T19:39:04.672Z"
 }

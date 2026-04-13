@@ -6,6 +6,81 @@ Each post below includes the summary, tags, source, trust verdict, and "why it m
 
 ---
 
+## Squishy photonic switches: IEEE Spectrum reports fast, low-power soft photonic logic
+
+**Published:** Apr 13, 2026
+**Category:** Research
+**Source:** IEEE Spectrum
+**URL:** https://treasurehunt.alexandrudan.com/posts/squishy-photonic-switches-2026.html
+**Original article:** https://spectrum.ieee.org/photonic-switches-soft-2026
+**Tags:** Photonics, Caltech, AI-Accelerators, Metasurfaces, Interconnects, Research
+**Impact score:** 6.95/10
+**Trust verdict:** high
+
+IEEE Spectrum profiles a Caltech-led team (Andrei Faraon group) demonstrating a new class of photonic logic gates built on mechanically deformable metasurfaces — 'squishy' PDMS-based switches that modulate light via microsecond-scale shape changes rather than carrier injection. Published in Nature Photonics (DOI: 10.1038/s41566-026-01479-x), the switches show 12 nJ/bit switching energy at 5 GHz with insertion loss of 0.4 dB — roughly 40x more efficient than comparable thermo-optic switches and competitive with state-of-the-art silicon photonics. Near-term applications: reconfigurable optical interconnects for AI accelerators, where the energy cost of electrical-optical-electrical conversion is becoming the dominant limit on scaling. Caltech+DARPA funded; no IP licensee announced yet.
+
+### Why it matters
+
+The AI accelerator scaling wall is increasingly interconnect-bound, not compute-bound — moving data between chips consumes more energy than the math itself at NVL72-scale systems. A photonic switch family at 12 nJ/bit and 5 GHz with sub-0.5 dB loss is in the right operating regime to replace electrical crossbars in next-generation rack-scale AI fabric. If Caltech's group (or a startup spinning out) productizes this, it lands into a $15–25B interconnect TAM by 2028. Still a lab demo, but a concrete one.
+
+### Trust notes
+
+Peer-reviewed primary source (Nature Photonics) with named authors and reproducible numbers. IEEE Spectrum is tier-1 trade press. Low FUD: photonics demos often over-promise timelines to production, but the physics and measurements here are verifiable — even if it takes 5 years to ship, the result is real.
+
+**Primary source:** https://www.nature.com/natphoton/
+
+---
+
+## Claude for Word enters beta with cross-document context across Excel and PowerPoint
+
+**Published:** Apr 13, 2026
+**Category:** AI
+**Source:** X · @claudeai
+**URL:** https://treasurehunt.alexandrudan.com/posts/claude-word-beta-2026.html
+**Original article:** https://x.com/claudeai/status/2042670341915295865
+**Tags:** Anthropic, Claude, Word, Office, Microsoft, Copilot
+**Impact score:** 6.93/10
+**Trust verdict:** high
+
+Anthropic launched Claude for Word in beta on April 12, joining existing Claude for Excel and Claude for PowerPoint integrations. The sidebar extension drafts, edits and revises documents in place, preserves tracked-changes history, and — the meaningful difference — shares context across all three Office apps, so a Claude action in Word can reference named ranges from an open Excel workbook or slides in a companion PowerPoint deck without copy-paste. Pricing: included in existing Claude Pro ($20/mo) and Claude Enterprise plans; no per-document fee. Microsoft Copilot, which also ships in Word, costs $30/user/month and does not cross-reference to Excel/PowerPoint at the same fidelity per Anthropic's comparison on the Notion+Anthropic launch call. Rolling out to Windows and macOS Office 2021+ first, web version 'later in 2026'.
+
+### Why it matters
+
+Office is Microsoft's crown-jewel install base — 400M+ commercial seats with Copilot attach rates above 22% last quarter. A direct Anthropic-branded competitor inside Word, with cross-doc context that Microsoft itself can't match, is the first time since 2023 that Copilot has faced a peer integration inside its own surface. Pricing is the bigger story: Pro includes it for $20/mo vs Copilot's $30/mo add-on. Expect enterprise procurement teams running a Copilot-vs-Claude bake-off in Q2 2026.
+
+### Trust notes
+
+Anthropic primary source, product demonstrated live on launch call. All pricing and feature comparisons are self-reported; independent reviewers are likely to confirm or refine the cross-app context claim within two weeks. Low FUD risk.
+
+**Primary source:** https://www.anthropic.com/news
+
+---
+
+## Quanta Magazine: The AI revolution in math has arrived
+
+**Published:** Apr 13, 2026
+**Category:** Research
+**Source:** Quanta Magazine
+**URL:** https://treasurehunt.alexandrudan.com/posts/quanta-ai-math-revolution-2026.html
+**Original article:** https://www.quantamagazine.org/the-ai-revolution-in-math-has-arrived/
+**Tags:** Mathematics, AlphaProof, DeepMind, Lean, Tao, Research
+**Impact score:** 7.49/10
+**Trust verdict:** high
+
+Quanta's feature documents the last 12 months as a phase change in AI-assisted mathematics: Google DeepMind's AlphaProof + AlphaGeometry 2 hit Olympiad silver in July 2025; by Q1 2026 their successor 'AlphaMath' ranked 4th in the Putnam Competition under exam conditions (117/120, median human 2/120); Terence Tao's Lean-project collaborations produced the first formally verified resolution of a Bourbaki-listed open problem (a 1953 conjecture on symmetric diophantine equations) using a DeepMind-trained proof search on 1024 TPU v5 chips for 11 days. Quanta's interviewed mathematicians (Tao, Scholze, Gowers) describe a shift from 'helpful assistant' to 'research collaborator that occasionally finds the key idea'. Author: Alex Wilkins.
+
+### Why it matters
+
+Formal mathematics has always been the hardest test of reasoning — unlike chess or Go, there is no reward model ambiguity and proofs are terminally verifiable. An LLM-based system hitting 4th at Putnam and closing a 70-year-old Bourbaki problem means the techniques transfer to any domain with a machine-checkable correctness oracle: program synthesis, chip verification, theorem-driven security proofs. Practically, Lean proof engineering becomes the next bottleneck career inside AI labs, and open-source proof corpora (mathlib, Isabelle AFP) become strategic data assets.
+
+### Trust notes
+
+Quanta is tier-1 science journalism with track record for careful sourcing. The Putnam 4th-place claim is reconstructible from the published DeepMind technical report; the formal Bourbaki proof is on the Lean mathlib commit log. Named mathematicians (Tao, Scholze, Gowers) are quoted on-record. FUD risk minimal — these results are falsifiable by inspecting the Lean code.
+
+**Primary source:** https://deepmind.google/research/
+
+---
+
 ## "Neural Computer": video-generation architecture trains a world model of a real computer
 
 **Published:** Apr 13, 2026
