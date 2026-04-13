@@ -4,26 +4,32 @@
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
     <loc>https://treasurehunt.alexandrudan.com/</loc>
-    <lastmod>2026-04-13T08:15:41.859Z</lastmod>
+    <lastmod>2026-04-13T08:24:26.785Z</lastmod>
     <changefreq>hourly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://treasurehunt.alexandrudan.com/about.html</loc>
-    <lastmod>2026-04-13T08:20:06.467Z</lastmod>
+    <lastmod>2026-04-13T08:24:26.899Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://treasurehunt.alexandrudan.com/methodology.html</loc>
-    <lastmod>2026-04-13T08:20:06.467Z</lastmod>
+    <lastmod>2026-04-13T08:24:26.899Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://treasurehunt.alexandrudan.com/archive.html</loc>
-    <lastmod>2026-04-13T08:20:06.467Z</lastmod>
+    <lastmod>2026-04-13T08:24:26.899Z</lastmod>
     <changefreq>hourly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://treasurehunt.alexandrudan.com/posts/anthropic-project-glasswing.html</loc>
+    <lastmod>2026-04-13T08:24:26.785Z</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>

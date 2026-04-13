@@ -1,7 +1,7 @@
 {
   "categories": {
     "Cybersecurity": {
-      "likes": 2,
+      "likes": 3,
       "dislikes": 3
     },
     "Research": {
@@ -35,7 +35,7 @@
       "dislikes": 0
     },
     "Anthropic": {
-      "likes": 4,
+      "likes": 5,
       "dislikes": 1
     },
     "Vidar": {
@@ -91,7 +91,7 @@
       "dislikes": 1
     },
     "Zero-Day": {
-      "likes": 0,
+      "likes": 1,
       "dislikes": 1
     },
     "Chrome": {
@@ -441,6 +441,18 @@
     "Prompt Injection": {
       "likes": 1,
       "dislikes": 0
+    },
+    "Claude Mythos": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "Project Glasswing": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "AI Safety": {
+      "likes": 1,
+      "dislikes": 0
     }
   },
   "sources": {
@@ -519,11 +531,15 @@
     "Reddit · r/technology": {
       "likes": 1,
       "dislikes": 0
+    },
+    "Anthropic": {
+      "likes": 1,
+      "dislikes": 0
     }
   },
   "totals": {
-    "likes": 17,
+    "likes": 18,
     "dislikes": 11
   },
-  "lastUpdated": "2026-04-12T21:19:25.643Z"
+  "lastUpdated": "2026-04-13T08:24:26.789Z"
 }

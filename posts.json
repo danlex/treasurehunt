@@ -1,5 +1,76 @@
 [
   {
+    "id": "anthropic-project-glasswing",
+    "category": "Cybersecurity",
+    "title": "Anthropic unveils Project Glasswing — Claude Mythos already found \"thousands\" of zero-days in major software",
+    "summary": "Anthropic launched Project Glasswing on April 7 alongside AWS, Apple, Cisco, Google and Microsoft: a closed program distributing a restricted preview of Claude Mythos — a frontier model Anthropic says has already identified thousands of high-severity zero-day vulnerabilities across every major OS and browser. Mythos chains multiple low-severity bugs into single high-impact exploits (sometimes combining 3–5). Access is limited to ~50 partner orgs; Anthropic says the public release risk is too high. Program backed by $100M in Claude credits and $4M in open-source security donations. Sets the template for \"AI that is too dangerous to ship\".",
+    "tags": [
+      "Anthropic",
+      "Claude Mythos",
+      "Zero-Day",
+      "Project Glasswing",
+      "AI Safety"
+    ],
+    "url": "https://www.anthropic.com/glasswing",
+    "source": "Anthropic",
+    "metrics": {
+      "coverage": 9,
+      "social": 8.5,
+      "novelty": 9,
+      "authority": 9.5,
+      "concreteness": 8.5,
+      "stakes": 9.5,
+      "fudRisk": 3,
+      "importance": 8.5,
+      "trust": 7
+    },
+    "signals": {
+      "outletCount": 35,
+      "tier1Count": 9,
+      "outlets": [
+        "Anthropic blog",
+        "TechCrunch",
+        "Fortune",
+        "VentureBeat",
+        "CyberScoop",
+        "NPR",
+        "NextGov",
+        "Via Satellite",
+        "Simon Willison weblog",
+        "ASIS Online"
+      ],
+      "twitterMentions": 18000,
+      "topTweets": [
+        {
+          "handle": "@AnthropicAI",
+          "likes": 12000
+        },
+        {
+          "handle": "@simonw",
+          "likes": 8400
+        }
+      ],
+      "subreddits": [
+        "r/netsec",
+        "r/cybersecurity",
+        "r/MachineLearning"
+      ],
+      "redditTop": {
+        "sub": "r/netsec",
+        "upvotes": 4800
+      },
+      "trustedVoicesMatched": [
+        "claudeai"
+      ],
+      "trustedVoicesWeight": 2
+    },
+    "whyItMatters": "If Mythos really is finding zero-days at the claimed scale, the offense-defense balance in software security shifts materially within months. The coalition of defenders (AWS/Apple/Cisco/Google/Microsoft) getting restricted access essentially ratifies a new category of \"controlled-access AI\" — and creates pressure for similar restrictions on OpenAI/Google/Meta cyber models. Bigger governance question: if a Claude-tier model can weaponize chained vulnerabilities at scale, is Anthropic's \"too dangerous to ship\" bar the new industry norm, or an exception?",
+    "trustVerdict": "medium",
+    "trustNotes": "First-party Anthropic announcement with partner confirmations from named Fortune-10 companies, plus independent coverage from NPR, TechCrunch, VentureBeat, Fortune. The \"thousands of zero-days\" claim is self-reported and unverifiable without access to the model — treat as Anthropic's characterization, not a third-party finding. FUD risk moderate: strong vendor-incentive to hype capability + consequence framing.",
+    "primarySource": "https://www.anthropic.com/glasswing",
+    "publishedAt": "2026-04-13T08:24:26.785Z"
+  },
+  {
     "id": "claude-managed-agents",
     "category": "AI",
     "title": "Anthropic ships Claude Managed Agents — production agents without the infra work",
