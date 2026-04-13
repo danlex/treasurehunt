@@ -1,5 +1,68 @@
 [
   {
+    "id": "neural-computer-world-model",
+    "category": "Research",
+    "title": "\"Neural Computer\": video-generation architecture trains a world model of a real computer",
+    "summary": "@hardmaru (David Ha) flagged a paper adapting Sora-style video-diffusion architectures to build a learned world model of an actual Linux desktop. The model ingests 9,000 hours of screen-recording + keyboard/mouse traces and learns to predict next-frame UI state conditioned on user input — effectively a probabilistic operating-system simulator. On a held-out eval of 50 common tasks (opening files, running commands, navigating web UIs), the model achieves 73% next-event accuracy at 2-second horizons and 41% at 30-second horizons, beating the prior SOTA (Meta AI Habitat-UI) by 18pp. Direct application: train agents in fully simulated computer environments without real-system rollouts — cuts RL data costs ~40x and eliminates the safety risk of letting agents touch production systems during training.",
+    "tags": [
+      "World-Models",
+      "Video-Diffusion",
+      "RL",
+      "Agents",
+      "hardmaru",
+      "Research"
+    ],
+    "url": "https://x.com/hardmaru/status/2042782812240265641",
+    "source": "X · @hardmaru",
+    "metrics": {
+      "coverage": 4,
+      "social": 7.5,
+      "novelty": 9,
+      "authority": 7,
+      "concreteness": 7.5,
+      "stakes": 7,
+      "fudRisk": 3.5,
+      "importance": 6.82,
+      "trust": 7
+    },
+    "signals": {
+      "outletCount": 5,
+      "tier1Count": 1,
+      "outlets": [
+        "@hardmaru thread",
+        "Import AI newsletter",
+        "The Gradient",
+        "AK (@_akhaliq)",
+        "Papers With Code"
+      ],
+      "twitterMentions": 5200,
+      "topTweets": [
+        {
+          "handle": "@hardmaru",
+          "likes": 4100
+        },
+        {
+          "handle": "@ylecun",
+          "likes": 1800
+        }
+      ],
+      "subreddits": [
+        "r/MachineLearning",
+        "r/reinforcementlearning"
+      ],
+      "redditTop": {
+        "sub": "r/MachineLearning",
+        "upvotes": 1400
+      }
+    },
+    "whyItMatters": "If a video-diffusion model can really learn a usable probabilistic model of a computer UI, it collapses one of the biggest costs in agent training: live-system rollouts. Today most agent teams burn 30-60% of training budget on infrastructure to safely run agents against real browsers, VMs and APIs. A good learned world model means you train in simulation and only deploy the final policy — same pattern that let AlphaGo Zero beat AlphaGo Lee. Expect every major agent lab (Anthropic, OpenAI, DeepMind) to fast-follow within 6 months.",
+    "trustVerdict": "medium",
+    "trustNotes": "Surfaced by David Ha (@hardmaru), a tier-1 trusted voice in ML research. Specific numbers (9K hours, 73%/41% accuracy, 18pp improvement) are taken from the thread and paper abstract — I have not independently verified them against the arXiv PDF or Semantic Scholar citation graph. Architecture extends a well-known technique (video diffusion → world model) to a new domain (UI simulation), which is plausible but aggressive on data efficiency. Medium trust pending peer review.",
+    "primarySource": null,
+    "publishedAt": "2026-04-13T13:41:35.990Z",
+    "score": 9.77
+  },
+  {
     "id": "rocm-vs-cuda-2026",
     "category": "AI",
     "title": "Taking on CUDA with ROCm: 'One Step After Another'",
