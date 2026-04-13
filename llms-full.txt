@@ -6,6 +6,55 @@ Each post below includes the summary, tags, source, trust verdict, and "why it m
 
 ---
 
+## Biological Computing Company: living neurons power new AI chips and algorithms
+
+**Published:** Apr 13, 2026
+**Category:** Research
+**Source:** Techmeme
+**URL:** https://treasurehunt.alexandrudan.com/posts/biological-computing-neurons-chips.html
+**Original article:** http://www.techmeme.com/260413/p7#a260413p7
+**Tags:** Wetware, Neuromorphic, Bio-Computing, Neurons, MIT, Caltech, DOD
+**Impact score:** 6.8/10
+**Trust verdict:** medium
+
+Techmeme surfaced a profile of Biological Computing Company, a startup using real living neurons cultivated on silicon substrates to build AI accelerator chips. The company claims its wetware-on-silicon hybrid achieves 3 orders of magnitude better energy efficiency on certain pattern-recognition tasks than digital neural networks, by letting the neurons naturally perform the relevant computation in analog. Founders include neuroscientists from MIT and Caltech; early demos run on 250K-neuron arrays kept alive on nutrient channels for up to 6 months. First commercial pilots expected with a DOD-adjacent customer in 2027. Genuine neuromorphic breakthrough or hype? Independent verification still pending.
+
+### Why it matters
+
+If wetware-on-silicon really delivers 3 orders of magnitude energy efficiency on specific tasks, it's the first genuine challenger to digital neural networks since analog neuromorphic silicon (which has underperformed for 15 years). Bigger picture: the next decade's AI-energy crisis may not be solved by smaller models or better quantization — it may be solved by moving parts of the inference stack back into biology. Even if Biological Computing Company's specific numbers prove inflated, the category is now on the map for DOD and enterprise pilot budgets.
+
+### Trust notes
+
+Biological-computing claims have a long history of impressive demos that don't scale. The founders' MIT/Caltech pedigree + 6-month neuron viability figure are concrete, but the 1000× energy claim is self-reported and not independently replicated. Treat as a promising research direction, not a settled result. Moderate FUD risk from the industry's track record of over-promising wetware breakthroughs.
+
+
+---
+
+## Anthropic unveils Project Glasswing — Claude Mythos already found "thousands" of zero-days in major software
+
+**Published:** Apr 13, 2026
+**Category:** Cybersecurity
+**Source:** Anthropic
+**URL:** https://treasurehunt.alexandrudan.com/posts/anthropic-project-glasswing.html
+**Original article:** https://www.anthropic.com/glasswing
+**Tags:** Anthropic, Claude Mythos, Zero-Day, Project Glasswing, AI Safety
+**Impact score:** 8.5/10
+**Trust verdict:** medium
+
+Anthropic launched Project Glasswing on April 7 alongside AWS, Apple, Cisco, Google and Microsoft: a closed program distributing a restricted preview of Claude Mythos — a frontier model Anthropic says has already identified thousands of high-severity zero-day vulnerabilities across every major OS and browser. Mythos chains multiple low-severity bugs into single high-impact exploits (sometimes combining 3–5). Access is limited to ~50 partner orgs; Anthropic says the public release risk is too high. Program backed by $100M in Claude credits and $4M in open-source security donations. Sets the template for "AI that is too dangerous to ship".
+
+### Why it matters
+
+If Mythos really is finding zero-days at the claimed scale, the offense-defense balance in software security shifts materially within months. The coalition of defenders (AWS/Apple/Cisco/Google/Microsoft) getting restricted access essentially ratifies a new category of "controlled-access AI" — and creates pressure for similar restrictions on OpenAI/Google/Meta cyber models. Bigger governance question: if a Claude-tier model can weaponize chained vulnerabilities at scale, is Anthropic's "too dangerous to ship" bar the new industry norm, or an exception?
+
+### Trust notes
+
+First-party Anthropic announcement with partner confirmations from named Fortune-10 companies, plus independent coverage from NPR, TechCrunch, VentureBeat, Fortune. The "thousands of zero-days" claim is self-reported and unverifiable without access to the model — treat as Anthropic's characterization, not a third-party finding. FUD risk moderate: strong vendor-incentive to hype capability + consequence framing.
+
+**Primary source:** https://www.anthropic.com/glasswing
+
+---
+
 ## Anthropic ships Claude Managed Agents — production agents without the infra work
 
 **Published:** Apr 13, 2026

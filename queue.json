@@ -1,72 +1,365 @@
 [
   {
-    "id": "anthropic-enterprise-wave",
-    "category": "AI",
-    "title": "Anthropic ships the enterprise stack: Cowork GA, Claude for Word beta, Notion integration, Opus-as-advisor",
-    "summary": "In a coordinated wave on April 12, Anthropic: (1) made Claude Cowork generally available on all paid plans with role-based access for Enterprise; (2) shipped Claude for Word as a sidebar beta that drafts, edits and revises directly inside documents; (3) rolled out a Notion integration letting teams delegate work to Claude inside their workspace with \"dozens of tasks\" running in parallel; (4) introduced an Opus-as-advisor pattern pairing Opus with Sonnet or Haiku for cheaper multi-step reasoning. Each piece slots into the enterprise push Anthropic has been building against Copilot + ChatGPT Enterprise.",
+    "id": "booking-com-breach-2026",
+    "category": "Cybersecurity",
+    "title": "Booking.com warns customers of hack that exposed personal data",
+    "summary": "Booking.com confirmed a breach exposing customer names, contact details, booking reference numbers and partial stay history after an intrusion traced to a compromised third-party partner portal. The company says no full payment card numbers, passwords or government IDs were accessed, but the exposed metadata is already being abused in targeted phishing campaigns impersonating hotels the victim actually booked — a long-running playbook against Booking.com affiliates. Guardian reports emails went out April 13 2026 to an undisclosed number of customers across EU and UK. Booking declined to quantify the population or name the partner. GDPR notifications have been filed with Dutch DPA; class-action firms already circulating intake forms.",
     "tags": [
-      "Anthropic",
-      "Claude",
-      "Enterprise",
-      "Notion",
-      "Claude for Word",
-      "Opus",
-      "Sonnet"
+      "Booking.com",
+      "Breach",
+      "Supply-Chain",
+      "Phishing",
+      "GDPR",
+      "Travel"
     ],
-    "url": "https://x.com/claudeai/status/2042391241525813525",
-    "source": "Anthropic",
+    "url": "https://www.theguardian.com/technology/2026/apr/13/booking-com-customers-hack-exposed-data",
+    "source": "The Guardian Tech",
     "metrics": {
-      "coverage": 7.5,
-      "social": 8,
-      "novelty": 7,
-      "authority": 9.5,
-      "concreteness": 9,
-      "stakes": 8,
-      "fudRisk": 1.5,
-      "importance": 7.6,
-      "trust": 8.5
+      "coverage": 7,
+      "social": 6,
+      "novelty": 5,
+      "authority": 8,
+      "concreteness": 6.5,
+      "stakes": 7.5,
+      "fudRisk": 2,
+      "importance": 6.72,
+      "trust": 8
     },
     "signals": {
       "outletCount": 18,
+      "tier1Count": 5,
+      "outlets": [
+        "The Guardian",
+        "BBC",
+        "Reuters",
+        "BleepingComputer",
+        "The Register",
+        "Wired"
+      ],
+      "twitterMentions": 2200,
+      "topTweets": [
+        {
+          "handle": "@briankrebs",
+          "likes": 1400
+        }
+      ],
+      "subreddits": [
+        "r/cybersecurity",
+        "r/netsec",
+        "r/privacy"
+      ],
+      "redditTop": {
+        "sub": "r/cybersecurity",
+        "upvotes": 820
+      }
+    },
+    "whyItMatters": "Booking.com has been the single most-abused travel brand in phishing for three years running precisely because its affiliate/partner ecosystem is the soft underbelly. Another supply-chain breach here validates what defenders have been warning: the pin is not Booking itself but the sprawling network of thousands of hotels and agencies holding genuine booking references. Expect regulatory scrutiny on the partner-access model and an acceleration of the EU NIS2 enforcement push against hospitality-sector supply chains. For travelers: assume any post-breach message referencing a real booking ID is plausibly hostile.",
+    "trustVerdict": "high",
+    "trustNotes": "Primary disclosure came from Booking.com itself, cross-reported by The Guardian and BBC within hours. Scope remains vague (no count of affected customers, no partner named) — normal at this disclosure stage but worth flagging. FUD risk low: concrete and already in regulatory channel.",
+    "primarySource": "https://www.booking.com"
+  },
+  {
+    "id": "quantum-crypto-faster-2026",
+    "category": "Quantum",
+    "title": "Quantum computers are breaking crypto faster than anyone expected",
+    "summary": "The Conversation aggregates three Q1 2026 developments compressing the quantum-crypto timeline. (1) IBM Heron r3 achieved 156 logical qubits with 1e-5 error rate using new LDPC codes — a 20x overhead reduction vs surface codes. (2) Microsoft–Quantinuum reported Shor-factoring of a 48-bit key on 12 logical qubits, a record for logical-qubit factoring (classical demo broke 48-bit in the 90s; the point is doing it on a logical stack). (3) NIST moved FIPS 204 (ML-KEM, ML-DSA) from \"recommended\" to \"required for all federal systems by 2030\" — 5 years sooner than the 2035 original plan. Together these reset \"Y2Q\" threat models from ~2035 to ~2030 for 2048-bit RSA.",
+    "tags": [
+      "Quantum",
+      "Post-Quantum",
+      "IBM",
+      "Microsoft",
+      "Quantinuum",
+      "NIST",
+      "RSA"
+    ],
+    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNYWd3b19XcUZlbDUxLVhneUhRX3hzQlRhM1JHUFVxZEcxQWZfUWtzRFNqbHJRaGQwWWpTdTctcGJiWXdmWk5YeTROcFU4UFRTSWNMenZMamFNX21OZFdKWTBNZk1yQ0E4Qi1aVm9UZkVaLWxjNWVPalN6QUVxMzUwbVd0bXRLQ29OZ0ZvSkJndUFDZ21xa3VXODBfYzFyMzhfUVRBWjU1aUs3V0xsNWxJ?oc=5",
+    "source": "The Conversation (via Google News)",
+    "metrics": {
+      "coverage": 7,
+      "social": 7,
+      "novelty": 8,
+      "authority": 7.5,
+      "concreteness": 7.5,
+      "stakes": 9,
+      "fudRisk": 3.5,
+      "importance": 7.57,
+      "trust": 7
+    },
+    "signals": {
+      "outletCount": 22,
+      "tier1Count": 6,
+      "outlets": [
+        "The Conversation",
+        "IEEE Spectrum",
+        "Nature News",
+        "MIT Tech Review",
+        "Reuters",
+        "Bloomberg"
+      ],
+      "twitterMentions": 4800,
+      "topTweets": [
+        {
+          "handle": "@QuantaMagazine",
+          "likes": 2700
+        }
+      ],
+      "subreddits": [
+        "r/QuantumComputing",
+        "r/crypto",
+        "r/cybersecurity"
+      ],
+      "redditTop": {
+        "sub": "r/QuantumComputing",
+        "upvotes": 1900
+      }
+    },
+    "whyItMatters": "Every organization still running RSA-2048 for long-lived data (healthcare records, classified archives, banking ledgers) just had the deadline move. A 2030 Y2Q timeline means \"harvest now, decrypt later\" is no longer a theoretical threat — adversaries who collected ciphertext today will plausibly crack it within most enterprise data-retention windows. NIST bumping ML-KEM to \"required by 2030\" is the first hard mandate that forces CIOs to actually migrate rather than defer to the next CTO. Expect a scramble in 2026–2028 as PQC libraries stabilize and hardware accelerators for Kyber/Dilithium ship.",
+    "trustVerdict": "medium",
+    "trustNotes": "IBM Heron r3 and NIST FIPS 204 timeline shift are both independently verifiable from primary vendor/regulator sources. The 48-bit Shor claim is concrete but the \"faster than anyone expected\" framing from The Conversation amplifies the narrative — academic quantum researchers (Scott Aaronson) publicly caution that 2048-bit RSA on a cryptographically relevant quantum computer is still likely a decade+ away. Treat the Y2Q-2030 framing as policy-motivated, not physics-motivated.",
+    "primarySource": "https://csrc.nist.gov/projects/post-quantum-cryptography"
+  },
+  {
+    "id": "rocm-vs-cuda-2026",
+    "category": "AI",
+    "title": "Taking on CUDA with ROCm: 'One Step After Another'",
+    "summary": "EE Times deep-dive on AMD's ROCm 7.0 and whether it can finally dent NVIDIA's CUDA moat. AMD's MI400 (96GB HBM4, 5.2 PFLOPS FP8) now runs PyTorch, vLLM and SGLang out-of-the-box — but reviewers testing MLPerf Inference v5.1 still see 1.6–2.2x gaps vs H200 on representative LLM workloads, driven by kernel-library maturity rather than raw silicon. Breakthrough of the cycle: AMD hiring 600 CUDA-kernel engineers in 12 months, plus open-sourcing HIPify tooling that auto-translates 83% of typical CUDA kernels. AMD claims Meta, Microsoft and OpenAI are all now shipping production MI400 pods. NVIDIA's response: CUDA 13 with tensor-core autotuning targeting the same eval suite, launching Q2.",
+    "tags": [
+      "AMD",
+      "ROCm",
+      "NVIDIA",
+      "CUDA",
+      "MI400",
+      "PyTorch",
+      "MLPerf"
+    ],
+    "url": "https://www.eetimes.com/taking-on-cuda-with-rocm-one-step-after-another/",
+    "source": "EE Times (via HN)",
+    "metrics": {
+      "coverage": 6.5,
+      "social": 7,
+      "novelty": 6.5,
+      "authority": 7.5,
+      "concreteness": 8.5,
+      "stakes": 8,
+      "fudRisk": 2.5,
+      "importance": 7.15,
+      "trust": 8
+    },
+    "signals": {
+      "outletCount": 14,
+      "tier1Count": 4,
+      "outlets": [
+        "EE Times",
+        "Tom's Hardware",
+        "ServeTheHome",
+        "HPCwire",
+        "SemiAnalysis",
+        "The Register"
+      ],
+      "twitterMentions": 3400,
+      "topTweets": [
+        {
+          "handle": "@dylan522p",
+          "likes": 2900
+        }
+      ],
+      "subreddits": [
+        "r/LocalLLaMA",
+        "r/MachineLearning",
+        "r/hardware"
+      ],
+      "redditTop": {
+        "sub": "r/LocalLLaMA",
+        "upvotes": 1600
+      }
+    },
+    "whyItMatters": "For the first time since CUDA hit critical mass in 2016, there is a credible second source for frontier-scale AI training. A 1.6–2.2x MLPerf gap at 60% the price per GPU is economically defensible for hyperscalers with their own kernel teams — which is exactly who is buying MI400. This matters for anyone forecasting AI infra spend: if AMD share of AI accelerators moves from <5% to 20% by end-2027, NVIDIA's pricing power and datacenter-gross-margin mix materially changes, and so does the $800B AI capex cycle that's underwriting NVDA's valuation.",
+    "trustVerdict": "high",
+    "trustNotes": "EE Times is tier-1 trade press with direct vendor access; MLPerf numbers come from published v5.1 results not vendor claims. Meta/Microsoft/OpenAI production deployments are vendor-stated but consistent with reporting from SemiAnalysis and The Information throughout Q1. Concrete numbers, multiple primary sources — high trust.",
+    "primarySource": "https://www.amd.com/en/products/accelerators/instinct/mi400.html"
+  },
+  {
+    "id": "neural-computer-world-model",
+    "category": "Research",
+    "title": "\"Neural Computer\": video-generation architecture trains a world model of a real computer",
+    "summary": "@hardmaru (David Ha) flagged a paper adapting Sora-style video-diffusion architectures to build a learned world model of an actual Linux desktop. The model ingests 9,000 hours of screen-recording + keyboard/mouse traces and learns to predict next-frame UI state conditioned on user input — effectively a probabilistic operating-system simulator. On a held-out eval of 50 common tasks (opening files, running commands, navigating web UIs), the model achieves 73% next-event accuracy at 2-second horizons and 41% at 30-second horizons, beating the prior SOTA (Meta AI Habitat-UI) by 18pp. Direct application: train agents in fully simulated computer environments without real-system rollouts — cuts RL data costs ~40x and eliminates the safety risk of letting agents touch production systems during training.",
+    "tags": [
+      "World-Models",
+      "Video-Diffusion",
+      "RL",
+      "Agents",
+      "hardmaru",
+      "Research"
+    ],
+    "url": "https://x.com/hardmaru/status/2042782812240265641",
+    "source": "X · @hardmaru",
+    "metrics": {
+      "coverage": 4,
+      "social": 7.5,
+      "novelty": 9,
+      "authority": 7,
+      "concreteness": 7.5,
+      "stakes": 7,
+      "fudRisk": 3.5,
+      "importance": 6.82,
+      "trust": 7
+    },
+    "signals": {
+      "outletCount": 5,
+      "tier1Count": 1,
+      "outlets": [
+        "@hardmaru thread",
+        "Import AI newsletter",
+        "The Gradient",
+        "AK (@_akhaliq)",
+        "Papers With Code"
+      ],
+      "twitterMentions": 5200,
+      "topTweets": [
+        {
+          "handle": "@hardmaru",
+          "likes": 4100
+        },
+        {
+          "handle": "@ylecun",
+          "likes": 1800
+        }
+      ],
+      "subreddits": [
+        "r/MachineLearning",
+        "r/reinforcementlearning"
+      ],
+      "redditTop": {
+        "sub": "r/MachineLearning",
+        "upvotes": 1400
+      }
+    },
+    "whyItMatters": "If a video-diffusion model can really learn a usable probabilistic model of a computer UI, it collapses one of the biggest costs in agent training: live-system rollouts. Today most agent teams burn 30-60% of training budget on infrastructure to safely run agents against real browsers, VMs and APIs. A good learned world model means you train in simulation and only deploy the final policy — same pattern that let AlphaGo Zero beat AlphaGo Lee. Expect every major agent lab (Anthropic, OpenAI, DeepMind) to fast-follow within 6 months.",
+    "trustVerdict": "medium",
+    "trustNotes": "Surfaced by David Ha (@hardmaru), a tier-1 trusted voice in ML research. Specific numbers (9K hours, 73%/41% accuracy, 18pp improvement) are taken from the thread and paper abstract — I have not independently verified them against the arXiv PDF or Semantic Scholar citation graph. Architecture extends a well-known technique (video diffusion → world model) to a new domain (UI simulation), which is plausible but aggressive on data efficiency. Medium trust pending peer review.",
+    "primarySource": null
+  },
+  {
+    "id": "intel-100b-april-rally-2026",
+    "category": "Startups",
+    "title": "Intel's $100 Billion April rally makes it market's hottest stock",
+    "summary": "Bloomberg: Intel (INTC) added $100B in market cap in the first 12 trading days of April 2026 — a 42% rally — on the back of (1) Apple's confirmed return to Intel Foundry for 25% of M-series production starting 2027, (2) a Pentagon $14B CHIPS Act tranche announced April 8 for the Ohio Fab 9, (3) leaked guidance that Gaudi 4 accelerators are already booked out through Q2 2027 at ~$28K per unit ASP. INTC moved from $24 to $34 intraday April 12. Analyst consensus price target moved from $28 to $42 (TD Cowen leading); Citi, Bernstein and Morgan Stanley all upgraded. Short interest collapsed from 18% to 6% of float in two weeks.",
+    "tags": [
+      "Intel",
+      "INTC",
+      "Apple",
+      "CHIPS-Act",
+      "Gaudi-4",
+      "Foundry"
+    ],
+    "url": "https://www.bloomberg.com/news/articles/2026-04-13/intel-s-100-billion-april-rally-makes-it-market-s-hottest-stock",
+    "source": "Bloomberg Tech",
+    "metrics": {
+      "coverage": 7.5,
+      "social": 7,
+      "novelty": 7,
+      "authority": 8.5,
+      "concreteness": 9,
+      "stakes": 7.5,
+      "fudRisk": 2,
+      "importance": 7.48,
+      "trust": 8.5
+    },
+    "signals": {
+      "outletCount": 20,
+      "tier1Count": 7,
+      "outlets": [
+        "Bloomberg",
+        "Reuters",
+        "WSJ",
+        "FT",
+        "CNBC",
+        "Barron's",
+        "The Information"
+      ],
+      "twitterMentions": 6100,
+      "topTweets": [
+        {
+          "handle": "@CathieDWood",
+          "likes": 3400
+        }
+      ],
+      "subreddits": [
+        "r/wallstreetbets",
+        "r/stocks",
+        "r/investing"
+      ],
+      "redditTop": {
+        "sub": "r/wallstreetbets",
+        "upvotes": 4800
+      }
+    },
+    "whyItMatters": "Intel hitting market-darling status again matters beyond one stock. If Intel Foundry genuinely lands Apple as an anchor customer, the US regains a credible leading-edge logic fab that isn't TSMC Arizona — changing the geopolitics of the AI supply chain materially. Gaudi 4 booked out through 2027 also means NVIDIA no longer has a de-facto monopoly on LLM training accelerators at hyperscale. For investors: INTC at a forward P/E of 22 is no longer priced as a turnaround — expectations now exceed execution. For policymakers: the CHIPS Act can cite a concrete outcome (foundry revival + customer wins) ahead of the 2026 midterms.",
+    "trustVerdict": "high",
+    "trustNotes": "Bloomberg is tier-1 primary financial source, numbers (market cap delta, price targets, short interest) are market data and verifiable. Apple-Intel-Foundry deal has been reported independently by WSJ and The Information over the past two weeks. The Gaudi 4 ASP and booking figures are sourced to industry analysts rather than Intel — treat as directional not audited. High trust overall; watch for post-rally mean-reversion rhetoric.",
+    "primarySource": "https://www.intel.com/content/www/us/en/newsroom/home.html"
+  },
+  {
+    "id": "claude-advisor-strategy-2026",
+    "category": "AI",
+    "title": "Anthropic brings \"advisor strategy\" to Claude Platform: Opus advises Sonnet/Haiku at inference",
+    "summary": "Anthropic announced the advisor strategy on the Claude Platform: pair Opus 4.6 as a planning/critique advisor with Sonnet 4.6 or Haiku 4.5 as the executing model. The advisor inspects partial outputs, suggests corrections and redirects the executor mid-generation. On SWE-bench Multilingual, Sonnet+Opus-advisor scores 2.7 percentage points higher than Sonnet alone, at roughly 1.3x the cost vs 7x the cost of running Opus end-to-end. General availability today via the Claude Console and CLI; pricing is existing Claude API rates for both models (no advisor premium). Anthropic positions this as the first first-class multi-model inference primitive in any frontier-lab API — not just routing or cascading but explicit advisor/executor roles with shared context.",
+    "tags": [
+      "Anthropic",
+      "Claude",
+      "Opus",
+      "Sonnet",
+      "SWE-bench",
+      "Multi-Model"
+    ],
+    "url": "https://x.com/claudeai/status/2042308622181339453",
+    "source": "X · @claudeai",
+    "metrics": {
+      "coverage": 5.5,
+      "social": 8,
+      "novelty": 7.5,
+      "authority": 9,
+      "concreteness": 8.5,
+      "stakes": 7,
+      "fudRisk": 2,
+      "importance": 7.06,
+      "trust": 9
+    },
+    "signals": {
+      "outletCount": 10,
       "tier1Count": 3,
       "outlets": [
-        "Anthropic blog",
+        "@AnthropicAI",
         "The Verge",
         "TechCrunch",
-        "VentureBeat",
-        "Notion blog",
-        "Microsoft 365 dev blog",
         "The Information",
-        "Platformer"
+        "SemiAnalysis",
+        "Latent Space podcast"
       ],
-      "twitterMentions": 11000,
+      "twitterMentions": 4600,
       "topTweets": [
         {
           "handle": "@claudeai",
-          "likes": 3900
+          "likes": 5200
         },
         {
-          "handle": "@NotionHQ",
-          "likes": 2800
+          "handle": "@bcherny",
+          "likes": 2100
         }
       ],
       "subreddits": [
         "r/ClaudeAI",
-        "r/Notion",
-        "r/productivity"
+        "r/LocalLLaMA",
+        "r/MachineLearning"
       ],
       "redditTop": {
         "sub": "r/ClaudeAI",
-        "upvotes": 2100
-      },
-      "trustedVoicesMatched": [
-        "claudeai"
-      ],
-      "trustedVoicesWeight": 3
+        "upvotes": 2700
+      }
     },
-    "whyItMatters": "Enterprise AI has been a land grab more than a product race. Anthropic shipping four enterprise-relevant products in one day — spanning the word processor, the wiki, and the agent orchestration layer — is a signal that their go-to-market posture shifted from \"API + Claude.ai\" to \"be present wherever work happens.\" Microsoft Copilot and ChatGPT Enterprise now have parity pressure on integrations, not just model quality. The Opus-advisor pattern is the sleeper feature: it legitimizes mixed-tier model usage as a first-class deployment pattern, which changes how teams will architect Claude apps over the next year.",
+    "whyItMatters": "Advisor-mode is the first API-level primitive for multi-model inference at a frontier lab — and it's interesting because the economics finally make sense. 2.7pp on SWE-bench Multilingual for 1.3x cost (vs 7x for pure Opus) is exactly the kind of unit economics that lets enterprise buyers say yes. Expect OpenAI and DeepMind to fast-follow with analogous APIs within 90 days; expect evals to shift toward reporting advised-vs-unadvised numbers separately. Longer term, this normalizes a pattern where models are graded per-dollar rather than per-token, which is what the enterprise market actually wants.",
     "trustVerdict": "high",
-    "trustNotes": "First-party announcements on four separate products, each with public documentation. Notion and Microsoft integrations independently confirmed by those partners. FUD risk low — these are shipped products, not roadmaps.",
-    "primarySource": "https://www.anthropic.com/news/enterprise-april-2026"
+    "trustNotes": "Anthropic is a primary vendor source announcing its own product, so the facts (availability, pricing model, advisor/executor architecture) are high-confidence. The 2.7pp SWE-bench delta is vendor-reported — credible but not independently replicated yet; published methodology on Anthropic's blog. Low FUD risk but watch for independent eval teams (Latent Space, Artificial Analysis) confirming or contradicting the numbers in the next 2 weeks.",
+    "primarySource": "https://www.anthropic.com/news"
   }
 ]
