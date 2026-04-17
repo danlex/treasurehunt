@@ -25,8 +25,11 @@ if (!queue.length) {
 }
 
 // ── Guard: audit all queued items before publishing ───────────────────────────
-const posts       = readJson(POSTS);
-const { results } = auditBatch(queue, posts);
+const posts    = readJson(POSTS);
+let   rejected_all = [];
+try { rejected_all = readJson(REJECTED); } catch {}
+
+const { results } = auditBatch(queue, { posts, rejected: rejected_all, batch: queue });
 
 const guardPassed = [];
 const guardFailed = [];
