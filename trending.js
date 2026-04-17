@@ -54,6 +54,7 @@ const RSS_FEEDS = [
   { url: 'https://feeds.feedburner.com/TheHackersNews',                                       source: 'The Hacker News' },
   { url: 'https://www.producthunt.com/feed',                                                  source: 'Product Hunt' },
   { url: 'https://lobste.rs/rss',                                                             source: 'Lobste.rs' },
+  { url: 'https://rss.slashdot.org/Slashdot/slashdotMain',                                   source: 'Slashdot' },
 
   // AI lab primary blogs — highest authority for model/product releases
   // (Use Google News targeted searches for labs whose RSS is blocked or absent)
@@ -64,6 +65,7 @@ const RSS_FEEDS = [
   { url: 'https://research.google/blog/rss/',                                                 source: 'Google Research Blog' },
   { url: 'https://huggingface.co/blog/feed.xml',                                              source: 'HuggingFace Blog' },
   { url: 'https://news.google.com/rss/search?q=site:mistral.ai&hl=en-US&gl=US',              source: 'Mistral AI (GNews)' },
+  { url: 'https://github.blog/feed/',                                                         source: 'GitHub Blog' },
 
   // arXiv — AI/ML/science preprints
   { url: 'https://export.arxiv.org/rss/cs.AI',                                                source: 'arXiv cs.AI' },
@@ -94,21 +96,45 @@ const RSS_FEEDS = [
   { url: 'https://www.theverge.com/rss/index.xml',                                            source: 'The Verge' },
   { url: 'http://feeds.arstechnica.com/arstechnica/index',                                    source: 'Ars Technica' },
   { url: 'https://www.wired.com/feed/rss',                                                    source: 'Wired' },
+  { url: 'https://www.wired.com/feed/category/science/latest/rss',                            source: 'Wired Science' },
   { url: 'https://techcrunch.com/feed/',                                                      source: 'TechCrunch' },
+  { url: 'https://techcrunch.com/tag/artificial-intelligence/feed/',                          source: 'TechCrunch AI' },
   { url: 'https://www.technologyreview.com/feed/',                                            source: 'MIT Tech Review' },
   { url: 'https://spectrum.ieee.org/rss/fulltext',                                            source: 'IEEE Spectrum' },
   { url: 'https://venturebeat.com/feed/',                                                     source: 'VentureBeat' },
+  { url: 'https://venturebeat.com/category/ai/feed/',                                         source: 'VentureBeat AI' },
   { url: 'https://www.theregister.com/headlines.atom',                                        source: 'The Register' },
   { url: 'https://www.zdnet.com/news/rss.xml',                                                source: 'ZDNet' },
   { url: 'https://feeds.feedburner.com/fastcompany/headlines',                                source: 'Fast Company' },
   { url: 'https://www.cnbc.com/id/19854910/device/rss/rss.html',                             source: 'CNBC Tech' },
   { url: 'https://feeds.a.dj.com/rss/RSSMarketsMain.xml',                                    source: 'WSJ Markets' },
+  { url: 'https://siliconangle.com/feed/',                                                    source: 'SiliconANGLE' },
+  { url: 'https://www.nextplatform.com/feed/',                                                source: 'The Next Platform' },
+  { url: 'https://www.engadget.com/rss.xml',                                                  source: 'Engadget' },
+  { url: 'https://news.crunchbase.com/feed/',                                                 source: 'Crunchbase News' },
 
-  // AI newsletters
+  // Yahoo — broad reach + finance angle
+  { url: 'https://news.yahoo.com/rss/',                                                       source: 'Yahoo News' },
+  { url: 'https://news.yahoo.com/rss/tech',                                                   source: 'Yahoo Tech' },
+  { url: 'https://finance.yahoo.com/rss/topstories',                                          source: 'Yahoo Finance' },
+
+  // AI newsletters & digests
   { url: 'https://jack-clark.net/feed/',                                                      source: 'Import AI (Jack Clark)' },
   { url: 'https://www.deeplearning.ai/blog/rss/',                                             source: 'The Batch (Andrew Ng)' },
   { url: 'https://buttondown.com/ainews/rss',                                                 source: 'AI News' },
   { url: 'https://tldr.tech/api/rss/ai',                                                      source: 'TLDR AI' },
+  { url: 'https://aiweekly.co/issues.rss',                                                    source: 'AI Weekly' },
+
+  // ML research outlets
+  { url: 'https://syncedreview.com/feed/',                                                    source: 'Synced Review' },
+  { url: 'https://www.marktechpost.com/feed/',                                                source: 'MarkTechPost' },
+  { url: 'https://bdtechtalks.com/feed/',                                                     source: 'TechTalks AI' },
+  { url: 'https://techxplore.com/rss-feed/machine-learning-ai-news/',                         source: 'TechXplore ML/AI' },
+  { url: 'https://www.kdnuggets.com/feed',                                                    source: 'KDnuggets' },
+  { url: 'https://distill.pub/rss.xml',                                                       source: 'Distill.pub' },
+  { url: 'https://bair.berkeley.edu/blog/feed.xml',                                           source: 'Berkeley BAIR' },
+  { url: 'https://news.mit.edu/rss/research',                                                 source: 'MIT Research News' },
+  { url: 'https://www.sciencedaily.com/rss/computers_math/artificial_intelligence.xml',       source: 'ScienceDaily AI' },
 
   // Cybersecurity specialists
   { url: 'https://krebsonsecurity.com/feed/',                                                 source: 'Krebs on Security' },
