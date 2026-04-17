@@ -13,8 +13,8 @@
       "dislikes": 0
     },
     "Startups": {
-      "likes": 3,
-      "dislikes": 3
+      "likes": 2,
+      "dislikes": 4
     },
     "Quantum": {
       "likes": 1,
@@ -755,8 +755,8 @@
       "dislikes": 0
     },
     "autonomous-ai": {
-      "likes": 1,
-      "dislikes": 0
+      "likes": 0,
+      "dislikes": 1
     },
     "macos": {
       "likes": 0,
@@ -771,6 +771,26 @@
       "dislikes": 1
     },
     "multimodal-ai": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "andon-labs": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "ai-agents": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "retail": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "ai-economics": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "startups": {
       "likes": 0,
       "dislikes": 1
     }
@@ -899,11 +919,15 @@
     "Google": {
       "likes": 0,
       "dislikes": 1
+    },
+    "Andon Labs": {
+      "likes": 0,
+      "dislikes": 1
     }
   },
   "totals": {
-    "likes": 23,
-    "dislikes": 23
+    "likes": 22,
+    "dislikes": 24
   },
-  "lastUpdated": "2026-04-17T11:14:38.141Z"
+  "lastUpdated": "2026-04-17T15:35:04.880Z"
 }
