@@ -21,8 +21,8 @@
       "dislikes": 5
     },
     "AI": {
-      "likes": 9,
-      "dislikes": 2
+      "likes": 8,
+      "dislikes": 3
     },
     "Viral": {
       "likes": 0,
@@ -715,12 +715,12 @@
       "dislikes": 0
     },
     "coding-agent": {
-      "likes": 2,
-      "dislikes": 0
-    },
-    "google": {
       "likes": 1,
       "dislikes": 1
+    },
+    "google": {
+      "likes": 0,
+      "dislikes": 2
     },
     "gemini": {
       "likes": 1,
@@ -780,7 +780,7 @@
     },
     "ai-agents": {
       "likes": 0,
-      "dislikes": 1
+      "dislikes": 2
     },
     "retail": {
       "likes": 0,
@@ -791,6 +791,18 @@
       "dislikes": 1
     },
     "startups": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "android": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "android-cli": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "developer-tools": {
       "likes": 0,
       "dislikes": 1
     }
@@ -923,11 +935,15 @@
     "Andon Labs": {
       "likes": 0,
       "dislikes": 1
+    },
+    "Google Android Developers": {
+      "likes": 0,
+      "dislikes": 1
     }
   },
   "totals": {
-    "likes": 22,
-    "dislikes": 24
+    "likes": 21,
+    "dislikes": 25
   },
-  "lastUpdated": "2026-04-17T15:35:04.880Z"
+  "lastUpdated": "2026-04-17T15:35:26.417Z"
 }

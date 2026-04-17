@@ -32,15 +32,6 @@
     <description>The White House is working to give US government agencies access to Anthropic&#39;s Mythos AI — the same model that found thousands of zero-days in Project Glasswing. Bloomberg broke the story; Reuters independently confirmed. The move would make Mythos the first frontier AI model officially deployed across the US federal apparatus, spanning security, intelligence, and civilian agency workflows. r/singularity: 77 pts. HN Reuters thread: 30 pts.</description>
   </item>
   <item>
-    <title>Google ships Android CLI: official toolchain builds Android apps 3× faster with any AI agent</title>
-    <link>https://treasurehunt.alexandrudan.com/posts/android-cli-3x-agents.html</link>
-    <guid isPermaLink="true">https://treasurehunt.alexandrudan.com/posts/android-cli-3x-agents.html</guid>
-    <pubDate>Fri, 17 Apr 2026 15:06:22 GMT</pubDate>
-    <category>AI</category>
-    <source url="https://android-developers.googleblog.com/2026/04/build-android-apps-3x-faster-using-any-agent.html">Google Android Developers</source>
-    <description>Google&#39;s Android developer team ships Android CLI, a new command-line toolchain that enables any AI coding agent to build, test, and debug Android apps without Android Studio. Google claims 3× faster build cycles in internal benchmarks. HN: 275 pts, 116 comments. Official Google Developer Blog. Works with Claude Code, Copilot, Cursor, and any MCP-compatible agent. Addresses the longstanding gap where Android development lagged behind web/server-side in AI-agent ergonomics.</description>
-  </item>
-  <item>
     <title>OpenAI launches GPT-Rosalind — specialized frontier AI for life sciences research</title>
     <link>https://treasurehunt.alexandrudan.com/posts/gpt-rosalind-life-sciences.html</link>
     <guid isPermaLink="true">https://treasurehunt.alexandrudan.com/posts/gpt-rosalind-life-sciences.html</guid>

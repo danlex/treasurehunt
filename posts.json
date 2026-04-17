@@ -110,68 +110,6 @@
     ]
   },
   {
-    "id": "android-cli-3x-agents",
-    "category": "AI",
-    "title": "Google ships Android CLI: official toolchain builds Android apps 3× faster with any AI agent",
-    "summary": "Google's Android developer team ships Android CLI, a new command-line toolchain that enables any AI coding agent to build, test, and debug Android apps without Android Studio. Google claims 3× faster build cycles in internal benchmarks. HN: 275 pts, 116 comments. Official Google Developer Blog. Works with Claude Code, Copilot, Cursor, and any MCP-compatible agent. Addresses the longstanding gap where Android development lagged behind web/server-side in AI-agent ergonomics.",
-    "tags": [
-      "google",
-      "android",
-      "android-cli",
-      "ai-agents",
-      "developer-tools",
-      "coding-agent"
-    ],
-    "url": "https://android-developers.googleblog.com/2026/04/build-android-apps-3x-faster-using-any-agent.html",
-    "source": "Google Android Developers",
-    "metrics": {
-      "coverage": 5,
-      "social": 7,
-      "novelty": 7,
-      "authority": 9,
-      "concreteness": 8,
-      "stakes": 6,
-      "fudRisk": 2,
-      "importance": 7.06,
-      "trust": 9
-    },
-    "signals": {
-      "outletCount": 7,
-      "tier1Count": 2,
-      "outlets": [
-        "Google Android Blog",
-        "HN",
-        "The Verge",
-        "Android Authority",
-        "VentureBeat"
-      ],
-      "twitterMentions": 1200,
-      "topTweets": [],
-      "subreddits": [
-        "r/programming",
-        "r/androiddev",
-        "r/MachineLearning"
-      ],
-      "redditTop": {
-        "sub": "r/programming",
-        "upvotes": 890
-      },
-      "trustedVoicesCount": 0,
-      "tickerMove": null
-    },
-    "whyItMatters": "Android has 3B+ active devices but has always been harder to develop for than iOS or web — partly because the tooling never integrated cleanly with AI agents. Android CLI closes that gap directly. Google making this agent-first (not IDE-first) signals a shift in how platform owners think about developer experience: the unit is now the AI agent, not the human developer. Expect iOS and other platforms to accelerate similar releases.",
-    "trustVerdict": "high",
-    "trustNotes": "Official Google Android developer blog by the Android team. 3× claim is from internal benchmarks — standard caveat applies, but sourcing is primary. HN 275 pts validates community interest.",
-    "primarySource": "https://android-developers.googleblog.com/2026/04/build-android-apps-3x-faster-using-any-agent.html",
-    "publishedAt": "2026-04-17T15:06:22.587Z",
-    "score": 13.96,
-    "guardVerdict": "pass",
-    "guardWarnings": [
-      "authority=9+ but URL domain \"android-developers.googleblog.com\" is not in known high-authority list",
-      "category \"AI\" is 7/10 of last 10 posts — diversity penalty"
-    ]
-  },
-  {
     "id": "gpt-rosalind-life-sciences",
     "category": "AI",
     "title": "OpenAI launches GPT-Rosalind — specialized frontier AI for life sciences research",
