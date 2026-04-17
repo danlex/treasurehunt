@@ -21,7 +21,7 @@
       "dislikes": 5
     },
     "AI": {
-      "likes": 9,
+      "likes": 10,
       "dislikes": 3
     },
     "Viral": {
@@ -849,6 +849,34 @@
     "research": {
       "likes": 1,
       "dislikes": 0
+    },
+    "stanford-hai": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "china-ai": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "us-china": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "ai-index": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "geopolitics": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "talent-migration": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "benchmarks": {
+      "likes": 1,
+      "dislikes": 0
     }
   },
   "sources": {
@@ -991,11 +1019,15 @@
     "arXiv / Huazhong University + Alibaba": {
       "likes": 1,
       "dislikes": 0
+    },
+    "Fortune / Stanford HAI": {
+      "likes": 1,
+      "dislikes": 0
     }
   },
   "totals": {
-    "likes": 23,
+    "likes": 24,
     "dislikes": 25
   },
-  "lastUpdated": "2026-04-17T21:05:15.803Z"
+  "lastUpdated": "2026-04-17T21:05:25.049Z"
 }

@@ -4,26 +4,32 @@
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
     <loc>https://treasurehunt.alexandrudan.com/</loc>
-    <lastmod>2026-04-17T21:05:15.800Z</lastmod>
+    <lastmod>2026-04-17T21:05:25.030Z</lastmod>
     <changefreq>hourly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://treasurehunt.alexandrudan.com/about.html</loc>
-    <lastmod>2026-04-17T21:05:15.946Z</lastmod>
+    <lastmod>2026-04-17T21:05:25.161Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://treasurehunt.alexandrudan.com/methodology.html</loc>
-    <lastmod>2026-04-17T21:05:15.946Z</lastmod>
+    <lastmod>2026-04-17T21:05:25.161Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://treasurehunt.alexandrudan.com/archive.html</loc>
-    <lastmod>2026-04-17T21:05:15.946Z</lastmod>
+    <lastmod>2026-04-17T21:05:25.161Z</lastmod>
     <changefreq>hourly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://treasurehunt.alexandrudan.com/posts/stanford-hai-china-ai-2026.html</loc>
+    <lastmod>2026-04-17T21:05:25.030Z</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>

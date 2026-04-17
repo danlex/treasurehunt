@@ -1,5 +1,58 @@
 [
   {
+    "id": "stanford-hai-china-ai-2026",
+    "category": "AI",
+    "title": "Stanford HAI 2026 Index: China narrowed Arena score gap from 1300 pts to 39 — and AI talent flow to US fell 89%",
+    "summary": "Stanford's 2026 AI Index, released April 16, shows China has nearly erased the US lead: the top model Arena score gap collapsed from 1300+ points (May 2023) to just 39 (March 2026). Meanwhile, AI scholars emigrating to the US dropped 89% since 2017, accelerating 80% in the past year. China leads in industrial robot installations (295,000 vs 34,200 US) and AI research citations (20.6% vs 12.6%). US private AI investment reached $285.9B in 2025 vs China's $12.4B — but the money gap isn't translating into capability dominance.",
+    "tags": [
+      "stanford-hai",
+      "china-ai",
+      "us-china",
+      "ai-index",
+      "geopolitics",
+      "talent-migration",
+      "benchmarks"
+    ],
+    "url": "https://fortune.com/2026/04/16/stanford-study-how-has-china-gained-on-us-ai-war/",
+    "source": "Fortune / Stanford HAI",
+    "metrics": {
+      "coverage": 7,
+      "social": 6,
+      "novelty": 7,
+      "authority": 8,
+      "concreteness": 9,
+      "stakes": 9,
+      "fudRisk": 2,
+      "importance": 7.85,
+      "trust": 8
+    },
+    "signals": {
+      "outletCount": 18,
+      "tier1Count": 3,
+      "outlets": [
+        "Fortune",
+        "China Daily",
+        "GDELT multilingual (36 articles)"
+      ],
+      "twitterMentions": 0,
+      "topTweets": [],
+      "subreddits": [
+        "r/technology"
+      ],
+      "redditTop": {
+        "sub": "r/technology",
+        "upvotes": 100
+      },
+      "trustedVoicesCount": 0,
+      "tickerMove": null
+    },
+    "whyItMatters": "The US advantage in AI is no longer about raw capability — at 39 Arena points the models are functionally tied. Structural risks are deeper: a collapsing talent pipeline and China's robot manufacturing lead (8.6× more installations) mean export controls and funding gaps may not hold. Policy makers assumed a multi-year runway; the Stanford data suggests it's gone.",
+    "trustVerdict": "high",
+    "trustNotes": "Stanford HAI publishes this annual index with full methodology. Hard numbers from Chatbot Arena (public leaderboard), OECD talent data, and IFR robot statistics. Fortune reporting accurately quotes the primary source.",
+    "primarySource": "https://aiindex.stanford.edu/report/",
+    "publishedAt": "2026-04-17T21:05:25.030Z"
+  },
+  {
     "id": "skillclaw-collective-skill-evolution",
     "category": "Research",
     "title": "SkillClaw: multi-user LLM agent ecosystems where skills evolve across all users — 276 HuggingFace upvotes in one week",
