@@ -5,7 +5,7 @@
       "dislikes": 11
     },
     "Research": {
-      "likes": 4,
+      "likes": 5,
       "dislikes": 1
     },
     "Top Tweets": {
@@ -779,7 +779,7 @@
       "dislikes": 1
     },
     "ai-agents": {
-      "likes": 1,
+      "likes": 2,
       "dislikes": 2
     },
     "retail": {
@@ -827,6 +827,26 @@
       "dislikes": 0
     },
     "llm": {
+      "likes": 2,
+      "dislikes": 0
+    },
+    "skill-evolution": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "multi-agent": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "collective-intelligence": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "autonomous-learning": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "research": {
       "likes": 1,
       "dislikes": 0
     }
@@ -967,11 +987,15 @@
     "GitHub / NousResearch": {
       "likes": 1,
       "dislikes": 0
+    },
+    "arXiv / Huazhong University + Alibaba": {
+      "likes": 1,
+      "dislikes": 0
     }
   },
   "totals": {
-    "likes": 22,
+    "likes": 23,
     "dislikes": 25
   },
-  "lastUpdated": "2026-04-17T21:04:44.491Z"
+  "lastUpdated": "2026-04-17T21:05:15.803Z"
 }
