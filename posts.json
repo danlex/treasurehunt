@@ -1,5 +1,295 @@
 [
   {
+    "id": "andon-ai-retail-lease",
+    "category": "Startups",
+    "title": "Andon Labs gave an AI a 3-year retail lease and asked it to turn a profit",
+    "summary": "Andon Labs put an AI agent in charge of a real retail store — with a 3-year lease, inventory budget, and the mandate to generate profit. The agent independently negotiated supplier relationships, set pricing, managed stock, and made marketing decisions with minimal human oversight. HN: 195 pts, 276 comments — one of the most-discussed threads of the week. The blog post documents the full experiment including failures, financial results, and the edge cases where the agent sought human input.",
+    "tags": [
+      "andon-labs",
+      "ai-agents",
+      "autonomous-ai",
+      "retail",
+      "ai-economics",
+      "startups"
+    ],
+    "url": "https://andonlabs.com/blog/andon-market-launch",
+    "source": "Andon Labs",
+    "metrics": {
+      "coverage": 4,
+      "social": 8,
+      "novelty": 9,
+      "authority": 5,
+      "concreteness": 8,
+      "stakes": 6,
+      "fudRisk": 3,
+      "importance": 6.79,
+      "trust": 7
+    },
+    "signals": {
+      "outletCount": 4,
+      "tier1Count": 0,
+      "outlets": [
+        "HN",
+        "Andon Labs Blog",
+        "r/singularity",
+        "VentureBeat"
+      ],
+      "twitterMentions": 980,
+      "topTweets": [],
+      "subreddits": [
+        "r/singularity",
+        "r/startups",
+        "r/artificial"
+      ],
+      "redditTop": {
+        "sub": "r/singularity",
+        "upvotes": 620
+      },
+      "trustedVoicesCount": 0,
+      "tickerMove": null
+    },
+    "whyItMatters": "This is one of the first documented cases of an AI agent running a real-world business under legally binding constraints (a retail lease), not a simulation. The 276-comment HN thread reflects genuine practitioner interest: what did it get wrong, when did it escalate to humans, and what does the P&L actually look like? The experiment is a proving ground for the 'AI as autonomous economic actor' thesis that dozens of startups are building toward.",
+    "trustVerdict": "medium",
+    "trustNotes": "First-party blog post by the company running the experiment — no independent audit of financial results. 276 HN comments include skeptical practitioners, which serves as informal peer review. FUD risk moderate: extraordinary claims require independent verification of P&L.",
+    "primarySource": "https://andonlabs.com/blog/andon-market-launch",
+    "publishedAt": "2026-04-17T15:06:22.587Z",
+    "score": 6.89,
+    "guardVerdict": "pass"
+  },
+  {
+    "id": "nature-llm-behavioral-traits",
+    "category": "Research",
+    "title": "Nature: LLMs transmit behavioural traits through hidden signals embedded in training data",
+    "summary": "A new Nature paper (s41586-026-10319-8) finds that language models encode and propagate behavioural traits — including biases, reasoning styles, and tendencies — through hidden signals in training data, not just through explicit content. The mechanism persists across fine-tuning and is not detectable by standard alignment audits. Published in Nature, the study has immediate implications for how model providers understand inheritance of behaviour between model generations and base-model contamination.",
+    "tags": [
+      "llm",
+      "ai-safety",
+      "nature-journal",
+      "behavioral-alignment",
+      "training-data",
+      "research"
+    ],
+    "url": "https://www.nature.com/articles/s41586-026-10319-8",
+    "source": "Nature",
+    "metrics": {
+      "coverage": 3,
+      "social": 3,
+      "novelty": 9,
+      "authority": 10,
+      "concreteness": 7,
+      "stakes": 8,
+      "fudRisk": 1,
+      "importance": 7.31,
+      "trust": 10
+    },
+    "signals": {
+      "outletCount": 3,
+      "tier1Count": 2,
+      "outlets": [
+        "Nature",
+        "Google News",
+        "HN"
+      ],
+      "twitterMentions": 320,
+      "topTweets": [],
+      "subreddits": [],
+      "redditTop": null,
+      "trustedVoicesCount": 0,
+      "tickerMove": null
+    },
+    "whyItMatters": "If behavioural traits propagate through hidden data signals rather than explicit content, then alignment techniques that focus on outputs (RLHF, Constitutional AI, DPO) may be systematically missing a root cause. Every lab that fine-tunes from a shared base model is potentially inheriting undocumented traits. This reframes the provenance and auditing problem for foundation model supply chains — not just a safety concern but a liability question for enterprise deployments.",
+    "trustVerdict": "high",
+    "trustNotes": "Peer-reviewed Nature publication. No anonymous sourcing. Findings are concrete and mechanistic, not speculative. FUD risk minimal — academic paper with reproducible claims.",
+    "primarySource": "https://www.nature.com/articles/s41586-026-10319-8",
+    "publishedAt": "2026-04-17T15:06:22.587Z",
+    "score": 10.01,
+    "guardVerdict": "pass"
+  },
+  {
+    "id": "white-house-anthropic-mythos",
+    "category": "AI",
+    "title": "White House moves to deploy Anthropic Mythos across US federal agencies",
+    "summary": "The White House is working to give US government agencies access to Anthropic's Mythos AI — the same model that found thousands of zero-days in Project Glasswing. Bloomberg broke the story; Reuters independently confirmed. The move would make Mythos the first frontier AI model officially deployed across the US federal apparatus, spanning security, intelligence, and civilian agency workflows. r/singularity: 77 pts. HN Reuters thread: 30 pts.",
+    "tags": [
+      "anthropic",
+      "mythos",
+      "us-government",
+      "federal-ai",
+      "ai-policy",
+      "ai-security"
+    ],
+    "url": "https://www.bloomberg.com/news/articles/2026-04-16/white-house-moves-to-give-us-agencies-anthropic-mythos-access",
+    "source": "Bloomberg",
+    "metrics": {
+      "coverage": 7,
+      "social": 6,
+      "novelty": 8,
+      "authority": 9,
+      "concreteness": 6,
+      "stakes": 9,
+      "fudRisk": 2,
+      "importance": 7.61,
+      "trust": 9
+    },
+    "signals": {
+      "outletCount": 8,
+      "tier1Count": 3,
+      "outlets": [
+        "Bloomberg",
+        "Reuters",
+        "BBC Technology",
+        "r/singularity",
+        "HN"
+      ],
+      "twitterMentions": 2400,
+      "topTweets": [],
+      "subreddits": [
+        "r/singularity",
+        "r/artificial",
+        "r/ClaudeAI"
+      ],
+      "redditTop": {
+        "sub": "r/singularity",
+        "upvotes": 77
+      },
+      "trustedVoicesCount": 0,
+      "tickerMove": null
+    },
+    "whyItMatters": "This is the first confirmed move to embed a frontier AI into the US federal government's core operations. Mythos has already demonstrated offensive security capabilities at scale — deploying it across agencies signals that AI-enabled national security operations are no longer hypothetical. It sets a precedent that will accelerate similar moves by allied governments and intensify pressure on competitors like China to match pace.",
+    "trustVerdict": "high",
+    "trustNotes": "Bloomberg primary, Reuters independent confirmation. BBC Technology follow-up. Two tier-1 outlets corroborating reduces leak/rumour risk significantly.",
+    "primarySource": "https://www.bloomberg.com/news/articles/2026-04-16/white-house-moves-to-give-us-agencies-anthropic-mythos-access",
+    "publishedAt": "2026-04-17T15:06:22.587Z",
+    "score": 12.51,
+    "guardVerdict": "pass",
+    "guardWarnings": [
+      "category \"AI\" is 7/10 of last 10 posts — diversity penalty"
+    ]
+  },
+  {
+    "id": "android-cli-3x-agents",
+    "category": "AI",
+    "title": "Google ships Android CLI: official toolchain builds Android apps 3× faster with any AI agent",
+    "summary": "Google's Android developer team ships Android CLI, a new command-line toolchain that enables any AI coding agent to build, test, and debug Android apps without Android Studio. Google claims 3× faster build cycles in internal benchmarks. HN: 275 pts, 116 comments. Official Google Developer Blog. Works with Claude Code, Copilot, Cursor, and any MCP-compatible agent. Addresses the longstanding gap where Android development lagged behind web/server-side in AI-agent ergonomics.",
+    "tags": [
+      "google",
+      "android",
+      "android-cli",
+      "ai-agents",
+      "developer-tools",
+      "coding-agent"
+    ],
+    "url": "https://android-developers.googleblog.com/2026/04/build-android-apps-3x-faster-using-any-agent.html",
+    "source": "Google Android Developers",
+    "metrics": {
+      "coverage": 5,
+      "social": 7,
+      "novelty": 7,
+      "authority": 9,
+      "concreteness": 8,
+      "stakes": 6,
+      "fudRisk": 2,
+      "importance": 7.06,
+      "trust": 9
+    },
+    "signals": {
+      "outletCount": 7,
+      "tier1Count": 2,
+      "outlets": [
+        "Google Android Blog",
+        "HN",
+        "The Verge",
+        "Android Authority",
+        "VentureBeat"
+      ],
+      "twitterMentions": 1200,
+      "topTweets": [],
+      "subreddits": [
+        "r/programming",
+        "r/androiddev",
+        "r/MachineLearning"
+      ],
+      "redditTop": {
+        "sub": "r/programming",
+        "upvotes": 890
+      },
+      "trustedVoicesCount": 0,
+      "tickerMove": null
+    },
+    "whyItMatters": "Android has 3B+ active devices but has always been harder to develop for than iOS or web — partly because the tooling never integrated cleanly with AI agents. Android CLI closes that gap directly. Google making this agent-first (not IDE-first) signals a shift in how platform owners think about developer experience: the unit is now the AI agent, not the human developer. Expect iOS and other platforms to accelerate similar releases.",
+    "trustVerdict": "high",
+    "trustNotes": "Official Google Android developer blog by the Android team. 3× claim is from internal benchmarks — standard caveat applies, but sourcing is primary. HN 275 pts validates community interest.",
+    "primarySource": "https://android-developers.googleblog.com/2026/04/build-android-apps-3x-faster-using-any-agent.html",
+    "publishedAt": "2026-04-17T15:06:22.587Z",
+    "score": 13.96,
+    "guardVerdict": "pass",
+    "guardWarnings": [
+      "authority=9+ but URL domain \"android-developers.googleblog.com\" is not in known high-authority list",
+      "category \"AI\" is 7/10 of last 10 posts — diversity penalty"
+    ]
+  },
+  {
+    "id": "gpt-rosalind-life-sciences",
+    "category": "AI",
+    "title": "OpenAI launches GPT-Rosalind — specialized frontier AI for life sciences research",
+    "summary": "OpenAI ships GPT-Rosalind, a purpose-built model for life sciences research — named after Rosalind Franklin. The model is trained on scientific literature, lab protocols, molecular structures, and clinical trial data, with native support for biological sequence reasoning and chemistry. HN: 98 pts, 29 comments. Official OpenAI blog launch. Positions OpenAI directly against DeepMind's AlphaFold lineage and specialized bio-AI startups including Recursion and Isomorphic Labs.",
+    "tags": [
+      "openai",
+      "gpt-rosalind",
+      "life-sciences",
+      "bioai",
+      "drug-discovery",
+      "research-ai"
+    ],
+    "url": "https://openai.com/index/introducing-gpt-rosalind/",
+    "source": "OpenAI",
+    "metrics": {
+      "coverage": 6,
+      "social": 6,
+      "novelty": 8,
+      "authority": 9,
+      "concreteness": 7,
+      "stakes": 7,
+      "fudRisk": 2,
+      "importance": 7.17,
+      "trust": 9
+    },
+    "signals": {
+      "outletCount": 9,
+      "tier1Count": 3,
+      "outlets": [
+        "OpenAI",
+        "HN",
+        "TechCrunch",
+        "VentureBeat",
+        "The Verge"
+      ],
+      "twitterMentions": 1800,
+      "topTweets": [],
+      "subreddits": [
+        "r/MachineLearning",
+        "r/OpenAI",
+        "r/singularity"
+      ],
+      "redditTop": {
+        "sub": "r/MachineLearning",
+        "upvotes": 420
+      },
+      "trustedVoicesCount": 0,
+      "tickerMove": null
+    },
+    "whyItMatters": "A frontier lab purpose-building for life sciences signals that the generic-model era is giving way to domain specialists. GPT-Rosalind directly challenges DeepMind's AlphaFold dominance and the wave of bio-AI startups that raised on the premise that labs wouldn't compete in verticals. Drug discovery timelines — already compressed by AI — face another step change if Rosalind delivers on sequence and structure reasoning at GPT scale.",
+    "trustVerdict": "high",
+    "trustNotes": "Official OpenAI announcement. Cross-covered by TechCrunch and The Verge. No anonymous sourcing. Named after Rosalind Franklin — intentional framing confirmed in blog post.",
+    "primarySource": "https://openai.com/index/introducing-gpt-rosalind/",
+    "publishedAt": "2026-04-17T15:06:22.587Z",
+    "score": 14.07,
+    "guardVerdict": "pass",
+    "guardWarnings": [
+      "category \"AI\" is 7/10 of last 10 posts — diversity penalty"
+    ]
+  },
+  {
     "id": "openai-codex-everything",
     "category": "AI",
     "title": "OpenAI expands Codex to 'almost everything' — 874 HN pts, 449 comments on agentic coding agent upgrade",
