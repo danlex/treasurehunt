@@ -22,7 +22,7 @@
     },
     "AI": {
       "likes": 9,
-      "dislikes": 1
+      "dislikes": 2
     },
     "Viral": {
       "likes": 0,
@@ -720,11 +720,11 @@
     },
     "google": {
       "likes": 1,
-      "dislikes": 0
+      "dislikes": 1
     },
     "gemini": {
       "likes": 1,
-      "dislikes": 0
+      "dislikes": 1
     },
     "firebase": {
       "likes": 1,
@@ -757,6 +757,22 @@
     "autonomous-ai": {
       "likes": 1,
       "dislikes": 0
+    },
+    "macos": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "desktop-app": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "sundar-pichai": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "multimodal-ai": {
+      "likes": 0,
+      "dislikes": 1
     }
   },
   "sources": {
@@ -879,11 +895,15 @@
     "OpenAI": {
       "likes": 1,
       "dislikes": 0
+    },
+    "Google": {
+      "likes": 0,
+      "dislikes": 1
     }
   },
   "totals": {
     "likes": 23,
-    "dislikes": 22
+    "dislikes": 23
   },
-  "lastUpdated": "2026-04-17T11:14:28.475Z"
+  "lastUpdated": "2026-04-17T11:14:38.141Z"
 }

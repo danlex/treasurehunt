@@ -516,8 +516,16 @@ function buildIndex() {
       itemListElement: posts.slice(0, 20).map((p, i) => ({
         '@type': 'ListItem',
         position: i + 1,
-        url: postUrl(p.id),
-        name: p.title
+        item: {
+          '@type': 'NewsArticle',
+          '@id': postUrl(p.id),
+          headline: p.title,
+          url: postUrl(p.id),
+          datePublished: dateISO(p.publishedAt),
+          dateModified: dateISO(p.publishedAt),
+          author: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL + '/' },
+          publisher: { '@id': SITE_URL + '/#organization' }
+        }
       }))
     },
     {
@@ -765,8 +773,18 @@ function buildArchive() {
       '@type': 'ItemList',
       numberOfItems: posts.length,
       itemListElement: posts.map((p, i) => ({
-        '@type': 'ListItem', position: i + 1,
-        url: postUrl(p.id), name: p.title
+        '@type': 'ListItem',
+        position: i + 1,
+        item: {
+          '@type': 'NewsArticle',
+          '@id': postUrl(p.id),
+          headline: p.title,
+          url: postUrl(p.id),
+          datePublished: dateISO(p.publishedAt),
+          dateModified: dateISO(p.publishedAt),
+          author: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL + '/' },
+          publisher: { '@id': SITE_URL + '/#organization' }
+        }
       }))
     }
   };
@@ -926,7 +944,6 @@ function buildPostPage(p, i) {
 ${navbar}
 <main class="container">
   <article itemscope itemtype="https://schema.org/NewsArticle">
-    <meta itemprop="datePublished" content="${dateISO(p.publishedAt)}">
     <meta itemprop="author" content="${esc(SITE_NAME)}">
     <a class="back" href="/">← Back to feed</a>
     <div style="margin: 18px 0 0;">

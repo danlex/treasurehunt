@@ -6,6 +6,231 @@ Each post below includes the summary, tags, source, trust verdict, and "why it m
 
 ---
 
+## Andon Labs gave an AI a 3-year retail lease and asked it to turn a profit
+
+**Published:** Apr 17, 2026
+**Category:** Startups
+**Source:** Andon Labs
+**URL:** https://treasurehunt.alexandrudan.com/posts/andon-ai-retail-lease.html
+**Original article:** https://andonlabs.com/blog/andon-market-launch
+**Tags:** andon-labs, ai-agents, autonomous-ai, retail, ai-economics, startups
+**Impact score:** 6.79/10
+**Trust verdict:** medium
+
+Andon Labs put an AI agent in charge of a real retail store — with a 3-year lease, inventory budget, and the mandate to generate profit. The agent independently negotiated supplier relationships, set pricing, managed stock, and made marketing decisions with minimal human oversight. HN: 195 pts, 276 comments — one of the most-discussed threads of the week. The blog post documents the full experiment including failures, financial results, and the edge cases where the agent sought human input.
+
+### Why it matters
+
+This is one of the first documented cases of an AI agent running a real-world business under legally binding constraints (a retail lease), not a simulation. The 276-comment HN thread reflects genuine practitioner interest: what did it get wrong, when did it escalate to humans, and what does the P&L actually look like? The experiment is a proving ground for the 'AI as autonomous economic actor' thesis that dozens of startups are building toward.
+
+### Trust notes
+
+First-party blog post by the company running the experiment — no independent audit of financial results. 276 HN comments include skeptical practitioners, which serves as informal peer review. FUD risk moderate: extraordinary claims require independent verification of P&L.
+
+**Primary source:** https://andonlabs.com/blog/andon-market-launch
+
+---
+
+## Nature: LLMs transmit behavioural traits through hidden signals embedded in training data
+
+**Published:** Apr 17, 2026
+**Category:** Research
+**Source:** Nature
+**URL:** https://treasurehunt.alexandrudan.com/posts/nature-llm-behavioral-traits.html
+**Original article:** https://www.nature.com/articles/s41586-026-10319-8
+**Tags:** llm, ai-safety, nature-journal, behavioral-alignment, training-data, research
+**Impact score:** 7.31/10
+**Trust verdict:** high
+
+A new Nature paper (s41586-026-10319-8) finds that language models encode and propagate behavioural traits — including biases, reasoning styles, and tendencies — through hidden signals in training data, not just through explicit content. The mechanism persists across fine-tuning and is not detectable by standard alignment audits. Published in Nature, the study has immediate implications for how model providers understand inheritance of behaviour between model generations and base-model contamination.
+
+### Why it matters
+
+If behavioural traits propagate through hidden data signals rather than explicit content, then alignment techniques that focus on outputs (RLHF, Constitutional AI, DPO) may be systematically missing a root cause. Every lab that fine-tunes from a shared base model is potentially inheriting undocumented traits. This reframes the provenance and auditing problem for foundation model supply chains — not just a safety concern but a liability question for enterprise deployments.
+
+### Trust notes
+
+Peer-reviewed Nature publication. No anonymous sourcing. Findings are concrete and mechanistic, not speculative. FUD risk minimal — academic paper with reproducible claims.
+
+**Primary source:** https://www.nature.com/articles/s41586-026-10319-8
+
+---
+
+## White House moves to deploy Anthropic Mythos across US federal agencies
+
+**Published:** Apr 17, 2026
+**Category:** AI
+**Source:** Bloomberg
+**URL:** https://treasurehunt.alexandrudan.com/posts/white-house-anthropic-mythos.html
+**Original article:** https://www.bloomberg.com/news/articles/2026-04-16/white-house-moves-to-give-us-agencies-anthropic-mythos-access
+**Tags:** anthropic, mythos, us-government, federal-ai, ai-policy, ai-security
+**Impact score:** 7.61/10
+**Trust verdict:** high
+
+The White House is working to give US government agencies access to Anthropic's Mythos AI — the same model that found thousands of zero-days in Project Glasswing. Bloomberg broke the story; Reuters independently confirmed. The move would make Mythos the first frontier AI model officially deployed across the US federal apparatus, spanning security, intelligence, and civilian agency workflows. r/singularity: 77 pts. HN Reuters thread: 30 pts.
+
+### Why it matters
+
+This is the first confirmed move to embed a frontier AI into the US federal government's core operations. Mythos has already demonstrated offensive security capabilities at scale — deploying it across agencies signals that AI-enabled national security operations are no longer hypothetical. It sets a precedent that will accelerate similar moves by allied governments and intensify pressure on competitors like China to match pace.
+
+### Trust notes
+
+Bloomberg primary, Reuters independent confirmation. BBC Technology follow-up. Two tier-1 outlets corroborating reduces leak/rumour risk significantly.
+
+**Primary source:** https://www.bloomberg.com/news/articles/2026-04-16/white-house-moves-to-give-us-agencies-anthropic-mythos-access
+
+---
+
+## Google ships Android CLI: official toolchain builds Android apps 3× faster with any AI agent
+
+**Published:** Apr 17, 2026
+**Category:** AI
+**Source:** Google Android Developers
+**URL:** https://treasurehunt.alexandrudan.com/posts/android-cli-3x-agents.html
+**Original article:** https://android-developers.googleblog.com/2026/04/build-android-apps-3x-faster-using-any-agent.html
+**Tags:** google, android, android-cli, ai-agents, developer-tools, coding-agent
+**Impact score:** 7.06/10
+**Trust verdict:** high
+
+Google's Android developer team ships Android CLI, a new command-line toolchain that enables any AI coding agent to build, test, and debug Android apps without Android Studio. Google claims 3× faster build cycles in internal benchmarks. HN: 275 pts, 116 comments. Official Google Developer Blog. Works with Claude Code, Copilot, Cursor, and any MCP-compatible agent. Addresses the longstanding gap where Android development lagged behind web/server-side in AI-agent ergonomics.
+
+### Why it matters
+
+Android has 3B+ active devices but has always been harder to develop for than iOS or web — partly because the tooling never integrated cleanly with AI agents. Android CLI closes that gap directly. Google making this agent-first (not IDE-first) signals a shift in how platform owners think about developer experience: the unit is now the AI agent, not the human developer. Expect iOS and other platforms to accelerate similar releases.
+
+### Trust notes
+
+Official Google Android developer blog by the Android team. 3× claim is from internal benchmarks — standard caveat applies, but sourcing is primary. HN 275 pts validates community interest.
+
+**Primary source:** https://android-developers.googleblog.com/2026/04/build-android-apps-3x-faster-using-any-agent.html
+
+---
+
+## OpenAI launches GPT-Rosalind — specialized frontier AI for life sciences research
+
+**Published:** Apr 17, 2026
+**Category:** AI
+**Source:** OpenAI
+**URL:** https://treasurehunt.alexandrudan.com/posts/gpt-rosalind-life-sciences.html
+**Original article:** https://openai.com/index/introducing-gpt-rosalind/
+**Tags:** openai, gpt-rosalind, life-sciences, bioai, drug-discovery, research-ai
+**Impact score:** 7.17/10
+**Trust verdict:** high
+
+OpenAI ships GPT-Rosalind, a purpose-built model for life sciences research — named after Rosalind Franklin. The model is trained on scientific literature, lab protocols, molecular structures, and clinical trial data, with native support for biological sequence reasoning and chemistry. HN: 98 pts, 29 comments. Official OpenAI blog launch. Positions OpenAI directly against DeepMind's AlphaFold lineage and specialized bio-AI startups including Recursion and Isomorphic Labs.
+
+### Why it matters
+
+A frontier lab purpose-building for life sciences signals that the generic-model era is giving way to domain specialists. GPT-Rosalind directly challenges DeepMind's AlphaFold dominance and the wave of bio-AI startups that raised on the premise that labs wouldn't compete in verticals. Drug discovery timelines — already compressed by AI — face another step change if Rosalind delivers on sequence and structure reasoning at GPT scale.
+
+### Trust notes
+
+Official OpenAI announcement. Cross-covered by TechCrunch and The Verge. No anonymous sourcing. Named after Rosalind Franklin — intentional framing confirmed in blog post.
+
+**Primary source:** https://openai.com/index/introducing-gpt-rosalind/
+
+---
+
+## OpenAI expands Codex to 'almost everything' — 874 HN pts, 449 comments on agentic coding agent upgrade
+
+**Published:** Apr 17, 2026
+**Category:** AI
+**Source:** OpenAI
+**URL:** https://treasurehunt.alexandrudan.com/posts/openai-codex-everything.html
+**Original article:** https://openai.com/index/codex-for-almost-everything/
+**Tags:** openai, codex, agentic-ai, coding-agent, llm-agents, autonomous-ai
+**Impact score:** 7.54/10
+**Trust verdict:** high
+
+OpenAI publishes 'Codex for almost everything', a major capability expansion for its Codex coding agent. The post details how Codex can now handle a far broader range of software engineering tasks end-to-end, including autonomous debugging and deployment steps. A companion demo 'Codex Hacked a Samsung TV' shows the agent autonomously reverse-engineering and exploiting a consumer device — drawing 100+ HN points. HN main thread: 874 pts, 449 comments on launch day.
+
+### Why it matters
+
+Codex is OpenAI's direct answer to Claude Code and GitHub Copilot Workspace — an agent that completes whole programming tasks, not just completions. Expanding it to 'almost everything' and demonstrating autonomous device hacking marks a capability step that will reshape how software is written and tested. The Samsung TV demo is proof that AI agents can now handle adversarial real-world targets, not just greenfield code.
+
+### Trust notes
+
+Official OpenAI blog post. Cross-confirmed by HN discussion. Demo linked directly. No anonymous sourcing or FUD flags.
+
+**Primary source:** https://openai.com/index/codex-for-almost-everything/
+
+---
+
+## €54,000 billing shock in 13 hours: unrestricted Firebase browser key drained by Gemini API abuse
+
+**Published:** Apr 17, 2026
+**Category:** AI
+**Source:** Google AI Developer Forum / HN
+**URL:** https://treasurehunt.alexandrudan.com/posts/firebase-gemini-54k-spike.html
+**Original article:** https://discuss.ai.google.dev/t/unexpected-54k-billing-spike-in-13-hours-firebase-browser-key-without-api-restrictions-used-for-gemini-requests/140262
+**Tags:** google, gemini, firebase, api-security, billing-abuse, ai-platform
+**Impact score:** 6.9/10
+**Trust verdict:** high
+
+A developer reports a €54,000 unexpected billing spike in just 13 hours after a Firebase browser key without API restrictions was used to make Gemini API requests — presumably by a malicious third party. The Google AI developer forum post goes viral with 386 HN pts and 281 comments. The incident exposes a critical gap in Google's abuse detection and billing caps for Gemini APIs: client-side Firebase keys often have no restrictions by default, and Gemini does not enforce spending caps out of the box.
+
+### Why it matters
+
+Gemini is now embedded in millions of Firebase projects. This incident demonstrates that Google's billing and abuse-control infrastructure hasn't kept pace with AI API adoption — a €54k loss in 13 hours could bankrupt a solo developer or small startup. It pressures Google to ship hard spending caps and anomaly alerts, and will accelerate scrutiny of how major AI platforms handle key security.
+
+### Trust notes
+
+First-party developer forum report with specific Euro amounts and 13-hour window. Corroborated by 386 HN upvotes and 281-comment community thread. No FUD flags — concrete billing incident.
+
+**Primary source:** https://discuss.ai.google.dev/t/unexpected-54k-billing-spike-in-13-hours-firebase-browser-key-without-api-restrictions-used-for-gemini-requests/140262
+
+---
+
+## Alibaba open-sources Qwen3.6-35B-A3B: 35B MoE, 3B active params, runs on a laptop, outdraws Claude Opus 4.7
+
+**Published:** Apr 17, 2026
+**Category:** AI
+**Source:** Alibaba / Qwen
+**URL:** https://treasurehunt.alexandrudan.com/posts/qwen3-6-35b-a3b-open.html
+**Original article:** https://huggingface.co/Qwen/Qwen3.6-35B-A3B
+**Tags:** alibaba, qwen, open-source-llm, mixture-of-experts, local-llm, coding-agent
+**Impact score:** 7.28/10
+**Trust verdict:** high
+
+Alibaba's Qwen team releases Qwen3.6-35B-A3B as fully open-source on HuggingFace (Apache license). The model uses a Mixture-of-Experts architecture with 35B total parameters but only 3B active per token — making it runnable on consumer hardware. Simon Willison's post 'Qwen3.6-35B-A3B on my laptop drew me a better pelican than Claude Opus 4.7' lands 404 HN pts and 84 comments, while the original release thread hits 100+ on r/LocalLLaMA. Pitched as 'agentic coding power, now open to all.'
+
+### Why it matters
+
+A laptop-runnable 35B model that can compete with a frontier closed model on creative tasks is a significant efficiency milestone. Open-sourcing it under Apache license means the practitioner community can fine-tune, quantize, and deploy without API dependency. The simonw comparison directly benchmarks it against Anthropic's latest Opus, increasing signal that the capability gap between open and closed frontier models is shrinking.
+
+### Trust notes
+
+Official HuggingFace release by Alibaba_Qwen. Apache license confirmed. Cross-verified by simonw benchmark and r/LocalLLaMA community testing.
+
+**Primary source:** https://huggingface.co/Qwen/Qwen3.6-35B-A3B
+
+---
+
+## Anthropic releases Claude Opus 4.7 — most capable Opus yet, 1,752 HN pts, extended thinking + higher rate limits
+
+**Published:** Apr 17, 2026
+**Category:** AI
+**Source:** Anthropic
+**URL:** https://treasurehunt.alexandrudan.com/posts/claude-opus-4-7.html
+**Original article:** https://www.anthropic.com/news/claude-opus-4-7
+**Tags:** anthropic, claude, opus-4.7, extended-thinking, llm-release, agentic-ai
+**Impact score:** 7.96/10
+**Trust verdict:** high
+
+Anthropic ships Claude Opus 4.7, its most capable Opus model yet. The release centres on long-running agentic tasks: more thinking tokens, an extended thinking mode, and increased API rate limits across all subscriber tiers to match. HN erupts with 1,752 points and 1,257 comments — the biggest AI model thread in weeks. @bcherny: 'Dogfooding Opus 4.7 the last few weeks, I've been feeling incredibly productive.' System card and model card published simultaneously.
+
+### Why it matters
+
+Opus 4.7 raises the bar for long-horizon agentic work at a time when coding agents and multi-step reasoning pipelines are mainstream. Extended thinking + rate limit increases signal Anthropic is positioning Opus as the default power-user model — directly competing with GPT-5.4 on autonomous-task use cases. The 1,257-comment HN thread shows the developer community is actively benchmarking it.
+
+### Trust notes
+
+Official Anthropic announcement with system card and model card. Cross-confirmed by @claudeai and @bcherny (Anthropic product leads). HN and Reddit discussion corroborate release. No FUD flags.
+
+**Primary source:** https://www.anthropic.com/news/claude-opus-4-7
+
+---
+
 ## Squishy photonic switches: IEEE Spectrum reports fast, low-power soft photonic logic
 
 **Published:** Apr 13, 2026
