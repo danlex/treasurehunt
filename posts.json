@@ -1,5 +1,65 @@
 [
   {
+    "id": "qwen3-6-35b-a3b-open",
+    "category": "AI",
+    "title": "Alibaba open-sources Qwen3.6-35B-A3B: 35B MoE, 3B active params, runs on a laptop, outdraws Claude Opus 4.7",
+    "summary": "Alibaba's Qwen team releases Qwen3.6-35B-A3B as fully open-source on HuggingFace (Apache license). The model uses a Mixture-of-Experts architecture with 35B total parameters but only 3B active per token — making it runnable on consumer hardware. Simon Willison's post 'Qwen3.6-35B-A3B on my laptop drew me a better pelican than Claude Opus 4.7' lands 404 HN pts and 84 comments, while the original release thread hits 100+ on r/LocalLLaMA. Pitched as 'agentic coding power, now open to all.'",
+    "tags": [
+      "alibaba",
+      "qwen",
+      "open-source-llm",
+      "mixture-of-experts",
+      "local-llm",
+      "coding-agent"
+    ],
+    "url": "https://huggingface.co/Qwen/Qwen3.6-35B-A3B",
+    "source": "Alibaba / Qwen",
+    "metrics": {
+      "coverage": 6,
+      "social": 7,
+      "novelty": 8,
+      "authority": 7,
+      "concreteness": 8,
+      "stakes": 7,
+      "fudRisk": 2,
+      "importance": 7.28,
+      "trust": 8
+    },
+    "signals": {
+      "outletCount": 9,
+      "tier1Count": 2,
+      "outlets": [
+        "HuggingFace",
+        "HN",
+        "Reddit/LocalLLaMA",
+        "simonwillison.net",
+        "Alibaba_Qwen on X"
+      ],
+      "twitterMentions": 1400,
+      "topTweets": [
+        {
+          "handle": "@Alibaba_Qwen",
+          "likes": 900
+        }
+      ],
+      "subreddits": [
+        "r/LocalLLaMA",
+        "r/MachineLearning"
+      ],
+      "redditTop": {
+        "sub": "r/LocalLLaMA",
+        "upvotes": 1100
+      },
+      "trustedVoicesCount": 1,
+      "tickerMove": null
+    },
+    "whyItMatters": "A laptop-runnable 35B model that can compete with a frontier closed model on creative tasks is a significant efficiency milestone. Open-sourcing it under Apache license means the practitioner community can fine-tune, quantize, and deploy without API dependency. The simonw comparison directly benchmarks it against Anthropic's latest Opus, increasing signal that the capability gap between open and closed frontier models is shrinking.",
+    "trustVerdict": "high",
+    "trustNotes": "Official HuggingFace release by Alibaba_Qwen. Apache license confirmed. Cross-verified by simonw benchmark and r/LocalLLaMA community testing.",
+    "primarySource": "https://huggingface.co/Qwen/Qwen3.6-35B-A3B",
+    "publishedAt": "2026-04-17T11:13:26.809Z"
+  },
+  {
     "id": "claude-opus-4-7",
     "category": "AI",
     "title": "Anthropic releases Claude Opus 4.7 — most capable Opus yet, 1,752 HN pts, extended thinking + higher rate limits",
