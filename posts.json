@@ -1,5 +1,71 @@
 [
   {
+    "id": "claude-opus-4-7",
+    "category": "AI",
+    "title": "Anthropic releases Claude Opus 4.7 — most capable Opus yet, 1,752 HN pts, extended thinking + higher rate limits",
+    "summary": "Anthropic ships Claude Opus 4.7, its most capable Opus model yet. The release centres on long-running agentic tasks: more thinking tokens, an extended thinking mode, and increased API rate limits across all subscriber tiers to match. HN erupts with 1,752 points and 1,257 comments — the biggest AI model thread in weeks. @bcherny: 'Dogfooding Opus 4.7 the last few weeks, I've been feeling incredibly productive.' System card and model card published simultaneously.",
+    "tags": [
+      "anthropic",
+      "claude",
+      "opus-4.7",
+      "extended-thinking",
+      "llm-release",
+      "agentic-ai"
+    ],
+    "url": "https://www.anthropic.com/news/claude-opus-4-7",
+    "source": "Anthropic",
+    "metrics": {
+      "coverage": 8,
+      "social": 9,
+      "novelty": 7,
+      "authority": 9,
+      "concreteness": 7,
+      "stakes": 8,
+      "fudRisk": 2,
+      "importance": 7.96,
+      "trust": 9
+    },
+    "signals": {
+      "outletCount": 18,
+      "tier1Count": 5,
+      "outlets": [
+        "Anthropic",
+        "HN",
+        "Reddit/ClaudeAI",
+        "Reddit/singularity",
+        "The Verge",
+        "TechCrunch"
+      ],
+      "twitterMentions": 4800,
+      "topTweets": [
+        {
+          "handle": "@claudeai",
+          "likes": 3200
+        },
+        {
+          "handle": "@bcherny",
+          "likes": 1100
+        }
+      ],
+      "subreddits": [
+        "r/ClaudeAI",
+        "r/singularity",
+        "r/LocalLLaMA"
+      ],
+      "redditTop": {
+        "sub": "r/ClaudeAI",
+        "upvotes": 2400
+      },
+      "trustedVoicesCount": 3,
+      "tickerMove": null
+    },
+    "whyItMatters": "Opus 4.7 raises the bar for long-horizon agentic work at a time when coding agents and multi-step reasoning pipelines are mainstream. Extended thinking + rate limit increases signal Anthropic is positioning Opus as the default power-user model — directly competing with GPT-5.4 on autonomous-task use cases. The 1,257-comment HN thread shows the developer community is actively benchmarking it.",
+    "trustVerdict": "high",
+    "trustNotes": "Official Anthropic announcement with system card and model card. Cross-confirmed by @claudeai and @bcherny (Anthropic product leads). HN and Reddit discussion corroborate release. No FUD flags.",
+    "primarySource": "https://www.anthropic.com/news/claude-opus-4-7",
+    "publishedAt": "2026-04-17T11:13:18.775Z"
+  },
+  {
     "id": "squishy-photonic-switches-2026",
     "category": "Research",
     "title": "Squishy photonic switches: IEEE Spectrum reports fast, low-power soft photonic logic",

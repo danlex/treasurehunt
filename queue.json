@@ -1,48 +1,17 @@
 [
   {
-    "id": "claude-opus-4-7",
-    "category": "AI",
-    "title": "Anthropic releases Claude Opus 4.7 — most capable Opus yet, 1,752 HN pts, extended thinking + higher rate limits",
-    "summary": "Anthropic ships Claude Opus 4.7, its most capable Opus model yet. The release centres on long-running agentic tasks: more thinking tokens, an extended thinking mode, and increased API rate limits across all subscriber tiers to match. HN erupts with 1,752 points and 1,257 comments — the biggest AI model thread in weeks. @bcherny: 'Dogfooding Opus 4.7 the last few weeks, I've been feeling incredibly productive.' System card and model card published simultaneously.",
-    "tags": ["anthropic", "claude", "opus-4.7", "extended-thinking", "llm-release", "agentic-ai"],
-    "url": "https://www.anthropic.com/news/claude-opus-4-7",
-    "source": "Anthropic",
-    "metrics": {
-      "coverage": 8,
-      "social": 9,
-      "novelty": 7,
-      "authority": 9,
-      "concreteness": 7,
-      "stakes": 8,
-      "fudRisk": 2,
-      "importance": 7.96,
-      "trust": 9
-    },
-    "signals": {
-      "outletCount": 18,
-      "tier1Count": 5,
-      "outlets": ["Anthropic", "HN", "Reddit/ClaudeAI", "Reddit/singularity", "The Verge", "TechCrunch"],
-      "twitterMentions": 4800,
-      "topTweets": [
-        { "handle": "@claudeai", "likes": 3200 },
-        { "handle": "@bcherny", "likes": 1100 }
-      ],
-      "subreddits": ["r/ClaudeAI", "r/singularity", "r/LocalLLaMA"],
-      "redditTop": { "sub": "r/ClaudeAI", "upvotes": 2400 },
-      "trustedVoicesCount": 3,
-      "tickerMove": null
-    },
-    "whyItMatters": "Opus 4.7 raises the bar for long-horizon agentic work at a time when coding agents and multi-step reasoning pipelines are mainstream. Extended thinking + rate limit increases signal Anthropic is positioning Opus as the default power-user model — directly competing with GPT-5.4 on autonomous-task use cases. The 1,257-comment HN thread shows the developer community is actively benchmarking it.",
-    "trustVerdict": "high",
-    "trustNotes": "Official Anthropic announcement with system card and model card. Cross-confirmed by @claudeai and @bcherny (Anthropic product leads). HN and Reddit discussion corroborate release. No FUD flags.",
-    "primarySource": "https://www.anthropic.com/news/claude-opus-4-7"
-  },
-  {
     "id": "openai-codex-everything",
     "category": "AI",
     "title": "OpenAI expands Codex to 'almost everything' — 874 HN pts, 449 comments on agentic coding agent upgrade",
     "summary": "OpenAI publishes 'Codex for almost everything', a major capability expansion for its Codex coding agent. The post details how Codex can now handle a far broader range of software engineering tasks end-to-end, including autonomous debugging and deployment steps. A companion demo 'Codex Hacked a Samsung TV' shows the agent autonomously reverse-engineering and exploiting a consumer device — drawing 100+ HN points. HN main thread: 874 pts, 449 comments on launch day.",
-    "tags": ["openai", "codex", "agentic-ai", "coding-agent", "llm-agents", "autonomous-ai"],
+    "tags": [
+      "openai",
+      "codex",
+      "agentic-ai",
+      "coding-agent",
+      "llm-agents",
+      "autonomous-ai"
+    ],
     "url": "https://openai.com/index/codex-for-almost-everything/",
     "source": "OpenAI",
     "metrics": {
@@ -59,13 +28,29 @@
     "signals": {
       "outletCount": 12,
       "tier1Count": 4,
-      "outlets": ["OpenAI", "HN", "TechCrunch", "The Verge", "Ars Technica"],
+      "outlets": [
+        "OpenAI",
+        "HN",
+        "TechCrunch",
+        "The Verge",
+        "Ars Technica"
+      ],
       "twitterMentions": 2200,
       "topTweets": [
-        { "handle": "@sama", "likes": 1800 }
+        {
+          "handle": "@sama",
+          "likes": 1800
+        }
       ],
-      "subreddits": ["r/MachineLearning", "r/programming", "r/OpenAI"],
-      "redditTop": { "sub": "r/OpenAI", "upvotes": 1600 },
+      "subreddits": [
+        "r/MachineLearning",
+        "r/programming",
+        "r/OpenAI"
+      ],
+      "redditTop": {
+        "sub": "r/OpenAI",
+        "upvotes": 1600
+      },
       "trustedVoicesCount": 2,
       "tickerMove": null
     },
@@ -79,7 +64,14 @@
     "category": "AI",
     "title": "Alibaba open-sources Qwen3.6-35B-A3B: 35B MoE, 3B active params, runs on a laptop, outdraws Claude Opus 4.7",
     "summary": "Alibaba's Qwen team releases Qwen3.6-35B-A3B as fully open-source on HuggingFace (Apache license). The model uses a Mixture-of-Experts architecture with 35B total parameters but only 3B active per token — making it runnable on consumer hardware. Simon Willison's post 'Qwen3.6-35B-A3B on my laptop drew me a better pelican than Claude Opus 4.7' lands 404 HN pts and 84 comments, while the original release thread hits 100+ on r/LocalLLaMA. Pitched as 'agentic coding power, now open to all.'",
-    "tags": ["alibaba", "qwen", "open-source-llm", "mixture-of-experts", "local-llm", "coding-agent"],
+    "tags": [
+      "alibaba",
+      "qwen",
+      "open-source-llm",
+      "mixture-of-experts",
+      "local-llm",
+      "coding-agent"
+    ],
     "url": "https://huggingface.co/Qwen/Qwen3.6-35B-A3B",
     "source": "Alibaba / Qwen",
     "metrics": {
@@ -96,13 +88,28 @@
     "signals": {
       "outletCount": 9,
       "tier1Count": 2,
-      "outlets": ["HuggingFace", "HN", "Reddit/LocalLLaMA", "simonwillison.net", "Alibaba_Qwen on X"],
+      "outlets": [
+        "HuggingFace",
+        "HN",
+        "Reddit/LocalLLaMA",
+        "simonwillison.net",
+        "Alibaba_Qwen on X"
+      ],
       "twitterMentions": 1400,
       "topTweets": [
-        { "handle": "@Alibaba_Qwen", "likes": 900 }
+        {
+          "handle": "@Alibaba_Qwen",
+          "likes": 900
+        }
       ],
-      "subreddits": ["r/LocalLLaMA", "r/MachineLearning"],
-      "redditTop": { "sub": "r/LocalLLaMA", "upvotes": 1100 },
+      "subreddits": [
+        "r/LocalLLaMA",
+        "r/MachineLearning"
+      ],
+      "redditTop": {
+        "sub": "r/LocalLLaMA",
+        "upvotes": 1100
+      },
       "trustedVoicesCount": 1,
       "tickerMove": null
     },
@@ -116,7 +123,14 @@
     "category": "AI",
     "title": "€54,000 billing shock in 13 hours: unrestricted Firebase browser key drained by Gemini API abuse",
     "summary": "A developer reports a €54,000 unexpected billing spike in just 13 hours after a Firebase browser key without API restrictions was used to make Gemini API requests — presumably by a malicious third party. The Google AI developer forum post goes viral with 386 HN pts and 281 comments. The incident exposes a critical gap in Google's abuse detection and billing caps for Gemini APIs: client-side Firebase keys often have no restrictions by default, and Gemini does not enforce spending caps out of the box.",
-    "tags": ["google", "gemini", "firebase", "api-security", "billing-abuse", "ai-platform"],
+    "tags": [
+      "google",
+      "gemini",
+      "firebase",
+      "api-security",
+      "billing-abuse",
+      "ai-platform"
+    ],
     "url": "https://discuss.ai.google.dev/t/unexpected-54k-billing-spike-in-13-hours-firebase-browser-key-without-api-restrictions-used-for-gemini-requests/140262",
     "source": "Google AI Developer Forum / HN",
     "metrics": {
@@ -127,17 +141,27 @@
       "concreteness": 9,
       "stakes": 7,
       "fudRisk": 1,
-      "importance": 6.90,
+      "importance": 6.9,
       "trust": 7
     },
     "signals": {
       "outletCount": 6,
       "tier1Count": 1,
-      "outlets": ["Google AI Forum", "HN", "Reddit/technology"],
+      "outlets": [
+        "Google AI Forum",
+        "HN",
+        "Reddit/technology"
+      ],
       "twitterMentions": 800,
       "topTweets": [],
-      "subreddits": ["r/technology", "r/programming"],
-      "redditTop": { "sub": "r/programming", "upvotes": 620 },
+      "subreddits": [
+        "r/technology",
+        "r/programming"
+      ],
+      "redditTop": {
+        "sub": "r/programming",
+        "upvotes": 620
+      },
       "trustedVoicesCount": 0,
       "tickerMove": null
     },
@@ -151,7 +175,14 @@
     "category": "AI",
     "title": "Google's Gemini app lands on macOS — first native desktop client, 169 HN pts, Sundar Pichai announces",
     "summary": "Google ships the Gemini app for macOS, the first time Gemini has a native desktop client. Sundar Pichai announces on X and links the blog.google post. The app brings native multimodal capabilities including real-time screen awareness and voice input. HN thread: 169 pts, 91 comments. Puts Gemini on equal footing with Claude for Desktop and ChatGPT's macOS app in the AI assistant desktop battle.",
-    "tags": ["google", "gemini", "macos", "desktop-app", "sundar-pichai", "multimodal-ai"],
+    "tags": [
+      "google",
+      "gemini",
+      "macos",
+      "desktop-app",
+      "sundar-pichai",
+      "multimodal-ai"
+    ],
     "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-mac-os/",
     "source": "Google",
     "metrics": {
@@ -168,13 +199,28 @@
     "signals": {
       "outletCount": 10,
       "tier1Count": 3,
-      "outlets": ["Google Blog", "HN", "TechCrunch", "The Verge", "Ars Technica"],
+      "outlets": [
+        "Google Blog",
+        "HN",
+        "TechCrunch",
+        "The Verge",
+        "Ars Technica"
+      ],
       "twitterMentions": 1600,
       "topTweets": [
-        { "handle": "@sundarpichai", "likes": 2100 }
+        {
+          "handle": "@sundarpichai",
+          "likes": 2100
+        }
       ],
-      "subreddits": ["r/MachineLearning", "r/technology"],
-      "redditTop": { "sub": "r/technology", "upvotes": 780 },
+      "subreddits": [
+        "r/MachineLearning",
+        "r/technology"
+      ],
+      "redditTop": {
+        "sub": "r/technology",
+        "upvotes": 780
+      },
       "trustedVoicesCount": 1,
       "tickerMove": null
     },
