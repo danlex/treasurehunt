@@ -21,7 +21,7 @@
       "dislikes": 5
     },
     "AI": {
-      "likes": 8,
+      "likes": 9,
       "dislikes": 3
     },
     "Viral": {
@@ -779,7 +779,7 @@
       "dislikes": 1
     },
     "ai-agents": {
-      "likes": 0,
+      "likes": 1,
       "dislikes": 2
     },
     "retail": {
@@ -805,6 +805,30 @@
     "developer-tools": {
       "likes": 0,
       "dislikes": 1
+    },
+    "open-source": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "nous-research": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "self-improving": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "github-trending": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "autonomous-agents": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "llm": {
+      "likes": 1,
+      "dislikes": 0
     }
   },
   "sources": {
@@ -939,11 +963,15 @@
     "Google Android Developers": {
       "likes": 0,
       "dislikes": 1
+    },
+    "GitHub / NousResearch": {
+      "likes": 1,
+      "dislikes": 0
     }
   },
   "totals": {
-    "likes": 21,
+    "likes": 22,
     "dislikes": 25
   },
-  "lastUpdated": "2026-04-17T15:35:26.417Z"
+  "lastUpdated": "2026-04-17T21:04:44.491Z"
 }

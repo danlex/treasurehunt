@@ -1,1 +1,261 @@
-[]
+[
+  {
+    "id": "stanford-hai-china-ai-2026",
+    "category": "AI",
+    "title": "Stanford HAI 2026 Index: China narrowed Arena score gap from 1300 pts to 39 — and AI talent flow to US fell 89%",
+    "summary": "Stanford's 2026 AI Index, released April 16, shows China has nearly erased the US lead: the top model Arena score gap collapsed from 1300+ points (May 2023) to just 39 (March 2026). Meanwhile, AI scholars emigrating to the US dropped 89% since 2017, accelerating 80% in the past year. China leads in industrial robot installations (295,000 vs 34,200 US) and AI research citations (20.6% vs 12.6%). US private AI investment reached $285.9B in 2025 vs China's $12.4B — but the money gap isn't translating into capability dominance.",
+    "tags": [
+      "stanford-hai",
+      "china-ai",
+      "us-china",
+      "ai-index",
+      "geopolitics",
+      "talent-migration",
+      "benchmarks"
+    ],
+    "url": "https://fortune.com/2026/04/16/stanford-study-how-has-china-gained-on-us-ai-war/",
+    "source": "Fortune / Stanford HAI",
+    "metrics": {
+      "coverage": 7,
+      "social": 6,
+      "novelty": 7,
+      "authority": 8,
+      "concreteness": 9,
+      "stakes": 9,
+      "fudRisk": 2,
+      "importance": 7.85,
+      "trust": 8
+    },
+    "signals": {
+      "outletCount": 18,
+      "tier1Count": 3,
+      "outlets": [
+        "Fortune",
+        "China Daily",
+        "GDELT multilingual (36 articles)"
+      ],
+      "twitterMentions": 0,
+      "topTweets": [],
+      "subreddits": [
+        "r/technology"
+      ],
+      "redditTop": {
+        "sub": "r/technology",
+        "upvotes": 100
+      },
+      "trustedVoicesCount": 0,
+      "tickerMove": null
+    },
+    "whyItMatters": "The US advantage in AI is no longer about raw capability — at 39 Arena points the models are functionally tied. Structural risks are deeper: a collapsing talent pipeline and China's robot manufacturing lead (8.6× more installations) mean export controls and funding gaps may not hold. Policy makers assumed a multi-year runway; the Stanford data suggests it's gone.",
+    "trustVerdict": "high",
+    "trustNotes": "Stanford HAI publishes this annual index with full methodology. Hard numbers from Chatbot Arena (public leaderboard), OECD talent data, and IFR robot statistics. Fortune reporting accurately quotes the primary source.",
+    "primarySource": "https://aiindex.stanford.edu/report/"
+  },
+  {
+    "id": "ai-compute-scarcity-2026",
+    "category": "Startups",
+    "title": "Tom Tunguz: The age of abundant AI is over — Blackwell GPUs up 48%, CoreWeave raised minimums to 3-year contracts, Anthropic limited new model to ~40 orgs",
+    "summary": "Theory Ventures partner Tom Tunguz argues AI has crossed from abundance to scarcity as of April 2026. Nvidia Blackwell GPU rentals hit $4.08/hour (up 48% in two months); CoreWeave raised prices 20% and extended minimum contracts from 1 to 3 years; Anthropic restricted its newest model to roughly 40 organizations. Tunguz identifies five hallmarks: restricted model access, prohibitive pricing, performance variability, rising costs, and forced developer diversification across providers. His conclusion: this isn't a blip — the scarcity era will last years.",
+    "tags": [
+      "compute",
+      "gpu-prices",
+      "nvidia",
+      "coreweave",
+      "anthropic",
+      "vc-analysis",
+      "ai-infrastructure"
+    ],
+    "url": "https://tomtunguz.com/ai-compute-crisis-2026/",
+    "source": "Tom Tunguz / Theory Ventures",
+    "metrics": {
+      "coverage": 4,
+      "social": 5,
+      "novelty": 7,
+      "authority": 5,
+      "concreteness": 9,
+      "stakes": 8,
+      "fudRisk": 3,
+      "importance": 6.46,
+      "trust": 6
+    },
+    "signals": {
+      "outletCount": 3,
+      "tier1Count": 0,
+      "outlets": [
+        "tomtunguz.com",
+        "Hacker News"
+      ],
+      "twitterMentions": 0,
+      "topTweets": [],
+      "subreddits": [],
+      "redditTop": null,
+      "trustedVoicesCount": 0,
+      "tickerMove": null
+    },
+    "whyItMatters": "Compute access is becoming the new moat. If GPU scarcity persists at these prices and contract lengths, only well-capitalised incumbents can sustain frontier model access — startups and researchers face a structural disadvantage. This reframes the 'AI democratisation' narrative: the tooling is open, but the compute isn't.",
+    "trustVerdict": "medium",
+    "trustNotes": "Author is a credible VC with track record (Theory Ventures). Hard numbers on GPU pricing and CoreWeave contracts are from market data; independently corroborated by the broader compute scarcity trend. Single-source analysis — no tier-1 outlet replication, but the data points are specific and verifiable.",
+    "primarySource": "https://tomtunguz.com/ai-compute-crisis-2026/"
+  },
+  {
+    "id": "allbirds-newbird-ai-crash",
+    "category": "Startups",
+    "title": "Allbirds rebrands as NewBird AI, surges 600% then crashes 35% — market cap swings from $21M to $159M in 48 hours",
+    "summary": "Allbirds (BIRD), the struggling shoe brand that sold its footwear assets for $39M in March, announced a full pivot to AI infrastructure on April 16: renaming to NewBird AI and planning to acquire 'high-performance, low-latency AI compute hardware' for lease to customers. The stock surged nearly 600% on the news, then plunged 35% the next day. Market cap oscillated between $21.7M and $159M. The company is seeking $50M in new funding (expected Q2 2026), citing 'GPU procurement lead times increasing' and 'North American data center vacancy rates at historic lows' as the market opportunity.",
+    "tags": [
+      "allbirds",
+      "ai-rebrand",
+      "stock-market",
+      "gpu-compute",
+      "startups",
+      "hype",
+      "viral"
+    ],
+    "url": "https://finance.yahoo.com/news/allbirds-stock-tumbles-after-nearly-600-rally-as-the-shoemaker-rebrands-as-an-ai-company-173129269.html",
+    "source": "Yahoo Finance",
+    "metrics": {
+      "coverage": 6,
+      "social": 7,
+      "novelty": 6,
+      "authority": 5,
+      "concreteness": 9,
+      "stakes": 5,
+      "fudRisk": 5,
+      "importance": 6,
+      "trust": 6
+    },
+    "signals": {
+      "outletCount": 8,
+      "tier1Count": 1,
+      "outlets": [
+        "Yahoo Finance",
+        "Bloomberg",
+        "Reuters"
+      ],
+      "twitterMentions": 0,
+      "topTweets": [],
+      "subreddits": [
+        "r/technology",
+        "r/wallstreetbets"
+      ],
+      "redditTop": {
+        "sub": "r/technology",
+        "upvotes": 100
+      },
+      "trustedVoicesCount": 0,
+      "tickerMove": {
+        "symbol": "BIRD",
+        "changePct": 500
+      }
+    },
+    "whyItMatters": "The pattern — distressed brand + AI rebrand + stock pump — mirrors the 2017 blockchain name-change wave ($LBCC, Long Island Iced Tea). That it works again in 2026 reveals market credulity around AI compute infrastructure at exactly the moment real compute scarcity is emerging. The underlying thesis (lease GPU capacity) isn't wrong; the execution (a failed shoe company with $21M market cap) is.",
+    "trustVerdict": "medium",
+    "trustNotes": "Stock price movements are public market data, independently verifiable. Yahoo Finance reporting is factual and corroborated by Bloomberg/Reuters. FudRisk is elevated because the company's AI pivot viability is speculative — scored accordingly.",
+    "primarySource": "https://finance.yahoo.com/news/allbirds-stock-tumbles-after-nearly-600-rally-as-the-shoemaker-rebrands-as-an-ai-company-173129269.html"
+  },
+  {
+    "id": "hy-embodied-05-tencent",
+    "category": "Research",
+    "title": "Tencent Robotics X releases HY-Embodied-0.5: 2B + 32B open-source embodied AI foundation models, leads 16 of 22 benchmarks",
+    "summary": "Tencent Robotics X and HY Vision Team released HY-Embodied-0.5, a family of open-source foundation models built for real-world robotic agents (arXiv 2604.07430). The 2B model targets edge devices and leads state-of-the-art alternatives on 16 of 22 benchmarks; the 32B variant matches Gemini 3.0 Pro on embodied understanding tasks. Both use a Mixture-of-Transformers (MoT) architecture with modality-specific computing paths and latent tokens for fine-grained visual perception — critical for manipulation and navigation. A VLA (Vision-Language-Action) model trained on this foundation enables real-world robot control. Full code and model weights are public on April 7, 2026.",
+    "tags": [
+      "embodied-ai",
+      "robotics",
+      "foundation-model",
+      "tencent",
+      "mixture-of-transformers",
+      "open-source",
+      "vla"
+    ],
+    "url": "https://arxiv.org/abs/2604.07430",
+    "source": "arXiv / Tencent Robotics X",
+    "metrics": {
+      "coverage": 6,
+      "social": 8,
+      "novelty": 8,
+      "authority": 8,
+      "concreteness": 8,
+      "stakes": 8,
+      "fudRisk": 2,
+      "importance": 7.76,
+      "trust": 8
+    },
+    "signals": {
+      "outletCount": 5,
+      "tier1Count": 0,
+      "outlets": [
+        "arXiv",
+        "Hugging Face Papers (182 upvotes)",
+        "GitHub"
+      ],
+      "twitterMentions": 0,
+      "topTweets": [],
+      "subreddits": [
+        "r/MachineLearning",
+        "r/LocalLLaMA"
+      ],
+      "redditTop": {
+        "sub": "r/MachineLearning",
+        "upvotes": 0
+      },
+      "trustedVoicesCount": 0,
+      "tickerMove": null
+    },
+    "whyItMatters": "Embodied AI has been bottlenecked by the lack of open foundation models trained specifically for physical interaction — most robotics work fine-tunes LLMs not designed for the task. HY-Embodied-0.5's MoT architecture and open weights lower the barrier for robotics labs globally. Matching Gemini 3.0 Pro with an open 32B model signals the frontier of embodied AI is becoming accessible.",
+    "trustVerdict": "high",
+    "trustNotes": "arXiv preprint (2604.07430, April 7 2026) from Tencent Robotics X — credible industrial research lab with prior publications. 182 Hugging Face upvotes in 10 days, open weights on Hugging Face Hub for independent verification. Benchmark claims are specific and reproducible.",
+    "primarySource": "https://arxiv.org/abs/2604.07430"
+  },
+  {
+    "id": "skillclaw-collective-skill-evolution",
+    "category": "Research",
+    "title": "SkillClaw: multi-user LLM agent ecosystems where skills evolve across all users — 276 HuggingFace upvotes in one week",
+    "summary": "SkillClaw (arXiv 2604.08377, April 9 2026) introduces a framework where deployed LLM agent skills improve themselves by aggregating real interactions across all users simultaneously. An autonomous evolver identifies recurring behavioral patterns in cross-user trajectories, distills improvements, and propagates them system-wide — so a fix discovered in one user's session benefits everyone. Evaluated on WildClawBench with Qwen3-Max, the system shows measurable gains from limited interaction data. The paper attracted 276 upvotes on Hugging Face in its first week — among the highest engagement of any April 2026 AI paper.",
+    "tags": [
+      "ai-agents",
+      "skill-evolution",
+      "multi-agent",
+      "collective-intelligence",
+      "llm",
+      "autonomous-learning",
+      "research"
+    ],
+    "url": "https://arxiv.org/abs/2604.08377",
+    "source": "arXiv / Huazhong University + Alibaba",
+    "metrics": {
+      "coverage": 5,
+      "social": 9,
+      "novelty": 9,
+      "authority": 6,
+      "concreteness": 6,
+      "stakes": 8,
+      "fudRisk": 3,
+      "importance": 7.29,
+      "trust": 7
+    },
+    "signals": {
+      "outletCount": 3,
+      "tier1Count": 0,
+      "outlets": [
+        "arXiv",
+        "Hugging Face Papers (276 upvotes)"
+      ],
+      "twitterMentions": 0,
+      "topTweets": [],
+      "subreddits": [
+        "r/MachineLearning",
+        "r/singularity"
+      ],
+      "redditTop": {
+        "sub": "r/MachineLearning",
+        "upvotes": 0
+      },
+      "trustedVoicesCount": 0,
+      "tickerMove": null
+    },
+    "whyItMatters": "Today's AI agents are static after deployment — every user starts from scratch. SkillClaw's collective evolution model is a step toward agents that genuinely learn from deployment at scale, similar to how human institutions transmit knowledge. If this generalises beyond the benchmark, it changes how agent platforms are designed: the value compounds with every user interaction rather than decaying.",
+    "trustVerdict": "medium",
+    "trustNotes": "arXiv preprint (2604.08377), listed as work in progress. Strong HF community signal (276 upvotes) but no peer-review yet. Benchmark results on WildClawBench are internally evaluated — independent replication pending. Author affiliations (Huazhong University, Alibaba) are credible but the framework is early-stage.",
+    "primarySource": "https://arxiv.org/abs/2604.08377"
+  }
+]

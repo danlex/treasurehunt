@@ -1,5 +1,59 @@
 [
   {
+    "id": "nous-hermes-agent-96k",
+    "category": "AI",
+    "title": "NousResearch hermes-agent hits 96k GitHub stars — open-source self-improving agent with built-in learning loop",
+    "summary": "NousResearch's hermes-agent (github.com/NousResearch/hermes-agent) has reached 96,216 stars and 13,481 forks, ranking among the most-starred AI agent projects on GitHub. Unlike most frameworks, it implements a persistent learning loop: the agent creates skills from experience, refines them during use, and searches its own conversation history. It runs across 200+ models (OpenRouter, OpenAI, Anthropic, custom), deploys via Terminal, Telegram, Discord, Slack, WhatsApp or Email, and operates on a $5 VPS or GPU cluster. It includes a cron scheduler for unattended operation and batch trajectory generation for RL training.",
+    "tags": [
+      "open-source",
+      "ai-agents",
+      "nous-research",
+      "self-improving",
+      "github-trending",
+      "autonomous-agents",
+      "llm"
+    ],
+    "url": "https://github.com/NousResearch/hermes-agent",
+    "source": "GitHub / NousResearch",
+    "metrics": {
+      "coverage": 5,
+      "social": 9,
+      "novelty": 8,
+      "authority": 6,
+      "concreteness": 8,
+      "stakes": 7,
+      "fudRisk": 2,
+      "importance": 7.11,
+      "trust": 7
+    },
+    "signals": {
+      "outletCount": 4,
+      "tier1Count": 0,
+      "outlets": [
+        "GitHub",
+        "Hacker News (trending)",
+        "Reddit r/singularity"
+      ],
+      "twitterMentions": 0,
+      "topTweets": [],
+      "subreddits": [
+        "r/LocalLLaMA",
+        "r/singularity"
+      ],
+      "redditTop": {
+        "sub": "r/LocalLLaMA",
+        "upvotes": 0
+      },
+      "trustedVoicesCount": 0,
+      "tickerMove": null
+    },
+    "whyItMatters": "96k stars in less than a year signals serious practitioner adoption. The learning loop — where the agent compresses past interactions into reusable skills — is a step toward genuinely autonomous systems that improve without human re-training. For developers, it's the most feature-complete self-hosted agent today: multi-platform, model-agnostic, and deployable on cheap hardware.",
+    "trustVerdict": "high",
+    "trustNotes": "Star/fork counts verified directly from GitHub API (96216 stars, 13481 forks, updated 2026-04-17). NousResearch is a credible open-source AI org known for Hermes fine-tune series. Claims are verifiable by reading the codebase.",
+    "primarySource": "https://github.com/NousResearch/hermes-agent",
+    "publishedAt": "2026-04-17T21:04:44.486Z"
+  },
+  {
     "id": "nature-llm-behavioral-traits",
     "category": "Research",
     "title": "Nature: LLMs transmit behavioural traits through hidden signals embedded in training data",
