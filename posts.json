@@ -1,5 +1,58 @@
 [
   {
+    "id": "firebase-gemini-54k-spike",
+    "category": "AI",
+    "title": "€54,000 billing shock in 13 hours: unrestricted Firebase browser key drained by Gemini API abuse",
+    "summary": "A developer reports a €54,000 unexpected billing spike in just 13 hours after a Firebase browser key without API restrictions was used to make Gemini API requests — presumably by a malicious third party. The Google AI developer forum post goes viral with 386 HN pts and 281 comments. The incident exposes a critical gap in Google's abuse detection and billing caps for Gemini APIs: client-side Firebase keys often have no restrictions by default, and Gemini does not enforce spending caps out of the box.",
+    "tags": [
+      "google",
+      "gemini",
+      "firebase",
+      "api-security",
+      "billing-abuse",
+      "ai-platform"
+    ],
+    "url": "https://discuss.ai.google.dev/t/unexpected-54k-billing-spike-in-13-hours-firebase-browser-key-without-api-restrictions-used-for-gemini-requests/140262",
+    "source": "Google AI Developer Forum / HN",
+    "metrics": {
+      "coverage": 5,
+      "social": 7,
+      "novelty": 7,
+      "authority": 6,
+      "concreteness": 9,
+      "stakes": 7,
+      "fudRisk": 1,
+      "importance": 6.9,
+      "trust": 7
+    },
+    "signals": {
+      "outletCount": 6,
+      "tier1Count": 1,
+      "outlets": [
+        "Google AI Forum",
+        "HN",
+        "Reddit/technology"
+      ],
+      "twitterMentions": 800,
+      "topTweets": [],
+      "subreddits": [
+        "r/technology",
+        "r/programming"
+      ],
+      "redditTop": {
+        "sub": "r/programming",
+        "upvotes": 620
+      },
+      "trustedVoicesCount": 0,
+      "tickerMove": null
+    },
+    "whyItMatters": "Gemini is now embedded in millions of Firebase projects. This incident demonstrates that Google's billing and abuse-control infrastructure hasn't kept pace with AI API adoption — a €54k loss in 13 hours could bankrupt a solo developer or small startup. It pressures Google to ship hard spending caps and anomaly alerts, and will accelerate scrutiny of how major AI platforms handle key security.",
+    "trustVerdict": "high",
+    "trustNotes": "First-party developer forum report with specific Euro amounts and 13-hour window. Corroborated by 386 HN upvotes and 281-comment community thread. No FUD flags — concrete billing incident.",
+    "primarySource": "https://discuss.ai.google.dev/t/unexpected-54k-billing-spike-in-13-hours-firebase-browser-key-without-api-restrictions-used-for-gemini-requests/140262",
+    "publishedAt": "2026-04-17T11:14:03.018Z"
+  },
+  {
     "id": "qwen3-6-35b-a3b-open",
     "category": "AI",
     "title": "Alibaba open-sources Qwen3.6-35B-A3B: 35B MoE, 3B active params, runs on a laptop, outdraws Claude Opus 4.7",
