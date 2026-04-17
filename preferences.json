@@ -5,7 +5,7 @@
       "dislikes": 11
     },
     "Research": {
-      "likes": 5,
+      "likes": 6,
       "dislikes": 1
     },
     "Top Tweets": {
@@ -14,7 +14,7 @@
     },
     "Startups": {
       "likes": 2,
-      "dislikes": 4
+      "dislikes": 6
     },
     "Quantum": {
       "likes": 1,
@@ -672,7 +672,7 @@
     },
     "anthropic": {
       "likes": 1,
-      "dislikes": 0
+      "dislikes": 1
     },
     "claude": {
       "likes": 1,
@@ -792,7 +792,7 @@
     },
     "startups": {
       "likes": 0,
-      "dislikes": 1
+      "dislikes": 2
     },
     "android": {
       "likes": 0,
@@ -807,7 +807,7 @@
       "dislikes": 1
     },
     "open-source": {
-      "likes": 1,
+      "likes": 2,
       "dislikes": 0
     },
     "nous-research": {
@@ -875,6 +875,78 @@
       "dislikes": 0
     },
     "benchmarks": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "compute": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "gpu-prices": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "nvidia": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "coreweave": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "vc-analysis": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "ai-infrastructure": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "allbirds": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "ai-rebrand": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "stock-market": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "gpu-compute": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "hype": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "viral": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "embodied-ai": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "robotics": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "foundation-model": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "tencent": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "mixture-of-transformers": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "vla": {
       "likes": 1,
       "dislikes": 0
     }
@@ -1023,11 +1095,23 @@
     "Fortune / Stanford HAI": {
       "likes": 1,
       "dislikes": 0
+    },
+    "Tom Tunguz / Theory Ventures": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "Yahoo Finance": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "arXiv / Tencent Robotics X": {
+      "likes": 1,
+      "dislikes": 0
     }
   },
   "totals": {
-    "likes": 24,
-    "dislikes": 25
+    "likes": 25,
+    "dislikes": 27
   },
-  "lastUpdated": "2026-04-17T21:05:25.049Z"
+  "lastUpdated": "2026-04-17T21:06:03.565Z"
 }

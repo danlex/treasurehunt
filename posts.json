@@ -1,5 +1,59 @@
 [
   {
+    "id": "hy-embodied-05-tencent",
+    "category": "Research",
+    "title": "Tencent Robotics X releases HY-Embodied-0.5: 2B + 32B open-source embodied AI foundation models, leads 16 of 22 benchmarks",
+    "summary": "Tencent Robotics X and HY Vision Team released HY-Embodied-0.5, a family of open-source foundation models built for real-world robotic agents (arXiv 2604.07430). The 2B model targets edge devices and leads state-of-the-art alternatives on 16 of 22 benchmarks; the 32B variant matches Gemini 3.0 Pro on embodied understanding tasks. Both use a Mixture-of-Transformers (MoT) architecture with modality-specific computing paths and latent tokens for fine-grained visual perception — critical for manipulation and navigation. A VLA (Vision-Language-Action) model trained on this foundation enables real-world robot control. Full code and model weights are public on April 7, 2026.",
+    "tags": [
+      "embodied-ai",
+      "robotics",
+      "foundation-model",
+      "tencent",
+      "mixture-of-transformers",
+      "open-source",
+      "vla"
+    ],
+    "url": "https://arxiv.org/abs/2604.07430",
+    "source": "arXiv / Tencent Robotics X",
+    "metrics": {
+      "coverage": 6,
+      "social": 8,
+      "novelty": 8,
+      "authority": 8,
+      "concreteness": 8,
+      "stakes": 8,
+      "fudRisk": 2,
+      "importance": 7.76,
+      "trust": 8
+    },
+    "signals": {
+      "outletCount": 5,
+      "tier1Count": 0,
+      "outlets": [
+        "arXiv",
+        "Hugging Face Papers (182 upvotes)",
+        "GitHub"
+      ],
+      "twitterMentions": 0,
+      "topTweets": [],
+      "subreddits": [
+        "r/MachineLearning",
+        "r/LocalLLaMA"
+      ],
+      "redditTop": {
+        "sub": "r/MachineLearning",
+        "upvotes": 0
+      },
+      "trustedVoicesCount": 0,
+      "tickerMove": null
+    },
+    "whyItMatters": "Embodied AI has been bottlenecked by the lack of open foundation models trained specifically for physical interaction — most robotics work fine-tunes LLMs not designed for the task. HY-Embodied-0.5's MoT architecture and open weights lower the barrier for robotics labs globally. Matching Gemini 3.0 Pro with an open 32B model signals the frontier of embodied AI is becoming accessible.",
+    "trustVerdict": "high",
+    "trustNotes": "arXiv preprint (2604.07430, April 7 2026) from Tencent Robotics X — credible industrial research lab with prior publications. 182 Hugging Face upvotes in 10 days, open weights on Hugging Face Hub for independent verification. Benchmark claims are specific and reproducible.",
+    "primarySource": "https://arxiv.org/abs/2604.07430",
+    "publishedAt": "2026-04-17T21:06:03.563Z"
+  },
+  {
     "id": "stanford-hai-china-ai-2026",
     "category": "AI",
     "title": "Stanford HAI 2026 Index: China narrowed Arena score gap from 1300 pts to 39 — and AI talent flow to US fell 89%",
