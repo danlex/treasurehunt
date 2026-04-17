@@ -2,6 +2,29 @@
 
 Reference doc for the hunt agent (cron that refills `queue.json` with researched items).
 
+## Guard — mandatory validation before queue write
+
+Before writing any item to `queue.json`, run:
+
+```
+node guard.js queue.json --fix --report
+```
+
+This runs five layers automatically:
+
+| Layer | What it catches |
+|---|---|
+| **Prompt injection** | Adversarial text in scraped titles/summaries trying to hijack agent behaviour |
+| **Schema guardrails** | Missing fields, out-of-range scores, invalid categories, malformed URLs |
+| **Anti-confabulation** | Numbers in title not in summary, outletCount >> named outlets, importance formula drift |
+| **Anti-hallucination** | Zero corroborating signals, impossible numbers, FUD patterns with low fudRisk score, low importance |
+| **Anti-confirmation bias** | Category overrepresented in last 10 posts → diversity penalty applied to score |
+
+`--fix` removes FAIL items from queue.json automatically. `--report` shows all flags.
+Items with verdict=warn are published with a `guardWarnings` field but not blocked.
+
+**Never skip the guard.** If `node guard.js` exits 1, review the output before proceeding.
+
 ## Signal sources
 
 Every candidate news item gets scored against these sources. The hunt agent fetches from each and aggregates evidence.

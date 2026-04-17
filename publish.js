@@ -1,17 +1,19 @@
 #!/usr/bin/env node
-// Picks the best item from queue.json and moves it to posts.json.
-// Scoring combines my initial ranking (earlier = better) with user taste
-// signals from preferences.json (likes +, dislikes −).
+// Publishes all items from queue.json to posts.json, best-first by score.
+// Scoring combines importance + user taste signals from preferences.json.
+// Runs guard.js on every item before publishing — FAIL items are moved to rejected.json.
 // Exits with code 2 if queue is empty.
 
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+const { auditBatch } = require('./guard');
 
-const ROOT  = __dirname;
-const QUEUE = path.join(ROOT, 'queue.json');
-const POSTS = path.join(ROOT, 'posts.json');
-const PREFS = path.join(ROOT, 'preferences.json');
+const ROOT     = __dirname;
+const QUEUE    = path.join(ROOT, 'queue.json');
+const POSTS    = path.join(ROOT, 'posts.json');
+const PREFS    = path.join(ROOT, 'preferences.json');
+const REJECTED = path.join(ROOT, 'rejected.json');
 
 const readJson  = p => JSON.parse(fs.readFileSync(p, 'utf8'));
 const writeJson = (p, d) => fs.writeFileSync(p, JSON.stringify(d, null, 2) + '\n');
@@ -19,6 +21,44 @@ const writeJson = (p, d) => fs.writeFileSync(p, JSON.stringify(d, null, 2) + '\n
 const queue = readJson(QUEUE);
 if (!queue.length) {
   console.error('Queue empty — nothing to publish.');
+  process.exit(2);
+}
+
+// ── Guard: audit all queued items before publishing ───────────────────────────
+const posts       = readJson(POSTS);
+const { results } = auditBatch(queue, posts);
+
+const guardPassed = [];
+const guardFailed = [];
+
+for (const r of results) {
+  if (r.verdict === 'fail') {
+    console.warn(`Guard FAIL: ${r.item.id || r.item.title?.slice(0, 60)}`);
+    console.warn(`  ${r.summary}`);
+    for (const f of r.flags.filter(x => x.severity === 'critical' || x.severity === 'error')) {
+      console.warn(`  [${f.layer}/${f.severity}] ${f.msg || f.pattern || ''}`);
+    }
+    guardFailed.push({ ...r.item, guardAudit: { verdict: r.verdict, flags: r.flags } });
+  } else {
+    // Apply diversity penalty to score
+    guardPassed.push({ item: r.item, penalty: r.penalty, guardVerdict: r.verdict, guardFlags: r.flags });
+  }
+}
+
+// Move failed items to rejected.json
+if (guardFailed.length > 0) {
+  const rejected = readJson(REJECTED);
+  const now      = new Date().toISOString();
+  for (const item of guardFailed) {
+    rejected.unshift({ ...item, rejectedAt: now, rejectedBy: 'guard' });
+  }
+  writeJson(REJECTED, rejected);
+  console.log(`Guard: ${guardFailed.length} item(s) rejected. ${guardPassed.length} proceeding.`);
+}
+
+if (!guardPassed.length) {
+  console.error('All items failed guard — nothing to publish.');
+  writeJson(QUEUE, []);
   process.exit(2);
 }
 
@@ -30,33 +70,39 @@ const bucketScore = (bucket, key) => {
   return b ? (b.likes || 0) - (b.dislikes || 0) : 0;
 };
 
-function itemScore(item, idx) {
-  // Primary: computed importance (0-10 scale, includes stakes/novelty/authority/etc.)
-  // Fallback: my initial ranking — earlier items worth more.
+function itemScore(item, idx, penalty = 0) {
   let s = item.metrics?.importance != null
     ? item.metrics.importance
-    : (queue.length - idx) * 0.5;
-  // FUD penalty
+    : (guardPassed.length - idx) * 0.5;
   if (item.metrics?.fudRisk) s -= item.metrics.fudRisk * 0.3;
-  // User taste signals
   s += bucketScore(prefs.categories, item.category);
   (item.tags || []).forEach(t => { s += bucketScore(prefs.tags, t); });
   if (item.source) s += bucketScore(prefs.sources, item.source);
+  s += penalty; // diversity penalty from guard (negative)
   return s;
 }
 
-const scored = queue.map((item, idx) => ({ item, idx, score: itemScore(item, idx) }));
-scored.sort((a, b) => b.score - a.score);
-const pick = scored[0];
-const rest = queue.filter((_, idx) => idx !== pick.idx);
+const scored = guardPassed
+  .map(({ item, penalty, guardVerdict, guardFlags }, idx) => ({
+    item, score: itemScore(item, idx, penalty), guardVerdict, guardFlags,
+  }))
+  .sort((a, b) => b.score - a.score);
 
-const posts = readJson(POSTS);
-posts.unshift({ ...pick.item, publishedAt: new Date().toISOString(), score: Number(pick.score.toFixed(2)) });
+const now = new Date().toISOString();
+for (const { item, score, guardVerdict, guardFlags } of scored) {
+  const warnings = (guardFlags || []).filter(f => f.severity === 'warn');
+  posts.unshift({
+    ...item,
+    publishedAt:  now,
+    score:        Number(score.toFixed(2)),
+    guardVerdict,
+    ...(warnings.length > 0 ? { guardWarnings: warnings.map(f => f.msg) } : {}),
+  });
+  const badge = guardVerdict === 'warn' ? ' ⚠' : '';
+  console.log(`Published: ${item.title} (score ${score.toFixed(2)})${badge}`);
+}
 
-writeJson(QUEUE, rest);
+writeJson(QUEUE, []);
 writeJson(POSTS, posts);
 
-// Regenerate the static site so index.html, per-post pages, sitemap and RSS stay in sync.
 execSync('node build.js', { cwd: ROOT, stdio: 'inherit' });
-
-console.log(`Published: ${pick.item.title} (score ${pick.score.toFixed(2)})`);

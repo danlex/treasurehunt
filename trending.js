@@ -10,9 +10,10 @@
 
 const fs = require('fs');
 const path = require('path');
-const hn = require('./hnCheck');
+const hn     = require('./hnCheck');
 const reddit = require('./redditCheck');
-const rss = require('./rssCheck');
+const rss    = require('./rssCheck');
+const { sanitizeTrendingItem } = require('./guard');
 
 // X is optional — only loaded if the module exists. xCheck.js loads .env itself.
 let xCheck = null;
@@ -274,7 +275,8 @@ async function collectAll() {
   }
 
   const chunks = await Promise.all(jobs);
-  const flat = chunks.flat().filter(x => x.title && x.url);
+  // Sanitize all scraped content for prompt injection before dedup/sort
+  const flat = chunks.flat().filter(x => x.title && x.url).map(sanitizeTrendingItem);
 
   // Deduplicate by normalized URL (strip query/fragment)
   const seen = new Map();
