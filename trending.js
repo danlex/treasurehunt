@@ -22,66 +22,106 @@ try { xCheck = require('./xCheck'); } catch { /* no X module */ }
 let gdelt = null;
 try { gdelt = require('./gdeltCheck'); } catch { /* no GDELT module */ }
 
+// GitHub Trending scraper
+let github = null;
+try { github = require('./githubCheck'); } catch { /* no githubCheck module */ }
+
 const CACHE_FILE = path.join(__dirname, '.cache', 'trending.json');
 const CACHE_TTL_MS = 20 * 60 * 1000;
 
 const REDDIT_SUBS = [
-  'r/technology', 'r/MachineLearning', 'r/LocalLLaMA', 'r/OpenAI', 'r/ClaudeAI',
-  'r/singularity', 'r/QuantumComputing', 'r/Physics', 'r/netsec', 'r/cybersecurity',
-  'r/sysadmin', 'r/venturecapital', 'r/startups', 'r/Futurology', 'r/programming'
+  // AI / ML
+  'r/MachineLearning', 'r/LocalLLaMA', 'r/OpenAI', 'r/ClaudeAI', 'r/ChatGPT',
+  'r/singularity', 'r/artificial',
+  // General tech
+  'r/technology', 'r/programming', 'r/compsci', 'r/Futurology',
+  // Science
+  'r/science', 'r/Physics', 'r/QuantumComputing',
+  // Security
+  'r/netsec', 'r/cybersecurity', 'r/sysadmin',
+  // Business / startups
+  'r/venturecapital', 'r/startups', 'r/wallstreetbets',
 ];
 
 const RSS_FEEDS = [
   // Tech aggregators
-  { url: 'https://www.techmeme.com/feed.xml',                                          source: 'Techmeme' },
-  { url: 'https://news.google.com/rss/search?q=artificial+intelligence&hl=en-US&gl=US', source: 'Google News (AI)' },
-  { url: 'https://news.google.com/rss/search?q=quantum+computing&hl=en-US',            source: 'Google News (Quantum)' },
-  { url: 'https://news.google.com/rss/search?q=cybersecurity+zero-day&hl=en-US',       source: 'Google News (Cyber)' },
-  { url: 'https://feeds.feedburner.com/TheHackersNews',                                source: 'The Hacker News' },
-  { url: 'https://www.producthunt.com/feed',                                           source: 'Product Hunt' },
-  { url: 'https://export.arxiv.org/rss/cs.AI',                                         source: 'arXiv cs.AI' },
-  { url: 'https://export.arxiv.org/rss/cs.LG',                                         source: 'arXiv cs.LG' },
-  { url: 'https://export.arxiv.org/rss/cs.CL',                                         source: 'arXiv cs.CL' },
-  { url: 'https://export.arxiv.org/rss/quant-ph',                                      source: 'arXiv quant-ph' },
+  { url: 'https://www.techmeme.com/feed.xml',                                                source: 'Techmeme' },
+  { url: 'https://news.google.com/rss/search?q=artificial+intelligence&hl=en-US&gl=US',      source: 'Google News (AI)' },
+  { url: 'https://news.google.com/rss/search?q=large+language+model&hl=en-US&gl=US',         source: 'Google News (LLM)' },
+  { url: 'https://news.google.com/rss/search?q=quantum+computing&hl=en-US',                  source: 'Google News (Quantum)' },
+  { url: 'https://news.google.com/rss/search?q=AI+startup+funding&hl=en-US&gl=US',           source: 'Google News (AI Funding)' },
+  { url: 'https://news.google.com/rss/search?q=cybersecurity+zero-day&hl=en-US',             source: 'Google News (Cyber)' },
+  { url: 'https://feeds.feedburner.com/TheHackersNews',                                       source: 'The Hacker News' },
+  { url: 'https://www.producthunt.com/feed',                                                  source: 'Product Hunt' },
+  { url: 'https://lobste.rs/rss',                                                             source: 'Lobste.rs' },
 
-  // Tier-1 general news (world + tech desks)
-  { url: 'http://feeds.bbci.co.uk/news/technology/rss.xml',                            source: 'BBC Technology' },
-  { url: 'http://feeds.bbci.co.uk/news/world/rss.xml',                                 source: 'BBC World' },
-  { url: 'http://feeds.bbci.co.uk/news/science_and_environment/rss.xml',               source: 'BBC Science' },
-  { url: 'http://rss.cnn.com/rss/cnn_tech.rss',                                        source: 'CNN Tech' },
-  { url: 'http://rss.cnn.com/rss/edition.rss',                                         source: 'CNN Top' },
-  { url: 'https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml',                source: 'NYT Technology' },
-  { url: 'https://rss.nytimes.com/services/xml/rss/nyt/Science.xml',                   source: 'NYT Science' },
-  { url: 'https://rss.nytimes.com/services/xml/rss/nyt/Business.xml',                  source: 'NYT Business' },
-  { url: 'https://www.theguardian.com/technology/rss',                                 source: 'The Guardian Tech' },
-  { url: 'https://www.theguardian.com/science/rss',                                    source: 'The Guardian Science' },
-  { url: 'https://feeds.washingtonpost.com/rss/business/technology',                   source: 'Washington Post Tech' },
-  { url: 'https://feeds.npr.org/1019/rss.xml',                                         source: 'NPR Technology' },
-  { url: 'https://apnews.com/hub/technology/feed',                                     source: 'AP Technology' },
-  { url: 'https://www.aljazeera.com/xml/rss/all.xml',                                  source: 'Al Jazeera' },
-  { url: 'https://www.reuters.com/rssFeed/technologyNews',                             source: 'Reuters Tech' },
-  { url: 'https://feeds.bloomberg.com/technology/news.rss',                            source: 'Bloomberg Tech' },
+  // AI lab primary blogs — highest authority for model/product releases
+  // (Use Google News targeted searches for labs whose RSS is blocked or absent)
+  { url: 'https://news.google.com/rss/search?q=site:anthropic.com&hl=en-US&gl=US',            source: 'Anthropic (GNews)' },
+  { url: 'https://news.google.com/rss/search?q=site:openai.com&hl=en-US&gl=US',              source: 'OpenAI (GNews)' },
+  { url: 'https://deepmind.google/blog/rss.xml',                                              source: 'Google DeepMind Blog' },
+  { url: 'https://news.google.com/rss/search?q=site:ai.meta.com&hl=en-US&gl=US',             source: 'Meta AI (GNews)' },
+  { url: 'https://research.google/blog/rss/',                                                 source: 'Google Research Blog' },
+  { url: 'https://huggingface.co/blog/feed.xml',                                              source: 'HuggingFace Blog' },
+  { url: 'https://news.google.com/rss/search?q=site:mistral.ai&hl=en-US&gl=US',              source: 'Mistral AI (GNews)' },
 
-  // Tech-focused outlets
-  { url: 'https://www.theverge.com/rss/index.xml',                                     source: 'The Verge' },
-  { url: 'http://feeds.arstechnica.com/arstechnica/index',                             source: 'Ars Technica' },
-  { url: 'https://www.wired.com/feed/rss',                                             source: 'Wired' },
-  { url: 'https://techcrunch.com/feed/',                                               source: 'TechCrunch' },
-  { url: 'https://www.technologyreview.com/feed/',                                     source: 'MIT Tech Review' },
-  { url: 'https://spectrum.ieee.org/rss/fulltext',                                     source: 'IEEE Spectrum' },
-  { url: 'https://venturebeat.com/feed/',                                              source: 'VentureBeat' },
+  // arXiv — AI/ML/science preprints
+  { url: 'https://export.arxiv.org/rss/cs.AI',                                                source: 'arXiv cs.AI' },
+  { url: 'https://export.arxiv.org/rss/cs.LG',                                                source: 'arXiv cs.LG' },
+  { url: 'https://export.arxiv.org/rss/cs.CL',                                                source: 'arXiv cs.CL' },
+  { url: 'https://export.arxiv.org/rss/cs.CV',                                                source: 'arXiv cs.CV' },
+  { url: 'https://export.arxiv.org/rss/cs.RO',                                                source: 'arXiv cs.RO' },
+  { url: 'https://export.arxiv.org/rss/stat.ML',                                              source: 'arXiv stat.ML' },
+  { url: 'https://export.arxiv.org/rss/quant-ph',                                             source: 'arXiv quant-ph' },
+
+  // Tier-1 general news
+  { url: 'http://feeds.bbci.co.uk/news/technology/rss.xml',                                   source: 'BBC Technology' },
+  { url: 'http://feeds.bbci.co.uk/news/world/rss.xml',                                        source: 'BBC World' },
+  { url: 'http://feeds.bbci.co.uk/news/science_and_environment/rss.xml',                      source: 'BBC Science' },
+  { url: 'http://rss.cnn.com/rss/cnn_tech.rss',                                               source: 'CNN Tech' },
+  { url: 'http://rss.cnn.com/rss/edition.rss',                                                source: 'CNN Top' },
+  { url: 'https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml',                       source: 'NYT Technology' },
+  { url: 'https://rss.nytimes.com/services/xml/rss/nyt/Science.xml',                          source: 'NYT Science' },
+  { url: 'https://rss.nytimes.com/services/xml/rss/nyt/Business.xml',                         source: 'NYT Business' },
+  { url: 'https://www.theguardian.com/technology/rss',                                        source: 'The Guardian Tech' },
+  { url: 'https://www.theguardian.com/science/rss',                                           source: 'The Guardian Science' },
+  { url: 'https://feeds.washingtonpost.com/rss/business/technology',                          source: 'Washington Post Tech' },
+  { url: 'https://feeds.npr.org/1019/rss.xml',                                                source: 'NPR Technology' },
+  { url: 'https://www.aljazeera.com/xml/rss/all.xml',                                         source: 'Al Jazeera' },
+  { url: 'https://feeds.bloomberg.com/technology/news.rss',                                   source: 'Bloomberg Tech' },
+
+  // Tech trade outlets
+  { url: 'https://www.theverge.com/rss/index.xml',                                            source: 'The Verge' },
+  { url: 'http://feeds.arstechnica.com/arstechnica/index',                                    source: 'Ars Technica' },
+  { url: 'https://www.wired.com/feed/rss',                                                    source: 'Wired' },
+  { url: 'https://techcrunch.com/feed/',                                                      source: 'TechCrunch' },
+  { url: 'https://www.technologyreview.com/feed/',                                            source: 'MIT Tech Review' },
+  { url: 'https://spectrum.ieee.org/rss/fulltext',                                            source: 'IEEE Spectrum' },
+  { url: 'https://venturebeat.com/feed/',                                                     source: 'VentureBeat' },
+  { url: 'https://www.theregister.com/headlines.atom',                                        source: 'The Register' },
+  { url: 'https://www.zdnet.com/news/rss.xml',                                                source: 'ZDNet' },
+  { url: 'https://feeds.feedburner.com/fastcompany/headlines',                                source: 'Fast Company' },
+  { url: 'https://www.cnbc.com/id/19854910/device/rss/rss.html',                             source: 'CNBC Tech' },
+  { url: 'https://feeds.a.dj.com/rss/RSSMarketsMain.xml',                                    source: 'WSJ Markets' },
+
+  // AI newsletters
+  { url: 'https://jack-clark.net/feed/',                                                      source: 'Import AI (Jack Clark)' },
+  { url: 'https://www.deeplearning.ai/blog/rss/',                                             source: 'The Batch (Andrew Ng)' },
+  { url: 'https://buttondown.com/ainews/rss',                                                 source: 'AI News' },
+  { url: 'https://tldr.tech/api/rss/ai',                                                      source: 'TLDR AI' },
 
   // Cybersecurity specialists
-  { url: 'https://krebsonsecurity.com/feed/',                                          source: 'Krebs on Security' },
-  { url: 'https://www.schneier.com/feed/atom/',                                        source: 'Schneier on Security' },
-  { url: 'https://www.darkreading.com/rss.xml',                                        source: 'Dark Reading' },
-  { url: 'https://www.bleepingcomputer.com/feed/',                                     source: 'BleepingComputer' },
+  { url: 'https://krebsonsecurity.com/feed/',                                                 source: 'Krebs on Security' },
+  { url: 'https://www.schneier.com/feed/atom/',                                               source: 'Schneier on Security' },
+  { url: 'https://www.darkreading.com/rss.xml',                                               source: 'Dark Reading' },
+  { url: 'https://www.bleepingcomputer.com/feed/',                                            source: 'BleepingComputer' },
 
   // Science / research
-  { url: 'https://www.nature.com/nature.rss',                                          source: 'Nature' },
-  { url: 'https://www.science.org/rss/news_current.xml',                               source: 'Science Magazine' },
-  { url: 'https://www.quantamagazine.org/feed/',                                       source: 'Quanta Magazine' },
-  { url: 'https://phys.org/rss-feed/',                                                 source: 'Phys.org' }
+  { url: 'https://www.nature.com/nature.rss',                                                 source: 'Nature' },
+  { url: 'https://www.science.org/rss/news_current.xml',                                      source: 'Science Magazine' },
+  { url: 'https://www.quantamagazine.org/feed/',                                              source: 'Quanta Magazine' },
+  { url: 'https://phys.org/rss-feed/',                                                        source: 'Phys.org' },
+  { url: 'https://www.newscientist.com/feed/home/',                                           source: 'New Scientist' },
 ];
 
 function ensureCacheDir() {
@@ -161,6 +201,33 @@ async function collectAll() {
         })))
         .catch(e => (console.error('GDELT hot failed:', e.message), []))
     );
+  }
+
+  // GitHub Trending — daily + weekly passes. High-signal for open-source releases.
+  // Repos with 1k+ daily stars are news-worthy; watch frontier orgs.
+  if (github) {
+    const WATCHED_ORGS = ['openai', 'anthropic', 'google-deepmind', 'google-ai-edge',
+      'meta-llama', 'NVIDIA', 'microsoft', 'HuggingFace', 'mistralai', 'karpathy'];
+    for (const since of ['daily', 'weekly']) {
+      jobs.push(
+        github.trending({ since, limit: 25 })
+          .then(repos => repos.map(r => {
+            const org = r.fullName.split('/')[0].toLowerCase();
+            const isFrontier = WATCHED_ORGS.some(w => org === w.toLowerCase());
+            // Score: star gain drives base; frontier org gets a bump
+            const base = Math.min(100, Math.log10(Math.max(1, r.starGain + 1)) * 28);
+            return {
+              title: `GitHub Trending (${since}): ${r.fullName}${r.description ? ' — ' + r.description.slice(0, 80) : ''}`,
+              url: r.url,
+              source: 'GitHub Trending',
+              score: isFrontier ? base + 15 : base,
+              createdAt: new Date().toISOString(),
+              meta: { starGain: r.starGain, totalStars: r.totalStars, language: r.language, since, isFrontier }
+            };
+          }))
+          .catch(e => (console.error(`GitHub trending (${since}) failed:`, e.message), []))
+      );
+    }
   }
 
   // X trusted voices — one call, fetches top recent tweets from tier-1+2 handles.
