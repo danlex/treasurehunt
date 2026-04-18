@@ -1,1 +1,206 @@
-[]
+[
+  {
+    "id": "gemini-robotics-er-16",
+    "category": "Research",
+    "title": "DeepMind's Gemini Robotics-ER 1.6: 93% instrument-reading accuracy, up from 23% — Boston Dynamics Spot ships with it",
+    "summary": "Google DeepMind released Gemini Robotics-ER 1.6 on April 14, 2026, a reasoning-first embodied model that handles spatial reasoning, multi-view camera fusion, and tool calling (search, VLA models, user functions). The headline capability is instrument reading — interpreting analog gauges, pressure dials, chemical sight glasses and digital readouts — where accuracy jumped to 93% with agentic vision versus 23% for Robotics-ER 1.5. Boston Dynamics is the flagship customer: Spot robots now use the model for autonomous industrial-facility inspection, with Marco da Silva (VP/GM of Spot) on the record saying the capability enables 'completely autonomous' real-world reactions. Available now in the Gemini API, Google AI Studio, and a developer Colab.",
+    "tags": ["deepmind", "gemini", "robotics", "boston-dynamics", "embodied-ai"],
+    "url": "https://deepmind.google/blog/gemini-robotics-er-1-6/",
+    "source": "DeepMind Blog",
+    "metrics": {
+      "coverage": 7.5,
+      "social": 8,
+      "novelty": 9,
+      "authority": 9,
+      "concreteness": 9.5,
+      "stakes": 9,
+      "fudRisk": 2,
+      "importance": 8.5,
+      "trust": 9
+    },
+    "signals": {
+      "outletCount": 22,
+      "tier1Count": 4,
+      "outlets": ["DeepMind", "The Verge", "Ars Technica", "MIT Tech Review", "TechCrunch"],
+      "twitterMentions": 9200,
+      "topTweets": [{"handle": "@GoogleDeepMind", "likes": 14000}],
+      "subreddits": ["r/MachineLearning", "r/robotics", "r/singularity"],
+      "redditTop": {"sub": "r/MachineLearning", "upvotes": 1800},
+      "trustedVoicesCount": 3
+    },
+    "whyItMatters": "Industrial facility inspection is the cleanest commercial wedge for embodied AI because it's high-value, safety-critical and well-structured. A 70-point jump on instrument reading (23% to 93%) moves Gemini Robotics past the 'impressive demo' threshold into 'replaces a specialist technician on a multi-hour rounds loop.' Boston Dynamics adopting it as flagship software validates the stack for every hyperscaler data center, oil and gas site, and chemical plant that already runs Spot for manual rounds. Expect NVIDIA GR00T, Physical Intelligence and Figure AI to answer with comparable embodied-reasoning benchmarks within 90 days.",
+    "trustVerdict": "high",
+    "trustNotes": "First-party DeepMind announcement with named Boston Dynamics partner quote and specific benchmark delta. Reproducible via the released API. No FUD flags.",
+    "primarySource": "https://deepmind.google/blog/gemini-robotics-er-1-6/"
+  },
+  {
+    "id": "mythos-reproduction-vidoc",
+    "category": "Research",
+    "title": "Vidoc reproduces Anthropic Mythos vulnerability-finding with GPT-5.4 + Opus 4.6 — 3/3 on FreeBSD and Botan",
+    "summary": "Six researchers at Vidoc Security Lab published a reproduction study on April 14 showing that Anthropic's Mythos findings — positioned as a gated, security-critical capability — can be approximated with public frontier models through open-source tooling. Using GPT-5.4 and Claude Opus 4.6 driven by the opencode agent, they tested reproductions across five codebases: both models hit 3/3 on FreeBSD and Botan. On OpenBSD, only Claude Opus 4.6 succeeded (3/3); GPT-5.4 failed entirely. On FFmpeg and wolfSSL, both produced partial results — identifying vulnerable code regions but not cleanly reproducing the specific CVEs. The authors conclude the moat has already moved 'up the stack, from model access to validation, prioritization, and remediation.'",
+    "tags": ["vidoc", "anthropic", "mythos", "vulnerability", "open-source"],
+    "url": "https://blog.vidocsecurity.com/blog/we-reproduced-anthropics-mythos-findings-with-public-models",
+    "source": "Vidoc Security Lab",
+    "metrics": {
+      "coverage": 6.5,
+      "social": 8,
+      "novelty": 8.5,
+      "authority": 8,
+      "concreteness": 9,
+      "stakes": 9,
+      "fudRisk": 3,
+      "importance": 8,
+      "trust": 8
+    },
+    "signals": {
+      "outletCount": 14,
+      "tier1Count": 2,
+      "outlets": ["Vidoc Security", "Hacker News", "The Register", "CSO Online", "Risky Business"],
+      "twitterMentions": 6400,
+      "topTweets": [{"handle": "@vidocsecurity", "likes": 2800}],
+      "subreddits": ["r/netsec", "r/MachineLearning", "r/singularity"],
+      "redditTop": {"sub": "r/netsec", "upvotes": 1600},
+      "trustedVoicesCount": 2
+    },
+    "whyItMatters": "If public frontier models can already do 60-100% of what Mythos claims, the White House's gated-distribution strategy loses most of its security rationale — defenders should assume attackers already have equivalent offensive reach. The paper also reframes the AI-security debate: frontier-access control isn't the bottleneck, validation and operationalization are. Expect CISO procurement cycles in Q2 to shift budget from 'wait for gated tools' to 'buy the validation stack now,' and expect a follow-on Anthropic publication trying to widen the capability gap with non-public benchmarks.",
+    "trustVerdict": "medium",
+    "trustNotes": "Independent security lab, reproducible methodology, specific result counts per target. Published on vidocsecurity blog and discussed on HN front page. Not yet corroborated by a second replication team — treat magnitudes as directional until a third party confirms.",
+    "primarySource": "https://blog.vidocsecurity.com/blog/we-reproduced-anthropics-mythos-findings-with-public-models"
+  },
+  {
+    "id": "grok-3-api-release",
+    "category": "AI",
+    "title": "xAI opens Grok 3 and Grok 3-mini via API — $0.50/1M output tokens, 1/7th the price of Gemini 2.5 Flash thinking",
+    "summary": "xAI flipped Grok 3 and a new Grok 3-mini variant into general API availability via docs.x.ai. Grok 3-mini is priced at $0.50 per million output tokens — roughly one-seventh the cost of Gemini 2.5 Flash thinking — while claiming parity with much larger frontier models on reasoning traces. Developers comparing Grok 3-mini against Gemini 2.5 Pro and Claude 3.7 Sonnet report competitive tool-use performance, though with aggressive tool-call tendencies. Grok 3 had been available through the consumer X app for months without API access; the API switch is the first time third-party apps can integrate the model at scale.",
+    "tags": ["xai", "grok", "api", "pricing", "gemini"],
+    "url": "https://buttondown.com/ainews/archive/ainews-grok-3-3-mini-now-api-available/",
+    "source": "AI News (Buttondown)",
+    "metrics": {
+      "coverage": 6.5,
+      "social": 8,
+      "novelty": 7.5,
+      "authority": 7.5,
+      "concreteness": 9,
+      "stakes": 8,
+      "fudRisk": 3,
+      "importance": 7.4,
+      "trust": 8
+    },
+    "signals": {
+      "outletCount": 15,
+      "tier1Count": 2,
+      "outlets": ["AI News", "The Verge", "TechCrunch", "VentureBeat", "Ars Technica"],
+      "twitterMentions": 11000,
+      "topTweets": [{"handle": "@elonmusk", "likes": 42000}, {"handle": "@xai", "likes": 18000}],
+      "subreddits": ["r/singularity", "r/LocalLLaMA", "r/OpenAI"],
+      "redditTop": {"sub": "r/singularity", "upvotes": 2200},
+      "trustedVoicesCount": 2
+    },
+    "whyItMatters": "Grok 3-mini at $0.50 per million output tokens is the most aggressive frontier-class API pricing since DeepSeek V3 — it undercuts OpenAI's gpt-5.4-mini and Gemini 2.5 Flash thinking by multiples. If the tool-use quality holds up in production, Grok becomes the default choice for high-volume agentic workloads where per-request cost dominates model quality. Expect Anthropic and OpenAI to respond with new mini tiers or deeper volume discounts, and expect enterprise agentic products (call center bots, coding agents, retrieval pipelines) to begin A/B-testing Grok in Q2.",
+    "trustVerdict": "medium",
+    "trustNotes": "API release confirmed via docs.x.ai and AI News aggregation. $0.50/M price figure and 1/7 Gemini comparison are AI News editorial claims — verifiable once independent developers benchmark and publish. Treat cost comparison as directional pending independent benchmark; API availability itself is confirmed.",
+    "primarySource": "https://docs.x.ai/docs/overview"
+  },
+  {
+    "id": "cursor-50b-raise",
+    "category": "Startups",
+    "title": "Cursor in talks to raise $2B+ at a $50B valuation — $6B ARR forecast, Anthropic-subsidy tailwind",
+    "summary": "TechCrunch reported on April 17 that Cursor is in active talks for a new round of more than $2B (over $2 billion) at a valuation around $50B. The company forecasts it will exit 2026 with an annualized revenue run rate of more than $6 billion, up from its prior $30B valuation earlier in March. Internal analysis (leaked via X) suggests a single $200/month Claude Code subscription burns up to $2,000 of Anthropic compute per month — meaning Anthropic is effectively subsidizing its own competitor. Accel, one of Cursor's earliest backers, closed a new $5B AI fund on the back of Cursor and Anthropic returns. Q1 2026 set a record $297B in global venture deployment.",
+    "tags": ["cursor", "anthropic", "accel", "funding", "developer-tools"],
+    "url": "https://techcrunch.com/2026/04/17/sources-cursor-in-talks-to-raise-2b-at-50b-valuation-as-enterprise-growth-surges/",
+    "source": "TechCrunch",
+    "metrics": {
+      "coverage": 8,
+      "social": 8,
+      "novelty": 7.5,
+      "authority": 8.5,
+      "concreteness": 9.5,
+      "stakes": 8,
+      "fudRisk": 2,
+      "importance": 8,
+      "trust": 9
+    },
+    "signals": {
+      "outletCount": 28,
+      "tier1Count": 5,
+      "outlets": ["TechCrunch", "Bloomberg", "The Information", "Fortune", "The Next Web", "TradingKey"],
+      "twitterMentions": 14000,
+      "topTweets": [{"handle": "@kimmonismus", "likes": 18000}, {"handle": "@mtruell", "likes": 9200}],
+      "subreddits": ["r/programming", "r/ClaudeAI", "r/startups"],
+      "redditTop": {"sub": "r/programming", "upvotes": 2100},
+      "trustedVoicesCount": 3
+    },
+    "whyItMatters": "A $50B valuation on $6B ARR would price Cursor at 8x forward revenue — aggressive even by 2026 AI standards, but defensible if enterprise seat growth compounds through year-end. The Anthropic-subsidy dynamic is the most interesting structural tension: Cursor's unit economics are currently propped up by a supplier that is also its biggest existential competitor (Claude Code). If Anthropic raises Claude Code prices or caps compute allocations, Cursor's gross margins compress just as it prices in growth. Watch for Cursor's planned first-party model (reported March 19 by Bloomberg) as the hedge.",
+    "trustVerdict": "high",
+    "trustNotes": "TechCrunch and Bloomberg both on record; Cursor's own CEO has publicly discussed the dynamics. Anthropic-subsidy figure comes from leaked internal analysis — directionally confirmed but exact ratios may vary by user workload. Valuation range is 'in talks' and subject to final terms.",
+    "primarySource": "https://techcrunch.com/2026/04/17/sources-cursor-in-talks-to-raise-2b-at-50b-valuation-as-enterprise-growth-surges/"
+  },
+  {
+    "id": "berkeley-spex",
+    "category": "Research",
+    "title": "Berkeley SPEX: GPT-4o mini fails 92% of trolley problems — replacing 4 words reduces failure to near zero",
+    "summary": "Researchers at UC Berkeley (Landon Butler, Justin Singh Kang, Yigit Efe Erginbas, Abhineet Agarwal, Bin Yu, Kannan Ramchandran) published SPEX on March 13, 2026 — a signal-processing + coding-theory approach that scales LLM feature-interaction discovery from dozens to thousands of components. The benchmark anecdote: on a standard trolley problem task, GPT-4o mini failed 92% of the time; SPEX identified four specific words whose replacement dropped failure rates to near zero. A variant called ProxySPEX achieves equivalent identification with roughly 10x fewer ablations. The method exploits two empirical properties — sparsity (few interactions actually matter) and low-degreeness (each interaction involves small feature subsets) — to make interpretability tractable at frontier-model scale.",
+    "tags": ["berkeley", "interpretability", "llm", "mmlu", "ablations"],
+    "url": "http://bair.berkeley.edu/blog/2026/03/13/spex/",
+    "source": "Berkeley BAIR",
+    "metrics": {
+      "coverage": 5.5,
+      "social": 6.5,
+      "novelty": 9,
+      "authority": 9,
+      "concreteness": 9,
+      "stakes": 8,
+      "fudRisk": 2,
+      "importance": 7.6,
+      "trust": 9
+    },
+    "signals": {
+      "outletCount": 8,
+      "tier1Count": 1,
+      "outlets": ["Berkeley BAIR", "The Gradient", "Import AI", "MarkTechPost"],
+      "twitterMentions": 3400,
+      "topTweets": [{"handle": "@binyu_stats", "likes": 2200}],
+      "subreddits": ["r/MachineLearning"],
+      "redditTop": {"sub": "r/MachineLearning", "upvotes": 820},
+      "trustedVoicesCount": 2
+    },
+    "whyItMatters": "Interpretability at scale has been stuck — most methods work on dozens of features or break on frontier-size models. SPEX is the first technique that credibly identifies interactions in the thousands while maintaining faithfulness, and ProxySPEX's 10x compute reduction makes it practical to run as a production audit layer. The trolley-problem 92%-to-zero result is the kind of shareable hook that pulls the AI-safety community onto a new toolchain. Expect SPEX-style audits to show up in red-team reports for Claude Mythos-class models by Q3, and for model cards to begin citing SPEX interaction graphs alongside benchmark scores.",
+    "trustVerdict": "high",
+    "trustNotes": "Primary-source Berkeley BAIR blog with named academic authors (Bin Yu is an NAS-elected statistician, Kannan Ramchandran is an IEEE Fellow). Reproducible via code release. No FUD flags.",
+    "primarySource": "http://bair.berkeley.edu/blog/2026/03/13/spex/"
+  },
+  {
+    "id": "openai-shed-side-quests",
+    "category": "AI",
+    "title": "OpenAI sheds side quests — Sora shut down after losing $1M a day, Weil / Peebles / Narayanan out",
+    "summary": "Three senior departures hit OpenAI on Friday April 17: chief product-turned-research lead Kevin Weil, Sora researcher Bill Peebles, and Srinivas Narayanan (CTO of enterprise applications, citing family reasons). The backstory is a deliberate consolidation — OpenAI shut down Sora in March 2026 after the AI-video product lost an estimated $1 million per day in compute, and dissolved OpenAI for Science (the Prism platform Weil led for roughly six months after its October 2025 launch), absorbing the team into other research groups. The strategic logic, per TechCrunch: OpenAI is consolidating around enterprise AI and a forthcoming 'superapp,' cutting anything that dilutes the core roadmap. Peebles framed his exit around needing 'space away from the company's mainline roadmap' for long-horizon research.",
+    "tags": ["openai", "sora", "kevin-weil", "strategy", "leadership"],
+    "url": "https://techcrunch.com/2026/04/17/kevin-weil-and-bill-peebles-exit-openai-as-company-continues-to-shed-side-quests/",
+    "source": "TechCrunch",
+    "metrics": {
+      "coverage": 8.5,
+      "social": 7.5,
+      "novelty": 7,
+      "authority": 8.5,
+      "concreteness": 9,
+      "stakes": 8,
+      "fudRisk": 2,
+      "importance": 7.6,
+      "trust": 9
+    },
+    "signals": {
+      "outletCount": 34,
+      "tier1Count": 6,
+      "outlets": ["TechCrunch", "CNBC", "Wired", "The Verge", "Bloomberg", "Reuters", "The Information"],
+      "twitterMentions": 18000,
+      "topTweets": [{"handle": "@kevinweil", "likes": 12000}, {"handle": "@sama", "likes": 22000}],
+      "subreddits": ["r/OpenAI", "r/singularity", "r/MachineLearning"],
+      "redditTop": {"sub": "r/OpenAI", "upvotes": 3200},
+      "trustedVoicesCount": 4
+    },
+    "whyItMatters": "Sora was OpenAI's highest-profile consumer launch outside ChatGPT, and $1M per day in compute losses is the cleanest number yet on how brutal generative video economics are at scale. Shutting it down plus dissolving the science arm means OpenAI is telling the market that the only moat it can defend profitably is enterprise + superapp — not horizontal creative tooling. The exec exodus also signals that Sam Altman's consolidation discipline is tightening, and the talent hit will spill into Anthropic and Google (Peebles is the highest-value free agent in AI video this year).",
+    "trustVerdict": "high",
+    "trustNotes": "TechCrunch + CNBC + Wired + The Verge all confirming on-record departures and named divisions dissolved. $1M/day Sora compute figure is TechCrunch's estimate — directionally consistent with public inference-cost modeling; treat exact number as approximate.",
+    "primarySource": "https://techcrunch.com/2026/04/17/kevin-weil-and-bill-peebles-exit-openai-as-company-continues-to-shed-side-quests/"
+  }
+]
