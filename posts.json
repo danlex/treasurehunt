@@ -1,5 +1,65 @@
 [
   {
+    "id": "claude-design",
+    "category": "AI",
+    "title": "Anthropic ships Claude Design — Brilliant cut 20 prompts to 2, Figma drops 4.26%",
+    "summary": "Anthropic launched Claude Design on April 17, 2026: a conversational design tool powered by Claude Opus 4.7 that produces prototypes, slides, one-pagers and interactive flows from chat. Early partners report concrete wins — Brilliant reduced complex page recreation from 20+ prompts to just 2, and Datadog compressed a week of design iterations into a single conversation. Canva announced native interop, with CEO Melanie Perkins framing it as a seamless bridge from ideation to polished output. The product shipped across Pro, Max, Team and Enterprise tiers simultaneously. Figma stock closed down 4.26% the same day.",
+    "tags": [
+      "anthropic",
+      "claude",
+      "design-tools",
+      "figma",
+      "canva"
+    ],
+    "url": "https://www.anthropic.com/news/claude-design-anthropic-labs",
+    "source": "Anthropic",
+    "metrics": {
+      "coverage": 8.5,
+      "social": 9,
+      "novelty": 8,
+      "authority": 9,
+      "concreteness": 9,
+      "stakes": 8,
+      "fudRisk": 2,
+      "importance": 8.3,
+      "trust": 9
+    },
+    "signals": {
+      "outletCount": 32,
+      "tier1Count": 6,
+      "outlets": [
+        "TechCrunch",
+        "The Verge",
+        "Ars Technica",
+        "Wired",
+        "The Information",
+        "Bloomberg"
+      ],
+      "twitterMentions": 12000,
+      "topTweets": [
+        {
+          "handle": "@AnthropicAI",
+          "likes": 18000
+        }
+      ],
+      "subreddits": [
+        "r/ClaudeAI",
+        "r/singularity",
+        "r/ChatGPT"
+      ],
+      "redditTop": {
+        "sub": "r/ClaudeAI",
+        "upvotes": 2400
+      },
+      "trustedVoicesCount": 3
+    },
+    "whyItMatters": "Claude Design is Anthropic's first real push into a horizontal productivity surface outside pure chat — the same playbook that turned Figma into a $20B company. With Canva shipping native interop and the 20-prompt-to-2-prompt efficiency story validated by design-native customers (Brilliant), Anthropic is signaling it intends to compete for creative tooling workflows, not just API calls. Figma's same-day 4.26% drop is the market's first read that collaborative design may be the next vertical absorbed by frontier-model products.",
+    "trustVerdict": "high",
+    "trustNotes": "First-party Anthropic announcement with on-record partner quotes (Canva, Brilliant, Datadog) and specific efficiency numbers. Figma stock move corroborates market reaction. No FUD flags.",
+    "primarySource": "https://www.anthropic.com/news/claude-design-anthropic-labs",
+    "publishedAt": "2026-04-18T02:23:44.355Z"
+  },
+  {
     "id": "hy-embodied-05-tencent",
     "category": "Research",
     "title": "Tencent Robotics X releases HY-Embodied-0.5: 2B + 32B open-source embodied AI foundation models, leads 16 of 22 benchmarks",

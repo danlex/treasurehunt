@@ -21,7 +21,7 @@
       "dislikes": 5
     },
     "AI": {
-      "likes": 10,
+      "likes": 11,
       "dislikes": 3
     },
     "Viral": {
@@ -671,11 +671,11 @@
       "dislikes": 1
     },
     "anthropic": {
-      "likes": 1,
+      "likes": 2,
       "dislikes": 1
     },
     "claude": {
-      "likes": 1,
+      "likes": 2,
       "dislikes": 0
     },
     "opus-4.7": {
@@ -949,6 +949,18 @@
     "vla": {
       "likes": 1,
       "dislikes": 0
+    },
+    "design-tools": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "figma": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "canva": {
+      "likes": 1,
+      "dislikes": 0
     }
   },
   "sources": {
@@ -1029,7 +1041,7 @@
       "dislikes": 0
     },
     "Anthropic": {
-      "likes": 2,
+      "likes": 3,
       "dislikes": 1
     },
     "Krebs on Security": {
@@ -1110,8 +1122,8 @@
     }
   },
   "totals": {
-    "likes": 25,
+    "likes": 26,
     "dislikes": 27
   },
-  "lastUpdated": "2026-04-17T21:06:03.565Z"
+  "lastUpdated": "2026-04-18T02:23:44.361Z"
 }
