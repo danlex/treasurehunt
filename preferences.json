@@ -5,8 +5,8 @@
       "dislikes": 11
     },
     "Research": {
-      "likes": 5,
-      "dislikes": 3
+      "likes": 4,
+      "dislikes": 4
     },
     "Top Tweets": {
       "likes": 3,
@@ -807,8 +807,8 @@
       "dislikes": 1
     },
     "open-source": {
-      "likes": 2,
-      "dislikes": 0
+      "likes": 1,
+      "dislikes": 1
     },
     "nous-research": {
       "likes": 1,
@@ -1017,6 +1017,22 @@
     "hacktron": {
       "likes": 0,
       "dislikes": 1
+    },
+    "cloudflare": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "compression": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "inference": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "cuda": {
+      "likes": 0,
+      "dislikes": 1
     }
   },
   "sources": {
@@ -1191,11 +1207,15 @@
     "The Register": {
       "likes": 0,
       "dislikes": 1
+    },
+    "Cloudflare Blog": {
+      "likes": 0,
+      "dislikes": 1
     }
   },
   "totals": {
-    "likes": 27,
-    "dislikes": 29
+    "likes": 26,
+    "dislikes": 30
   },
-  "lastUpdated": "2026-04-18T20:18:44.949Z"
+  "lastUpdated": "2026-04-18T20:19:28.051Z"
 }

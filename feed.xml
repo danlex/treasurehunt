@@ -14,15 +14,6 @@
     <link>https://treasurehunt.alexandrudan.com/</link>
   </image>
   <item>
-    <title>Cloudflare open-sources Unweight — 15-22% lossless LLM compression, ~3GB VRAM saved per model</title>
-    <link>https://treasurehunt.alexandrudan.com/posts/cloudflare-unweight.html</link>
-    <guid isPermaLink="true">https://treasurehunt.alexandrudan.com/posts/cloudflare-unweight.html</guid>
-    <pubDate>Sat, 18 Apr 2026 18:37:12 GMT</pubDate>
-    <category>Research</category>
-    <source url="https://blog.cloudflare.com/high-performance-llms/">Cloudflare Blog</source>
-    <description>Cloudflare shipped Unweight during Agents Week 2026 (April 13-17): an inference-time lossless compression system for LLM weights that reduces model footprint by 15-22% while preserving bit-exact outputs — unlike quantization, which is lossy and can degrade response quality unpredictably. The trick: in BF16 weights, the exponent is highly compressible — out of 256 possible values, typically the top 16 account for over 99% of weights in a layer. Unweight uses Huffman coding on the exponent stream to get ~30% compression there, which translates to 15-22% overall MLP weight reduction, saving roughly 3 GB of VRAM per model. Per-layer &#39;hard&#39; versus &#39;easy&#39; classification lets the GPU hide decompression on separate CUDA streams. The GPU kernels are open source.</description>
-  </item>
-  <item>
     <title>Anthropic&#39;s Automated Alignment Researchers: 9 Opus 4.6 copies hit 0.94 PGR on math alignment, 0.47 on coding</title>
     <link>https://treasurehunt.alexandrudan.com/posts/anthropic-alignment-researchers.html</link>
     <guid isPermaLink="true">https://treasurehunt.alexandrudan.com/posts/anthropic-alignment-researchers.html</guid>
@@ -462,6 +453,15 @@
     <category>Research</category>
     <source url="https://llm-stats.com/ai-news">LLM Stats</source>
     <description>At ICLR 2026, DeepMind&#39;s Yury Makarychev presented TurboQuant — PolarQuant (a randomized rotation making weight distributions near-Gaussian) composed with a Quantized Johnson–Lindenstrauss projection. Together they compress the KV cache 6.2× at identical perplexity. On a Gemini 3.1 Ultra 2M-token workload, GPU memory dropped from 380GB to 62GB per request. Google says it ships in Gemini&#39;s April 18 update. On-device long-context inference suddenly looks tractable; data-center inference costs fall sharply.</description>
+  </item>
+  <item>
+    <title>MCP crosses 97M installs; Linux Foundation takes governance at KubeCon</title>
+    <link>https://treasurehunt.alexandrudan.com/posts/mcp-97m.html</link>
+    <guid isPermaLink="true">https://treasurehunt.alexandrudan.com/posts/mcp-97m.html</guid>
+    <pubDate>Sun, 12 Apr 2026 18:49:51 GMT</pubDate>
+    <category>AI</category>
+    <source url="https://llm-stats.com/ai-news">LLM Stats</source>
+    <description>Anthropic&#39;s Model Context Protocol — the open spec for wiring LLMs to tools, files and APIs — crossed 97 million installs in March, up from ~3M a year ago. Every frontier vendor now ships MCP-compatible tooling: OpenAI, Google, Mistral, xAI, Cohere. The Linux Foundation announced at KubeCon EU on April 14 that it will take MCP under open governance, with Microsoft, Red Hat and GitHub signing as founding stewards. Arguably the fastest-standardizing protocol since LSP in 2016.</description>
   </item>
 </channel>
 </rss>

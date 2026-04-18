@@ -375,28 +375,6 @@
   <section class="related">
     <h2>Keep reading</h2>
     
-<article class="post" aria-labelledby="title-cloudflare-unweight">
-  <span class="cat-tag cat-Research">Research</span>
-  <div class="post-meta">
-    <time datetime="2026-04-18T18:37:12.263Z">Apr 18, 2026</time>
-    <span class="dot">·</span>
-    <span class="source">Cloudflare Blog</span>
-  </div>
-  <h2 class="post-title" id="title-cloudflare-unweight"><a href="/posts/cloudflare-unweight.html">Cloudflare open-sources Unweight — 15-22% lossless LLM compression, ~3GB VRAM saved per model</a></h2>
-  
-  <div class="impact-strip">
-    <span class="impact-score">Impact <span class="num">7.8</span>/10</span>
-    <span class="trust-pill trust-high">Trust · high</span>
-    <span class="signals-inline">
-      📰 <strong>12</strong> outlets · 🐦 <strong>5,200</strong> · 👽 r/LocalLLaMA · <strong>1,100</strong>
-    </span>
-  </div>
-  <p class="post-summary">Cloudflare shipped Unweight during Agents Week 2026 (April 13-17): an inference-time lossless compression system for LLM weights that reduces model footprint by 15-22% while preserving bit-exact outputs — unlike quantization, which is lossy and can degrade response quality unpredictably. The trick: in BF16 weights, the exponent is highly compressible — out of 256 possible values, typically the top 16 account for over 99% of weights in a layer. Unweight uses Huffman coding on the exponent stream to get ~30% compression there, which translates to 15-22% overall MLP weight reduction, saving roughly 3 GB of VRAM per model. Per-layer &#39;hard&#39; versus &#39;easy&#39; classification lets the GPU hide decompression on separate CUDA streams. The GPU kernels are open source.</p>
-  <div class="post-footer">
-    <div class="tags"><span class="tag">cloudflare</span><span class="tag">compression</span><span class="tag">inference</span><span class="tag">open-source</span><span class="tag">cuda</span></div>
-    <a class="read-link" href="/posts/cloudflare-unweight.html">Read more →</a>
-  </div>
-</article>
 <article class="post" aria-labelledby="title-anthropic-alignment-researchers">
   <span class="cat-tag cat-Research">Research</span>
   <div class="post-meta">
@@ -439,6 +417,28 @@
   <div class="post-footer">
     <div class="tags"><span class="tag">google</span><span class="tag">deepmind</span><span class="tag">gemini</span><span class="tag">voice</span><span class="tag">audio</span></div>
     <a class="read-link" href="/posts/gemini-3-1-flash-live.html">Read more →</a>
+  </div>
+</article>
+<article class="post" aria-labelledby="title-gpt-5-4-cyber">
+  <span class="cat-tag cat-AI">AI</span>
+  <div class="post-meta">
+    <time datetime="2026-04-18T18:37:12.263Z">Apr 18, 2026</time>
+    <span class="dot">·</span>
+    <span class="source">OpenAI</span>
+  </div>
+  <h2 class="post-title" id="title-gpt-5-4-cyber"><a href="/posts/gpt-5-4-cyber.html">OpenAI ships GPT-5.4-Cyber — cyber-permissive model that reverse-engineers binaries, gated to vetted defenders</a></h2>
+  
+  <div class="impact-strip">
+    <span class="impact-score">Impact <span class="num">8</span>/10</span>
+    <span class="trust-pill trust-high">Trust · high</span>
+    <span class="signals-inline">
+      📰 <strong>22</strong> outlets · 🐦 <strong>9,800</strong> · 👽 r/OpenAI · <strong>2,400</strong>
+    </span>
+  </div>
+  <p class="post-summary">OpenAI launched GPT-5.4-Cyber on April 14, 2026, a variant of GPT-5.4 fine-tuned for defensive cybersecurity work with a lowered refusal boundary for legitimate security tasks. New capabilities include binary reverse engineering — analyzing compiled software for malware indicators, vulnerabilities and robustness without source. Access is gated through OpenAI&#39;s Trusted Access for Cyber (TAC) program, which is scaling to thousands of verified individual defenders and hundreds of teams protecting critical software. Individuals verify at chatgpt.com/cyber; enterprises request via a sales rep. Rollout is explicitly described as iterative to &#39;lockstep capability with defender deployment.&#39; Coverage from Axios, Help Net Security, SiliconANGLE, The Hacker News confirms the tiered-access architecture.</p>
+  <div class="post-footer">
+    <div class="tags"><span class="tag">openai</span><span class="tag">gpt-5</span><span class="tag">cybersecurity</span><span class="tag">binary-analysis</span><span class="tag">defense</span></div>
+    <a class="read-link" href="/posts/gpt-5-4-cyber.html">Read more →</a>
   </div>
 </article>
   </section>
