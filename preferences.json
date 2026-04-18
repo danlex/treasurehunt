@@ -5,8 +5,8 @@
       "dislikes": 11
     },
     "Research": {
-      "likes": 6,
-      "dislikes": 1
+      "likes": 5,
+      "dislikes": 3
     },
     "Top Tweets": {
       "likes": 3,
@@ -671,12 +671,12 @@
       "dislikes": 1
     },
     "anthropic": {
-      "likes": 2,
-      "dislikes": 1
+      "likes": 1,
+      "dislikes": 3
     },
     "claude": {
-      "likes": 2,
-      "dislikes": 0
+      "likes": 1,
+      "dislikes": 2
     },
     "opus-4.7": {
       "likes": 1,
@@ -993,6 +993,30 @@
     "agents": {
       "likes": 1,
       "dislikes": 0
+    },
+    "opus-4-7": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "benchmark": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "regression": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "chrome": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "vulnerability": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "hacktron": {
+      "likes": 0,
+      "dislikes": 1
     }
   },
   "sources": {
@@ -1159,11 +1183,19 @@
     "Mistral AI": {
       "likes": 1,
       "dislikes": 0
+    },
+    "GitHub / lechmazur": {
+      "likes": 0,
+      "dislikes": 1
+    },
+    "The Register": {
+      "likes": 0,
+      "dislikes": 1
     }
   },
   "totals": {
-    "likes": 28,
-    "dislikes": 27
+    "likes": 27,
+    "dislikes": 29
   },
-  "lastUpdated": "2026-04-18T02:24:11.704Z"
+  "lastUpdated": "2026-04-18T20:18:44.949Z"
 }

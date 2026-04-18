@@ -14,15 +14,6 @@
     <link>https://treasurehunt.alexandrudan.com/</link>
   </image>
   <item>
-    <title>Hacktron CTO built a working Chrome V8 exploit with Claude Opus 4.6 — 2.3B tokens, $2,283 in API cost, 20 hours</title>
-    <link>https://treasurehunt.alexandrudan.com/posts/claude-opus-chrome-exploit.html</link>
-    <guid isPermaLink="true">https://treasurehunt.alexandrudan.com/posts/claude-opus-chrome-exploit.html</guid>
-    <pubDate>Sat, 18 Apr 2026 18:37:12 GMT</pubDate>
-    <category>Research</category>
-    <source url="https://www.theregister.com/2026/04/17/claude_opus_wrote_chrome_exploit/">The Register</source>
-    <description>Mohan Pedhapati (s1r1us), CTO of Hacktron, published a blow-by-blow on April 16 detailing how he used Claude Opus 4.6 to develop a working exploit for CVE-2026-5873, an out-of-bounds V8 JavaScript engine vulnerability in Chrome 138 (bundled inside Discord). The receipts: 2.3B (2.3 billion) tokens consumed, $2,283 ($2283) in Claude API costs, about 20 hours of his own time unsticking the model from dead ends. End result: a proof-of-concept that &#39;popped calc&#39; on the target. His closing warning: &#39;Eventually, any script kiddie with enough patience and an API key will be able to pop shells on unpatched software.&#39; Google has not publicly responded. The Register covered the case on April 17.</description>
-  </item>
-  <item>
     <title>Cloudflare open-sources Unweight — 15-22% lossless LLM compression, ~3GB VRAM saved per model</title>
     <link>https://treasurehunt.alexandrudan.com/posts/cloudflare-unweight.html</link>
     <guid isPermaLink="true">https://treasurehunt.alexandrudan.com/posts/cloudflare-unweight.html</guid>
@@ -462,6 +453,15 @@
     <category>Startups</category>
     <source url="https://news.crunchbase.com/venture/foundational-ai-startup-funding-doubled-openai-anthropic-xai-q1-2026/">Crunchbase News</source>
     <description>OpenAI closed its $122B primary+secondary on March 31 at an $852B post-money, passing SpaceX to become the most valuable private company in history. D.E. Shaw and MGX co-led, with Thrive, Coatue and Temasek participating. Revenue run-rate hit $28B on the April 1 board update, up from $12B a year earlier. The round funds OpenAI&#39;s $500B Stargate commitment with Oracle and SoftBank plus a reported $70B custom-chip program with Broadcom and TSMC aimed at halving training-compute cost per token by 2027.</description>
+  </item>
+  <item>
+    <title>DeepMind&#39;s TurboQuant: 6.2× KV-cache compression, no perplexity loss</title>
+    <link>https://treasurehunt.alexandrudan.com/posts/turboquant.html</link>
+    <guid isPermaLink="true">https://treasurehunt.alexandrudan.com/posts/turboquant.html</guid>
+    <pubDate>Sun, 12 Apr 2026 18:51:44 GMT</pubDate>
+    <category>Research</category>
+    <source url="https://llm-stats.com/ai-news">LLM Stats</source>
+    <description>At ICLR 2026, DeepMind&#39;s Yury Makarychev presented TurboQuant — PolarQuant (a randomized rotation making weight distributions near-Gaussian) composed with a Quantized Johnson–Lindenstrauss projection. Together they compress the KV cache 6.2× at identical perplexity. On a Gemini 3.1 Ultra 2M-token workload, GPU memory dropped from 380GB to 62GB per request. Google says it ships in Gemini&#39;s April 18 update. On-device long-context inference suddenly looks tractable; data-center inference costs fall sharply.</description>
   </item>
 </channel>
 </rss>
