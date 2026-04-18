@@ -21,7 +21,7 @@
       "dislikes": 5
     },
     "AI": {
-      "likes": 11,
+      "likes": 12,
       "dislikes": 3
     },
     "Viral": {
@@ -719,11 +719,11 @@
       "dislikes": 1
     },
     "google": {
-      "likes": 0,
+      "likes": 1,
       "dislikes": 2
     },
     "gemini": {
-      "likes": 1,
+      "likes": 2,
       "dislikes": 1
     },
     "firebase": {
@@ -961,6 +961,18 @@
     "canva": {
       "likes": 1,
       "dislikes": 0
+    },
+    "deepmind": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "tts": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "elevenlabs": {
+      "likes": 1,
+      "dislikes": 0
     }
   },
   "sources": {
@@ -1119,11 +1131,15 @@
     "arXiv / Tencent Robotics X": {
       "likes": 1,
       "dislikes": 0
+    },
+    "Google Blog": {
+      "likes": 1,
+      "dislikes": 0
     }
   },
   "totals": {
-    "likes": 26,
+    "likes": 27,
     "dislikes": 27
   },
-  "lastUpdated": "2026-04-18T02:23:44.361Z"
+  "lastUpdated": "2026-04-18T02:23:50.367Z"
 }

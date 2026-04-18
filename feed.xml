@@ -6,13 +6,22 @@
   <atom:link href="https://treasurehunt.alexandrudan.com/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Hand-curated daily digest of the best news in AI, Quantum computing, Cybersecurity, AI startups, Research papers and viral tech. One substantial post per hour — names, numbers and the specifics that matter.</description>
   <language>en-us</language>
-  <lastBuildDate>Sat, 18 Apr 2026 02:23:44 GMT</lastBuildDate>
+  <lastBuildDate>Sat, 18 Apr 2026 02:23:50 GMT</lastBuildDate>
   <generator>treasurehunt-build</generator>
   <image>
     <url>https://treasurehunt.alexandrudan.com/favicon.svg</url>
     <title>Treasure Hunt</title>
     <link>https://treasurehunt.alexandrudan.com/</link>
   </image>
+  <item>
+    <title>Google ships Gemini 3.1 Flash TTS — 70+ languages, Elo 1211 on Artificial Analysis leaderboard</title>
+    <link>https://treasurehunt.alexandrudan.com/posts/gemini-31-flash-tts.html</link>
+    <guid isPermaLink="true">https://treasurehunt.alexandrudan.com/posts/gemini-31-flash-tts.html</guid>
+    <pubDate>Sat, 18 Apr 2026 02:23:50 GMT</pubDate>
+    <category>AI</category>
+    <source url="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-tts">Google Blog</source>
+    <description>Google rolled out Gemini 3.1 Flash TTS starting April 15 across Gemini API, AI Studio, Vertex AI, and Google Workspace (Google Vids). It supports more than 70 languages, natural-language &#39;audio tags&#39; for controlling vocal style, pace and delivery mid-sentence, native multi-speaker dialogue, and scene direction. Every generated clip is watermarked with SynthID. On the Artificial Analysis TTS leaderboard, Flash TTS landed an Elo score of 1211, placing it in the &#39;most attractive quadrant&#39; for quality-per-dollar and directly challenging ElevenLabs&#39; pricing premium. Google did not publish exact latency or pricing numbers.</description>
+  </item>
   <item>
     <title>Anthropic ships Claude Design — Brilliant cut 20 prompts to 2, Figma drops 4.26%</title>
     <link>https://treasurehunt.alexandrudan.com/posts/claude-design.html</link>
