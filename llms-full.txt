@@ -6,6 +6,131 @@ Each post below includes the summary, tags, source, trust verdict, and "why it m
 
 ---
 
+## OpenAI commits $20B to Cerebras over 3 years — up from $10B, equity warrants for up to 10% stake
+
+**Published:** Apr 18, 2026
+**Category:** Startups
+**Source:** The Information
+**URL:** https://treasurehunt.alexandrudan.com/posts/openai-cerebras-20b.html
+**Original article:** https://www.theinformation.com/articles/openai-spend-20-billion-cerebras-chips-receive-equity-stake
+**Tags:** openai, cerebras, compute, nvidia, infrastructure
+**Impact score:** 8.4/10
+**Trust verdict:** high
+
+OpenAI doubled its Cerebras commitment to more than $20B (over $20 billion) over three years, expanding a January deal that was already worth $10B for 750 megawatts of compute capacity. Under the new terms, OpenAI receives warrants for a minority stake that could reach 10% as spending scales, with total outlay potentially hitting $30B. OpenAI also earmarked roughly $1B to help Cerebras build dedicated data centers for its workloads. The deal is explicitly positioned to reduce OpenAI's Nvidia dependency and lock in non-GPU wafer-scale silicon for inference at ChatGPT scale. Reported first by The Information on April 17.
+
+### Why it matters
+
+This is the largest single commitment OpenAI has ever made to a non-Nvidia accelerator vendor, and the equity-warrant structure is a first-of-kind financing template: OpenAI becomes a partial owner of its own inference supplier. If Cerebras ships on the 750 MW ramp, OpenAI's inference unit economics become structurally decoupled from Nvidia list pricing — which is the single biggest variable cost in ChatGPT operations. Expect Anthropic and Google to accelerate their own custom-silicon economics (Trainium, TPU) in response, and Nvidia's 90%+ training share to finally start eroding in the inference tier.
+
+### Trust notes
+
+The Information primary scoop, widely replicated across Bloomberg and Reuters within hours. OpenAI published a corroborating partnership page. Numbers (over $20B, $1B DC, ~10% warrant stake) are attributed to named sources at The Information.
+
+**Primary source:** https://openai.com/index/cerebras-partnership/
+
+---
+
+## Claude 4.7's new tokenizer inflates text 1.325x on average — 80-turn Code sessions now cost 20-30% more
+
+**Published:** Apr 18, 2026
+**Category:** Research
+**Source:** claudecodecamp.com
+**URL:** https://treasurehunt.alexandrudan.com/posts/claude-47-tokenizer-cost.html
+**Original article:** https://www.claudecodecamp.com/p/i-measured-claude-4-7-s-new-tokenizer-here-s-what-it-costs-you
+**Tags:** anthropic, claude, tokenizer, cost, benchmark
+**Impact score:** 7.3/10
+**Trust verdict:** medium
+
+A measurement study published April 17 on claudecodecamp compared Anthropic's Claude 4.6 and 4.7 tokenizers on identical content using Anthropic's free /v1/messages/count_tokens endpoint. Weighted across seven real Claude Code workloads, the 4.7 tokenizer produces 1.325x more tokens than 4.6 — CLAUDE.md files run 1.445x, user prompts 1.373x, code diffs 1.212x, terminal output 1.291x. The root cause is that English chars-per-token dropped from 4.33 to 3.60; TypeScript dropped from 3.66 to 2.69 — the new tokenizer just slices text finer. Net effect on an 80-turn Claude Code session: 4.6 cost ~$6.65 vs 4.7 cost ~$7.86-$8.76, roughly 20-30% higher at identical list prices.
+
+### Why it matters
+
+Tokenizer inflation is the hidden variable in 'list price vs actual bill' comparisons — most enterprise AI budgeting spreadsheets assume constant tokens-per-word across model generations. A 1.325x multiplier means every Anthropic customer who upgraded from Opus 4.6 to 4.7 at stated pricing is effectively paying 32% more for the same workload before any model-quality differences factor in. Expect Anthropic to either cut 4.7 per-token pricing, publish an official tokenizer-efficiency note, or face a second enterprise-visible story (after the NYT Connections regression) undermining the 4.7 release narrative.
+
+### Trust notes
+
+Independent blogger with reproducible methodology using Anthropic's own token-count endpoint, posted on HN front page. Numbers are verifiable by anyone with API access. Not yet corroborated by Anthropic — treat efficiency multiplier as directionally accurate, exact deltas subject to workload mix.
+
+**Primary source:** https://www.claudecodecamp.com/p/i-measured-claude-4-7-s-new-tokenizer-here-s-what-it-costs-you
+
+---
+
+## OpenBMB releases VoxCPM2 — 2B-param tokenizer-free TTS, 1.84% WER in English, 30 languages, Apache 2.0
+
+**Published:** Apr 18, 2026
+**Category:** Research
+**Source:** github.com
+**URL:** https://treasurehunt.alexandrudan.com/posts/voxcpm2-openbmb.html
+**Original article:** https://github.com/OpenBMB/VoxCPM
+**Tags:** openbmb, tts, diffusion, open-source, multilingual
+**Impact score:** 7.7/10
+**Trust verdict:** high
+
+OpenBMB released VoxCPM2 in April 2026 — a 2B-parameter speech synthesis model trained on over 2 million hours of multilingual audio and released under Apache 2.0. Unlike standard TTS systems that quantize speech into discrete tokens, VoxCPM2 skips quantization entirely: it generates continuous speech representations through an end-to-end diffusion autoregressive pipeline operating in AudioVAE V2's latent space (LocEnc-TSLM-RALM-LocDiT). Coverage spans 30 languages plus nine Chinese dialects (Cantonese, Sichuan, Wu, Northeast, Henan, Shaanxi, Shandong, Tianjin, Minnan). On Seed-TTS-eval English it hits 1.84% WER with 75.3% speaker similarity; on CV3-eval multilingual it logs 3.65% CER in Chinese and 5.00% WER in English across 11 tested languages.
+
+### Why it matters
+
+VoxCPM2 lands four days after Gemini 3.1 Flash TTS and sets the Apache-2.0 open-weight bar where Google set the hosted-API bar. A 2B tokenizer-free diffusion-AR architecture is the clearest departure from the Encodec-style discrete-token pipeline that has dominated TTS since 2022, and 1.84% WER puts the model within reach of closed competitors on English. For any team that was blocked on ElevenLabs pricing or Google's licensing, VoxCPM2 is the first serious multilingual open alternative — expect a wave of self-hosted voice deployments in customer support, accessibility and audiobook production within Q2.
+
+### Trust notes
+
+Weights and training methodology public on GitHub; benchmark numbers reproducible on Seed-TTS-eval and CV3-eval harnesses. Apache 2.0 license verifiable. No FUD flags; open-weight releases are self-authenticating.
+
+**Primary source:** https://github.com/OpenBMB/VoxCPM
+
+---
+
+## Addy Osmani's agent-skills hits 17K stars — 20 engineering skills, 7 slash commands, 3 personas for AI coding
+
+**Published:** Apr 18, 2026
+**Category:** AI
+**Source:** github.com
+**URL:** https://treasurehunt.alexandrudan.com/posts/addyosmani-agent-skills.html
+**Original article:** https://github.com/addyosmani/agent-skills
+**Tags:** google, addy-osmani, agents, claude-code, engineering
+**Impact score:** 7.5/10
+**Trust verdict:** high
+
+Addy Osmani — the Google Chrome engineer best known for web performance standards — released agent-skills v0.5.0 in April 2026 and crossed 17,000 GitHub stars with 2,200+ forks. The framework packages senior-engineer discipline into structured agent workflows: 20 core skills organized across six lifecycle phases (Define, Plan, Build, Verify, Review, Ship), 7 slash commands (/spec, /plan, /build, /test, /review, /code-simplify, /ship), 3 specialist personas (code reviewer, test engineer, security auditor), and reference checklists for testing, security, performance and accessibility. Its design philosophy is 'process, not prose' — each skill is a verifiable workflow with gates, not generic guidance. The repo borrows heavily from Software Engineering at Google including trunk-based development and feature-flag patterns.
+
+### Why it matters
+
+After karpathy-skills (same category, 4 months ago) and Anthropic's own Claude Code skills launch, agent-skills is the third major signal that the AI coding practice is codifying into explicit workflow libraries — and the first from a Google insider with a reputation for rigor rather than practitioner folklore. 17K stars in weeks means the 'skills' abstraction is becoming the default mental model for how engineering teams teach agents to behave, displacing ad hoc CLAUDE.md files. Expect platform vendors (Anthropic, Cursor, Cognition) to ship first-party skill registries within 2 quarters.
+
+### Trust notes
+
+Public repo, verifiable star count and release notes. Addy Osmani's Google engineering profile is well-established. No FUD flags.
+
+**Primary source:** https://github.com/addyosmani/agent-skills
+
+---
+
+## Perplexity ships Personal Computer for Mac — $200/mo, orchestrates 19 AI models, runs on a $599 Mac mini
+
+**Published:** Apr 18, 2026
+**Category:** AI
+**Source:** 9to5Mac
+**URL:** https://treasurehunt.alexandrudan.com/posts/perplexity-personal-computer.html
+**Original article:** https://9to5mac.com/2026/04/16/perplexitys-personal-computer-ai-assistant-feature-launches-on-mac-for-subscribers/
+**Tags:** perplexity, agents, mac, orchestration, productivity
+**Impact score:** 7.8/10
+**Trust verdict:** high
+
+Perplexity rolled out Personal Computer to Max subscribers on April 16-17 2026, five weeks after unveiling it at the Ask conference. The product orchestrates 19 different AI models simultaneously to complete multi-step tasks across local files, native Mac apps, and the browser, with every action requiring user confirmation and a full audit trail. It targets always-on deployment on dedicated hardware — Perplexity's pitch is that a $599 Mac mini is cheap enough to sit permanently as an AI workstation. Remote task kickoff from iPhone is built in. Pricing: Perplexity Max at $200/month with 10,000 monthly compute credits; the $20 Pro tier is excluded. Mac-only at launch with no Windows timeline.
+
+### Why it matters
+
+Perplexity is the first consumer-AI company to commit architecturally to always-on local execution rather than stateless cloud chat — and to pick orchestration across 19 models instead of betting on one lab. The $200/month price point tests whether prosumer users will pay 10x the Pro tier for agentic autonomy. If Max retention holds above 60% at this price, the orchestration-layer thesis (pick-best-model-per-task) beats the single-model-vertical thesis (Anthropic/OpenAI) for end-user products. Mac-only is a deliberate constraint: Perplexity optimized for the user base that already owns the hardware it assumes.
+
+### Trust notes
+
+Launch confirmed by 9to5Mac, Digital Trends, Dataconomy, MacDailyNews. Pricing and 19-model figure are corroborated across sources. Credit allocation and iPhone kickoff confirmed. No FUD flags.
+
+**Primary source:** https://9to5mac.com/2026/04/16/perplexitys-personal-computer-ai-assistant-feature-launches-on-mac-for-subscribers/
+
+---
+
 ## Converge Bio raises $25M Series A — 4.5x protein yields, Bessemer + Meta/OpenAI/Wiz execs back it
 
 **Published:** Apr 18, 2026

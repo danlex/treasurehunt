@@ -6,13 +6,58 @@
   <atom:link href="https://treasurehunt.alexandrudan.com/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Hand-curated daily digest of the best news in AI, Quantum computing, Cybersecurity, AI startups, Research papers and viral tech. One substantial post per hour — names, numbers and the specifics that matter.</description>
   <language>en-us</language>
-  <lastBuildDate>Sat, 18 Apr 2026 02:42:55 GMT</lastBuildDate>
+  <lastBuildDate>Sat, 18 Apr 2026 08:15:36 GMT</lastBuildDate>
   <generator>treasurehunt-build</generator>
   <image>
     <url>https://treasurehunt.alexandrudan.com/favicon.svg</url>
     <title>Treasure Hunt</title>
     <link>https://treasurehunt.alexandrudan.com/</link>
   </image>
+  <item>
+    <title>OpenAI commits $20B to Cerebras over 3 years — up from $10B, equity warrants for up to 10% stake</title>
+    <link>https://treasurehunt.alexandrudan.com/posts/openai-cerebras-20b.html</link>
+    <guid isPermaLink="true">https://treasurehunt.alexandrudan.com/posts/openai-cerebras-20b.html</guid>
+    <pubDate>Sat, 18 Apr 2026 08:15:36 GMT</pubDate>
+    <category>Startups</category>
+    <source url="https://www.theinformation.com/articles/openai-spend-20-billion-cerebras-chips-receive-equity-stake">The Information</source>
+    <description>OpenAI doubled its Cerebras commitment to more than $20B (over $20 billion) over three years, expanding a January deal that was already worth $10B for 750 megawatts of compute capacity. Under the new terms, OpenAI receives warrants for a minority stake that could reach 10% as spending scales, with total outlay potentially hitting $30B. OpenAI also earmarked roughly $1B to help Cerebras build dedicated data centers for its workloads. The deal is explicitly positioned to reduce OpenAI&#39;s Nvidia dependency and lock in non-GPU wafer-scale silicon for inference at ChatGPT scale. Reported first by The Information on April 17.</description>
+  </item>
+  <item>
+    <title>Claude 4.7&#39;s new tokenizer inflates text 1.325x on average — 80-turn Code sessions now cost 20-30% more</title>
+    <link>https://treasurehunt.alexandrudan.com/posts/claude-47-tokenizer-cost.html</link>
+    <guid isPermaLink="true">https://treasurehunt.alexandrudan.com/posts/claude-47-tokenizer-cost.html</guid>
+    <pubDate>Sat, 18 Apr 2026 08:15:36 GMT</pubDate>
+    <category>Research</category>
+    <source url="https://www.claudecodecamp.com/p/i-measured-claude-4-7-s-new-tokenizer-here-s-what-it-costs-you">claudecodecamp.com</source>
+    <description>A measurement study published April 17 on claudecodecamp compared Anthropic&#39;s Claude 4.6 and 4.7 tokenizers on identical content using Anthropic&#39;s free /v1/messages/count_tokens endpoint. Weighted across seven real Claude Code workloads, the 4.7 tokenizer produces 1.325x more tokens than 4.6 — CLAUDE.md files run 1.445x, user prompts 1.373x, code diffs 1.212x, terminal output 1.291x. The root cause is that English chars-per-token dropped from 4.33 to 3.60; TypeScript dropped from 3.66 to 2.69 — the new tokenizer just slices text finer. Net effect on an 80-turn Claude Code session: 4.6 cost ~$6.65 vs 4.7 cost ~$7.86-$8.76, roughly 20-30% higher at identical list prices.</description>
+  </item>
+  <item>
+    <title>OpenBMB releases VoxCPM2 — 2B-param tokenizer-free TTS, 1.84% WER in English, 30 languages, Apache 2.0</title>
+    <link>https://treasurehunt.alexandrudan.com/posts/voxcpm2-openbmb.html</link>
+    <guid isPermaLink="true">https://treasurehunt.alexandrudan.com/posts/voxcpm2-openbmb.html</guid>
+    <pubDate>Sat, 18 Apr 2026 08:15:36 GMT</pubDate>
+    <category>Research</category>
+    <source url="https://github.com/OpenBMB/VoxCPM">github.com</source>
+    <description>OpenBMB released VoxCPM2 in April 2026 — a 2B-parameter speech synthesis model trained on over 2 million hours of multilingual audio and released under Apache 2.0. Unlike standard TTS systems that quantize speech into discrete tokens, VoxCPM2 skips quantization entirely: it generates continuous speech representations through an end-to-end diffusion autoregressive pipeline operating in AudioVAE V2&#39;s latent space (LocEnc-TSLM-RALM-LocDiT). Coverage spans 30 languages plus nine Chinese dialects (Cantonese, Sichuan, Wu, Northeast, Henan, Shaanxi, Shandong, Tianjin, Minnan). On Seed-TTS-eval English it hits 1.84% WER with 75.3% speaker similarity; on CV3-eval multilingual it logs 3.65% CER in Chinese and 5.00% WER in English across 11 tested languages.</description>
+  </item>
+  <item>
+    <title>Addy Osmani&#39;s agent-skills hits 17K stars — 20 engineering skills, 7 slash commands, 3 personas for AI coding</title>
+    <link>https://treasurehunt.alexandrudan.com/posts/addyosmani-agent-skills.html</link>
+    <guid isPermaLink="true">https://treasurehunt.alexandrudan.com/posts/addyosmani-agent-skills.html</guid>
+    <pubDate>Sat, 18 Apr 2026 08:15:36 GMT</pubDate>
+    <category>AI</category>
+    <source url="https://github.com/addyosmani/agent-skills">github.com</source>
+    <description>Addy Osmani — the Google Chrome engineer best known for web performance standards — released agent-skills v0.5.0 in April 2026 and crossed 17,000 GitHub stars with 2,200+ forks. The framework packages senior-engineer discipline into structured agent workflows: 20 core skills organized across six lifecycle phases (Define, Plan, Build, Verify, Review, Ship), 7 slash commands (/spec, /plan, /build, /test, /review, /code-simplify, /ship), 3 specialist personas (code reviewer, test engineer, security auditor), and reference checklists for testing, security, performance and accessibility. Its design philosophy is &#39;process, not prose&#39; — each skill is a verifiable workflow with gates, not generic guidance. The repo borrows heavily from Software Engineering at Google including trunk-based development and feature-flag patterns.</description>
+  </item>
+  <item>
+    <title>Perplexity ships Personal Computer for Mac — $200/mo, orchestrates 19 AI models, runs on a $599 Mac mini</title>
+    <link>https://treasurehunt.alexandrudan.com/posts/perplexity-personal-computer.html</link>
+    <guid isPermaLink="true">https://treasurehunt.alexandrudan.com/posts/perplexity-personal-computer.html</guid>
+    <pubDate>Sat, 18 Apr 2026 08:15:36 GMT</pubDate>
+    <category>AI</category>
+    <source url="https://9to5mac.com/2026/04/16/perplexitys-personal-computer-ai-assistant-feature-launches-on-mac-for-subscribers/">9to5Mac</source>
+    <description>Perplexity rolled out Personal Computer to Max subscribers on April 16-17 2026, five weeks after unveiling it at the Ask conference. The product orchestrates 19 different AI models simultaneously to complete multi-step tasks across local files, native Mac apps, and the browser, with every action requiring user confirmation and a full audit trail. It targets always-on deployment on dedicated hardware — Perplexity&#39;s pitch is that a $599 Mac mini is cheap enough to sit permanently as an AI workstation. Remote task kickoff from iPhone is built in. Pricing: Perplexity Max at $200/month with 10,000 monthly compute credits; the $20 Pro tier is excluded. Mac-only at launch with no Windows timeline.</description>
+  </item>
   <item>
     <title>Converge Bio raises $25M Series A — 4.5x protein yields, Bessemer + Meta/OpenAI/Wiz execs back it</title>
     <link>https://treasurehunt.alexandrudan.com/posts/converge-bio-25m.html</link>

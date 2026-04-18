@@ -4,26 +4,56 @@
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
     <loc>https://treasurehunt.alexandrudan.com/</loc>
-    <lastmod>2026-04-18T02:42:55.977Z</lastmod>
+    <lastmod>2026-04-18T08:15:36.853Z</lastmod>
     <changefreq>hourly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://treasurehunt.alexandrudan.com/about.html</loc>
-    <lastmod>2026-04-18T02:42:56.077Z</lastmod>
+    <lastmod>2026-04-18T08:15:36.982Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://treasurehunt.alexandrudan.com/methodology.html</loc>
-    <lastmod>2026-04-18T02:42:56.077Z</lastmod>
+    <lastmod>2026-04-18T08:15:36.982Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://treasurehunt.alexandrudan.com/archive.html</loc>
-    <lastmod>2026-04-18T02:42:56.077Z</lastmod>
+    <lastmod>2026-04-18T08:15:36.982Z</lastmod>
     <changefreq>hourly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://treasurehunt.alexandrudan.com/posts/openai-cerebras-20b.html</loc>
+    <lastmod>2026-04-18T08:15:36.853Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://treasurehunt.alexandrudan.com/posts/claude-47-tokenizer-cost.html</loc>
+    <lastmod>2026-04-18T08:15:36.853Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://treasurehunt.alexandrudan.com/posts/voxcpm2-openbmb.html</loc>
+    <lastmod>2026-04-18T08:15:36.853Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://treasurehunt.alexandrudan.com/posts/addyosmani-agent-skills.html</loc>
+    <lastmod>2026-04-18T08:15:36.853Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://treasurehunt.alexandrudan.com/posts/perplexity-personal-computer.html</loc>
+    <lastmod>2026-04-18T08:15:36.853Z</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
