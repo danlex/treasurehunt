@@ -1,5 +1,232 @@
 [
   {
+    "id": "allbirds-newbird-ai-crash",
+    "category": "Startups",
+    "title": "Allbirds rebrands as NewBird AI, surges 600% then crashes 35% — market cap swings from $21M to $159M in 48 hours",
+    "summary": "Allbirds (BIRD), the struggling shoe brand that sold its footwear assets for $39M in March, announced a full pivot to AI infrastructure on April 16: renaming to NewBird AI and planning to acquire 'high-performance, low-latency AI compute hardware' for lease to customers. The stock surged nearly 600% on the news, then plunged 35% the next day. Market cap oscillated between $21.7M and $159M. The company is seeking $50M in new funding (expected Q2 2026), citing 'GPU procurement lead times increasing' and 'North American data center vacancy rates at historic lows' as the market opportunity.",
+    "tags": [
+      "allbirds",
+      "ai-rebrand",
+      "stock-market",
+      "gpu-compute",
+      "startups",
+      "hype",
+      "viral"
+    ],
+    "url": "https://finance.yahoo.com/news/allbirds-stock-tumbles-after-nearly-600-rally-as-the-shoemaker-rebrands-as-an-ai-company-173129269.html",
+    "source": "Yahoo Finance",
+    "metrics": {
+      "coverage": 6,
+      "social": 7,
+      "novelty": 6,
+      "authority": 5,
+      "concreteness": 9,
+      "stakes": 5,
+      "fudRisk": 5,
+      "importance": 6,
+      "trust": 6
+    },
+    "signals": {
+      "outletCount": 8,
+      "tier1Count": 1,
+      "outlets": [
+        "Yahoo Finance",
+        "Bloomberg",
+        "Reuters"
+      ],
+      "twitterMentions": 0,
+      "topTweets": [],
+      "subreddits": [
+        "r/technology",
+        "r/wallstreetbets"
+      ],
+      "redditTop": {
+        "sub": "r/technology",
+        "upvotes": 100
+      },
+      "trustedVoicesCount": 0,
+      "tickerMove": {
+        "symbol": "BIRD",
+        "changePct": 500
+      }
+    },
+    "whyItMatters": "The pattern — distressed brand + AI rebrand + stock pump — mirrors the 2017 blockchain name-change wave ($LBCC, Long Island Iced Tea). That it works again in 2026 reveals market credulity around AI compute infrastructure at exactly the moment real compute scarcity is emerging. The underlying thesis (lease GPU capacity) isn't wrong; the execution (a failed shoe company with $21M market cap) is.",
+    "trustVerdict": "medium",
+    "trustNotes": "Stock price movements are public market data, independently verifiable. Yahoo Finance reporting is factual and corroborated by Bloomberg/Reuters. FudRisk is elevated because the company's AI pivot viability is speculative — scored accordingly.",
+    "primarySource": "https://finance.yahoo.com/news/allbirds-stock-tumbles-after-nearly-600-rally-as-the-shoemaker-rebrands-as-an-ai-company-173129269.html",
+    "rejectedAt": "2026-04-17T21:05:49.864Z"
+  },
+  {
+    "id": "ai-compute-scarcity-2026",
+    "category": "Startups",
+    "title": "Tom Tunguz: The age of abundant AI is over — Blackwell GPUs up 48%, CoreWeave raised minimums to 3-year contracts, Anthropic limited new model to ~40 orgs",
+    "summary": "Theory Ventures partner Tom Tunguz argues AI has crossed from abundance to scarcity as of April 2026. Nvidia Blackwell GPU rentals hit $4.08/hour (up 48% in two months); CoreWeave raised prices 20% and extended minimum contracts from 1 to 3 years; Anthropic restricted its newest model to roughly 40 organizations. Tunguz identifies five hallmarks: restricted model access, prohibitive pricing, performance variability, rising costs, and forced developer diversification across providers. His conclusion: this isn't a blip — the scarcity era will last years.",
+    "tags": [
+      "compute",
+      "gpu-prices",
+      "nvidia",
+      "coreweave",
+      "anthropic",
+      "vc-analysis",
+      "ai-infrastructure"
+    ],
+    "url": "https://tomtunguz.com/ai-compute-crisis-2026/",
+    "source": "Tom Tunguz / Theory Ventures",
+    "metrics": {
+      "coverage": 4,
+      "social": 5,
+      "novelty": 7,
+      "authority": 5,
+      "concreteness": 9,
+      "stakes": 8,
+      "fudRisk": 3,
+      "importance": 6.46,
+      "trust": 6
+    },
+    "signals": {
+      "outletCount": 3,
+      "tier1Count": 0,
+      "outlets": [
+        "tomtunguz.com",
+        "Hacker News"
+      ],
+      "twitterMentions": 0,
+      "topTweets": [],
+      "subreddits": [],
+      "redditTop": null,
+      "trustedVoicesCount": 0,
+      "tickerMove": null
+    },
+    "whyItMatters": "Compute access is becoming the new moat. If GPU scarcity persists at these prices and contract lengths, only well-capitalised incumbents can sustain frontier model access — startups and researchers face a structural disadvantage. This reframes the 'AI democratisation' narrative: the tooling is open, but the compute isn't.",
+    "trustVerdict": "medium",
+    "trustNotes": "Author is a credible VC with track record (Theory Ventures). Hard numbers on GPU pricing and CoreWeave contracts are from market data; independently corroborated by the broader compute scarcity trend. Single-source analysis — no tier-1 outlet replication, but the data points are specific and verifiable.",
+    "primarySource": "https://tomtunguz.com/ai-compute-crisis-2026/",
+    "rejectedAt": "2026-04-17T21:05:36.045Z"
+  },
+  {
+    "id": "android-cli-3x-agents",
+    "category": "AI",
+    "title": "Google ships Android CLI: official toolchain builds Android apps 3× faster with any AI agent",
+    "summary": "Google's Android developer team ships Android CLI, a new command-line toolchain that enables any AI coding agent to build, test, and debug Android apps without Android Studio. Google claims 3× faster build cycles in internal benchmarks. HN: 275 pts, 116 comments. Official Google Developer Blog. Works with Claude Code, Copilot, Cursor, and any MCP-compatible agent. Addresses the longstanding gap where Android development lagged behind web/server-side in AI-agent ergonomics.",
+    "tags": [
+      "google",
+      "android",
+      "android-cli",
+      "ai-agents",
+      "developer-tools",
+      "coding-agent"
+    ],
+    "url": "https://android-developers.googleblog.com/2026/04/build-android-apps-3x-faster-using-any-agent.html",
+    "source": "Google Android Developers",
+    "metrics": {
+      "coverage": 5,
+      "social": 7,
+      "novelty": 7,
+      "authority": 9,
+      "concreteness": 8,
+      "stakes": 6,
+      "fudRisk": 2,
+      "importance": 7.06,
+      "trust": 9
+    },
+    "signals": {
+      "outletCount": 7,
+      "tier1Count": 2,
+      "outlets": [
+        "Google Android Blog",
+        "HN",
+        "The Verge",
+        "Android Authority",
+        "VentureBeat"
+      ],
+      "twitterMentions": 1200,
+      "topTweets": [],
+      "subreddits": [
+        "r/programming",
+        "r/androiddev",
+        "r/MachineLearning"
+      ],
+      "redditTop": {
+        "sub": "r/programming",
+        "upvotes": 890
+      },
+      "trustedVoicesCount": 0,
+      "tickerMove": null
+    },
+    "whyItMatters": "Android has 3B+ active devices but has always been harder to develop for than iOS or web — partly because the tooling never integrated cleanly with AI agents. Android CLI closes that gap directly. Google making this agent-first (not IDE-first) signals a shift in how platform owners think about developer experience: the unit is now the AI agent, not the human developer. Expect iOS and other platforms to accelerate similar releases.",
+    "trustVerdict": "high",
+    "trustNotes": "Official Google Android developer blog by the Android team. 3× claim is from internal benchmarks — standard caveat applies, but sourcing is primary. HN 275 pts validates community interest.",
+    "primarySource": "https://android-developers.googleblog.com/2026/04/build-android-apps-3x-faster-using-any-agent.html",
+    "publishedAt": "2026-04-17T15:06:22.587Z",
+    "score": 13.96,
+    "guardVerdict": "pass",
+    "guardWarnings": [
+      "authority=9+ but URL domain \"android-developers.googleblog.com\" is not in known high-authority list",
+      "category \"AI\" is 7/10 of last 10 posts — diversity penalty"
+    ],
+    "rejectedAt": "2026-04-17T15:35:26.416Z",
+    "wasPublished": true
+  },
+  {
+    "id": "andon-ai-retail-lease",
+    "category": "Startups",
+    "title": "Andon Labs gave an AI a 3-year retail lease and asked it to turn a profit",
+    "summary": "Andon Labs put an AI agent in charge of a real retail store — with a 3-year lease, inventory budget, and the mandate to generate profit. The agent independently negotiated supplier relationships, set pricing, managed stock, and made marketing decisions with minimal human oversight. HN: 195 pts, 276 comments — one of the most-discussed threads of the week. The blog post documents the full experiment including failures, financial results, and the edge cases where the agent sought human input.",
+    "tags": [
+      "andon-labs",
+      "ai-agents",
+      "autonomous-ai",
+      "retail",
+      "ai-economics",
+      "startups"
+    ],
+    "url": "https://andonlabs.com/blog/andon-market-launch",
+    "source": "Andon Labs",
+    "metrics": {
+      "coverage": 4,
+      "social": 8,
+      "novelty": 9,
+      "authority": 5,
+      "concreteness": 8,
+      "stakes": 6,
+      "fudRisk": 3,
+      "importance": 6.79,
+      "trust": 7
+    },
+    "signals": {
+      "outletCount": 4,
+      "tier1Count": 0,
+      "outlets": [
+        "HN",
+        "Andon Labs Blog",
+        "r/singularity",
+        "VentureBeat"
+      ],
+      "twitterMentions": 980,
+      "topTweets": [],
+      "subreddits": [
+        "r/singularity",
+        "r/startups",
+        "r/artificial"
+      ],
+      "redditTop": {
+        "sub": "r/singularity",
+        "upvotes": 620
+      },
+      "trustedVoicesCount": 0,
+      "tickerMove": null
+    },
+    "whyItMatters": "This is one of the first documented cases of an AI agent running a real-world business under legally binding constraints (a retail lease), not a simulation. The 276-comment HN thread reflects genuine practitioner interest: what did it get wrong, when did it escalate to humans, and what does the P&L actually look like? The experiment is a proving ground for the 'AI as autonomous economic actor' thesis that dozens of startups are building toward.",
+    "trustVerdict": "medium",
+    "trustNotes": "First-party blog post by the company running the experiment — no independent audit of financial results. 276 HN comments include skeptical practitioners, which serves as informal peer review. FUD risk moderate: extraordinary claims require independent verification of P&L.",
+    "primarySource": "https://andonlabs.com/blog/andon-market-launch",
+    "publishedAt": "2026-04-17T15:06:22.587Z",
+    "score": 6.89,
+    "guardVerdict": "pass",
+    "rejectedAt": "2026-04-17T15:35:04.874Z",
+    "wasPublished": true
+  },
+  {
     "id": "gemini-app-mac",
     "category": "AI",
     "title": "Google's Gemini app lands on macOS — first native desktop client, 169 HN pts, Sundar Pichai announces",
