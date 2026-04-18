@@ -4,26 +4,62 @@
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
     <loc>https://treasurehunt.alexandrudan.com/</loc>
-    <lastmod>2026-04-18T08:15:36.853Z</lastmod>
+    <lastmod>2026-04-18T11:42:57.448Z</lastmod>
     <changefreq>hourly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://treasurehunt.alexandrudan.com/about.html</loc>
-    <lastmod>2026-04-18T08:15:36.982Z</lastmod>
+    <lastmod>2026-04-18T11:42:57.549Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://treasurehunt.alexandrudan.com/methodology.html</loc>
-    <lastmod>2026-04-18T08:15:36.982Z</lastmod>
+    <lastmod>2026-04-18T11:42:57.549Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://treasurehunt.alexandrudan.com/archive.html</loc>
-    <lastmod>2026-04-18T08:15:36.982Z</lastmod>
+    <lastmod>2026-04-18T11:42:57.549Z</lastmod>
     <changefreq>hourly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://treasurehunt.alexandrudan.com/posts/cursor-50b-raise.html</loc>
+    <lastmod>2026-04-18T11:42:57.448Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://treasurehunt.alexandrudan.com/posts/berkeley-spex.html</loc>
+    <lastmod>2026-04-18T11:42:57.448Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://treasurehunt.alexandrudan.com/posts/mythos-reproduction-vidoc.html</loc>
+    <lastmod>2026-04-18T11:42:57.448Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://treasurehunt.alexandrudan.com/posts/gemini-robotics-er-16.html</loc>
+    <lastmod>2026-04-18T11:42:57.448Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://treasurehunt.alexandrudan.com/posts/grok-3-api-release.html</loc>
+    <lastmod>2026-04-18T11:42:57.448Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://treasurehunt.alexandrudan.com/posts/openai-shed-side-quests.html</loc>
+    <lastmod>2026-04-18T11:42:57.448Z</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
