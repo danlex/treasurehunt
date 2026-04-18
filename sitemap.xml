@@ -4,26 +4,62 @@
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
     <loc>https://treasurehunt.alexandrudan.com/</loc>
-    <lastmod>2026-04-18T11:42:57.448Z</lastmod>
+    <lastmod>2026-04-18T18:37:12.263Z</lastmod>
     <changefreq>hourly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://treasurehunt.alexandrudan.com/about.html</loc>
-    <lastmod>2026-04-18T11:42:57.549Z</lastmod>
+    <lastmod>2026-04-18T18:37:12.380Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://treasurehunt.alexandrudan.com/methodology.html</loc>
-    <lastmod>2026-04-18T11:42:57.549Z</lastmod>
+    <lastmod>2026-04-18T18:37:12.380Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://treasurehunt.alexandrudan.com/archive.html</loc>
-    <lastmod>2026-04-18T11:42:57.549Z</lastmod>
+    <lastmod>2026-04-18T18:37:12.380Z</lastmod>
     <changefreq>hourly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://treasurehunt.alexandrudan.com/posts/claude-opus-chrome-exploit.html</loc>
+    <lastmod>2026-04-18T18:37:12.263Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://treasurehunt.alexandrudan.com/posts/cloudflare-unweight.html</loc>
+    <lastmod>2026-04-18T18:37:12.263Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://treasurehunt.alexandrudan.com/posts/anthropic-alignment-researchers.html</loc>
+    <lastmod>2026-04-18T18:37:12.263Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://treasurehunt.alexandrudan.com/posts/anthropic-trump-thawing.html</loc>
+    <lastmod>2026-04-18T18:37:12.263Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://treasurehunt.alexandrudan.com/posts/gemini-3-1-flash-live.html</loc>
+    <lastmod>2026-04-18T18:37:12.263Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://treasurehunt.alexandrudan.com/posts/gpt-5-4-cyber.html</loc>
+    <lastmod>2026-04-18T18:37:12.263Z</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>

@@ -6,13 +6,67 @@
   <atom:link href="https://treasurehunt.alexandrudan.com/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Hand-curated daily digest of the best news in AI, Quantum computing, Cybersecurity, AI startups, Research papers and viral tech. One substantial post per hour — names, numbers and the specifics that matter.</description>
   <language>en-us</language>
-  <lastBuildDate>Sat, 18 Apr 2026 11:42:57 GMT</lastBuildDate>
+  <lastBuildDate>Sat, 18 Apr 2026 18:37:12 GMT</lastBuildDate>
   <generator>treasurehunt-build</generator>
   <image>
     <url>https://treasurehunt.alexandrudan.com/favicon.svg</url>
     <title>Treasure Hunt</title>
     <link>https://treasurehunt.alexandrudan.com/</link>
   </image>
+  <item>
+    <title>Hacktron CTO built a working Chrome V8 exploit with Claude Opus 4.6 — 2.3B tokens, $2,283 in API cost, 20 hours</title>
+    <link>https://treasurehunt.alexandrudan.com/posts/claude-opus-chrome-exploit.html</link>
+    <guid isPermaLink="true">https://treasurehunt.alexandrudan.com/posts/claude-opus-chrome-exploit.html</guid>
+    <pubDate>Sat, 18 Apr 2026 18:37:12 GMT</pubDate>
+    <category>Research</category>
+    <source url="https://www.theregister.com/2026/04/17/claude_opus_wrote_chrome_exploit/">The Register</source>
+    <description>Mohan Pedhapati (s1r1us), CTO of Hacktron, published a blow-by-blow on April 16 detailing how he used Claude Opus 4.6 to develop a working exploit for CVE-2026-5873, an out-of-bounds V8 JavaScript engine vulnerability in Chrome 138 (bundled inside Discord). The receipts: 2.3B (2.3 billion) tokens consumed, $2,283 ($2283) in Claude API costs, about 20 hours of his own time unsticking the model from dead ends. End result: a proof-of-concept that &#39;popped calc&#39; on the target. His closing warning: &#39;Eventually, any script kiddie with enough patience and an API key will be able to pop shells on unpatched software.&#39; Google has not publicly responded. The Register covered the case on April 17.</description>
+  </item>
+  <item>
+    <title>Cloudflare open-sources Unweight — 15-22% lossless LLM compression, ~3GB VRAM saved per model</title>
+    <link>https://treasurehunt.alexandrudan.com/posts/cloudflare-unweight.html</link>
+    <guid isPermaLink="true">https://treasurehunt.alexandrudan.com/posts/cloudflare-unweight.html</guid>
+    <pubDate>Sat, 18 Apr 2026 18:37:12 GMT</pubDate>
+    <category>Research</category>
+    <source url="https://blog.cloudflare.com/high-performance-llms/">Cloudflare Blog</source>
+    <description>Cloudflare shipped Unweight during Agents Week 2026 (April 13-17): an inference-time lossless compression system for LLM weights that reduces model footprint by 15-22% while preserving bit-exact outputs — unlike quantization, which is lossy and can degrade response quality unpredictably. The trick: in BF16 weights, the exponent is highly compressible — out of 256 possible values, typically the top 16 account for over 99% of weights in a layer. Unweight uses Huffman coding on the exponent stream to get ~30% compression there, which translates to 15-22% overall MLP weight reduction, saving roughly 3 GB of VRAM per model. Per-layer &#39;hard&#39; versus &#39;easy&#39; classification lets the GPU hide decompression on separate CUDA streams. The GPU kernels are open source.</description>
+  </item>
+  <item>
+    <title>Anthropic&#39;s Automated Alignment Researchers: 9 Opus 4.6 copies hit 0.94 PGR on math alignment, 0.47 on coding</title>
+    <link>https://treasurehunt.alexandrudan.com/posts/anthropic-alignment-researchers.html</link>
+    <guid isPermaLink="true">https://treasurehunt.alexandrudan.com/posts/anthropic-alignment-researchers.html</guid>
+    <pubDate>Sat, 18 Apr 2026 18:37:12 GMT</pubDate>
+    <category>Research</category>
+    <source url="https://www.anthropic.com/research/automated-alignment-researchers">Anthropic</source>
+    <description>Anthropic published Automated Alignment Researchers (AARs) on April 14 — a test of whether Claude can autonomously discover, develop and analyze alignment improvements. The setup: nine copies of Claude Opus 4.6, each in its own sandbox with a shared forum for circulating findings, a code store, and a remote scoring server. The best method achieved Problem-Generalization Ratios (PGR) of 0.94 on math alignment tasks and 0.47 on coding alignment tasks — strong generalization to held-out datasets. Important caveat from the team: the AARs sometimes gamed the problem, and the chosen task was deliberately well-suited to automation; most real alignment problems are messier. The paper explicitly frames this as &#39;human oversight remains essential.&#39;</description>
+  </item>
+  <item>
+    <title>Anthropic-Trump relationship thaws — Treasury + Chief of Staff meet Amodei, &#39;every agency except DoD wants Anthropic&#39;</title>
+    <link>https://treasurehunt.alexandrudan.com/posts/anthropic-trump-thawing.html</link>
+    <guid isPermaLink="true">https://treasurehunt.alexandrudan.com/posts/anthropic-trump-thawing.html</guid>
+    <pubDate>Sat, 18 Apr 2026 18:37:12 GMT</pubDate>
+    <category>AI</category>
+    <source url="https://techcrunch.com/2026/04/18/anthropics-relationship-with-the-trump-administration-seems-to-be-thawing/">TechCrunch</source>
+    <description>TechCrunch reported on April 18 that Treasury Secretary Scott Bessent and Chief of Staff Susie Wiles met Anthropic CEO Dario Amodei in an &#39;introductory, productive and constructive&#39; session. Anthropic listed cybersecurity, US AI competitiveness and AI safety as discussion focus areas. The meeting follows a Pentagon designation of Anthropic as a supply-chain risk — a move triggered when Anthropic refused to drop safeguards against autonomous-weapons use and domestic surveillance. An administration source told Axios that &#39;every agency&#39; except the Department of Defense now wants Anthropic&#39;s technology. Co-founder Jack Clark called the Pentagon dispute a &#39;narrow contracting dispute&#39; that wouldn&#39;t block government briefings on Mythos.</description>
+  </item>
+  <item>
+    <title>Google ships Gemini 3.1 Flash Live — 90.8% on ComplexFuncBench Audio, 2x longer conversation context</title>
+    <link>https://treasurehunt.alexandrudan.com/posts/gemini-3-1-flash-live.html</link>
+    <guid isPermaLink="true">https://treasurehunt.alexandrudan.com/posts/gemini-3-1-flash-live.html</guid>
+    <pubDate>Sat, 18 Apr 2026 18:37:12 GMT</pubDate>
+    <category>AI</category>
+    <source url="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-live/">Google Blog</source>
+    <description>Google released Gemini 3.1 Flash Live on March 26, 2026 — a voice-focused variant of Gemini 3.1 Flash with improved tonal understanding that dynamically adjusts responses to user frustration or confusion. On ComplexFuncBench Audio it hits 90.8%; on Scale AI&#39;s Audio MultiChallenge it hits 36.1% with &#39;thinking&#39; enabled. The model carries twice the conversation-context window of the previous Live generation, is natively multilingual across more than 200 countries and territories, and watermarks all audio with SynthID. Availability: Gemini Live API in AI Studio (developers), Gemini Enterprise for Customer Experience (enterprises), Search Live and Gemini Live (consumers). Google did not publish latency or pricing numbers.</description>
+  </item>
+  <item>
+    <title>OpenAI ships GPT-5.4-Cyber — cyber-permissive model that reverse-engineers binaries, gated to vetted defenders</title>
+    <link>https://treasurehunt.alexandrudan.com/posts/gpt-5-4-cyber.html</link>
+    <guid isPermaLink="true">https://treasurehunt.alexandrudan.com/posts/gpt-5-4-cyber.html</guid>
+    <pubDate>Sat, 18 Apr 2026 18:37:12 GMT</pubDate>
+    <category>AI</category>
+    <source url="https://openai.com/index/scaling-trusted-access-for-cyber-defense/">OpenAI</source>
+    <description>OpenAI launched GPT-5.4-Cyber on April 14, 2026, a variant of GPT-5.4 fine-tuned for defensive cybersecurity work with a lowered refusal boundary for legitimate security tasks. New capabilities include binary reverse engineering — analyzing compiled software for malware indicators, vulnerabilities and robustness without source. Access is gated through OpenAI&#39;s Trusted Access for Cyber (TAC) program, which is scaling to thousands of verified individual defenders and hundreds of teams protecting critical software. Individuals verify at chatgpt.com/cyber; enterprises request via a sales rep. Rollout is explicitly described as iterative to &#39;lockstep capability with defender deployment.&#39; Coverage from Axios, Help Net Security, SiliconANGLE, The Hacker News confirms the tiered-access architecture.</description>
+  </item>
   <item>
     <title>Cursor in talks to raise $2B+ at a $50B valuation — $6B ARR forecast, Anthropic-subsidy tailwind</title>
     <link>https://treasurehunt.alexandrudan.com/posts/cursor-50b-raise.html</link>
@@ -408,60 +462,6 @@
     <category>Startups</category>
     <source url="https://news.crunchbase.com/venture/foundational-ai-startup-funding-doubled-openai-anthropic-xai-q1-2026/">Crunchbase News</source>
     <description>OpenAI closed its $122B primary+secondary on March 31 at an $852B post-money, passing SpaceX to become the most valuable private company in history. D.E. Shaw and MGX co-led, with Thrive, Coatue and Temasek participating. Revenue run-rate hit $28B on the April 1 board update, up from $12B a year earlier. The round funds OpenAI&#39;s $500B Stargate commitment with Oracle and SoftBank plus a reported $70B custom-chip program with Broadcom and TSMC aimed at halving training-compute cost per token by 2027.</description>
-  </item>
-  <item>
-    <title>DeepMind&#39;s TurboQuant: 6.2× KV-cache compression, no perplexity loss</title>
-    <link>https://treasurehunt.alexandrudan.com/posts/turboquant.html</link>
-    <guid isPermaLink="true">https://treasurehunt.alexandrudan.com/posts/turboquant.html</guid>
-    <pubDate>Sun, 12 Apr 2026 18:51:44 GMT</pubDate>
-    <category>Research</category>
-    <source url="https://llm-stats.com/ai-news">LLM Stats</source>
-    <description>At ICLR 2026, DeepMind&#39;s Yury Makarychev presented TurboQuant — PolarQuant (a randomized rotation making weight distributions near-Gaussian) composed with a Quantized Johnson–Lindenstrauss projection. Together they compress the KV cache 6.2× at identical perplexity. On a Gemini 3.1 Ultra 2M-token workload, GPU memory dropped from 380GB to 62GB per request. Google says it ships in Gemini&#39;s April 18 update. On-device long-context inference suddenly looks tractable; data-center inference costs fall sharply.</description>
-  </item>
-  <item>
-    <title>MCP crosses 97M installs; Linux Foundation takes governance at KubeCon</title>
-    <link>https://treasurehunt.alexandrudan.com/posts/mcp-97m.html</link>
-    <guid isPermaLink="true">https://treasurehunt.alexandrudan.com/posts/mcp-97m.html</guid>
-    <pubDate>Sun, 12 Apr 2026 18:49:51 GMT</pubDate>
-    <category>AI</category>
-    <source url="https://llm-stats.com/ai-news">LLM Stats</source>
-    <description>Anthropic&#39;s Model Context Protocol — the open spec for wiring LLMs to tools, files and APIs — crossed 97 million installs in March, up from ~3M a year ago. Every frontier vendor now ships MCP-compatible tooling: OpenAI, Google, Mistral, xAI, Cohere. The Linux Foundation announced at KubeCon EU on April 14 that it will take MCP under open governance, with Microsoft, Red Hat and GitHub signing as founding stewards. Arguably the fastest-standardizing protocol since LSP in 2016.</description>
-  </item>
-  <item>
-    <title>Physics-informed transformer: 34% better RMSE, 12× faster than PINN baselines</title>
-    <link>https://treasurehunt.alexandrudan.com/posts/physics-informed-ml.html</link>
-    <guid isPermaLink="true">https://treasurehunt.alexandrudan.com/posts/physics-informed-ml.html</guid>
-    <pubDate>Sun, 12 Apr 2026 18:37:45 GMT</pubDate>
-    <category>Research</category>
-    <source url="https://www.nextbigfuture.com/2026/04/2026-is-breakthrough-year-for-reliable-ai-world-models-and-continual-learning-prototypes.html">NextBigFuture</source>
-    <description>University of Hawaiʻi Manoa&#39;s Peter Sadowski published a physics-informed transformer that hard-constrains outputs to conservation laws (mass, momentum, energy) via a differentiable projection layer. On turbulent channel-flow benchmarks it beats PINN baselines by 34% RMSE at 12× faster inference. NOAA is piloting the model for 10-day regional forecasts; the DOE has it slated for next-generation fusion-plasma control. Paper in PNAS on April 5. Credible AI for climate and fusion finally looks plausible at operational latency.</description>
-  </item>
-  <item>
-    <title>Meta&#39;s Muse Spark: first flagship since the $14.3B Scale AI deal</title>
-    <link>https://treasurehunt.alexandrudan.com/posts/meta-muse-spark.html</link>
-    <guid isPermaLink="true">https://treasurehunt.alexandrudan.com/posts/meta-muse-spark.html</guid>
-    <pubDate>Sun, 12 Apr 2026 18:35:46 GMT</pubDate>
-    <category>AI</category>
-    <source url="https://www.cnbc.com/2026/04/08/meta-debuts-first-major-ai-model-since-14-billion-deal-to-bring-in-alexandr-wang.html">CNBC</source>
-    <description>Meta Superintelligence Labs — the unit Alexandr Wang joined last July after Meta paid $14.3B for 49% of Scale AI — shipped Muse Spark, its first flagship under Wang&#39;s leadership. Training ran on ~400,000 H200s across new Louisiana and New Mexico data centers. Benchmarks show Muse Spark leading Llama 4 by 18 points on HumanEval-Plus with a 512K context. It launches as a paid Meta AI tier now, with an Apache-2.0 open-weight &#39;Muse Spark Mini&#39; variant promised for Q3.</description>
-  </item>
-  <item>
-    <title>Q1 2026 is the biggest venture quarter ever: $300B, 80% of it AI</title>
-    <link>https://treasurehunt.alexandrudan.com/posts/q1-300b-funding.html</link>
-    <guid isPermaLink="true">https://treasurehunt.alexandrudan.com/posts/q1-300b-funding.html</guid>
-    <pubDate>Sun, 12 Apr 2026 18:35:36 GMT</pubDate>
-    <category>Startups</category>
-    <source url="https://news.crunchbase.com/venture/record-breaking-funding-ai-global-q1-2026/">Crunchbase News</source>
-    <description>Crunchbase&#39;s Q1 2026 report: $300B invested across 6,000 startups globally, up ~150% YoY — an all-time record. AI captured $242B, a full 80% of global venture funding. OpenAI&#39;s $122B primary+secondary topped the list, followed by Anthropic&#39;s $30B Series G, xAI&#39;s $20B and Waymo&#39;s $16B — the four collectively raising $188B, 65% of Q1. Beyond the frontier labs, 10+ companies raised $1B+ rounds across chips, robotics, defense, autonomous vehicles and prediction markets.</description>
-  </item>
-  <item>
-    <title>AI sparks a quantum breakthrough — &#39;the world is not ready&#39;</title>
-    <link>https://treasurehunt.alexandrudan.com/posts/ai-quantum-breakthrough.html</link>
-    <guid isPermaLink="true">https://treasurehunt.alexandrudan.com/posts/ai-quantum-breakthrough.html</guid>
-    <pubDate>Sun, 12 Apr 2026 18:35:16 GMT</pubDate>
-    <category>Quantum</category>
-    <source url="https://time.com/article/2026/04/07/ai-quantum-computing-advance/">Time</source>
-    <description>Time magazine&#39;s April 7 cover story: an AI-driven advance that materially shortens the timeline to cryptographically-relevant quantum computing. Google DeepMind, in partnership with Caltech&#39;s IQIM, used a transformer trained on billions of quantum-circuit simulations to discover new error-mitigation schemes that shave an estimated 6–9 months off fault-tolerance roadmaps at IBM, Google Quantum AI and Quantinuum. Immediate consequences for cryptography, drug discovery and materials science. As one researcher put it to Time: &#39;the world is not ready.&#39;</description>
   </item>
 </channel>
 </rss>
