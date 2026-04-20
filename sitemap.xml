@@ -4,26 +4,32 @@
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
     <loc>https://treasurehunt.alexandrudan.com/</loc>
-    <lastmod>2026-04-20T07:12:36.399Z</lastmod>
+    <lastmod>2026-04-20T07:12:51.966Z</lastmod>
     <changefreq>hourly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://treasurehunt.alexandrudan.com/about.html</loc>
-    <lastmod>2026-04-20T07:12:36.491Z</lastmod>
+    <lastmod>2026-04-20T07:12:52.054Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://treasurehunt.alexandrudan.com/methodology.html</loc>
-    <lastmod>2026-04-20T07:12:36.491Z</lastmod>
+    <lastmod>2026-04-20T07:12:52.054Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://treasurehunt.alexandrudan.com/archive.html</loc>
-    <lastmod>2026-04-20T07:12:36.491Z</lastmod>
+    <lastmod>2026-04-20T07:12:52.054Z</lastmod>
     <changefreq>hourly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://treasurehunt.alexandrudan.com/posts/kronos-financial-foundation-model.html</loc>
+    <lastmod>2026-04-20T07:12:51.966Z</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>

@@ -6,13 +6,22 @@
   <atom:link href="https://treasurehunt.alexandrudan.com/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Hand-curated daily digest of the best news in AI, Quantum computing, Cybersecurity, AI startups, Research papers and viral tech. One substantial post per hour — names, numbers and the specifics that matter.</description>
   <language>en-us</language>
-  <lastBuildDate>Mon, 20 Apr 2026 07:12:36 GMT</lastBuildDate>
+  <lastBuildDate>Mon, 20 Apr 2026 07:12:51 GMT</lastBuildDate>
   <generator>treasurehunt-build</generator>
   <image>
     <url>https://treasurehunt.alexandrudan.com/favicon.svg</url>
     <title>Treasure Hunt</title>
     <link>https://treasurehunt.alexandrudan.com/</link>
   </image>
+  <item>
+    <title>Kronos — open foundation model for financial markets — 12B K-lines from 45 exchanges, +93% RankIC over best time-series baseline, AAAI 2026 accepted</title>
+    <link>https://treasurehunt.alexandrudan.com/posts/kronos-financial-foundation-model.html</link>
+    <guid isPermaLink="true">https://treasurehunt.alexandrudan.com/posts/kronos-financial-foundation-model.html</guid>
+    <pubDate>Mon, 20 Apr 2026 07:12:51 GMT</pubDate>
+    <category>Research</category>
+    <source url="https://arxiv.org/abs/2508.02739">arxiv.org</source>
+    <description>Kronos (AAAI 2026 accepted, arxiv 2508.02739) is the first open-source foundation model pre-trained on financial candlestick (K-line) sequences. A specialized tokenizer quantizes multi-dimensional OHLCV data into hierarchical discrete tokens; a decoder-only autoregressive transformer is pre-trained on 12B (12 billion) K-line records from 45 global exchanges. Results against the leading time-series foundation model (TSFM) and best non-pretrained baseline: 93% higher RankIC on price-series forecasting over TSFM and 87% over the non-pretrained baseline; 9% lower MAE on volatility forecasting; 22% improvement in generative fidelity for synthetic K-line sequences. Model, weights, and demo are open on GitHub (shiyu-coder/Kronos) — repo is currently GitHub-trending.</description>
+  </item>
   <item>
     <title>Google Research&#39;s Simula generates 512K synthetic training samples — mechanism-design framework yields 10% math-reasoning gain with Gemma-3 4B student</title>
     <link>https://treasurehunt.alexandrudan.com/posts/google-simula-synthetic-data.html</link>
@@ -453,15 +462,6 @@
     <category>AI</category>
     <source url="https://github.com/karpathy/nanochat">GitHub</source>
     <description>Andrej Karpathy&#39;s nanochat repo — a minimal, from-scratch full-stack training/inference pipeline for a ChatGPT clone — passed 51.7K GitHub stars. In ~8,000 lines of code it covers tokenizer, pretraining, SFT, RL and eval. Karpathy says you can train your own ChatGPT clone for roughly $100 of compute in four hours, and it&#39;s the capstone project for his upcoming Eureka Labs LLM101n course. llm.c (pure C/CUDA training) sits alongside at 29.5K stars. Karpathy&#39;s &quot;make LLMs legible&quot; mission keeps reshaping what developers build.</description>
-  </item>
-  <item>
-    <title>Karpathy&#39;s LLM-coding pitfalls compiled into viral CLAUDE.md — #2 on GitHub weekly</title>
-    <link>https://treasurehunt.alexandrudan.com/posts/karpathy-skills-trending.html</link>
-    <guid isPermaLink="true">https://treasurehunt.alexandrudan.com/posts/karpathy-skills-trending.html</guid>
-    <pubDate>Sun, 12 Apr 2026 20:04:09 GMT</pubDate>
-    <category>Top Tweets</category>
-    <source url="https://github.com/forrestchang/andrej-karpathy-skills">GitHub Trending</source>
-    <description>A community-maintained distillation of Andrej Karpathy&#39;s observations about where LLMs fail at coding — shipped as a single CLAUDE.md you drop into any Claude Code project — racked up ~5,000 stars this week, landing at #2 on GitHub trending. The repo encodes Karpathy&#39;s rules for atomic commits, test-driven scaffolding, and guarding against hallucinated APIs. Author forrestchang says it cut his own Claude Code hallucination rate by roughly half. Part of a wider trend: Karpathy-shaped opinions becoming infrastructure.</description>
   </item>
 </channel>
 </rss>

@@ -5,7 +5,7 @@
       "dislikes": 11
     },
     "Research": {
-      "likes": 5,
+      "likes": 6,
       "dislikes": 4
     },
     "Top Tweets": {
@@ -807,7 +807,7 @@
       "dislikes": 1
     },
     "open-source": {
-      "likes": 1,
+      "likes": 2,
       "dislikes": 1
     },
     "nous-research": {
@@ -935,7 +935,7 @@
       "dislikes": 0
     },
     "foundation-model": {
-      "likes": 1,
+      "likes": 2,
       "dislikes": 0
     },
     "tencent": {
@@ -1099,6 +1099,22 @@
       "dislikes": 0
     },
     "mechanism-design": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "kronos": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "time-series": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "finance": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "aaai-2026": {
       "likes": 1,
       "dislikes": 0
     }
@@ -1291,11 +1307,15 @@
     "research.google": {
       "likes": 1,
       "dislikes": 0
+    },
+    "arxiv.org": {
+      "likes": 1,
+      "dislikes": 0
     }
   },
   "totals": {
-    "likes": 30,
+    "likes": 31,
     "dislikes": 30
   },
-  "lastUpdated": "2026-04-20T07:12:36.401Z"
+  "lastUpdated": "2026-04-20T07:12:51.967Z"
 }
