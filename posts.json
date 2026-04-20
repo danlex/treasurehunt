@@ -1,5 +1,68 @@
 [
   {
+    "id": "meta-muse-spark-msl",
+    "category": "AI",
+    "title": "Meta Superintelligence Labs debuts Muse Spark — 58% on Humanity's Last Exam in Contemplating mode, 10x less compute than Llama 4 Maverick",
+    "summary": "Meta announced Muse Spark on April 8, 2026 — the first model from the new Meta Superintelligence Labs (MSL) under Alexandr Wang. It is natively multimodal with tool-use, visual chain-of-thought, and a 'Contemplating mode' for parallel multi-agent reasoning. Benchmarks disclosed: 58% on Humanity's Last Exam and 38% on FrontierScience Research, both in Contemplating mode. Meta claims 'over an order of magnitude less compute' than Llama 4 Maverick to reach equivalent capability — roughly 10x training efficiency. Over 1,000 physicians curated health-reasoning training data. Muse Spark is proprietary (breaking from Meta's open-source stance), already live in Meta AI app and meta.ai, rolling out to WhatsApp, Instagram, Facebook, Messenger, and AI glasses.",
+    "tags": [
+      "meta",
+      "muse-spark",
+      "superintelligence",
+      "multimodal",
+      "alexandr-wang",
+      "contemplating-mode"
+    ],
+    "url": "https://ai.meta.com/blog/introducing-muse-spark-msl/",
+    "source": "ai.meta.com",
+    "metrics": {
+      "coverage": 10,
+      "social": 8,
+      "novelty": 8,
+      "authority": 10,
+      "concreteness": 8,
+      "stakes": 9,
+      "fudRisk": 2,
+      "importance": 8.7,
+      "trust": 8
+    },
+    "signals": {
+      "outletCount": 14,
+      "tier1Count": 6,
+      "outlets": [
+        "ai.meta.com",
+        "about.fb.com",
+        "Bloomberg",
+        "CNBC",
+        "TechCrunch",
+        "Help Net Security",
+        "Trending Topics",
+        "Business Daily",
+        "R&D World",
+        "VentureBeat AI",
+        "Meta AI (GNews)",
+        "Techmeme",
+        "Wired",
+        "The Verge"
+      ],
+      "twitterMentions": 0,
+      "topTweets": [],
+      "subreddits": [
+        "r/singularity",
+        "r/artificial"
+      ],
+      "redditTop": {
+        "sub": "r/singularity",
+        "upvotes": 76
+      },
+      "trustedVoicesCount": 0
+    },
+    "whyItMatters": "Muse Spark is the first public output of Zuckerberg's $14B hire of Alexandr Wang and proves MSL can ship. Closed-weights is a structural break from Meta's Llama strategy — a signal that the open-source-by-default era for frontier Western labs is ending. A 10x compute-efficiency claim against Llama 4 Maverick, if it holds under independent testing, repositions Meta from catch-up to parity with Google and OpenAI.",
+    "trustVerdict": "high",
+    "trustNotes": "Primary source is Meta's own blog plus corroboration from Bloomberg, CNBC, and TechCrunch (tier-1). Parameter count and training compute are not disclosed — benchmark claims come from vendor, not independent eval. Noted in fudRisk.",
+    "primarySource": "https://ai.meta.com/blog/introducing-muse-spark-msl/",
+    "publishedAt": "2026-04-20T07:11:50.524Z"
+  },
+  {
     "id": "anthropic-alignment-researchers",
     "category": "Research",
     "title": "Anthropic's Automated Alignment Researchers: 9 Opus 4.6 copies hit 0.94 PGR on math alignment, 0.47 on coding",
