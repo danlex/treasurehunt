@@ -7,3 +7,15 @@ node_modules/
 .env
 .env.*
 !.env.example
+
+# classifier model + embedding cache (rebuilt from posts.json + rejected.json)
+classifier/model.npz
+classifier/embeddings_cache.npz
+classifier/__pycache__/
+
+# video renders + ephemeral composition state (all regenerated on demand)
+presentations/renders/
+presentations/audio/
+presentations/assets/
+presentations/transcript.json
+presentations/index.html

@@ -250,6 +250,18 @@
     border: 1px solid var(--border);
   }
   .btn-dislike:hover { background: var(--dark); color: #fff; border-color: var(--dark); }
+  .btn-animate {
+    background: #0f172a;
+    color: #38bdf8;
+    border: 1px solid #38bdf8;
+  }
+  .btn-animate:hover { background: #38bdf8; color: #0f172a; }
+  .btn-tweet {
+    background: #000;
+    color: #fff;
+    border: 1px solid #1d1d1d;
+  }
+  .btn-tweet:hover { background: #1d1d1d; }
   .btn:disabled { opacity: 0.5; cursor: wait; }
 
   /* TASTE PANEL */
@@ -297,6 +309,15 @@
   .taste-row .score .up   { color: var(--green); }
   .taste-row .score .down { color: var(--red); }
   .taste-empty { color: var(--text-mute); font-size: 12px; font-style: italic; }
+  .taste-badge {
+    display: inline-flex; align-items: center; gap: 3px;
+    font-size: 11px; font-weight: 600;
+    padding: 2px 7px; border-radius: 10px;
+    font-variant-numeric: tabular-nums;
+    border: 1px solid currentColor;
+  }
+  .taste-badge.up   { color: var(--green); }
+  .taste-badge.down { color: var(--red); }
 
   .toast {
     position: fixed;
@@ -411,14 +432,27 @@ function cardHTML(item, variant) {
   const klass =
     variant === 'liked'    ? 'is-liked' :
     variant === 'disliked' ? 'is-disliked' : '';
+  const animateBtn = (variant === 'pending' || variant === 'liked')
+    ? `<button class="btn btn-animate" data-action="animate">▶ Animate</button>` : '';
+  const tweetBtn = (variant === 'pending' || variant === 'liked')
+    ? `<button class="btn btn-tweet" data-action="compose">𝕏 Compose</button>
+       <button class="btn btn-tweet" data-action="tweet">𝕏 Draft</button>` : '';
   const actions =
     variant === 'pending' ? `
+        ${animateBtn}
+        ${tweetBtn}
         <button class="btn btn-dislike" data-action="dislike">Dislike</button>
         <button class="btn btn-like" data-action="like">Like → Publish</button>` :
     variant === 'liked' ? `
+        ${animateBtn}
+        ${tweetBtn}
         <button class="btn btn-dislike" data-action="unpublish">Change mind · Dislike</button>` :
     variant === 'disliked' ? `
         <button class="btn btn-dislike" data-action="restore">Restore to queue</button>` : '';
+
+  const tasteBadge = (variant === 'pending' && typeof item.tasteScore === 'number')
+    ? `<span class="taste-badge ${item.tasteScore > 0 ? 'up' : 'down'}" title="Predicted by taste classifier">${item.tasteScore > 0 ? '▲' : '▼'} ${item.tasteScore.toFixed(1)}</span>`
+    : '';
 
   return `
     <article class="card ${klass}" data-id="${item.id}" data-variant="${variant}">
@@ -426,6 +460,7 @@ function cardHTML(item, variant) {
         <span class="cat-badge ${catClass(item.category)}">${item.category}</span>
         <span>·</span>
         <span>${item.source || ""}</span>
+        ${tasteBadge}
         ${verdictBadge}
       </div>
       <h2 class="card-title">${escapeHtml(item.title)}</h2>
@@ -441,8 +476,13 @@ function cardHTML(item, variant) {
 }
 
 function renderPanels() {
+  const pendingSorted = [...state.queue].sort((a, b) => {
+    const sa = typeof a.tasteScore === 'number' ? a.tasteScore : -Infinity;
+    const sb = typeof b.tasteScore === 'number' ? b.tasteScore : -Infinity;
+    return sb - sa;
+  });
   const panels = {
-    pending:  { items: state.queue,                  empty: "Queue empty. Ask me to hunt for more news." },
+    pending:  { items: pendingSorted,                empty: "Queue empty. Ask me to hunt for more news." },
     liked:    { items: state.posts,                  empty: "Nothing liked yet." },
     disliked: { items: state.rejected,               empty: "Nothing disliked yet." },
   };
@@ -527,7 +567,80 @@ const endpointFor = action => action === "unpublish" ? "unpublish"
                             : action === "restore"   ? "restore"
                             : action;
 
+async function tweet(card, id) {
+  try {
+    const r = await fetch(`/api/tweet/${id}`);
+    const j = await r.json();
+    if (!r.ok) throw new Error(j.error || 'failed');
+    await navigator.clipboard.writeText(j.text).catch(() => {});
+    window.open(j.intentUrl, '_blank', 'noopener');
+    showToast('Tweet copied — X compose opened.', 'ok');
+  } catch (e) {
+    showToast('Tweet error: ' + e.message, 'err');
+  }
+}
+
+async function xpost(card, id) {
+  const btn = card.querySelector('button[data-action="xpost"]');
+  if (btn) { btn.disabled = true; btn.textContent = 'Posting…'; }
+  try {
+    const r = await fetch(`/api/x-post/${id}`, { method: 'POST' });
+    const j = await r.json();
+    if (!r.ok) throw new Error(j.error || `HTTP ${r.status}`);
+    showToast(`Posted: ${j.tweetUrl || 'tweet id ' + j.tweetId}`, 'ok');
+    if (btn) { btn.textContent = '𝕏 Posted'; }
+  } catch (e) {
+    if (btn) { btn.disabled = false; btn.textContent = '𝕏 Post +img'; }
+    showToast('X post failed: ' + e.message, 'err');
+  }
+}
+
+async function animate(card, id) {
+  const btn = card.querySelector('button[data-action="animate"]');
+  if (btn) { btn.disabled = true; btn.textContent = "Rendering…"; }
+  try {
+    const r = await fetch(`/api/animate/${id}`, { method: "POST" });
+    const j = await r.json();
+    if (!r.ok) throw new Error(j.error || "failed to start");
+    // Poll status
+    let done = false;
+    while (!done) {
+      await new Promise(r => setTimeout(r, 2000));
+      const s = await fetch(`/api/animate/${id}/status`).then(r => r.json());
+      if (s.status === "done") {
+        if (btn) { btn.textContent = "▶ Re-render"; btn.disabled = false; }
+        // Inject video player into the card
+        const existing = card.querySelector('.anim-player');
+        if (existing) existing.remove();
+        const player = document.createElement('video');
+        player.className = 'anim-player';
+        player.controls = true;
+        player.autoplay = true;
+        player.style.cssText = 'width:100%;margin-top:16px;border-radius:8px;background:#000;';
+        player.src = s.videoPath + '?t=' + Date.now();
+        card.appendChild(player);
+        showToast("Rendered. Playing now.", "ok");
+        done = true;
+      } else if (s.status === "failed") {
+        if (btn) { btn.textContent = "▶ Animate"; btn.disabled = false; }
+        showToast("Render failed: " + (s.error || "unknown"), "err");
+        done = true;
+      }
+    }
+  } catch (e) {
+    if (btn) { btn.textContent = "▶ Animate"; btn.disabled = false; }
+    showToast("Animate error: " + e.message, "err");
+  }
+}
+
 async function act(card, id, action) {
+  if (action === "animate") return animate(card, id);
+  if (action === "tweet")   return tweet(card, id);
+  if (action === "xpost")   return xpost(card, id);
+  if (action === "compose") {
+    window.open(`/tweet-studio.html?id=${encodeURIComponent(id)}`, '_blank');
+    return;
+  }
   card.querySelectorAll("button").forEach(b => b.disabled = true);
   card.classList.add("leaving-" + (action === "like" ? "like" : "dislike"));
 

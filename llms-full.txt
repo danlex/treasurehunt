@@ -6,53 +6,128 @@ Each post below includes the summary, tags, source, trust verdict, and "why it m
 
 ---
 
-## Hacktron CTO built a working Chrome V8 exploit with Claude Opus 4.6 — 2.3B tokens, $2,283 in API cost, 20 hours
+## Kronos — open foundation model for financial markets — 12B K-lines from 45 exchanges, +93% RankIC over best time-series baseline, AAAI 2026 accepted
 
-**Published:** Apr 18, 2026
+**Published:** Apr 20, 2026
 **Category:** Research
-**Source:** The Register
-**URL:** https://treasurehunt.alexandrudan.com/posts/claude-opus-chrome-exploit.html
-**Original article:** https://www.theregister.com/2026/04/17/claude_opus_wrote_chrome_exploit/
-**Tags:** anthropic, claude, chrome, vulnerability, hacktron
-**Impact score:** 7.9/10
-**Trust verdict:** medium
-
-Mohan Pedhapati (s1r1us), CTO of Hacktron, published a blow-by-blow on April 16 detailing how he used Claude Opus 4.6 to develop a working exploit for CVE-2026-5873, an out-of-bounds V8 JavaScript engine vulnerability in Chrome 138 (bundled inside Discord). The receipts: 2.3B (2.3 billion) tokens consumed, $2,283 ($2283) in Claude API costs, about 20 hours of his own time unsticking the model from dead ends. End result: a proof-of-concept that 'popped calc' on the target. His closing warning: 'Eventually, any script kiddie with enough patience and an API key will be able to pop shells on unpatched software.' Google has not publicly responded. The Register covered the case on April 17.
-
-### Why it matters
-
-This is the cleanest public cost-and-time breakdown of an AI-assisted 0-day weaponization to date — $2283 and 20 hours for a working V8 exploit is a price point where motivated low-budget attackers can credibly DIY. Combined with the Vidoc Mythos reproduction earlier this week, the empirical evidence stacking up is that frontier models have already crossed the threshold where exploit development is a commodity task. Expect Google to cite this receipt in its own Project Zero AI-assisted bug-hunting defense narrative, and expect browser vendors to accelerate memory-safe V8 replacements (Oilpan, PartitionAlloc) in response.
-
-### Trust notes
-
-First-person technical writeup by a named researcher with on-record API cost receipts and a specific CVE number. The Register corroborates. Treat 2.3B-token and 20-hour figures as self-reported by Hacktron — directionally accurate given the API cost cross-check.
-
-**Primary source:** https://www.theregister.com/2026/04/17/claude_opus_wrote_chrome_exploit/
-
----
-
-## Cloudflare open-sources Unweight — 15-22% lossless LLM compression, ~3GB VRAM saved per model
-
-**Published:** Apr 18, 2026
-**Category:** Research
-**Source:** Cloudflare Blog
-**URL:** https://treasurehunt.alexandrudan.com/posts/cloudflare-unweight.html
-**Original article:** https://blog.cloudflare.com/high-performance-llms/
-**Tags:** cloudflare, compression, inference, open-source, cuda
+**Source:** arxiv.org
+**URL:** https://treasurehunt.alexandrudan.com/posts/kronos-financial-foundation-model.html
+**Original article:** https://arxiv.org/abs/2508.02739
+**Tags:** kronos, foundation-model, time-series, finance, aaai-2026, open-source
 **Impact score:** 7.8/10
 **Trust verdict:** high
 
-Cloudflare shipped Unweight during Agents Week 2026 (April 13-17): an inference-time lossless compression system for LLM weights that reduces model footprint by 15-22% while preserving bit-exact outputs — unlike quantization, which is lossy and can degrade response quality unpredictably. The trick: in BF16 weights, the exponent is highly compressible — out of 256 possible values, typically the top 16 account for over 99% of weights in a layer. Unweight uses Huffman coding on the exponent stream to get ~30% compression there, which translates to 15-22% overall MLP weight reduction, saving roughly 3 GB of VRAM per model. Per-layer 'hard' versus 'easy' classification lets the GPU hide decompression on separate CUDA streams. The GPU kernels are open source.
+Kronos (AAAI 2026 accepted, arxiv 2508.02739) is the first open-source foundation model pre-trained on financial candlestick (K-line) sequences. A specialized tokenizer quantizes multi-dimensional OHLCV data into hierarchical discrete tokens; a decoder-only autoregressive transformer is pre-trained on 12B (12 billion) K-line records from 45 global exchanges. Results against the leading time-series foundation model (TSFM) and best non-pretrained baseline: 93% higher RankIC on price-series forecasting over TSFM and 87% over the non-pretrained baseline; 9% lower MAE on volatility forecasting; 22% improvement in generative fidelity for synthetic K-line sequences. Model, weights, and demo are open on GitHub (shiyu-coder/Kronos) — repo is currently GitHub-trending.
 
 ### Why it matters
 
-Every frontier-model deployer is currently trading quality for memory via quantization — Unweight is the first credible lossless alternative at production kernel quality. 3 GB saved per model maps directly to either higher batch sizes or cheaper GPUs per token, which is the tightest variable in inference economics. Cloudflare releasing the CUDA kernels open source rather than gating them behind Workers AI is a classic land-grab: they want every on-prem and competing-cloud deployer to be dependent on Cloudflare-authored infra primitives. Expect TurboQuant (DeepMind, already published) and Unweight to be composed — lossless on MLP, lossy on attention — in production stacks by Q3.
+Financial-markets time-series was one of the last major domains without a credible open foundation model. A +93% RankIC delta over the previous best TSFM is the kind of step-change improvement that reshapes quant research pipelines — and because the model and weights are open, it arrives with the infrastructure to be reproduced and extended. AAAI 2026 acceptance indicates peer review cleared the methodology.
 
 ### Trust notes
 
-Cloudflare primary post plus research writeup at research.cloudflare.com, open-source GPU kernels on GitHub. Benchmark numbers reproducible. No FUD flags.
+Peer-reviewed at AAAI 2026. Arxiv paper, HuggingFace listing, and GitHub repo all consistent. Author single-name (ShiYu) lowers authority slightly vs multi-lab collaborations. No FUD indicators; claims verifiable with the released model.
 
-**Primary source:** https://blog.cloudflare.com/high-performance-llms/
+**Primary source:** https://arxiv.org/abs/2508.02739
+
+---
+
+## Google Research's Simula generates 512K synthetic training samples — mechanism-design framework yields 10% math-reasoning gain with Gemma-3 4B student
+
+**Published:** Apr 20, 2026
+**Category:** Research
+**Source:** research.google
+**URL:** https://treasurehunt.alexandrudan.com/posts/google-simula-synthetic-data.html
+**Original article:** https://research.google/blog/designing-synthetic-datasets-for-the-real-world-mechanism-design-and-reasoning-from-first-principles/
+**Tags:** google-research, synthetic-data, gemma-3, gemini, tmlr, mechanism-design
+**Impact score:** 8/10
+**Trust verdict:** high
+
+Google Research published Simula in Transactions on Machine Learning Research (April 16, 2026): a framework that reframes synthetic data generation as mechanism design, using reasoning-driven construction rather than sample-level optimization. The team (Tim R. Davidson, Benoit Seguin, Enrico Bacis, Cesar Ilharco, Hamza Harkous) generated datasets of up to 512K (512,000) data points across five domains — cybersecurity (CTI-MCQ, CTI-RCM), legal reasoning (LEXam), math (GSM8k), and multilingual knowledge (Global MMLU). Results show 'better data scales better': a 10% accuracy gain on math reasoning using Gemini 2.5 Flash as teacher and Gemma-3 4B as student. The four-step recipe is global diversification → local diversification → complexification → quality checks. Complexification helped math but hurt legal reasoning — the paper warns mechanism design is domain-dependent.
+
+### Why it matters
+
+The synthetic-data scaling ceiling is a real bottleneck as the open web gets exhausted. Simula proposes a reproducible recipe that outperforms per-sample quality filters by treating dataset construction as an incentive-compatible mechanism. A 10% boost on GSM8k math with a 4B student is non-trivial; but the honest reporting of domains where complexification hurts (LEXam legal) is a useful negative result that calibrates when to use this approach.
+
+### Trust notes
+
+Peer-reviewed in TMLR with OpenReview paper link. Authors at Google Research. Numbers match the blog and the paper. Honest disclosure of negative results on legal reasoning lowers FUD risk.
+
+**Primary source:** https://openreview.net/pdf?id=NALsdGEPhB
+
+---
+
+## Archon — first open-source harness builder for AI coding — hits 18.8k stars, ships 17 default workflows, v0.3.6 released April 12
+
+**Published:** Apr 20, 2026
+**Category:** AI
+**Source:** github.com
+**URL:** https://treasurehunt.alexandrudan.com/posts/archon-coding-harness-188k.html
+**Original article:** https://github.com/coleam00/Archon
+**Tags:** archon, coding-agent, harness, github-trending, claude-code, workflow
+**Impact score:** 7.2/10
+**Trust verdict:** high
+
+coleam00/Archon is a TypeScript open-source workflow harness that makes AI coding deterministic and repeatable through YAML-defined development processes. Hit 18.8k GitHub stars and is trending weekly. Latest release v0.3.6 on April 12, 2026 with 1,265 commits on dev branch. It ships 17 default workflows covering issue fixes, feature development, PR reviews, and refactoring. Core features: isolated execution (each run gets its own git worktree for parallel conflict-free processing), composable workflows (mix deterministic nodes like bash/tests/git with AI-powered steps like planning/code-gen/review), multi-platform (CLI, Web UI, Slack, Telegram, Discord, GitHub webhooks), and human gates (interactive approval steps). MIT licensed, requires Bun + Claude Code + GitHub CLI.
+
+### Why it matters
+
+Archon competes directly with the growing Claude-Code ecosystem (agent-skills, claude-mem, etc.) by making coding agents reproducible — deterministic workflows over probabilistic agent chatter. Ships with native Claude Code integration, which positions it as the YAML-harness layer most Claude-Code power users will reach for. 18.8k stars for a v0.3.x release in a crowded field signals strong practitioner pull.
+
+### Trust notes
+
+All numbers verified from GitHub repo (stars, commits, release date). Open-source, MIT licensed, active development. No FUD indicators.
+
+**Primary source:** https://github.com/coleam00/Archon
+
+---
+
+## OpenAI Agents Python SDK hits 22.6k stars — 1351 commits, 268 contributors, 100+ LLM providers supported
+
+**Published:** Apr 20, 2026
+**Category:** AI
+**Source:** github.com
+**URL:** https://treasurehunt.alexandrudan.com/posts/openai-agents-python-22k.html
+**Original article:** https://github.com/openai/openai-agents-python
+**Tags:** openai, agents, python, github-trending, mcp, agent-framework
+**Impact score:** 7.2/10
+**Trust verdict:** high
+
+OpenAI's agents-python framework crossed 22,600 GitHub stars and is daily-trending. The repo has 1351 commits, 268 contributors, 84 releases, 3,600 forks, and 195 watchers. It is a lightweight, provider-agnostic multi-agent framework supporting OpenAI APIs plus 100+ other LLM providers. Features: agent configuration with tools, guardrails, and handoffs; sandboxed agents with filesystem access; MCP integration; built-in safety guardrails; human-in-the-loop mechanisms; automatic conversation history via sessions; tracing for debugging; and voice-agent support via gpt-realtime-1.5.
+
+### Why it matters
+
+OpenAI's SDK being provider-agnostic and supporting 100+ LLM providers is strategic: OpenAI competes on model quality but wants to be the control plane for agent orchestration, like Stripe for agents. A 22.6k-star repo with 268 contributors is a fast-moving ecosystem alternative to LangChain and AutoGen — and because it handles MCP natively, it becomes the path-of-least-resistance for Claude-based agents too.
+
+### Trust notes
+
+All numbers verified directly from the GitHub repo page. No FUD indicators. Factual adoption claim with hard metrics.
+
+**Primary source:** https://github.com/openai/openai-agents-python
+
+---
+
+## Meta Superintelligence Labs debuts Muse Spark — 58% on Humanity's Last Exam in Contemplating mode, 10x less compute than Llama 4 Maverick
+
+**Published:** Apr 20, 2026
+**Category:** AI
+**Source:** ai.meta.com
+**URL:** https://treasurehunt.alexandrudan.com/posts/meta-muse-spark-msl.html
+**Original article:** https://ai.meta.com/blog/introducing-muse-spark-msl/
+**Tags:** meta, muse-spark, superintelligence, multimodal, alexandr-wang, contemplating-mode
+**Impact score:** 8.7/10
+**Trust verdict:** high
+
+Meta announced Muse Spark on April 8, 2026 — the first model from the new Meta Superintelligence Labs (MSL) under Alexandr Wang. It is natively multimodal with tool-use, visual chain-of-thought, and a 'Contemplating mode' for parallel multi-agent reasoning. Benchmarks disclosed: 58% on Humanity's Last Exam and 38% on FrontierScience Research, both in Contemplating mode. Meta claims 'over an order of magnitude less compute' than Llama 4 Maverick to reach equivalent capability — roughly 10x training efficiency. Over 1,000 physicians curated health-reasoning training data. Muse Spark is proprietary (breaking from Meta's open-source stance), already live in Meta AI app and meta.ai, rolling out to WhatsApp, Instagram, Facebook, Messenger, and AI glasses.
+
+### Why it matters
+
+Muse Spark is the first public output of Zuckerberg's $14B hire of Alexandr Wang and proves MSL can ship. Closed-weights is a structural break from Meta's Llama strategy — a signal that the open-source-by-default era for frontier Western labs is ending. A 10x compute-efficiency claim against Llama 4 Maverick, if it holds under independent testing, repositions Meta from catch-up to parity with Google and OpenAI.
+
+### Trust notes
+
+Primary source is Meta's own blog plus corroboration from Bloomberg, CNBC, and TechCrunch (tier-1). Parameter count and training compute are not disclosed — benchmark claims come from vendor, not independent eval. Noted in fudRisk.
+
+**Primary source:** https://ai.meta.com/blog/introducing-muse-spark-msl/
 
 ---
 

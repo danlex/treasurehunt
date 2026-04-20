@@ -1,5 +1,193 @@
 [
   {
+    "id": "cloudflare-unweight",
+    "category": "Research",
+    "title": "Cloudflare open-sources Unweight — 15-22% lossless LLM compression, ~3GB VRAM saved per model",
+    "summary": "Cloudflare shipped Unweight during Agents Week 2026 (April 13-17): an inference-time lossless compression system for LLM weights that reduces model footprint by 15-22% while preserving bit-exact outputs — unlike quantization, which is lossy and can degrade response quality unpredictably. The trick: in BF16 weights, the exponent is highly compressible — out of 256 possible values, typically the top 16 account for over 99% of weights in a layer. Unweight uses Huffman coding on the exponent stream to get ~30% compression there, which translates to 15-22% overall MLP weight reduction, saving roughly 3 GB of VRAM per model. Per-layer 'hard' versus 'easy' classification lets the GPU hide decompression on separate CUDA streams. The GPU kernels are open source.",
+    "tags": [
+      "cloudflare",
+      "compression",
+      "inference",
+      "open-source",
+      "cuda"
+    ],
+    "url": "https://blog.cloudflare.com/high-performance-llms/",
+    "source": "Cloudflare Blog",
+    "metrics": {
+      "coverage": 7,
+      "social": 7.5,
+      "novelty": 8.5,
+      "authority": 8.5,
+      "concreteness": 9.5,
+      "stakes": 8,
+      "fudRisk": 2,
+      "importance": 7.8,
+      "trust": 9
+    },
+    "signals": {
+      "outletCount": 12,
+      "tier1Count": 2,
+      "outlets": [
+        "Cloudflare",
+        "StartupHub.ai",
+        "Lushbinary",
+        "The Next Platform"
+      ],
+      "twitterMentions": 5200,
+      "topTweets": [
+        {
+          "handle": "@Cloudflare",
+          "likes": 4800
+        }
+      ],
+      "subreddits": [
+        "r/LocalLLaMA",
+        "r/MachineLearning"
+      ],
+      "redditTop": {
+        "sub": "r/LocalLLaMA",
+        "upvotes": 1100
+      },
+      "trustedVoicesCount": 2
+    },
+    "whyItMatters": "Every frontier-model deployer is currently trading quality for memory via quantization — Unweight is the first credible lossless alternative at production kernel quality. 3 GB saved per model maps directly to either higher batch sizes or cheaper GPUs per token, which is the tightest variable in inference economics. Cloudflare releasing the CUDA kernels open source rather than gating them behind Workers AI is a classic land-grab: they want every on-prem and competing-cloud deployer to be dependent on Cloudflare-authored infra primitives. Expect TurboQuant (DeepMind, already published) and Unweight to be composed — lossless on MLP, lossy on attention — in production stacks by Q3.",
+    "trustVerdict": "high",
+    "trustNotes": "Cloudflare primary post plus research writeup at research.cloudflare.com, open-source GPU kernels on GitHub. Benchmark numbers reproducible. No FUD flags.",
+    "primarySource": "https://blog.cloudflare.com/high-performance-llms/",
+    "publishedAt": "2026-04-18T18:37:12.263Z",
+    "score": 12.7,
+    "guardVerdict": "pass",
+    "guardWarnings": [
+      "category \"Research\" is 5/10 of last 10 posts — diversity penalty"
+    ],
+    "rejectedAt": "2026-04-18T20:19:28.049Z",
+    "wasPublished": true
+  },
+  {
+    "id": "claude-opus-chrome-exploit",
+    "category": "Research",
+    "title": "Hacktron CTO built a working Chrome V8 exploit with Claude Opus 4.6 — 2.3B tokens, $2,283 in API cost, 20 hours",
+    "summary": "Mohan Pedhapati (s1r1us), CTO of Hacktron, published a blow-by-blow on April 16 detailing how he used Claude Opus 4.6 to develop a working exploit for CVE-2026-5873, an out-of-bounds V8 JavaScript engine vulnerability in Chrome 138 (bundled inside Discord). The receipts: 2.3B (2.3 billion) tokens consumed, $2,283 ($2283) in Claude API costs, about 20 hours of his own time unsticking the model from dead ends. End result: a proof-of-concept that 'popped calc' on the target. His closing warning: 'Eventually, any script kiddie with enough patience and an API key will be able to pop shells on unpatched software.' Google has not publicly responded. The Register covered the case on April 17.",
+    "tags": [
+      "anthropic",
+      "claude",
+      "chrome",
+      "vulnerability",
+      "hacktron"
+    ],
+    "url": "https://www.theregister.com/2026/04/17/claude_opus_wrote_chrome_exploit/",
+    "source": "The Register",
+    "metrics": {
+      "coverage": 7,
+      "social": 8,
+      "novelty": 8,
+      "authority": 8,
+      "concreteness": 9.5,
+      "stakes": 9,
+      "fudRisk": 3,
+      "importance": 7.9,
+      "trust": 8
+    },
+    "signals": {
+      "outletCount": 16,
+      "tier1Count": 2,
+      "outlets": [
+        "The Register",
+        "Hacker News",
+        "Risky Business",
+        "CSO Online",
+        "BleepingComputer"
+      ],
+      "twitterMentions": 7200,
+      "topTweets": [
+        {
+          "handle": "@s1r1us_ipv4",
+          "likes": 4400
+        }
+      ],
+      "subreddits": [
+        "r/netsec",
+        "r/ClaudeAI",
+        "r/cybersecurity"
+      ],
+      "redditTop": {
+        "sub": "r/netsec",
+        "upvotes": 1900
+      },
+      "trustedVoicesCount": 2
+    },
+    "whyItMatters": "This is the cleanest public cost-and-time breakdown of an AI-assisted 0-day weaponization to date — $2283 and 20 hours for a working V8 exploit is a price point where motivated low-budget attackers can credibly DIY. Combined with the Vidoc Mythos reproduction earlier this week, the empirical evidence stacking up is that frontier models have already crossed the threshold where exploit development is a commodity task. Expect Google to cite this receipt in its own Project Zero AI-assisted bug-hunting defense narrative, and expect browser vendors to accelerate memory-safe V8 replacements (Oilpan, PartitionAlloc) in response.",
+    "trustVerdict": "medium",
+    "trustNotes": "First-person technical writeup by a named researcher with on-record API cost receipts and a specific CVE number. The Register corroborates. Treat 2.3B-token and 20-hour figures as self-reported by Hacktron — directionally accurate given the API cost cross-check.",
+    "primarySource": "https://www.theregister.com/2026/04/17/claude_opus_wrote_chrome_exploit/",
+    "publishedAt": "2026-04-18T18:37:12.263Z",
+    "score": 11.5,
+    "guardVerdict": "pass",
+    "guardWarnings": [
+      "category \"Research\" is 5/10 of last 10 posts — diversity penalty"
+    ],
+    "rejectedAt": "2026-04-18T20:18:44.942Z",
+    "wasPublished": true
+  },
+  {
+    "id": "opus-4-7-regression",
+    "category": "Research",
+    "title": "Claude Opus 4.7 collapses on NYT Connections — 41.0% vs Opus 4.6's 94.7%, now ranked #39",
+    "summary": "On the NYT Connections Extended benchmark (940 puzzles, Feb 2 2026 cutoff), Claude Opus 4.7 with high reasoning scored 41.0% — a 53.7-point drop from Opus 4.6's 94.7% on the same test with the same settings. Opus 4.6 sits at #3 overall; Opus 4.7 fell to #39, below Sonnet 4.6 at 85.7%. Gemini 3.1 Pro Preview leads at 98.4%; GPT-5.4 xhigh is second at 94.0%. The benchmark author notes Opus 4.7 'refuses a lot of requests,' consistent with r/singularity and r/ClaudeAI power-user reports of aggressive guardrails degrading general reasoning. Anthropic has not yet issued a response.",
+    "tags": [
+      "anthropic",
+      "claude",
+      "opus-4-7",
+      "benchmark",
+      "regression"
+    ],
+    "url": "https://github.com/lechmazur/nyt-connections/",
+    "source": "GitHub / lechmazur",
+    "metrics": {
+      "coverage": 6,
+      "social": 9,
+      "novelty": 8,
+      "authority": 8,
+      "concreteness": 9.5,
+      "stakes": 8,
+      "fudRisk": 3,
+      "importance": 7.8,
+      "trust": 8
+    },
+    "signals": {
+      "outletCount": 9,
+      "tier1Count": 1,
+      "outlets": [
+        "The Verge",
+        "TLDR AI",
+        "MarkTechPost"
+      ],
+      "twitterMentions": 7500,
+      "topTweets": [
+        {
+          "handle": "@lechmazur",
+          "likes": 4200
+        }
+      ],
+      "subreddits": [
+        "r/singularity",
+        "r/ClaudeAI",
+        "r/artificial",
+        "r/LocalLLaMA"
+      ],
+      "redditTop": {
+        "sub": "r/singularity",
+        "upvotes": 2100
+      },
+      "trustedVoicesCount": 2
+    },
+    "whyItMatters": "A 53.7-point single-generation regression on a well-regarded reasoning benchmark is the first public evidence that aggressive safety post-training can materially degrade a flagship model's core capability. If Anthropic's next release doesn't restore Opus 4.6's reasoning profile — or if the benchmark's refusal hypothesis holds — enterprise buyers currently on Anthropic will reopen RFPs with OpenAI and Google. The episode also sets a replicable pattern: a single indie benchmark author can move the frontier-lab narrative faster than official marketing.",
+    "trustVerdict": "medium",
+    "trustNotes": "Reproducible benchmark with transparent methodology, but single-evaluator dependency means it's not yet corroborated by LMArena or MMLU-Pro. Treat the refusal hypothesis as plausible but unconfirmed until Anthropic responds or independent replication lands.",
+    "primarySource": "https://github.com/lechmazur/nyt-connections/",
+    "rejectedAt": "2026-04-18T02:24:35.471Z"
+  },
+  {
     "id": "allbirds-newbird-ai-crash",
     "category": "Startups",
     "title": "Allbirds rebrands as NewBird AI, surges 600% then crashes 35% — market cap swings from $21M to $159M in 48 hours",
