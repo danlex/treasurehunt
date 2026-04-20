@@ -1,5 +1,59 @@
 [
   {
+    "id": "openai-agents-python-22k",
+    "category": "AI",
+    "title": "OpenAI Agents Python SDK hits 22.6k stars — 1351 commits, 268 contributors, 100+ LLM providers supported",
+    "summary": "OpenAI's agents-python framework crossed 22,600 GitHub stars and is daily-trending. The repo has 1351 commits, 268 contributors, 84 releases, 3,600 forks, and 195 watchers. It is a lightweight, provider-agnostic multi-agent framework supporting OpenAI APIs plus 100+ other LLM providers. Features: agent configuration with tools, guardrails, and handoffs; sandboxed agents with filesystem access; MCP integration; built-in safety guardrails; human-in-the-loop mechanisms; automatic conversation history via sessions; tracing for debugging; and voice-agent support via gpt-realtime-1.5.",
+    "tags": [
+      "openai",
+      "agents",
+      "python",
+      "github-trending",
+      "mcp",
+      "agent-framework"
+    ],
+    "url": "https://github.com/openai/openai-agents-python",
+    "source": "github.com",
+    "metrics": {
+      "coverage": 6,
+      "social": 8,
+      "novelty": 6,
+      "authority": 8,
+      "concreteness": 9,
+      "stakes": 7,
+      "fudRisk": 1,
+      "importance": 7.2,
+      "trust": 9
+    },
+    "signals": {
+      "outletCount": 5,
+      "tier1Count": 1,
+      "outlets": [
+        "GitHub Trending",
+        "TechCrunch AI",
+        "VentureBeat AI",
+        "Techmeme",
+        "MarkTechPost"
+      ],
+      "twitterMentions": 0,
+      "topTweets": [],
+      "subreddits": [
+        "r/ClaudeAI",
+        "r/LocalLLaMA"
+      ],
+      "redditTop": {
+        "sub": "r/ClaudeAI",
+        "upvotes": 55
+      },
+      "trustedVoicesCount": 0
+    },
+    "whyItMatters": "OpenAI's SDK being provider-agnostic and supporting 100+ LLM providers is strategic: OpenAI competes on model quality but wants to be the control plane for agent orchestration, like Stripe for agents. A 22.6k-star repo with 268 contributors is a fast-moving ecosystem alternative to LangChain and AutoGen — and because it handles MCP natively, it becomes the path-of-least-resistance for Claude-based agents too.",
+    "trustVerdict": "high",
+    "trustNotes": "All numbers verified directly from the GitHub repo page. No FUD indicators. Factual adoption claim with hard metrics.",
+    "primarySource": "https://github.com/openai/openai-agents-python",
+    "publishedAt": "2026-04-20T07:12:07.255Z"
+  },
+  {
     "id": "meta-muse-spark-msl",
     "category": "AI",
     "title": "Meta Superintelligence Labs debuts Muse Spark — 58% on Humanity's Last Exam in Contemplating mode, 10x less compute than Llama 4 Maverick",

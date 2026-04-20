@@ -21,7 +21,7 @@
       "dislikes": 5
     },
     "AI": {
-      "likes": 14,
+      "likes": 15,
       "dislikes": 3
     },
     "Viral": {
@@ -743,7 +743,7 @@
       "dislikes": 0
     },
     "openai": {
-      "likes": 1,
+      "likes": 2,
       "dislikes": 0
     },
     "codex": {
@@ -819,7 +819,7 @@
       "dislikes": 0
     },
     "github-trending": {
-      "likes": 1,
+      "likes": 2,
       "dislikes": 0
     },
     "autonomous-agents": {
@@ -979,7 +979,7 @@
       "dislikes": 0
     },
     "mcp": {
-      "likes": 1,
+      "likes": 2,
       "dislikes": 0
     },
     "enterprise": {
@@ -991,7 +991,7 @@
       "dislikes": 0
     },
     "agents": {
-      "likes": 1,
+      "likes": 2,
       "dislikes": 0
     },
     "opus-4-7": {
@@ -1055,6 +1055,14 @@
       "dislikes": 0
     },
     "contemplating-mode": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "python": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "agent-framework": {
       "likes": 1,
       "dislikes": 0
     }
@@ -1239,11 +1247,15 @@
     "ai.meta.com": {
       "likes": 1,
       "dislikes": 0
+    },
+    "github.com": {
+      "likes": 1,
+      "dislikes": 0
     }
   },
   "totals": {
-    "likes": 27,
+    "likes": 28,
     "dislikes": 30
   },
-  "lastUpdated": "2026-04-20T07:11:50.529Z"
+  "lastUpdated": "2026-04-20T07:12:07.257Z"
 }
