@@ -1,57 +1,5 @@
 [
   {
-    "id": "google-simula-synthetic-data",
-    "category": "Research",
-    "title": "Google Research's Simula generates 512K synthetic training samples — mechanism-design framework yields 10% math-reasoning gain with Gemma-3 4B student",
-    "summary": "Google Research published Simula in Transactions on Machine Learning Research (April 16, 2026): a framework that reframes synthetic data generation as mechanism design, using reasoning-driven construction rather than sample-level optimization. The team (Tim R. Davidson, Benoit Seguin, Enrico Bacis, Cesar Ilharco, Hamza Harkous) generated datasets of up to 512K (512,000) data points across five domains — cybersecurity (CTI-MCQ, CTI-RCM), legal reasoning (LEXam), math (GSM8k), and multilingual knowledge (Global MMLU). Results show 'better data scales better': a 10% accuracy gain on math reasoning using Gemini 2.5 Flash as teacher and Gemma-3 4B as student. The four-step recipe is global diversification → local diversification → complexification → quality checks. Complexification helped math but hurt legal reasoning — the paper warns mechanism design is domain-dependent.",
-    "tags": [
-      "google-research",
-      "synthetic-data",
-      "gemma-3",
-      "gemini",
-      "tmlr",
-      "mechanism-design"
-    ],
-    "url": "https://research.google/blog/designing-synthetic-datasets-for-the-real-world-mechanism-design-and-reasoning-from-first-principles/",
-    "source": "research.google",
-    "metrics": {
-      "coverage": 6,
-      "social": 6,
-      "novelty": 9,
-      "authority": 9,
-      "concreteness": 9,
-      "stakes": 8,
-      "fudRisk": 1,
-      "importance": 8,
-      "trust": 9
-    },
-    "signals": {
-      "outletCount": 5,
-      "tier1Count": 1,
-      "outlets": [
-        "research.google",
-        "openreview.net",
-        "Google Research Blog",
-        "Synced Review",
-        "MarkTechPost"
-      ],
-      "twitterMentions": 0,
-      "topTweets": [],
-      "subreddits": [
-        "r/MachineLearning"
-      ],
-      "redditTop": {
-        "sub": "r/MachineLearning",
-        "upvotes": 42
-      },
-      "trustedVoicesCount": 0
-    },
-    "whyItMatters": "The synthetic-data scaling ceiling is a real bottleneck as the open web gets exhausted. Simula proposes a reproducible recipe that outperforms per-sample quality filters by treating dataset construction as an incentive-compatible mechanism. A 10% boost on GSM8k math with a 4B student is non-trivial; but the honest reporting of domains where complexification hurts (LEXam legal) is a useful negative result that calibrates when to use this approach.",
-    "trustVerdict": "high",
-    "trustNotes": "Peer-reviewed in TMLR with OpenReview paper link. Authors at Google Research. Numbers match the blog and the paper. Honest disclosure of negative results on legal reasoning lowers FUD risk.",
-    "primarySource": "https://openreview.net/pdf?id=NALsdGEPhB"
-  },
-  {
     "id": "kronos-financial-foundation-model",
     "category": "Research",
     "title": "Kronos — open foundation model for financial markets — 12B K-lines from 45 exchanges, +93% RankIC over best time-series baseline, AAAI 2026 accepted",

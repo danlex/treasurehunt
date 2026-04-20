@@ -5,7 +5,7 @@
       "dislikes": 11
     },
     "Research": {
-      "likes": 4,
+      "likes": 5,
       "dislikes": 4
     },
     "Top Tweets": {
@@ -723,7 +723,7 @@
       "dislikes": 2
     },
     "gemini": {
-      "likes": 2,
+      "likes": 3,
       "dislikes": 1
     },
     "firebase": {
@@ -1081,6 +1081,26 @@
     "workflow": {
       "likes": 1,
       "dislikes": 0
+    },
+    "google-research": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "synthetic-data": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "gemma-3": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "tmlr": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "mechanism-design": {
+      "likes": 1,
+      "dislikes": 0
     }
   },
   "sources": {
@@ -1267,11 +1287,15 @@
     "github.com": {
       "likes": 2,
       "dislikes": 0
+    },
+    "research.google": {
+      "likes": 1,
+      "dislikes": 0
     }
   },
   "totals": {
-    "likes": 29,
+    "likes": 30,
     "dislikes": 30
   },
-  "lastUpdated": "2026-04-20T07:12:18.579Z"
+  "lastUpdated": "2026-04-20T07:12:36.401Z"
 }
