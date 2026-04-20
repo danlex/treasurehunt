@@ -1,56 +1,5 @@
 [
   {
-    "id": "archon-coding-harness-188k",
-    "category": "AI",
-    "title": "Archon — first open-source harness builder for AI coding — hits 18.8k stars, ships 17 default workflows, v0.3.6 released April 12",
-    "summary": "coleam00/Archon is a TypeScript open-source workflow harness that makes AI coding deterministic and repeatable through YAML-defined development processes. Hit 18.8k GitHub stars and is trending weekly. Latest release v0.3.6 on April 12, 2026 with 1,265 commits on dev branch. It ships 17 default workflows covering issue fixes, feature development, PR reviews, and refactoring. Core features: isolated execution (each run gets its own git worktree for parallel conflict-free processing), composable workflows (mix deterministic nodes like bash/tests/git with AI-powered steps like planning/code-gen/review), multi-platform (CLI, Web UI, Slack, Telegram, Discord, GitHub webhooks), and human gates (interactive approval steps). MIT licensed, requires Bun + Claude Code + GitHub CLI.",
-    "tags": [
-      "archon",
-      "coding-agent",
-      "harness",
-      "github-trending",
-      "claude-code",
-      "workflow"
-    ],
-    "url": "https://github.com/coleam00/Archon",
-    "source": "github.com",
-    "metrics": {
-      "coverage": 5,
-      "social": 7,
-      "novelty": 8,
-      "authority": 8,
-      "concreteness": 9,
-      "stakes": 7,
-      "fudRisk": 1,
-      "importance": 7.2,
-      "trust": 8
-    },
-    "signals": {
-      "outletCount": 3,
-      "tier1Count": 0,
-      "outlets": [
-        "GitHub Trending",
-        "r/ClaudeAI",
-        "Techmeme"
-      ],
-      "twitterMentions": 0,
-      "topTweets": [],
-      "subreddits": [
-        "r/ClaudeAI",
-        "r/programming"
-      ],
-      "redditTop": {
-        "sub": "r/ClaudeAI",
-        "upvotes": 95
-      },
-      "trustedVoicesCount": 0
-    },
-    "whyItMatters": "Archon competes directly with the growing Claude-Code ecosystem (agent-skills, claude-mem, etc.) by making coding agents reproducible — deterministic workflows over probabilistic agent chatter. Ships with native Claude Code integration, which positions it as the YAML-harness layer most Claude-Code power users will reach for. 18.8k stars for a v0.3.x release in a crowded field signals strong practitioner pull.",
-    "trustVerdict": "high",
-    "trustNotes": "All numbers verified from GitHub repo (stars, commits, release date). Open-source, MIT licensed, active development. No FUD indicators.",
-    "primarySource": "https://github.com/coleam00/Archon"
-  },
-  {
     "id": "google-simula-synthetic-data",
     "category": "Research",
     "title": "Google Research's Simula generates 512K synthetic training samples — mechanism-design framework yields 10% math-reasoning gain with Gemma-3 4B student",

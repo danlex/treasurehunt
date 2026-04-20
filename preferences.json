@@ -21,7 +21,7 @@
       "dislikes": 5
     },
     "AI": {
-      "likes": 15,
+      "likes": 16,
       "dislikes": 3
     },
     "Viral": {
@@ -715,7 +715,7 @@
       "dislikes": 0
     },
     "coding-agent": {
-      "likes": 1,
+      "likes": 2,
       "dislikes": 1
     },
     "google": {
@@ -819,7 +819,7 @@
       "dislikes": 0
     },
     "github-trending": {
-      "likes": 2,
+      "likes": 3,
       "dislikes": 0
     },
     "autonomous-agents": {
@@ -1065,6 +1065,22 @@
     "agent-framework": {
       "likes": 1,
       "dislikes": 0
+    },
+    "archon": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "harness": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "claude-code": {
+      "likes": 1,
+      "dislikes": 0
+    },
+    "workflow": {
+      "likes": 1,
+      "dislikes": 0
     }
   },
   "sources": {
@@ -1249,13 +1265,13 @@
       "dislikes": 0
     },
     "github.com": {
-      "likes": 1,
+      "likes": 2,
       "dislikes": 0
     }
   },
   "totals": {
-    "likes": 28,
+    "likes": 29,
     "dislikes": 30
   },
-  "lastUpdated": "2026-04-20T07:12:07.257Z"
+  "lastUpdated": "2026-04-20T07:12:18.579Z"
 }
