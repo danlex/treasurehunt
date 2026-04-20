@@ -273,6 +273,15 @@ const STYLES = `
   footer a { color: var(--text-sec); text-decoration: none; margin-left: 16px; }
   footer a:hover { color: var(--red); }
 
+  .more-link { text-align: center; padding: 32px 40px 12px; max-width: 980px; margin: 0 auto; }
+  .btn-secondary {
+    display: inline-block; padding: 12px 22px; border: 1px solid var(--border);
+    border-radius: 999px; color: var(--text-sec); text-decoration: none;
+    font-weight: 600; font-size: 14px; letter-spacing: 0.3px;
+    transition: color .12s, border-color .12s, background .12s;
+  }
+  .btn-secondary:hover { color: var(--red); border-color: var(--red); background: #fff6f4; }
+
   @media (max-width: 640px) {
     nav { padding: 0 20px; }
     .hero, main, footer, .container { padding-left: 20px; padding-right: 20px; }
@@ -331,10 +340,12 @@ ${(opts.tagList || []).map(t => `<meta property="article:tag" content="${esc(t)}
 <!-- Feeds -->
 <link rel="alternate" type="application/rss+xml" title="${esc(SITE_NAME)} RSS" href="${SITE_URL}/feed.xml">
 <link rel="sitemap" type="application/xml" href="${SITE_URL}/sitemap.xml">
-<!-- Fonts -->
+<!-- Fonts — reduced weight set + non-blocking load (5 weights, was 9) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Manrope:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Manrope:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Manrope:wght@400;500;600;700&display=swap"></noscript>
 <style>${STYLES}</style>
 ${jsonLd}
 </head>`;
@@ -513,7 +524,7 @@ function buildIndex() {
       name: 'Treasure Hunt — latest posts',
       itemListOrder: 'https://schema.org/ItemListOrderDescending',
       numberOfItems: posts.length,
-      itemListElement: posts.slice(0, 20).map((p, i) => ({
+      itemListElement: posts.slice(0, 10).map((p, i) => ({
         '@type': 'ListItem',
         position: i + 1,
         item: {
@@ -557,7 +568,8 @@ ${navbar}
   <p>One substantial post per hour, packed with names, numbers and the specifics that matter. Every item scored across seven dimensions (Stakes · Novelty · Authority · Coverage · Concreteness · Social · FUD risk) and given an explicit trust verdict. Methodology is <a href="/methodology.html">public</a>.</p>
 </section>
 <main>
-  ${posts.length ? posts.map(postCard).join('\n') : '<p>No posts yet — check back soon.</p>'}
+  ${posts.length ? posts.slice(0, 30).map(postCard).join('\n') : '<p>No posts yet — check back soon.</p>'}
+  ${posts.length > 30 ? `<div class="more-link"><a href="/archive.html" class="btn-secondary">View all ${posts.length} posts in the archive →</a></div>` : ''}
 </main>
 ${footer}
 </body>
